@@ -1,0 +1,195 @@
+2026-01-18 16:05:54,506 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 16:05:54,511 - __main__ - WARNING - simple_app.py:128 - 前端目录不存在，已创建空目录: E:\traeAiProject\GenerateInterTool\backend\dist\dist
+2026-01-18 16:05:54,512 - __main__ - WARNING - simple_app.py:133 - 前端index.html文件不存在: E:\traeAiProject\GenerateInterTool\backend\dist\dist\index.html
+2026-01-18 16:05:54,512 - __main__ - INFO - simple_app.py:134 - 当前BASE_DIR: E:\traeAiProject\GenerateInterTool\backend\dist
+2026-01-18 16:05:54,512 - __main__ - INFO - simple_app.py:135 - 当前FRONTEND_DIR: E:\traeAiProject\GenerateInterTool\backend\dist\dist
+2026-01-18 16:05:54,513 - __main__ - INFO - simple_app.py:136 - 目录内容: ['api_generator.db', 'app.log', 'backups', 'config_custom.py', 'dist', 'i18n', 'InterfaceGenerator.exe', 'plugins', 'templates', 'uploads']
+2026-01-18 16:05:54,531 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 16:05:54,533 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 16:05:54,569 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-01-18 16:05:54,569 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 18:43:26,840 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 18:43:26,844 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 18:43:26,845 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 18:43:26,886 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-01-18 18:43:26,887 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 18:48:10,443 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 18:48:10,446 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 18:48:10,447 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 18:48:10,478 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-18 18:48:10,478 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 18:52:42,521 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 18:52:42,531 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 18:52:42,535 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 18:52:42,591 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8002
+ * Running on http://10.203.224.140:8002
+2026-01-18 18:52:42,595 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 18:53:26,592 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 18:53:26,596 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 18:53:26,597 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 18:53:26,634 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://10.203.224.140:8003
+2026-01-18 18:53:26,634 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 18:55:52,150 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 18:55:52,154 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 18:55:52,156 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 18:55:52,190 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8004
+ * Running on http://10.203.224.140:8004
+2026-01-18 18:55:52,192 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 18:56:46,821 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 18:56:46,823 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 18:56:46,825 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 18:56:46,858 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8005
+ * Running on http://10.203.224.140:8005
+2026-01-18 18:56:46,858 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 18:58:44,156 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 18:58:44,159 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 18:58:44,160 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 18:58:44,191 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-18 18:58:44,192 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 19:07:02,515 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 19:07:02,518 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 19:07:02,520 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 19:07:02,560 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-18 19:07:02,560 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 19:11:50,522 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 19:11:50,535 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 19:11:50,540 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 19:11:50,583 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8006
+ * Running on http://10.203.224.140:8006
+2026-01-18 19:11:50,583 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 19:12:47,441 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:12:47] "GET /?ide_webview_request_time=1768734767234 HTTP/1.1" 200 -
+2026-01-18 19:12:47,480 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:12:47] "GET /js/chunk-vendors.6798b6f4.js HTTP/1.1" 200 -
+2026-01-18 19:12:47,487 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:12:47] "GET /css/chunk-vendors.10dd4e95.css HTTP/1.1" 200 -
+2026-01-18 19:12:47,504 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:12:47] "GET /js/app.a2e2be83.js HTTP/1.1" 200 -
+2026-01-18 19:12:47,518 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:12:47] "GET /css/app.f4bfeb7c.css HTTP/1.1" 200 -
+2026-01-18 19:12:47,752 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:12:47] "GET /api/api/files HTTP/1.1" 200 -
+2026-01-18 19:12:47,789 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:12:47] "GET /api/api/interfaces HTTP/1.1" 200 -
+2026-01-18 19:12:47,869 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:12:47] "GET /fonts/element-icons.ff18efd1.woff HTTP/1.1" 200 -
+2026-01-18 19:12:48,364 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:12:48] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-18 19:13:06,485 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:13:06] "GET /?ide_webview_request_time=1768734786472 HTTP/1.1" 200 -
+2026-01-18 19:13:06,512 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:13:06] "[36mGET /js/chunk-vendors.6798b6f4.js HTTP/1.1[0m" 304 -
+2026-01-18 19:13:06,512 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:13:06] "[36mGET /js/app.a2e2be83.js HTTP/1.1[0m" 304 -
+2026-01-18 19:13:06,514 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:13:06] "[36mGET /css/chunk-vendors.10dd4e95.css HTTP/1.1[0m" 304 -
+2026-01-18 19:13:06,515 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:13:06] "[36mGET /css/app.f4bfeb7c.css HTTP/1.1[0m" 304 -
+2026-01-18 19:13:06,568 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:13:06] "[36mGET /api/api/files HTTP/1.1[0m" 304 -
+2026-01-18 19:13:06,572 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:13:06] "[36mGET /api/api/interfaces HTTP/1.1[0m" 304 -
+2026-01-18 19:13:06,586 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:13:06] "[36mGET /fonts/element-icons.ff18efd1.woff HTTP/1.1[0m" 304 -
+2026-01-18 19:13:06,914 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:13:06] "[36mGET /@vite/client HTTP/1.1[0m" 304 -
+2026-01-18 19:14:29,577 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 19:14:29,581 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 19:14:29,582 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 19:14:29,620 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-18 19:14:29,620 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 19:23:14,168 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 19:23:14,171 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 19:23:14,173 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 19:23:14,183 - __main__ - INFO - simple_app.py:882 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-18 19:23:14,219 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-18 19:23:14,219 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 19:23:17,413 - __main__ - INFO - simple_app.py:868 - 已自动打开浏览器，访问地址: http://0.0.0.0:8000
+2026-01-18 19:35:03,282 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 19:35:03,286 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 19:35:03,287 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 19:35:03,300 - __main__ - INFO - simple_app.py:886 - 应用即将启动，访问地址: http://0.0.0.0:8003
+2026-01-18 19:35:03,332 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://10.203.224.140:8003
+2026-01-18 19:35:03,332 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 19:35:20,785 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 19:35:20,788 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-18 19:35:20,789 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-18 19:35:20,800 - __main__ - INFO - simple_app.py:886 - 应用即将启动，访问地址: http://0.0.0.0:8004
+2026-01-18 19:35:20,825 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8004
+ * Running on http://10.203.224.140:8004
+2026-01-18 19:35:20,826 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 19:35:24,034 - __main__ - INFO - simple_app.py:870 - 已自动打开浏览器，访问地址: http://localhost:8004
+2026-01-18 19:35:24,687 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:35:24] "GET / HTTP/1.1" 200 -
+2026-01-18 19:35:24,723 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:35:24] "GET /js/app.a2e2be83.js HTTP/1.1" 200 -
+2026-01-18 19:35:24,727 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:35:24] "GET /js/chunk-vendors.6798b6f4.js HTTP/1.1" 200 -
+2026-01-18 19:35:25,023 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:35:25] "GET /css/app.f4bfeb7c.css HTTP/1.1" 200 -
+2026-01-18 19:35:25,025 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:35:25] "GET /css/chunk-vendors.10dd4e95.css HTTP/1.1" 200 -
+2026-01-18 19:35:25,446 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:35:25] "GET /api/api/files HTTP/1.1" 200 -
+2026-01-18 19:35:25,447 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:35:25] "GET /fonts/element-icons.ff18efd1.woff HTTP/1.1" 200 -
+2026-01-18 19:35:25,506 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:35:25] "GET /api/api/interfaces HTTP/1.1" 200 -
+2026-01-18 19:35:25,728 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:35:25] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-18 19:57:48,903 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 19:57:48,906 - __main__ - INFO - simple_app.py:251 - 初始化数据库...
+2026-01-18 19:57:48,907 - __main__ - INFO - simple_app.py:254 - 数据库初始化成功
+2026-01-18 19:57:48,923 - __main__ - INFO - simple_app.py:897 - 应用即将启动，访问地址: http://0.0.0.0:8005
+2026-01-18 19:57:48,960 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8005
+ * Running on http://10.203.224.140:8005
+2026-01-18 19:57:48,961 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 19:58:05,843 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:58:05] "GET /api/files HTTP/1.1" 200 -
+2026-01-18 19:59:03,710 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:03] "GET / HTTP/1.1" 200 -
+2026-01-18 19:59:03,820 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:03] "GET /js/chunk-vendors.6798b6f4.js HTTP/1.1" 200 -
+2026-01-18 19:59:03,843 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:03] "GET /js/app.a2e2be83.js HTTP/1.1" 200 -
+2026-01-18 19:59:04,146 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:04] "GET /css/app.f4bfeb7c.css HTTP/1.1" 200 -
+2026-01-18 19:59:04,149 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:04] "GET /css/chunk-vendors.10dd4e95.css HTTP/1.1" 200 -
+2026-01-18 19:59:04,568 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:04] "GET /fonts/element-icons.ff18efd1.woff HTTP/1.1" 200 -
+2026-01-18 19:59:04,574 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:04] "GET /api/api/files HTTP/1.1" 200 -
+2026-01-18 19:59:04,643 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:04] "GET /api/api/interfaces HTTP/1.1" 200 -
+2026-01-18 19:59:04,823 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:04] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-18 19:59:16,782 - __main__ - INFO - simple_app.py:284 - 收到文件上传请求
+2026-01-18 19:59:16,784 - __main__ - INFO - simple_app.py:296 - 开始上传文件: position-planning-api.md
+2026-01-18 19:59:16,787 - __main__ - INFO - simple_app.py:305 - 文件保存成功: E:\traeAiProject\GenerateInterTool\backend\dist\uploads\96739f4d-16e4-4f7b-bc13-7c039f3ac2b4_position-planning-api.md
+2026-01-18 19:59:16,913 - __main__ - INFO - simple_app.py:328 - 文件记录已添加到数据库，文件ID: 2
+2026-01-18 19:59:16,914 - __main__ - INFO - simple_app.py:332 - 已提交文件解析任务，文件ID: 2
+2026-01-18 19:59:16,914 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:16] "POST /api/files/upload HTTP/1.1" 200 -
+2026-01-18 19:59:17,045 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [18/Jan/2026 19:59:17] "[36mGET /api/api/files HTTP/1.1[0m" 304 -
+2026-01-18 20:59:16,985 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-18 20:59:16,987 - __main__ - INFO - simple_app.py:251 - 初始化数据库...
+2026-01-18 20:59:16,989 - __main__ - INFO - simple_app.py:254 - 数据库初始化成功
+2026-01-18 20:59:16,999 - __main__ - INFO - simple_app.py:897 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-18 20:59:17,023 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-18 20:59:17,023 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-18 20:59:20,241 - __main__ - INFO - simple_app.py:881 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-19 18:08:42,966 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-19 18:08:42,968 - __main__ - INFO - simple_app.py:251 - 初始化数据库...
+2026-01-19 18:08:43,025 - __main__ - INFO - simple_app.py:254 - 数据库初始化成功
+2026-01-19 18:08:43,040 - __main__ - INFO - simple_app.py:897 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-19 18:08:43,108 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-19 18:08:43,108 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-19 18:08:46,308 - __main__ - INFO - simple_app.py:881 - 已自动打开浏览器，访问地址: http://localhost:8000

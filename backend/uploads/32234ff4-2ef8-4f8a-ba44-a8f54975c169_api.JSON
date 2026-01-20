@@ -1,0 +1,191 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "查询交易对手列表API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/cash/outer/rivalInfo/query": {
+            "get": {
+                "summary": "查询交易对手列表",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "string",
+                        "required": true,
+                        "description": "页码"
+                    },
+                    {
+                        "name": "rows",
+                        "in": "query",
+                        "type": "string",
+                        "required": true,
+                        "description": "行数"
+                    },
+                    {
+                        "name": "beginDateStart",
+                        "in": "query",
+                        "type": "string",
+                        "required": true,
+                        "description": "开始日期起始"
+                    },
+                    {
+                        "name": "beginDateEnd",
+                        "in": "query",
+                        "type": "string",
+                        "required": true,
+                        "description": "开始日期结束"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功响应",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "string",
+                                    "description": "响应码(0成功/-1失败)"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "description": "响应消息"
+                                },
+                                "body": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total": {
+                                            "type": "object",
+                                            "description": "总行数"
+                                        },
+                                        "page": {
+                                            "type": "object",
+                                            "description": "页码"
+                                        },
+                                        "size": {
+                                            "type": "object",
+                                            "description": "每页行数"
+                                        },
+                                        "rows": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "rivalId": {
+                                                        "type": "string",
+                                                        "description": "交易对手id"
+                                                    },
+                                                    "rivalName": {
+                                                        "type": "string",
+                                                        "description": "交易对手名称"
+                                                    },
+                                                    "rivalFullname": {
+                                                        "type": "string",
+                                                        "description": "交易对手全称"
+                                                    },
+                                                    "rivalCode": {
+                                                        "type": "string",
+                                                        "description": "交易对手code"
+                                                    },
+                                                    "rivalStatus": {
+                                                        "type": "string",
+                                                        "description": "交易对手状态(1: 正常, 3: 冻结, 4: 注销)"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/cash/outer/rivalInfo/query666": {
+            "post": {
+                "summary": "初始化产品列表",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "type": "string",
+                        "required": true,
+                        "description": "页码"
+                    },
+                    {
+                        "name": "rows",
+                        "in": "query",
+                        "type": "string",
+                        "required": true,
+                        "description": "行数"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功响应",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "code": {
+                                    "type": "string",
+                                    "description": "响应码(0成功/-1失败)"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "description": "响应消息"
+                                },
+                                "body": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total": {
+                                            "type": "object",
+                                            "description": "总行数"
+                                        },
+                                        "page": {
+                                            "type": "object",
+                                            "description": "页码"
+                                        },
+                                        "size": {
+                                            "type": "object",
+                                            "description": "每页行数"
+                                        },
+                                        "rows": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "rivalId": {
+                                                        "type": "string",
+                                                        "description": "交易对手id"
+                                                    },
+                                                    "rivalName": {
+                                                        "type": "string",
+                                                        "description": "交易对手名称"
+                                                    },
+                                                    "rivalFullname": {
+                                                        "type": "string",
+                                                        "description": "交易对手全称"
+                                                    },
+                                                    "rivalCode": {
+                                                        "type": "string",
+                                                        "description": "交易对手code"
+                                                    },
+                                                    "rivalStatus": {
+                                                        "type": "string",
+                                                        "description": "交易对手状态(1: 正常, 3: 冻结, 4: 注销)"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

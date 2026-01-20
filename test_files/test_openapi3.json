@@ -1,0 +1,131 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "\u6d4b\u8bd5API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/products/{id}": {
+      "get": {
+        "summary": "\u83b7\u53d6\u4ea7\u54c1\u8be6\u60c5",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "\u4ea7\u54c1ID",
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "\u6210\u529f\u54cd\u5e94",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "\u54cd\u5e94\u7801",
+                      "example": 0
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "\u54cd\u5e94\u6d88\u606f",
+                      "example": "success"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer",
+                          "description": "\u4ea7\u54c1ID",
+                          "example": 1
+                        },
+                        "name": {
+                          "type": "string",
+                          "description": "\u4ea7\u54c1\u540d\u79f0",
+                          "example": "\u6d4b\u8bd5\u4ea7\u54c1"
+                        },
+                        "price": {
+                          "type": "number",
+                          "description": "\u4ea7\u54c1\u4ef7\u683c",
+                          "example": 99.99
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "\u66f4\u65b0\u4ea7\u54c1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "\u4ea7\u54c1ID"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "\u4ea7\u54c1\u540d\u79f0"
+                  },
+                  "price": {
+                    "type": "number",
+                    "description": "\u4ea7\u54c1\u4ef7\u683c"
+                  }
+                },
+                "required": [
+                  "name"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "\u6210\u529f\u54cd\u5e94",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "description": "\u54cd\u5e94\u7801",
+                      "example": 0
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "\u54cd\u5e94\u6d88\u606f",
+                      "example": "success"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
