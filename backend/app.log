@@ -2651,3 +2651,5 @@
 2026-01-20 15:35:20,855 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:35:20] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
 2026-01-20 15:35:20,867 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:35:20] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
 2026-01-20 15:35:23,608 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:35:23] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-20 15:38:07,060 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:38:07] "GET / HTTP/1.1" 200 -
+2026-01-20 15:38:59,435 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:38:59] "GET / HTTP/1.1" 200 -

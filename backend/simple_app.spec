@@ -10,7 +10,7 @@ version = "1.0.0"
 # 定义资源文件
 added_files = [
     ('uploads', 'uploads'),
-    ('../frontend/dist', 'frontend'),
+    ('frontend', 'frontend'),
     # 添加空目录，确保应用运行时能正常创建
     ('backups', 'backups'),
     ('templates', 'templates'),
