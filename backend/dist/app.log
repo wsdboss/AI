@@ -193,3 +193,150 @@
  * Running on http://10.203.224.140:8000
 2026-01-19 18:08:43,108 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
 2026-01-19 18:08:46,308 - __main__ - INFO - simple_app.py:881 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-20 15:14:29,042 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-20 15:14:29,063 - __main__ - INFO - simple_app.py:251 - 初始化数据库...
+2026-01-20 15:14:29,085 - __main__ - INFO - simple_app.py:254 - 数据库初始化成功
+2026-01-20 15:14:29,097 - __main__ - INFO - simple_app.py:897 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-20 15:14:29,129 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-20 15:14:29,130 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-20 15:14:32,530 - __main__ - INFO - simple_app.py:881 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-20 15:38:03,301 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-20 15:38:03,304 - __main__ - INFO - simple_app.py:251 - 初始化数据库...
+2026-01-20 15:38:03,308 - __main__ - INFO - simple_app.py:254 - 数据库初始化成功
+2026-01-20 15:38:03,318 - __main__ - INFO - simple_app.py:897 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-20 15:38:03,348 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-20 15:38:03,348 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-20 15:38:06,651 - __main__ - INFO - simple_app.py:881 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-20 15:38:55,439 - __main__ - INFO - simple_app.py:55 - 日志系统初始化完成
+2026-01-20 15:38:55,458 - __main__ - INFO - simple_app.py:251 - 初始化数据库...
+2026-01-20 15:38:55,460 - __main__ - INFO - simple_app.py:254 - 数据库初始化成功
+2026-01-20 15:38:55,475 - __main__ - INFO - simple_app.py:897 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-20 15:38:55,508 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-20 15:38:55,508 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-20 15:38:58,806 - __main__ - INFO - simple_app.py:881 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-20 15:53:27,453 - __main__ - INFO - simple_app.py:56 - 日志系统初始化完成
+2026-01-20 15:53:27,468 - __main__ - INFO - simple_app.py:112 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI424962\frontend
+2026-01-20 15:53:27,469 - __main__ - INFO - simple_app.py:113 - 前端目录是否存在: True
+2026-01-20 15:53:27,469 - __main__ - INFO - simple_app.py:114 - index.html是否存在: True
+2026-01-20 15:53:27,469 - __main__ - INFO - simple_app.py:234 - 初始化数据库...
+2026-01-20 15:53:27,472 - __main__ - INFO - simple_app.py:237 - 数据库初始化成功
+2026-01-20 15:53:27,482 - __main__ - INFO - simple_app.py:899 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-20 15:53:27,511 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-20 15:53:27,511 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-20 15:53:30,798 - __main__ - INFO - simple_app.py:883 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-20 15:53:33,589 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:33] "GET / HTTP/1.1" 200 -
+2026-01-20 15:53:33,599 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:33] "GET /assets/index-e5ed8a0f.js HTTP/1.1" 200 -
+2026-01-20 15:53:33,696 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:33] "GET /assets/index-eb385d45.css HTTP/1.1" 200 -
+2026-01-20 15:53:34,061 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:34] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 15:53:34,122 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:34] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 15:53:34,319 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:34] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-20 15:53:43,390 - __main__ - INFO - simple_app.py:267 - 收到文件上传请求
+2026-01-20 15:53:43,391 - __main__ - INFO - simple_app.py:279 - 开始上传文件: api.JSON
+2026-01-20 15:53:43,396 - __main__ - INFO - simple_app.py:288 - 文件保存成功: E:\traeAiProject\GenerateInterTool\backend\dist\uploads\51c65a73-84e9-4a15-ab8d-fe37ad9b9ee6_api.JSON
+2026-01-20 15:53:43,468 - __main__ - INFO - simple_app.py:311 - 文件记录已添加到数据库，文件ID: 3
+2026-01-20 15:53:43,556 - __main__ - INFO - simple_app.py:315 - 文件解析任务已执行，文件ID: 3
+2026-01-20 15:53:43,557 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:43] "POST /api/files/upload HTTP/1.1" 200 -
+2026-01-20 15:53:43,871 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:43] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 15:53:45,636 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:45] "GET /api/interfaces?file_id=3 HTTP/1.1" 200 -
+2026-01-20 15:53:45,949 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:45] "GET /api/interfaces?file_id=3 HTTP/1.1" 200 -
+2026-01-20 15:53:46,291 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:46] "GET /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 15:53:46,610 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:46] "GET /api/interfaces/16/params HTTP/1.1" 200 -
+2026-01-20 15:53:46,648 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:46] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-20 15:53:46,917 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:46] "GET /api/interfaces/16/responses HTTP/1.1" 200 -
+2026-01-20 15:53:47,240 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:47] "GET /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 15:53:52,439 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:52] "PUT /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 15:53:55,349 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:53:55] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-20 15:58:28,826 - __main__ - INFO - simple_app.py:56 - 日志系统初始化完成
+2026-01-20 15:58:28,828 - __main__ - INFO - simple_app.py:112 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI482642\frontend
+2026-01-20 15:58:28,828 - __main__ - INFO - simple_app.py:113 - 前端目录是否存在: True
+2026-01-20 15:58:28,828 - __main__ - INFO - simple_app.py:114 - index.html是否存在: True
+2026-01-20 15:58:28,829 - __main__ - INFO - simple_app.py:234 - 初始化数据库...
+2026-01-20 15:58:28,831 - __main__ - INFO - simple_app.py:237 - 数据库初始化成功
+2026-01-20 15:58:28,849 - __main__ - INFO - simple_app.py:943 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-20 15:58:28,870 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-20 15:58:28,870 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-20 15:58:32,162 - __main__ - INFO - simple_app.py:883 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-20 15:58:34,923 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:34] "GET / HTTP/1.1" 200 -
+2026-01-20 15:58:34,931 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:34] "GET /assets/index-e5ed8a0f.js HTTP/1.1" 200 -
+2026-01-20 15:58:35,025 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:35] "GET /assets/index-eb385d45.css HTTP/1.1" 200 -
+2026-01-20 15:58:35,394 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:35] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 15:58:35,441 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:35] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 15:58:35,656 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:35] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-20 15:58:40,115 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:40] "GET /api/interfaces?file_id=3 HTTP/1.1" 200 -
+2026-01-20 15:58:40,433 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:40] "GET /api/interfaces?file_id=3 HTTP/1.1" 200 -
+2026-01-20 15:58:40,842 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:40] "GET /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 15:58:41,158 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:41] "GET /api/interfaces/16/params HTTP/1.1" 200 -
+2026-01-20 15:58:41,189 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:41] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-20 15:58:41,481 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:41] "GET /api/interfaces/16/responses HTTP/1.1" 200 -
+2026-01-20 15:58:41,788 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:41] "GET /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 15:58:43,610 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:58:43] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-20 16:03:32,831 - __main__ - INFO - simple_app.py:56 - 日志系统初始化完成
+2026-01-20 16:03:32,849 - __main__ - INFO - simple_app.py:112 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI531242\frontend
+2026-01-20 16:03:32,850 - __main__ - INFO - simple_app.py:113 - 前端目录是否存在: True
+2026-01-20 16:03:32,850 - __main__ - INFO - simple_app.py:114 - index.html是否存在: True
+2026-01-20 16:03:32,851 - __main__ - INFO - simple_app.py:234 - 初始化数据库...
+2026-01-20 16:03:32,854 - __main__ - INFO - simple_app.py:237 - 数据库初始化成功
+2026-01-20 16:03:32,879 - __main__ - INFO - simple_app.py:943 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-20 16:03:32,906 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-20 16:03:32,906 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-20 16:03:36,185 - __main__ - INFO - simple_app.py:883 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-20 16:03:39,032 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:39] "GET / HTTP/1.1" 200 -
+2026-01-20 16:03:39,041 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:39] "GET /assets/index-821d7373.js HTTP/1.1" 200 -
+2026-01-20 16:03:39,129 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:39] "GET /assets/index-5548f35e.css HTTP/1.1" 200 -
+2026-01-20 16:03:39,499 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:39] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 16:03:39,545 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:39] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 16:03:39,759 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:39] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-20 16:03:53,540 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:53] "GET /interface/397 HTTP/1.1" 200 -
+2026-01-20 16:03:53,554 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:53] "GET /assets/index-5548f35e.css HTTP/1.1" 200 -
+2026-01-20 16:03:53,554 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:53] "GET /assets/index-821d7373.js HTTP/1.1" 200 -
+2026-01-20 16:03:53,638 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:53] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 16:03:53,653 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:53] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 16:03:53,671 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:03:53] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-20 16:04:03,646 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:03] "GET /api/interfaces?file_id=3 HTTP/1.1" 200 -
+2026-01-20 16:04:03,954 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:03] "GET /api/interfaces?file_id=3 HTTP/1.1" 200 -
+2026-01-20 16:04:04,634 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:04] "GET /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 16:04:04,945 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:04] "GET /api/interfaces/16/params HTTP/1.1" 200 -
+2026-01-20 16:04:04,974 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:04] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-20 16:04:05,253 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:05] "GET /api/interfaces/16/responses HTTP/1.1" 200 -
+2026-01-20 16:04:05,562 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:05] "GET /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 16:04:10,258 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:10] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-20 16:04:18,729 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:18] "PUT /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 16:04:23,595 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:23] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-20 16:04:34,278 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:34] "GET /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 16:04:34,354 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:34] "PUT /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 16:04:34,922 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:34] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-20 16:04:37,653 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:37] "PUT /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 16:04:37,838 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:37] "GET /api/interfaces/16/mock-config HTTP/1.1" 200 -
+2026-01-20 16:04:38,282 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:38] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-20 16:04:43,267 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:43] "DELETE /api/files/3 HTTP/1.1" 200 -
+2026-01-20 16:04:43,274 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:43] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 16:04:47,019 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:47] "GET /interface/16 HTTP/1.1" 200 -
+2026-01-20 16:04:47,027 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:47] "[36mGET /assets/index-821d7373.js HTTP/1.1[0m" 304 -
+2026-01-20 16:04:47,262 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:47] "[36mGET /assets/index-5548f35e.css HTTP/1.1[0m" 304 -
+2026-01-20 16:04:47,603 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:47] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-20 16:04:47,605 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:47] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 16:04:47,848 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-20 16:04:55,629 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:55] "GET /interface/384 HTTP/1.1" 200 -
+2026-01-20 16:04:55,875 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:55] "GET /assets/index-5548f35e.css HTTP/1.1" 200 -
+2026-01-20 16:04:55,951 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:55] "GET /assets/index-821d7373.js HTTP/1.1" 200 -
+2026-01-20 16:04:56,116 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:56] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 16:04:56,474 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:56] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 16:04:56,736 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:04:56] "GET /@vite/client HTTP/1.1" 200 -

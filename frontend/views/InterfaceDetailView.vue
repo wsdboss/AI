@@ -459,7 +459,7 @@ export default {
 
 .detail-content {
   flex: 1;
-  overflow: hidden;
+  overflow-y: auto;
   padding: 16px 0;
 }
 
@@ -467,7 +467,7 @@ export default {
 
 /* 章节样式 */
 .detail-section {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding: 16px;
   background-color: white;
   border-radius: 8px;
@@ -489,10 +489,12 @@ export default {
 }
 
 .response-result {
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 10px;
   background-color: #f5f7fa;
   border-radius: 4px;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .log-list {

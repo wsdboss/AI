@@ -887,12 +887,56 @@ def open_browser(host, port):
         browser_host = host if host != '0.0.0.0' else 'localhost'
         print(f"自动打开浏览器失败，请手动访问 http://{browser_host}:{port}")
 
+# 端口可用性检测函数
+def is_port_available(port, host='0.0.0.0'):
+    """
+    检测指定端口是否可用
+    :param port: 要检测的端口
+    :param host: 要检测的主机，默认0.0.0.0
+    :return: 端口是否可用，可用返回True，否则返回False
+    """
+    import socket
+    try:
+        # 创建socket对象
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            # 设置超时时间为1秒
+            s.settimeout(1)
+            # 尝试绑定端口
+            s.bind((host, port))
+            return True
+    except (socket.error, OSError):
+        return False
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='动态接口生成工具')
     parser.add_argument('--port', type=int, default=config.MOCK_SERVER_PORT, help='服务器端口，默认8000')
     parser.add_argument('--host', type=str, default=config.MOCK_SERVER_HOST, help='服务器主机，默认0.0.0.0')
     parser.add_argument('--no-browser', action='store_true', help='不自动打开浏览器')
     args = parser.parse_args()
+    
+    # 检测指定端口是否可用，如果不可用，自动寻找下一个可用端口
+    original_port = args.port
+    max_attempts = 100  # 最多尝试100个端口
+    for attempt in range(max_attempts):
+        if is_port_available(args.port, args.host):
+            # 端口可用，使用该端口
+            break
+        else:
+            # 端口不可用，尝试下一个端口
+            logger.warning(f"端口 {args.port} 已被占用，尝试下一个可用端口")
+            print(f"端口 {args.port} 已被占用，尝试下一个可用端口...")
+            args.port += 1
+    
+    # 如果尝试了max_attempts个端口都不可用，退出应用
+    if attempt >= max_attempts - 1 and not is_port_available(args.port, args.host):
+        logger.error(f"无法找到可用端口，已尝试从 {original_port} 到 {args.port} 共 {max_attempts} 个端口")
+        print(f"无法找到可用端口，已尝试从 {original_port} 到 {args.port} 共 {max_attempts} 个端口")
+        sys.exit(1)
+    
+    # 如果使用了不同的端口，打印提示信息
+    if args.port != original_port:
+        logger.info(f"已切换到可用端口 {args.port}")
+        print(f"已切换到可用端口 {args.port}\n")
     
     # 启动应用前先打印访问地址
     access_url = f'http://{args.host}:{args.port}'

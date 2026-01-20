@@ -2653,3 +2653,30 @@
 2026-01-20 15:35:23,608 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:35:23] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
 2026-01-20 15:38:07,060 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:38:07] "GET / HTTP/1.1" 200 -
 2026-01-20 15:38:59,435 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:38:59] "GET / HTTP/1.1" 200 -
+2026-01-20 15:45:22,666 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 15:45:22] "GET / HTTP/1.1" 200 -
+2026-01-20 16:01:03,253 - __main__ - INFO - simple_app.py:56 - 日志系统初始化完成
+2026-01-20 16:01:03,257 - __main__ - INFO - simple_app.py:112 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-20 16:01:03,257 - __main__ - INFO - simple_app.py:113 - 前端目录是否存在: True
+2026-01-20 16:01:03,257 - __main__ - INFO - simple_app.py:114 - index.html是否存在: True
+2026-01-20 16:01:03,258 - __main__ - INFO - simple_app.py:234 - 初始化数据库...
+2026-01-20 16:01:03,261 - __main__ - INFO - simple_app.py:237 - 数据库初始化成功
+2026-01-20 16:01:03,281 - __main__ - INFO - simple_app.py:943 - 应用即将启动，访问地址: http://127.0.0.1:8000
+2026-01-20 16:01:03,313 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2026-01-20 16:01:03,313 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-20 16:01:19,929 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:19] "GET /?ide_webview_request_time=1768896079726 HTTP/1.1" 200 -
+2026-01-20 16:01:19,944 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:19] "GET /assets/index-5548f35e.css HTTP/1.1" 200 -
+2026-01-20 16:01:19,945 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:19] "GET /assets/index-821d7373.js HTTP/1.1" 200 -
+2026-01-20 16:01:20,136 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:20] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 16:01:20,193 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:20] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 16:01:20,239 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:20] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-20 16:01:21,652 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:21] "GET /api/interfaces?file_id=69 HTTP/1.1" 200 -
+2026-01-20 16:01:21,658 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:21] "GET /api/interfaces?file_id=69 HTTP/1.1" 200 -
+2026-01-20 16:01:22,658 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:22] "GET /api/interfaces?file_id=70 HTTP/1.1" 200 -
+2026-01-20 16:01:22,664 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:22] "GET /api/interfaces?file_id=70 HTTP/1.1" 200 -
+2026-01-20 16:01:23,706 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:23] "GET /api/interfaces/397/mock-config HTTP/1.1" 200 -
+2026-01-20 16:01:23,708 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:23] "GET /api/interfaces/397/params HTTP/1.1" 200 -
+2026-01-20 16:01:23,736 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:23] "GET /api/interfaces/397/responses HTTP/1.1" 200 -
+2026-01-20 16:01:23,754 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:23] "GET /api/interfaces/397/mock-config HTTP/1.1" 200 -
+2026-01-20 16:01:28,975 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:28] "PUT /api/interfaces/397/mock-config HTTP/1.1" 200 -
+2026-01-20 16:01:31,019 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 16:01:31] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
