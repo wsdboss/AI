@@ -766,13 +766,6 @@ def dynamic_interface(path):
         # 处理GET请求参数
         get_params = request.args.to_dict()
         
-        # 提取mock_count
-        if 'mock_count' in get_params:
-            try:
-                mock_count = int(get_params['mock_count'])
-            except ValueError:
-                pass
-        
         # 提取并解析params
         if 'params' in get_params:
             try:
@@ -784,13 +777,6 @@ def dynamic_interface(path):
         try:
             request_data = request.get_json() or {}
             params = request_data.get('params', {})
-            
-            # 提取mock_count
-            if 'mock_count' in request_data:
-                try:
-                    mock_count = int(request_data['mock_count'])
-                except ValueError:
-                    pass
         except:
             params = {}
     

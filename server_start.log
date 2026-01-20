@@ -9,3 +9,87 @@
 2026-01-19 15:25:28,943 - INFO - 
 2026-01-19 15:25:28,943 - INFO - * Serving Flask app 'simple_app'
 2026-01-19 15:25:28,944 - INFO - * Debug mode: off
+2026-01-20 15:11:39,285 - INFO - 准备启动后端服务...
+2026-01-20 15:11:39,286 - INFO - 执行命令: E:\traeAiProject\新建文件夹\AI\.venv\Scripts\python.exe E:\traeAiProject\新建文件夹\AI\backend\simple_app.py --port 8000 --host 127.0.0.1 --no-browser
+2026-01-20 15:11:39,548 - INFO - 服务已启动，PID: 44712
+2026-01-20 15:11:40,516 - INFO - 自定义配置加载成功: E:\traeAiProject\新建文件夹\AI\backend\config_custom.py
+2026-01-20 15:11:40,516 - INFO - 
+2026-01-20 15:11:40,516 - INFO - 应用即将启动...
+2026-01-20 15:11:40,516 - INFO - 访问地址: http://127.0.0.1:8000
+2026-01-20 15:11:40,516 - INFO - 按 Ctrl+C 停止应用
+2026-01-20 15:11:40,516 - INFO - 
+2026-01-20 15:11:40,516 - INFO - 启动应用，监听 127.0.0.1:8000
+2026-01-20 15:11:40,516 - INFO - * Serving Flask app 'simple_app'
+2026-01-20 15:11:40,517 - INFO - * Debug mode: off
+2026-01-20 15:15:31,162 - INFO - 准备启动后端服务...
+2026-01-20 15:15:31,163 - INFO - 执行命令: E:\traeAiProject\新建文件夹\AI\.venv\Scripts\python.exe E:\traeAiProject\新建文件夹\AI\backend\simple_app.py --port 8000 --host 127.0.0.1 --no-browser
+2026-01-20 15:15:31,378 - INFO - 服务已启动，PID: 40024
+2026-01-20 15:15:31,913 - INFO - 自定义配置加载成功: E:\traeAiProject\新建文件夹\AI\backend\config_custom.py
+2026-01-20 15:15:31,913 - INFO - 
+2026-01-20 15:15:31,913 - INFO - 应用即将启动...
+2026-01-20 15:15:31,913 - INFO - 访问地址: http://127.0.0.1:8000
+2026-01-20 15:15:31,913 - INFO - 按 Ctrl+C 停止应用
+2026-01-20 15:15:31,914 - INFO - 
+2026-01-20 15:15:31,914 - INFO - 启动应用，监听 127.0.0.1:8000
+2026-01-20 15:15:31,914 - INFO - * Serving Flask app 'simple_app'
+2026-01-20 15:15:31,914 - INFO - * Debug mode: off
+2026-01-20 15:21:42,394 - INFO - 准备启动后端服务...
+2026-01-20 15:21:42,395 - INFO - 执行命令: E:\traeAiProject\新建文件夹\AI\.venv\Scripts\python.exe E:\traeAiProject\新建文件夹\AI\backend\simple_app.py --port 8000 --host 127.0.0.1 --no-browser
+2026-01-20 15:21:42,424 - INFO - 服务已启动，PID: 23888
+2026-01-20 15:21:42,945 - INFO - 自定义配置加载成功: E:\traeAiProject\新建文件夹\AI\backend\config_custom.py
+2026-01-20 15:21:42,945 - INFO - 
+2026-01-20 15:21:42,945 - INFO - 应用即将启动...
+2026-01-20 15:21:42,945 - INFO - 访问地址: http://127.0.0.1:8000
+2026-01-20 15:21:42,945 - INFO - 按 Ctrl+C 停止应用
+2026-01-20 15:21:42,946 - INFO - 
+2026-01-20 15:21:42,946 - INFO - 启动应用，监听 127.0.0.1:8000
+2026-01-20 15:21:42,946 - INFO - * Serving Flask app 'simple_app'
+2026-01-20 15:21:42,946 - INFO - * Debug mode: off
+2026-01-20 15:23:48,156 - INFO - 准备启动后端服务...
+2026-01-20 15:23:48,156 - INFO - 执行命令: E:\traeAiProject\新建文件夹\AI\.venv\Scripts\python.exe E:\traeAiProject\新建文件夹\AI\backend\simple_app.py --port 8000 --host 127.0.0.1 --no-browser
+2026-01-20 15:23:48,182 - INFO - 服务已启动，PID: 47984
+2026-01-20 15:23:48,561 - INFO - 自定义配置加载成功: E:\traeAiProject\新建文件夹\AI\backend\config_custom.py
+2026-01-20 15:23:48,562 - INFO - 
+2026-01-20 15:23:48,562 - INFO - 应用即将启动...
+2026-01-20 15:23:48,562 - INFO - 访问地址: http://127.0.0.1:8000
+2026-01-20 15:23:48,562 - INFO - 按 Ctrl+C 停止应用
+2026-01-20 15:23:48,562 - INFO - 
+2026-01-20 15:23:48,562 - INFO - 启动应用，监听 127.0.0.1:8000
+2026-01-20 15:23:48,563 - INFO - * Serving Flask app 'simple_app'
+2026-01-20 15:23:48,563 - INFO - * Debug mode: off
+2026-01-20 15:26:56,746 - INFO - 准备启动后端服务...
+2026-01-20 15:26:56,746 - INFO - 执行命令: E:\traeAiProject\新建文件夹\AI\.venv\Scripts\python.exe E:\traeAiProject\新建文件夹\AI\backend\simple_app.py --port 8000 --host 127.0.0.1 --no-browser
+2026-01-20 15:26:56,772 - INFO - 服务已启动，PID: 31648
+2026-01-20 15:26:57,104 - INFO - 自定义配置加载成功: E:\traeAiProject\新建文件夹\AI\backend\config_custom.py
+2026-01-20 15:26:57,105 - INFO - 
+2026-01-20 15:26:57,105 - INFO - 应用即将启动...
+2026-01-20 15:26:57,105 - INFO - 访问地址: http://127.0.0.1:8000
+2026-01-20 15:26:57,105 - INFO - 按 Ctrl+C 停止应用
+2026-01-20 15:26:57,106 - INFO - 
+2026-01-20 15:26:57,106 - INFO - 启动应用，监听 127.0.0.1:8000
+2026-01-20 15:26:57,106 - INFO - * Serving Flask app 'simple_app'
+2026-01-20 15:26:57,106 - INFO - * Debug mode: off
+2026-01-20 15:29:39,665 - INFO - 准备启动后端服务...
+2026-01-20 15:29:39,665 - INFO - 执行命令: E:\traeAiProject\新建文件夹\AI\.venv\Scripts\python.exe E:\traeAiProject\新建文件夹\AI\backend\simple_app.py --port 8000 --host 127.0.0.1 --no-browser
+2026-01-20 15:29:39,689 - INFO - 服务已启动，PID: 46016
+2026-01-20 15:29:40,192 - INFO - 自定义配置加载成功: E:\traeAiProject\新建文件夹\AI\backend\config_custom.py
+2026-01-20 15:29:40,192 - INFO - 
+2026-01-20 15:29:40,192 - INFO - 应用即将启动...
+2026-01-20 15:29:40,193 - INFO - 访问地址: http://127.0.0.1:8000
+2026-01-20 15:29:40,193 - INFO - 按 Ctrl+C 停止应用
+2026-01-20 15:29:40,193 - INFO - 
+2026-01-20 15:29:40,193 - INFO - 启动应用，监听 127.0.0.1:8000
+2026-01-20 15:29:40,193 - INFO - * Serving Flask app 'simple_app'
+2026-01-20 15:29:40,193 - INFO - * Debug mode: off
+2026-01-20 15:34:28,187 - INFO - 准备启动后端服务...
+2026-01-20 15:34:28,187 - INFO - 执行命令: E:\traeAiProject\新建文件夹\AI\.venv\Scripts\python.exe E:\traeAiProject\新建文件夹\AI\backend\simple_app.py --port 8000 --host 127.0.0.1 --no-browser
+2026-01-20 15:34:28,209 - INFO - 服务已启动，PID: 50160
+2026-01-20 15:34:28,496 - INFO - 自定义配置加载成功: E:\traeAiProject\新建文件夹\AI\backend\config_custom.py
+2026-01-20 15:34:28,496 - INFO - 
+2026-01-20 15:34:28,496 - INFO - 应用即将启动...
+2026-01-20 15:34:28,496 - INFO - 访问地址: http://127.0.0.1:8000
+2026-01-20 15:34:28,497 - INFO - 按 Ctrl+C 停止应用
+2026-01-20 15:34:28,497 - INFO - 
+2026-01-20 15:34:28,497 - INFO - 启动应用，监听 127.0.0.1:8000
+2026-01-20 15:34:28,497 - INFO - * Serving Flask app 'simple_app'
+2026-01-20 15:34:28,497 - INFO - * Debug mode: off

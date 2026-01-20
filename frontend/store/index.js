@@ -131,10 +131,9 @@ export default new Vuex.Store({
     // 加载Mock配置
     async loadMockConfig({ commit }, interfaceId) {
       try {
-        // Mock配置功能使用已有接口数据，不需要单独请求
-        commit('SET_MOCK_CONFIG', null)
-        // const response = await this._vm.$axios.get(`/api/interfaces/${interfaceId}/mock-config`)
-        // commit('SET_MOCK_CONFIG', response.data)
+        // 从后端获取Mock配置
+        const response = await this._vm.$axios.get(`/interfaces/${interfaceId}/mock-config`)
+        commit('SET_MOCK_CONFIG', response.data)
       } catch (error) {
         console.error('加载Mock配置失败:', error)
       }

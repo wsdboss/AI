@@ -66,6 +66,22 @@
           </div>
         </el-tab-pane>
         
+        <!-- Mock配置 -->
+        <el-tab-pane label="Mock配置" name="mock-config">
+          <div class="detail-section">
+            <el-form :model="mockConfigForm" label-width="120px">
+              <el-form-item label="Mock服务开关">
+                <el-switch v-model="mockConfigForm.enabled"></el-switch>
+              </el-form-item>
+              <el-form-item label="默认Mock条数">
+                <el-input-number v-model="mockConfigForm.default_count" :min="1" :max="1000" :step="1"></el-input-number>
+              </el-form-item>
+              <el-form-item>
+                <el-button type="primary" @click="saveMockConfig">保存配置</el-button>
+              </el-form-item>
+            </el-form>
+          </div>
+        </el-tab-pane>
 
         
         <!-- 发送请求 -->
@@ -106,7 +122,7 @@
                 ></el-input>
               </el-form-item>
               <el-form-item label="Mock条数">
-                <el-input-number v-model="requestForm.mock_count" :min="1" :max="1000" :step="1"></el-input-number>
+                <div class="mock-count-display">{{ requestForm.mock_count }}</div>
               </el-form-item>
               <el-form-item>
                 <el-button type="primary" @click="sendRequest" :loading="sending">发送请求</el-button>
@@ -155,6 +171,10 @@ export default {
       interfaceParams: [],
       interfaceResponses: [],
       mockConfig: null,
+      mockConfigForm: {
+        enabled: true,
+        default_count: 10
+      },
       requestUrl: '',
       isBrowserSupported: true,
 
@@ -220,11 +240,39 @@ export default {
         const mockResponse = await this.$axios.get(`/interfaces/${interfaceId}/mock-config`)
         // 保存Mock配置到组件数据中，用于发送请求时使用
         this.mockConfig = mockResponse.data
+        // 将mock配置同步到表单中
+        this.mockConfigForm = {
+          enabled: mockResponse.data.enabled,
+          default_count: mockResponse.data.default_count
+        }
+        // 将mock配置中的默认条数设置到请求表单中
+        this.requestForm.mock_count = mockResponse.data.default_count
         
         // 更新请求URL
         this.updateRequestUrl()
       } catch (error) {
         console.error('加载接口详情失败:', error)
+      }
+    },
+    
+    // 保存Mock配置
+    async saveMockConfig() {
+      try {
+        if (!this.currentInterface) return
+        
+        // 保存Mock配置到后端
+        await this.$axios.put(`/interfaces/${this.currentInterface.id}/mock-config`, this.mockConfigForm)
+        
+        // 更新本地mockConfig
+        this.mockConfig = {...this.mockConfigForm}
+        
+        // 更新请求表单中的mock_count
+        this.requestForm.mock_count = this.mockConfigForm.default_count
+        
+        this.$message.success('Mock配置保存成功')
+      } catch (error) {
+        console.error('保存Mock配置失败:', error)
+        this.$message.error('保存Mock配置失败')
       }
     },
     
@@ -504,5 +552,18 @@ export default {
   
   .browser-support-tip {
     margin-top: 10px;
+  }
+  
+  /* Mock条数展示样式 */
+  .mock-count-display {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f5f7fa;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #606266;
+    min-width: 80px;
+    text-align: center;
   }
 </style>
