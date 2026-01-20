@@ -265,24 +265,23 @@ def generate_mock_value(field_type):
 @app.route('/api/files/upload', methods=['POST'])
 def upload_file():
     logger.info("收到文件上传请求")
-    
-    # 检查请求中是否包含文件
-    if 'file' not in request.files:
-        logger.warning("文件上传请求中没有文件部分")
-        return jsonify({'error': 'No file part'}), 400
-    
-    file = request.files['file']
-    if file.filename == '':
-        logger.warning("没有选择要上传的文件")
-        return jsonify({'error': 'No selected file'}), 400
-    
-    logger.info(f"开始上传文件: {file.filename}")
-    
-    # 生成唯一文件名
-    unique_filename = f"{uuid.uuid4()}_{file.filename}"
-    file_path = os.path.join(UPLOAD_DIR, unique_filename)
-    
     try:
+        # 检查请求中是否包含文件
+        if 'file' not in request.files:
+            logger.warning("文件上传请求中没有文件部分")
+            return jsonify({'error': 'No file part'}), 400
+        
+        file = request.files['file']
+        if file.filename == '':
+            logger.warning("没有选择要上传的文件")
+            return jsonify({'error': 'No selected file'}), 400
+        
+        logger.info(f"开始上传文件: {file.filename}")
+        
+        # 生成唯一文件名
+        unique_filename = f"{uuid.uuid4()}_{file.filename}"
+        file_path = os.path.join(UPLOAD_DIR, unique_filename)
+        
         # 保存文件
         file.save(file_path)
         logger.info(f"文件保存成功: {file_path}")
@@ -299,11 +298,19 @@ def upload_file():
         supported_types = ['.json', '.md', '.txt', '.docx', '.xlsx', '.pdf', '.png', '.jpg', '.jpeg']
         parsed_status = 1 if file_ext in supported_types else 0
         
+        logger.info(f"准备插入数据库，文件信息: filename={file.filename}, file_path={file_path}, file_type={file.content_type or 'application/octet-stream'}, size={os.path.getsize(file_path)}, uploaded_at={uploaded_at}, parsed={parsed_status}")
+        
+        # 先检查表结构
+        cursor.execute("PRAGMA table_info(interface_files)")
+        table_info = cursor.fetchall()
+        logger.info(f"表结构: {table_info}")
+        
+        # 简化插入语句，只插入必要字段
         cursor.execute('''
-            INSERT INTO interface_files (filename, file_path, file_type, size, uploaded_at, parsed, parsed_interfaces, parsed_params, parsed_responses)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO interface_files (filename, file_path, file_type, size, uploaded_at, parsed)
+            VALUES (?, ?, ?, ?, ?, ?)
         ''', (file.filename, file_path, file.content_type or 'application/octet-stream', 
-              os.path.getsize(file_path), uploaded_at, parsed_status, 0, 0, 0))
+              os.path.getsize(file_path), uploaded_at, parsed_status))
         file_id = cursor.lastrowid
         
         conn.commit()
@@ -311,6 +318,8 @@ def upload_file():
         logger.info(f"文件记录已添加到数据库，文件ID: {file_id}")
         
         # 同步执行文件解析
+        logger.info(f"准备执行文件解析，文件ID: {file_id}")
+        # 执行文件解析
         parse_file_async(file_id, file_path, file.filename, file.content_type or 'application/octet-stream')
         logger.info(f"文件解析任务已执行，文件ID: {file_id}")
         
@@ -329,7 +338,10 @@ def upload_file():
             'message': f'文件上传成功，正在后台解析...'
         })
     except Exception as e:
-        logger.error(f"文件上传处理失败: {e}")
+        logger.error(f"文件上传处理失败: {str(e)}")
+        logger.error(f"错误类型: {type(e).__name__}")
+        import traceback
+        logger.error(f"错误堆栈: {traceback.format_exc()}")
         # 清理资源
         try:
             if 'conn' in locals() and conn:

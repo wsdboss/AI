@@ -70,9 +70,6 @@
         <el-tab-pane label="Mock配置" name="mock-config">
           <div class="detail-section">
             <el-form :model="mockConfigForm" label-width="120px">
-              <el-form-item label="Mock服务开关">
-                <el-switch v-model="mockConfigForm.enabled"></el-switch>
-              </el-form-item>
               <el-form-item label="默认Mock条数">
                 <el-input-number v-model="mockConfigForm.default_count" :min="1" :max="1000" :step="1"></el-input-number>
               </el-form-item>

@@ -93,3 +93,39 @@
 2026-01-20 15:34:28,497 - INFO - 启动应用，监听 127.0.0.1:8000
 2026-01-20 15:34:28,497 - INFO - * Serving Flask app 'simple_app'
 2026-01-20 15:34:28,497 - INFO - * Debug mode: off
+2026-01-20 16:11:34,934 - INFO - 准备启动后端服务...
+2026-01-20 16:11:34,935 - INFO - 执行命令: E:\traeAiProject\GenerateInterTool\.venv\Scripts\python.exe E:\traeAiProject\GenerateInterTool\backend\simple_app.py --port 8000 --host 127.0.0.1 --no-browser
+2026-01-20 16:11:35,250 - INFO - 服务已启动，PID: 50616
+2026-01-20 16:11:35,782 - INFO - 自定义配置加载成功: E:\traeAiProject\GenerateInterTool\backend\config_custom.py
+2026-01-20 16:11:35,782 - INFO - 
+2026-01-20 16:11:35,782 - INFO - 应用即将启动...
+2026-01-20 16:11:35,782 - INFO - 访问地址: http://127.0.0.1:8000
+2026-01-20 16:11:35,783 - INFO - 按 Ctrl+C 停止应用
+2026-01-20 16:11:35,783 - INFO - 
+2026-01-20 16:11:35,783 - INFO - 启动应用，监听 127.0.0.1:8000
+2026-01-20 16:11:35,783 - INFO - * Serving Flask app 'simple_app'
+2026-01-20 16:11:35,783 - INFO - * Debug mode: off
+2026-01-20 16:18:53,655 - INFO - 准备启动后端服务...
+2026-01-20 16:18:53,656 - INFO - 执行命令: E:\traeAiProject\GenerateInterTool\.venv\Scripts\python.exe E:\traeAiProject\GenerateInterTool\backend\simple_app.py --port 8000 --host 127.0.0.1 --no-browser
+2026-01-20 16:18:53,687 - INFO - 服务已启动，PID: 54708
+2026-01-20 16:18:54,060 - INFO - 自定义配置加载成功: E:\traeAiProject\GenerateInterTool\backend\config_custom.py
+2026-01-20 16:18:54,060 - INFO - 
+2026-01-20 16:18:54,060 - INFO - 应用即将启动...
+2026-01-20 16:18:54,061 - INFO - 访问地址: http://127.0.0.1:8000
+2026-01-20 16:18:54,061 - INFO - 按 Ctrl+C 停止应用
+2026-01-20 16:18:54,061 - INFO - 
+2026-01-20 16:18:54,061 - INFO - 启动应用，监听 127.0.0.1:8000
+2026-01-20 16:18:54,061 - INFO - * Serving Flask app 'simple_app'
+2026-01-20 16:18:54,061 - INFO - * Debug mode: off
+2026-01-20 16:25:11,172 - INFO - 准备启动后端服务...
+2026-01-20 16:25:11,173 - INFO - 执行命令: E:\traeAiProject\GenerateInterTool\.venv\Scripts\python.exe E:\traeAiProject\GenerateInterTool\backend\simple_app.py --port 8000 --host 127.0.0.1 --no-browser
+2026-01-20 16:25:11,204 - INFO - 服务已启动，PID: 20236
+2026-01-20 16:25:11,854 - INFO - 自定义配置加载成功: E:\traeAiProject\GenerateInterTool\backend\config_custom.py
+2026-01-20 16:25:11,854 - INFO - 
+2026-01-20 16:25:11,854 - INFO - 应用即将启动...
+2026-01-20 16:25:11,855 - INFO - 访问地址: http://127.0.0.1:8000
+2026-01-20 16:25:11,855 - INFO - 按 Ctrl+C 停止应用
+2026-01-20 16:25:11,855 - INFO - 
+2026-01-20 16:25:11,855 - INFO - 启动应用，监听 127.0.0.1:8000
+2026-01-20 16:25:11,855 - INFO - * Serving Flask app 'simple_app'
+2026-01-20 16:25:11,855 - INFO - * Debug mode: off

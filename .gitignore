@@ -1,0 +1,47 @@
+# 日志文件
+*.log
+app.log
+server_start.log
+
+# 数据库文件
+*.db
+api_generator.db
+
+# 构建产物
+backend/frontend/
+backend/dist/
+dist/
+build/
+
+# 上传文件
+uploads/
+backend/uploads/
+backend/dist/uploads/
+
+# 缓存和依赖
+node_modules/
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+
+# 环境文件
+.env
+.env.local
+.env.*.local
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE文件
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 其他
+*.tmp
+*.temp
+.cache/

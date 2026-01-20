@@ -16,8 +16,12 @@ else:
     # 开发模式运行
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# 导入配置，使用与主程序相同的数据库路径
+sys.path.insert(0, BASE_DIR)
+from config import DATABASE_PATH
+
 # 数据库配置
-DATABASE = os.path.join(BASE_DIR, 'api_generator.db')
+DATABASE = DATABASE_PATH
 
 # 异步文件解析函数
 def parse_file_async(file_id, file_path, file_name, file_content_type):

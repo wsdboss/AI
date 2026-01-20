@@ -1,73 +1,79 @@
 <template>
   <div class="file-upload-view">
-    <div class="view-header">
-      <h3>文件管理</h3>
-      <el-button type="primary" size="small" @click="showUploadDialog = true">
-        <i class="el-icon-upload"></i> 上传文件
-      </el-button>
+    <!-- 上传区 -->
+    <div class="upload-section">
+      <h3 class="section-title">上传区域</h3>
+      <div class="upload-content">
+        <el-upload
+          class="upload-demo"
+          drag
+          :action="uploadUrl"
+          :on-success="handleUploadSuccess"
+          :on-error="handleUploadError"
+          :before-upload="beforeUpload"
+          multiple
+          :show-file-list="false"
+        >
+          <i class="el-icon-upload"></i>
+          <div class="el-upload__text">拖拽文件到此处或<em>点击上传</em></div>
+          <div class="el-upload__tip" slot="tip">
+            支持格式：JSON/YAML/XLSX/MD/TXT/DOC/DOCX/PDF/PNG/JPG
+          </div>
+        </el-upload>
+      </div>
     </div>
     
-    <!-- 上传文件对话框 -->
-    <el-dialog
-      title="上传接口文档"
-      :visible.sync="showUploadDialog"
-      width="500px"
-      @close="resetUploadForm"
-    >
-      <el-upload
-        class="upload-demo"
-        drag
-        action="/api/files/upload"
-        :on-success="handleUploadSuccess"
-        :on-error="handleUploadError"
-        :before-upload="beforeUpload"
-        multiple
-      >
-        <i class="el-icon-upload"></i>
-        <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-        <div class="el-upload__tip" slot="tip">
-          支持上传任意格式的文件，单文件大小不超过10MB
-        </div>
-      </el-upload>
-    </el-dialog>
-    
-    <!-- 文件列表 -->
-    <div class="file-list">
-      <el-empty description="暂无上传的文件" v-if="files.length === 0"></el-empty>
-      <el-card v-for="file in files" :key="file.id" class="file-card" @dblclick="selectFile(file)">
-        <div class="file-info">
-          <div class="file-name">{{ file.filename }}</div>
-          <div class="file-meta">
-            <span class="file-type">{{ file.file_type }}</span>
-            <span class="file-size">{{ formatFileSize(file.size) }}</span>
-            <span class="file-time">{{ formatDateTime(file.uploaded_at) }}</span>
+    <!-- 文件解析结果区 -->
+    <div class="file-result-section">
+      <h3 class="section-title">文件解析结果区</h3>
+      <div class="file-list">
+        <el-empty description="暂无上传的文件" v-if="files.length === 0"></el-empty>
+        <el-card v-for="file in files" :key="file.id" class="file-card" @click.native="selectFile(file)">
+          <div class="file-info">
+            <div class="file-name">{{ file.filename }}</div>
+            <div class="file-meta">
+              <span class="file-type">{{ file.file_type }}</span>
+              <span class="file-size">{{ formatFileSize(file.size) }}</span>
+              <span class="file-time">{{ formatDateTime(file.uploaded_at) }}</span>
+            </div>
+            <!-- 文件上传状态 -->
+            <div class="file-status">
+              <el-tag :type="file.parsed ? 'success' : 'danger'" size="small" effect="light">
+                {{ file.parsed ? '上传成功' : '上传失败' }}
+              </el-tag>
+            </div>
+            <!-- 解析结果显示 -->
+            <div class="file-parse-result" v-if="file.parsed">
+              <el-tag type="success" size="small" effect="light">已解析</el-tag>
+              <span class="parse-count">
+                <i class="el-icon-document"></i> 接口: {{ file.parsed_interfaces || 0 }}
+              </span>
+              <span class="parse-count">
+                <i class="el-icon-s-promotion"></i> 参数: {{ file.parsed_params || 0 }}
+              </span>
+              <span class="parse-count">
+                <i class="el-icon-reading"></i> 响应: {{ file.parsed_responses || 0 }}
+              </span>
+            </div>
+            <div class="file-parse-result" v-else>
+              <el-tag type="info" size="small" effect="light">未解析</el-tag>
+            </div>
           </div>
-          <!-- 解析结果显示 -->
-          <div class="file-parse-result" v-if="file.parsed">
-            <el-tag type="success" size="small" effect="light">已解析</el-tag>
-            <span class="parse-count">
-              <i class="el-icon-document"></i> 接口: {{ file.parsed_interfaces || 0 }}
-            </span>
-            <span class="parse-count">
-              <i class="el-icon-s-promotion"></i> 参数: {{ file.parsed_params || 0 }}
-            </span>
-            <span class="parse-count">
-              <i class="el-icon-reading"></i> 响应: {{ file.parsed_responses || 0 }}
-            </span>
+          <div class="file-actions">
+            <!-- 添加查看按钮，用于加载接口列表 -->
+            <el-button size="mini" type="success" @click.stop="selectFile(file)">
+              <i class="el-icon-view"></i> 查看
+            </el-button>
+            <!-- 增加导出按钮 -->
+            <el-button size="mini" type="primary" @click.stop="downloadFile(file)">
+              <i class="el-icon-download"></i> 导出
+            </el-button>
+            <el-button size="mini" type="danger" @click.stop="deleteFile(file)">
+              <i class="el-icon-delete"></i> 删除
+            </el-button>
           </div>
-          <div class="file-parse-result" v-else>
-            <el-tag type="info" size="small" effect="light">未解析</el-tag>
-          </div>
-        </div>
-        <div class="file-actions">
-          <el-button size="mini" @click="selectFile(file)">
-            <i class="el-icon-folder-opened"></i> 查看
-          </el-button>
-          <el-button size="mini" type="danger" @click="deleteFile(file)">
-            <i class="el-icon-delete"></i> 删除
-          </el-button>
-        </div>
-      </el-card>
+        </el-card>
+      </div>
     </div>
   </div>
 </template>
@@ -78,7 +84,8 @@ export default {
   data() {
     return {
       showUploadDialog: false,
-      files: []
+      files: [],
+      uploadUrl: '/api/files/upload' // 使用相对路径，通过代理转发到后端
     }
   },
   created() {
@@ -197,6 +204,17 @@ export default {
           console.error('删除文件失败:', error)
         }
       }
+    },
+    
+    // 导出文件
+    downloadFile(file) {
+      try {
+        // 使用window.open直接打开下载链接，需要包含完整的/api前缀
+        window.open(`/api/files/download/${file.id}`, '_blank')
+      } catch (error) {
+        this.$message.error('文件下载失败')
+        console.error('文件下载失败:', error)
+      }
     }
   }
 }
@@ -206,25 +224,80 @@ export default {
 .file-upload-view {
   height: 100%;
   padding: 10px;
-}
-
-.view-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.file-list {
-  height: calc(100% - 60px);
+  flex-direction: column;
+  gap: 15px;
   overflow-y: auto;
 }
 
+/* 上传区样式 */
+.upload-section {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 文件解析结果区样式 */
+.file-result-section {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* 区域标题样式 */
+.section-title {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+/* 上传内容样式 */
+.upload-content {
+  border: 2px dashed #d9d9d9;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* 设置上传拖拽区域宽度 */
+.upload-demo >>> .el-upload-dragger {
+  width: 258px !important;
+  box-sizing: border-box;
+}
+
+.upload-content:hover {
+  border-color: #409eff;
+}
+
+/* 文件列表样式 */
+.file-list {
+  height: calc(100% - 40px);
+  overflow-y: auto;
+}
+
+/* 文件卡片样式 */
 .file-card {
   margin-bottom: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
+.file-card:hover {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 文件信息样式 */
 .file-info {
   margin-bottom: 5px;
 }
@@ -232,6 +305,7 @@ export default {
 .file-name {
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: 14px;
 }
 
 .file-meta {
@@ -239,7 +313,12 @@ export default {
   gap: 10px;
   font-size: 12px;
   color: #999;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+/* 文件上传状态样式 */
+.file-status {
+  margin-bottom: 8px;
 }
 
 /* 解析结果样式 */
@@ -247,11 +326,11 @@ export default {
   display: flex;
   align-items: center;
   gap: 15px;
-  padding: 10px;
+  padding: 8px 10px;
   background-color: #f0f9eb;
   border-radius: 4px;
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .parse-count {
@@ -262,12 +341,41 @@ export default {
 }
 
 .parse-count i {
-  font-size: 14px;
+  font-size: 13px;
 }
 
+/* 文件操作样式 */
 .file-actions {
   display: flex;
   justify-content: flex-end;
   gap: 5px;
+}
+
+/* 滚动条样式优化 */
+.file-upload-view::-webkit-scrollbar,
+.file-result-section::-webkit-scrollbar,
+.file-list::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.file-upload-view::-webkit-scrollbar-track,
+.file-result-section::-webkit-scrollbar-track,
+.file-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.file-upload-view::-webkit-scrollbar-thumb,
+.file-result-section::-webkit-scrollbar-thumb,
+.file-list::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.file-upload-view::-webkit-scrollbar-thumb:hover,
+.file-result-section::-webkit-scrollbar-thumb:hover,
+.file-list::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
 }
 </style>

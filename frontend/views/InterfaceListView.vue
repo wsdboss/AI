@@ -103,7 +103,6 @@ export default {
       currentFile: null,
       currentInterface: null,
       activeInterfaceId: '',
-      allMockEnabled: false,
       mockConfigs: {}, // 存储每个接口的Mock配置
       requestForms: {} // 存储每个接口的请求表单数据
     }
@@ -272,8 +271,11 @@ export default {
       this.$store.dispatch('loadMockConfig', intf.id)
       // 加载请求日志
       this.$store.dispatch('loadRequestLogs', intf.id)
-      // 跳转到接口详情页
-      this.$router.push(`/interface/${intf.id}`)
+      // 跳转到接口详情页，避免重复导航
+      const targetPath = `/interface/${intf.id}`
+      if (this.$router.currentRoute.path !== targetPath) {
+        this.$router.push(targetPath)
+      }
     },
     
     // 获取接口参数

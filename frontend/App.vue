@@ -13,7 +13,7 @@
     <!-- 主体内容区 -->
     <el-container class="app-container">
       <!-- 左侧文件上传区 -->
-      <el-aside width="300px" class="app-aside-left">
+      <el-aside width="338px" class="app-aside-left">
         <router-view name="left"></router-view>
       </el-aside>
       
@@ -124,7 +124,8 @@ body {
   overflow-y: auto;
   padding: 24px;
   transition: all 0.3s ease;
-  flex: 1;
+  width: 800px;
+  flex-shrink: 0;
 }
 
 /* 右侧接口详情区 */
