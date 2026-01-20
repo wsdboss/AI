@@ -1,0 +1,131 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "\u6d4b\u8bd5API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/users": {
+      "get": {
+        "summary": "\u83b7\u53d6\u7528\u6237\u5217\u8868",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "type": "integer",
+            "description": "\u9875\u7801",
+            "required": false,
+            "example": 1
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "type": "integer",
+            "description": "\u6bcf\u9875\u6761\u6570",
+            "required": false,
+            "example": 10
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "\u6210\u529f\u54cd\u5e94",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "integer",
+                  "description": "\u54cd\u5e94\u7801",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "description": "\u54cd\u5e94\u6d88\u606f",
+                  "example": "success"
+                },
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "description": "\u7528\u6237ID",
+                        "example": 1
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "\u7528\u6237\u540d",
+                        "example": "test"
+                      },
+                      "email": {
+                        "type": "string",
+                        "description": "\u90ae\u7bb1",
+                        "example": "test@example.com"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "\u521b\u5efa\u7528\u6237",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "\u7528\u6237\u4fe1\u606f",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "\u7528\u6237\u540d",
+                  "example": "new_user"
+                },
+                "email": {
+                  "type": "string",
+                  "description": "\u90ae\u7bb1",
+                  "example": "new@example.com"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "\u6210\u529f\u54cd\u5e94",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "integer",
+                  "description": "\u54cd\u5e94\u7801",
+                  "example": 0
+                },
+                "message": {
+                  "type": "string",
+                  "description": "\u54cd\u5e94\u6d88\u606f",
+                  "example": "success"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "\u7528\u6237ID",
+                      "example": 2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
