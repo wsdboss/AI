@@ -3025,3 +3025,146 @@
 2026-01-20 18:59:33,291 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 18:59:33] "GET /api/interfaces/399/params HTTP/1.1" 200 -
 2026-01-20 18:59:33,310 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 18:59:33] "GET /api/interfaces/399/responses HTTP/1.1" 200 -
 2026-01-20 18:59:33,329 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 18:59:33] "GET /api/interfaces/399/mock-config HTTP/1.1" 200 -
+2026-01-20 19:11:56,752 - __main__ - INFO - simple_app.py:56 - 日志系统初始化完成
+2026-01-20 19:11:56,755 - __main__ - INFO - simple_app.py:112 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-20 19:11:56,755 - __main__ - INFO - simple_app.py:113 - 前端目录是否存在: True
+2026-01-20 19:11:56,755 - __main__ - INFO - simple_app.py:114 - index.html是否存在: True
+2026-01-20 19:11:56,756 - __main__ - INFO - simple_app.py:234 - 初始化数据库...
+2026-01-20 19:11:56,758 - __main__ - INFO - simple_app.py:237 - 数据库初始化成功
+2026-01-20 19:11:56,779 - __main__ - INFO - simple_app.py:955 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-20 19:11:56,803 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-20 19:11:56,804 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-20 19:12:00,075 - __main__ - INFO - simple_app.py:895 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-20 19:12:00,660 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:00] "GET / HTTP/1.1" 200 -
+2026-01-20 19:12:00,669 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:00] "GET /assets/index-4c4a69f6.js HTTP/1.1" 200 -
+2026-01-20 19:12:00,760 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:00] "GET /assets/index-c3443b5d.css HTTP/1.1" 200 -
+2026-01-20 19:12:01,165 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:01] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 19:12:01,243 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:01] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 19:12:01,427 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:01] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-20 19:12:49,634 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:49] "GET /?ide_webview_request_time=1768907569586 HTTP/1.1" 200 -
+2026-01-20 19:12:49,719 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:49] "GET /assets/index-c3443b5d.css HTTP/1.1" 200 -
+2026-01-20 19:12:49,720 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:49] "GET /assets/index-4c4a69f6.js HTTP/1.1" 200 -
+2026-01-20 19:12:49,881 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:49] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 19:12:49,932 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:49] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 19:12:49,966 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:49] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-20 19:12:54,996 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:54] "GET /?ide_webview_request_time=1768907574678 HTTP/1.1" 200 -
+2026-01-20 19:12:55,257 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:55] "GET /assets/index-c3443b5d.css HTTP/1.1" 200 -
+2026-01-20 19:12:55,319 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:55] "GET /assets/index-4c4a69f6.js HTTP/1.1" 200 -
+2026-01-20 19:12:55,486 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:55] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 19:12:55,840 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:55] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 19:12:56,098 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:12:56] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-20 19:13:04,781 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:13:04] "[36mGET / HTTP/1.1[0m" 304 -
+2026-01-20 19:13:04,788 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:13:04] "[36mGET /assets/index-4c4a69f6.js HTTP/1.1[0m" 304 -
+2026-01-20 19:13:05,026 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:13:05] "[36mGET /assets/index-c3443b5d.css HTTP/1.1[0m" 304 -
+2026-01-20 19:13:05,361 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:13:05] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-20 19:13:05,373 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:13:05] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 19:13:05,619 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:13:05] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-20 19:13:07,808 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:13:07] "[36mGET /assets/index-c3443b5d.css HTTP/1.1[0m" 304 -
+2026-01-20 19:13:08,141 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:13:08] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 200 -
+2026-01-20 19:15:19,338 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:19] "GET /?ide_webview_request_time=1768907719023 HTTP/1.1" 200 -
+2026-01-20 19:15:19,601 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:19] "GET /assets/index-5fc4be47.css HTTP/1.1" 200 -
+2026-01-20 19:15:19,661 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:19] "GET /assets/index-2ec4aa20.js HTTP/1.1" 200 -
+2026-01-20 19:15:19,819 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:19] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 19:15:20,153 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:20] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 19:15:20,399 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:20] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-20 19:15:21,125 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:21] "GET /?ide_webview_request_time=1768907719023 HTTP/1.1" 200 -
+2026-01-20 19:15:21,443 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:21] "GET /assets/index-5fc4be47.css HTTP/1.1" 200 -
+2026-01-20 19:15:21,443 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:21] "GET /assets/index-2ec4aa20.js HTTP/1.1" 200 -
+2026-01-20 19:15:21,704 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:21] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 19:15:21,827 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:21] "[36mGET /@vite/client HTTP/1.1[0m" 304 -
+2026-01-20 19:15:21,829 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:21] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 19:15:25,799 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:25] "GET /?ide_webview_request_time=1768907569586 HTTP/1.1" 200 -
+2026-01-20 19:15:25,909 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:25] "GET /assets/index-2ec4aa20.js HTTP/1.1" 200 -
+2026-01-20 19:15:25,909 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:25] "GET /assets/index-5fc4be47.css HTTP/1.1" 200 -
+2026-01-20 19:15:26,080 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:26] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 19:15:26,149 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:26] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 19:15:26,185 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:15:26] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-20 19:17:42,845 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:17:42] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-20 19:17:43,088 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:17:43] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-20 19:17:43,736 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:17:43] "GET /api/interfaces/399/mock-config HTTP/1.1" 200 -
+2026-01-20 19:17:44,053 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:17:44] "GET /api/interfaces/399/params HTTP/1.1" 200 -
+2026-01-20 19:17:44,081 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:17:44] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-20 19:17:44,312 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:17:44] "GET /api/interfaces/399/responses HTTP/1.1" 200 -
+2026-01-20 19:17:44,372 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:17:44] "GET /api/interfaces/399/mock-config HTTP/1.1" 200 -
+2026-01-20 19:21:56,513 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:21:56] "GET /?ide_webview_request_time=1768908116185 HTTP/1.1" 200 -
+2026-01-20 19:21:56,758 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:21:56] "GET /assets/index-5fc4be47.css HTTP/1.1" 200 -
+2026-01-20 19:21:56,837 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:21:56] "GET /assets/index-e325126f.js HTTP/1.1" 200 -
+2026-01-20 19:21:57,006 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:21:57] "GET /api/files HTTP/1.1" 200 -
+2026-01-20 19:21:57,359 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:21:57] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-20 19:21:57,619 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [20/Jan/2026 19:21:57] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-21 09:20:18,495 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:20:18] "GET /?ide_webview_request_time=1768958418167 HTTP/1.1" 200 -
+2026-01-21 09:20:18,737 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:20:18] "GET /assets/index-274d7b1d.css HTTP/1.1" 200 -
+2026-01-21 09:20:18,814 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:20:18] "GET /assets/index-b5c6f877.js HTTP/1.1" 200 -
+2026-01-21 09:20:18,979 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:20:18] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 09:20:19,291 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:20:19] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-21 09:20:19,614 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:20:19] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-21 09:21:49,094 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:49] "GET /?ide_webview_request_time=1768958418167 HTTP/1.1" 200 -
+2026-01-21 09:21:49,355 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:49] "GET /assets/index-c5a9ee38.css HTTP/1.1" 200 -
+2026-01-21 09:21:49,417 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:49] "GET /assets/index-4b0d736d.js HTTP/1.1" 200 -
+2026-01-21 09:21:49,570 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:49] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 09:21:49,907 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:49] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-21 09:21:50,153 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:50] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-21 09:21:50,653 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:50] "GET /?ide_webview_request_time=1768958418167 HTTP/1.1" 200 -
+2026-01-21 09:21:50,966 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:50] "GET /assets/index-c5a9ee38.css HTTP/1.1" 200 -
+2026-01-21 09:21:50,967 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:50] "GET /assets/index-4b0d736d.js HTTP/1.1" 200 -
+2026-01-21 09:21:51,226 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:51] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-21 09:21:51,348 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:51] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 09:21:51,367 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:21:51] "[36mGET /@vite/client HTTP/1.1[0m" 304 -
+2026-01-21 09:22:47,712 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:22:47] "GET /?ide_webview_request_time=1768958418167 HTTP/1.1" 200 -
+2026-01-21 09:22:48,041 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:22:48] "GET /assets/index-c5a9ee38.css HTTP/1.1" 200 -
+2026-01-21 09:22:48,041 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:22:48] "GET /assets/index-4b0d736d.js HTTP/1.1" 200 -
+2026-01-21 09:22:48,287 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:22:48] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-21 09:22:48,426 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:22:48] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 09:22:48,443 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:22:48] "[36mGET /@vite/client HTTP/1.1[0m" 304 -
+2026-01-21 09:23:02,978 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:23:02] "GET /?ide_webview_request_time=1768958582972 HTTP/1.1" 200 -
+2026-01-21 09:23:03,302 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:23:03] "[36mGET /assets/index-c5a9ee38.css HTTP/1.1[0m" 304 -
+2026-01-21 09:23:03,303 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:23:03] "[36mGET /assets/index-4b0d736d.js HTTP/1.1[0m" 304 -
+2026-01-21 09:23:03,567 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:23:03] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-21 09:23:03,644 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:23:03] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 09:23:03,647 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:23:03] "[36mGET /@vite/client HTTP/1.1[0m" 304 -
+2026-01-21 09:24:40,331 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:40] "GET /?ide_webview_request_time=1768958582972 HTTP/1.1" 200 -
+2026-01-21 09:24:40,592 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:40] "GET /assets/index-0592bbf6.css HTTP/1.1" 200 -
+2026-01-21 09:24:40,653 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:40] "GET /assets/index-649b59cd.js HTTP/1.1" 200 -
+2026-01-21 09:24:40,828 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:40] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 09:24:41,165 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:41] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-21 09:24:41,425 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:41] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-21 09:24:49,131 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:49] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-21 09:24:49,438 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:49] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-21 09:24:50,091 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:50] "GET /api/interfaces/399/mock-config HTTP/1.1" 200 -
+2026-01-21 09:24:50,095 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:50] "GET /api/interfaces/399/params HTTP/1.1" 200 -
+2026-01-21 09:24:50,352 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:50] "GET /api/interfaces/399/responses HTTP/1.1" 200 -
+2026-01-21 09:24:50,401 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:24:50] "GET /api/interfaces/399/mock-config HTTP/1.1" 200 -
+2026-01-21 09:28:00,995 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:00] "GET /interface/399 HTTP/1.1" 200 -
+2026-01-21 09:28:01,245 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:01] "GET /assets/index-e98f8807.css HTTP/1.1" 200 -
+2026-01-21 09:28:01,321 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:01] "GET /assets/index-9301d82b.js HTTP/1.1" 200 -
+2026-01-21 09:28:01,478 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:01] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 09:28:01,797 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:01] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-21 09:28:02,061 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:02] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-21 09:28:04,561 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:04] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-21 09:28:04,873 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:04] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-21 09:28:05,733 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:05] "GET /api/interfaces/399/mock-config HTTP/1.1" 200 -
+2026-01-21 09:28:05,734 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:05] "GET /api/interfaces/399/params HTTP/1.1" 200 -
+2026-01-21 09:28:05,994 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:05] "GET /api/interfaces/399/responses HTTP/1.1" 200 -
+2026-01-21 09:28:06,056 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:28:06] "GET /api/interfaces/399/mock-config HTTP/1.1" 200 -
+2026-01-21 09:29:23,805 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:23] "GET /interface/399 HTTP/1.1" 200 -
+2026-01-21 09:29:24,069 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:24] "GET /assets/index-9f7426c1.css HTTP/1.1" 200 -
+2026-01-21 09:29:24,116 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:24] "GET /assets/index-08740453.js HTTP/1.1" 200 -
+2026-01-21 09:29:24,272 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:24] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 09:29:24,591 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:24] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-21 09:29:24,854 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:24] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-21 09:29:26,731 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:26] "GET /interface/399 HTTP/1.1" 200 -
+2026-01-21 09:29:27,054 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:27] "GET /assets/index-9f7426c1.css HTTP/1.1" 200 -
+2026-01-21 09:29:27,054 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:27] "GET /assets/index-08740453.js HTTP/1.1" 200 -
+2026-01-21 09:29:27,314 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:27] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-21 09:29:27,435 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:27] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 09:29:27,450 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:27] "[36mGET /@vite/client HTTP/1.1[0m" 304 -
+2026-01-21 09:29:28,572 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:28] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-21 09:29:28,880 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:28] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-21 09:29:29,693 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:29] "GET /api/interfaces/399/mock-config HTTP/1.1" 200 -
+2026-01-21 09:29:29,693 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:29] "GET /api/interfaces/399/params HTTP/1.1" 200 -
+2026-01-21 09:29:29,940 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:29] "GET /api/interfaces/399/responses HTTP/1.1" 200 -
+2026-01-21 09:29:30,004 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:30] "GET /api/interfaces/399/mock-config HTTP/1.1" 200 -
+2026-01-21 09:29:44,116 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:44] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -

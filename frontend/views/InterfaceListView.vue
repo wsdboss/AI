@@ -3,13 +3,6 @@
     <div class="view-header">
       <h3>接口列表</h3>
       <div class="view-actions">
-        <el-select v-model="filterMethod" placeholder="请求方式" clearable size="small" @change="handleFilterChange">
-          <el-option label="GET" value="GET"></el-option>
-          <el-option label="POST" value="POST"></el-option>
-          <el-option label="PUT" value="PUT"></el-option>
-          <el-option label="DELETE" value="DELETE"></el-option>
-          <el-option label="PATCH" value="PATCH"></el-option>
-        </el-select>
         <el-input
           v-model="searchKeyword"
           placeholder="搜索接口名称或路径"
@@ -97,7 +90,6 @@ export default {
   name: 'InterfaceListView',
   data() {
     return {
-      filterMethod: '',
       searchKeyword: '',
       interfaces: [],
       currentFile: null,
@@ -111,12 +103,8 @@ export default {
     // 过滤后的接口列表
     filteredInterfaces() {
       console.log('计算属性 filteredInterfaces 被调用，接口列表:', this.interfaces)
-      console.log('过滤条件 - method:', this.filterMethod, 'keyword:', this.searchKeyword)
+      console.log('过滤条件 - keyword:', this.searchKeyword)
       const result = this.interfaces.filter(intf => {
-        // 按请求方式过滤
-        if (this.filterMethod && intf.method !== this.filterMethod) {
-          return false
-        }
         // 按关键词搜索
         if (this.searchKeyword) {
           const keyword = this.searchKeyword.toLowerCase()
@@ -185,8 +173,7 @@ export default {
     this.interfaces = this.$store.state.interfaces
     this.currentFile = this.$store.state.currentFile
     
-    // 重置过滤条件，确保不会过滤掉接口
-    this.filterMethod = ''
+    // 重置搜索条件，确保不会过滤掉接口
     this.searchKeyword = ''
     console.log('初始化 - 接口列表:', this.interfaces)
     console.log('初始化 - 当前文件:', this.currentFile)
@@ -198,8 +185,7 @@ export default {
         console.log('Vuex接口列表变化:', newInterfaces)
         this.interfaces = newInterfaces
         console.log('组件接口列表更新:', this.interfaces.length, '个接口')
-        // 重置过滤条件，确保不会过滤掉接口
-        this.filterMethod = ''
+        // 重置搜索条件，确保不会过滤掉接口
         this.searchKeyword = ''
       },
       { deep: true }
@@ -230,11 +216,6 @@ export default {
       } catch (error) {
         this.$message.error('加载接口列表失败')
       }
-    },
-    
-    // 处理筛选条件变化
-    handleFilterChange() {
-      // 筛选条件变化时自动过滤
     },
     
     // 处理搜索

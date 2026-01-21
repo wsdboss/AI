@@ -13,7 +13,7 @@
     <!-- 主体内容区 -->
     <el-container class="app-container">
       <!-- 左侧文件上传区 -->
-      <el-aside width="338px" class="app-aside-left">
+      <el-aside width="358px" class="app-aside-left">
         <router-view name="left"></router-view>
       </el-aside>
       
@@ -23,7 +23,7 @@
       </el-main>
       
       <!-- 右侧接口详情区 -->
-      <el-aside width="400px" class="app-aside-right">
+      <el-aside class="app-aside-right">
         <router-view name="right"></router-view>
       </el-aside>
     </el-container>
@@ -119,13 +119,15 @@ body {
 }
 
 /* 中间接口列表区 */
-.app-main {
+.el-container > .el-main.app-main {
   background-color: #f5f7fa;
   overflow-y: auto;
-  padding: 24px;
+  padding: 10px;
   transition: all 0.3s ease;
-  width: 800px;
+  width: 456px;
   flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 456px;
 }
 
 /* 右侧接口详情区 */
@@ -135,6 +137,8 @@ body {
   overflow-y: auto;
   transition: all 0.3s ease;
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 300px;
 }
 
 /* 滚动条样式优化 */
