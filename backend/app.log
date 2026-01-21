@@ -3168,3 +3168,74 @@
 2026-01-21 09:29:29,940 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:29] "GET /api/interfaces/399/responses HTTP/1.1" 200 -
 2026-01-21 09:29:30,004 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:30] "GET /api/interfaces/399/mock-config HTTP/1.1" 200 -
 2026-01-21 09:29:44,116 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 09:29:44] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-21 14:33:25,543 - __main__ - INFO - simple_app.py:56 - 日志系统初始化完成
+2026-01-21 14:33:25,561 - __main__ - INFO - simple_app.py:112 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-21 14:33:25,561 - __main__ - INFO - simple_app.py:113 - 前端目录是否存在: True
+2026-01-21 14:33:25,562 - __main__ - INFO - simple_app.py:114 - index.html是否存在: True
+2026-01-21 14:33:25,562 - __main__ - INFO - simple_app.py:234 - 初始化数据库...
+2026-01-21 14:33:25,569 - __main__ - INFO - simple_app.py:237 - 数据库初始化成功
+2026-01-21 14:33:25,591 - __main__ - INFO - simple_app.py:955 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-21 14:33:25,651 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-21 14:33:25,652 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-21 14:33:28,975 - __main__ - INFO - simple_app.py:895 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-21 14:33:29,822 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:29] "GET / HTTP/1.1" 200 -
+2026-01-21 14:33:30,153 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:30] "GET /assets/index-91cdf31e.css HTTP/1.1" 200 -
+2026-01-21 14:33:30,153 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:30] "GET /assets/index-d426abee.js HTTP/1.1" 200 -
+2026-01-21 14:33:30,412 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:30] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-21 14:33:30,567 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:30] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 14:33:30,621 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:30] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-21 14:33:33,224 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:33] "GET /?ide_webview_request_time=1768977213211 HTTP/1.1" 200 -
+2026-01-21 14:33:33,525 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:33] "GET /assets/index-d426abee.js HTTP/1.1" 200 -
+2026-01-21 14:33:33,526 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:33] "GET /assets/index-91cdf31e.css HTTP/1.1" 200 -
+2026-01-21 14:33:33,707 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:33] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 14:33:33,750 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:33] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-21 14:33:33,804 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:33] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-21 14:33:35,868 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:35] "GET /api/interfaces HTTP/1.1" 200 -
+2026-01-21 14:33:36,131 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:36] "GET /api/interfaces HTTP/1.1" 200 -
+2026-01-21 14:33:38,767 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:38] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-21 14:33:39,086 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:39] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-21 14:33:40,278 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:40] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-21 14:33:40,593 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:40] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-21 14:33:42,246 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:42] "GET /api/interfaces/401/mock-config HTTP/1.1" 200 -
+2026-01-21 14:33:42,556 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:42] "GET /api/interfaces/401/params HTTP/1.1" 200 -
+2026-01-21 14:33:42,586 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:42] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-21 14:33:42,882 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:42] "GET /api/interfaces/401/responses HTTP/1.1" 200 -
+2026-01-21 14:33:43,202 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:33:43] "GET /api/interfaces/401/mock-config HTTP/1.1" 200 -
+2026-01-21 14:35:12,022 - __main__ - INFO - simple_app.py:56 - 日志系统初始化完成
+2026-01-21 14:35:12,024 - __main__ - INFO - simple_app.py:112 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-21 14:35:12,025 - __main__ - INFO - simple_app.py:113 - 前端目录是否存在: True
+2026-01-21 14:35:12,025 - __main__ - INFO - simple_app.py:114 - index.html是否存在: True
+2026-01-21 14:35:12,025 - __main__ - INFO - simple_app.py:234 - 初始化数据库...
+2026-01-21 14:35:12,026 - __main__ - INFO - simple_app.py:237 - 数据库初始化成功
+2026-01-21 14:35:12,052 - __main__ - INFO - simple_app.py:955 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-21 14:35:12,078 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-21 14:35:12,078 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-21 14:35:15,428 - __main__ - INFO - simple_app.py:895 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-21 14:35:16,046 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:16] "[36mGET / HTTP/1.1[0m" 304 -
+2026-01-21 14:35:16,060 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:16] "[36mGET /assets/index-d426abee.js HTTP/1.1[0m" 304 -
+2026-01-21 14:35:16,096 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:16] "[36mGET /assets/index-91cdf31e.css HTTP/1.1[0m" 304 -
+2026-01-21 14:35:16,478 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:16] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-21 14:35:16,541 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:16] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 14:35:16,737 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:16] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-21 14:35:28,105 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:28] "GET /api/interfaces HTTP/1.1" 200 -
+2026-01-21 14:35:29,728 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:29] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-21 14:35:29,988 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:29] "GET /api/interfaces?file_id=72 HTTP/1.1" 200 -
+2026-01-21 14:35:37,907 - __main__ - INFO - simple_app.py:267 - 收到文件上传请求
+2026-01-21 14:35:37,909 - __main__ - INFO - simple_app.py:279 - 开始上传文件: 自定义更新配置文档.docx
+2026-01-21 14:35:37,935 - __main__ - INFO - simple_app.py:287 - 文件保存成功: E:\traeAiProject\GenerateInterTool\backend\uploads\9044397c-465a-4b98-b084-efc7e67ad5da_自定义更新配置文档.docx
+2026-01-21 14:35:37,936 - __main__ - INFO - simple_app.py:301 - 准备插入数据库，文件信息: filename=自定义更新配置文档.docx, file_path=E:\traeAiProject\GenerateInterTool\backend\uploads\9044397c-465a-4b98-b084-efc7e67ad5da_自定义更新配置文档.docx, file_type=application/vnd.openxmlformats-officedocument.wordprocessingml.document, size=408625, uploaded_at=2026-01-21T14:35:37.936259, parsed=1
+2026-01-21 14:35:37,937 - __main__ - INFO - simple_app.py:306 - 表结构: [(0, 'id', 'INTEGER', 0, None, 1), (1, 'filename', 'TEXT', 1, None, 0), (2, 'file_path', 'TEXT', 1, None, 0), (3, 'file_type', 'TEXT', 1, None, 0), (4, 'size', 'INTEGER', 1, None, 0), (5, 'uploaded_at', 'TEXT', 1, None, 0), (6, 'parsed', 'INTEGER', 0, '0', 0), (7, 'parsed_interfaces', 'INTEGER', 0, '0', 0), (8, 'parsed_params', 'INTEGER', 0, '0', 0), (9, 'parsed_responses', 'INTEGER', 0, '0', 0)]
+2026-01-21 14:35:38,045 - __main__ - INFO - simple_app.py:318 - 文件记录已添加到数据库，文件ID: 74
+2026-01-21 14:35:38,045 - __main__ - INFO - simple_app.py:321 - 准备执行文件解析，文件ID: 74
+2026-01-21 14:35:38,150 - __main__ - INFO - simple_app.py:324 - 文件解析任务已执行，文件ID: 74
+2026-01-21 14:35:38,151 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:38] "POST /api/files/upload HTTP/1.1" 200 -
+2026-01-21 14:35:38,467 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:38] "GET /api/files HTTP/1.1" 200 -
+2026-01-21 14:35:38,467 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:38] "GET /api/interfaces HTTP/1.1" 200 -
+2026-01-21 14:35:45,378 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:45] "DELETE /api/files/72 HTTP/1.1" 200 -
+2026-01-21 14:35:45,700 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:45] "GET /api/files HTTP/1.1" 200 -

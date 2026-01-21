@@ -26,6 +26,12 @@
     <!-- 文件解析结果区 -->
     <div class="file-result-section">
       <h3 class="section-title">文件解析结果区</h3>
+      <!-- 添加查看所有接口按钮 -->
+      <div class="file-actions-header" v-if="files.length > 0">
+        <el-button size="small" type="primary" @click="loadAllInterfaces">
+          <i class="el-icon-view"></i> 查看所有接口
+        </el-button>
+      </div>
       <div class="file-list">
         <el-empty description="暂无上传的文件" v-if="files.length === 0"></el-empty>
         <el-card v-for="file in files" :key="file.id" class="file-card" @click.native="selectFile(file)">
@@ -139,6 +145,8 @@ export default {
     handleUploadSuccess() {
       this.$message.success('文件上传成功')
       this.loadFiles() // 重新加载文件列表
+      // 上传完成后默认展示所有接口
+      this.loadAllInterfaces()
     },
     
     // 文件上传失败处理
@@ -215,6 +223,13 @@ export default {
         this.$message.error('文件下载失败')
         console.error('文件下载失败:', error)
       }
+    },
+    
+    // 加载所有接口
+    loadAllInterfaces() {
+      this.$store.commit('SET_CURRENT_FILE', null)
+      // 加载所有接口
+      this.$store.dispatch('loadInterfaces')
     }
   }
 }
