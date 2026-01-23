@@ -50,9 +50,11 @@
                   {{ intf.method }}
                 </div>
                 <div class="interface-path">{{ intf.path }}</div>
-                <div class="interface-status" v-if="!intf.service_generated">
-                  <el-tag :type="getMockConfig(intf.id).enabled ? 'success' : 'warning'" size="mini">
-                    {{ getMockConfig(intf.id).enabled ? '已启用Mock' : '未生成' }}
+                <div class="interface-tags">
+                  <el-tag :type="intf.is_websocket ? 'primary' : 'success'" size="mini">
+                    <i v-if="intf.is_websocket" class="el-icon-link"></i>
+                    <i v-else class="el-icon-document"></i>
+                    {{ intf.is_websocket ? 'WebSocket' : 'HTTP' }}
                   </el-tag>
                 </div>
               </div>

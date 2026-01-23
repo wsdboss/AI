@@ -1,0 +1,70 @@
+# 实现左侧上传区域添加"查看所有接口"按钮
+
+## 需求分析
+
+1. 在左侧上传文件区域增加"查看所有接口"按钮
+2. 上传完文件后默认展示所有文件的接口列表
+3. 点击某个文件才查询对应的接口列表
+
+## 实现方案
+
+### 1. 修改 FileUploadView\.vue
+
+* 在文件列表上方添加"查看所有接口"按钮
+
+* 修改上传成功后的逻辑，默认加载所有接口
+
+* 修改 selectFile 方法，点击文件时加载该文件的接口
+
+### 2. 修改 Vuex Store
+
+* 确保 loadInterfaces action 支持加载所有接口（fileId 为 null 时）
+
+### 3. 修改 backend API
+
+* 确保后端 /api/interfaces 端点支持返回所有接口（不指定 file\_id 时）
+
+## 实现步骤
+
+1. **添加"查看所有接口"按钮**
+
+   * 在 FileUploadView\.vue 的 file-result-section 中添加按钮
+
+   * 按钮点击事件调用 loadAllInterfaces 方法
+
+2. **实现 loadAllInterfaces 方法**
+
+   * 在 FileUploadView\.vue 中添加该方法
+
+   * 调用 Vuex action 加载所有接口
+
+   * 清除当前选中的文件
+
+3. **修改上传成功逻辑**
+
+   * 在 handleUploadSuccess 方法中，上传成功后调用 loadAllInterfaces
+
+4. **修改 selectFile 方法**
+
+   * 保持现有逻辑不变，点击文件时加载对应接口
+
+5. **验证 backend 支持**
+
+   * 确保后端 /api/interfaces 端点支持返回所有接口
+
+## 预期效果
+
+* 左侧上传区域显示"查看所有接口"按钮
+
+* 上传文件成功后，默认加载所有文件的接口
+
+* 点击某个文件时，加载该文件对应的接口
+
+* 点击"查看所有接口"按钮时，清除当前选中文件，加载所有接口
+
+## 修改文件
+
+* `frontend/views/FileUploadView.vue` - 主要实现文件
+
+* 可能需要验证 `backend/simple_app.py` 中的接口逻辑
+

@@ -2,12 +2,16 @@ import sys
 import os
 import time
 import logging
+import webbrowser
+import threading
+import argparse
 
 # 导入配置
 import config
 
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
+from flask_socketio import SocketIO, emit
 # 移除对flask_executor的依赖
 # from flask_executor import Executor
 import sqlite3
@@ -61,6 +65,37 @@ from async_parser import parse_file_async
 app = Flask(__name__)
 CORS(app)  # 允许跨域请求
 
+# 初始化SocketIO，确保在所有中间件和扩展初始化之前完成
+app.config['SECRET_KEY'] = 'your-secret-key-here'  # SocketIO需要的密钥
+
+# 初始化SocketIO，确保在打包环境中能正常工作
+socketio = None
+try:
+    # 提前导入，确保在所有扩展初始化之前完成
+    from flask_socketio import SocketIO as FlaskSocketIO
+    
+    # 配置SocketIO，添加详细日志
+    logger.info("开始初始化SocketIO...")
+    
+    # 在PyInstaller打包环境中，明确指定async_mode为threading，这是最兼容的模式
+    # threading模式在各种环境下都能稳定运行，避免自动检测失败
+    socketio = FlaskSocketIO(
+        app, 
+        cors_allowed_origins="*",
+        logger=True,
+        engineio_logger=True,
+        async_mode='threading'  # 明确指定async_mode为threading，确保在打包环境中正常工作
+    )
+    logger.info("SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*")
+
+except Exception as e:
+    # 如果SocketIO初始化失败，记录详细错误并继续运行应用程序
+    logger.error(f"SocketIO初始化失败: {type(e).__name__}: {e}")
+    print(f"SocketIO初始化失败: {type(e).__name__}: {e}")
+    print("应用程序将继续运行，但WebSocket功能将不可用")
+    import traceback
+    traceback.print_exc()
+
 # 移除Executor初始化
 # executor = Executor(app)
 
@@ -107,7 +142,16 @@ else:
 # 前端资源目录处理
 # 硬编码前端资源目录路径，确保使用恢复的v1.0.0版本
 import os
-FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'frontend'))
+import sys
+
+# 根据运行模式设置前端资源目录
+if getattr(sys, 'frozen', False):
+    # 打包后运行 - 使用PyInstaller的临时目录
+    FRONTEND_DIR = os.path.abspath(os.path.join(sys._MEIPASS, 'frontend'))
+else:
+    # 开发模式运行
+    FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'frontend'))
+
 # 打印日志，确认前端目录
 logger.info(f"使用前端资源目录: {FRONTEND_DIR}")
 logger.info(f"前端目录是否存在: {os.path.exists(FRONTEND_DIR)}")
@@ -171,6 +215,13 @@ def init_db():
             FOREIGN KEY (file_id) REFERENCES interface_files (id)
         )
     ''')
+    
+    # 添加is_websocket字段到interfaces表（如果不存在）
+    try:
+        cursor.execute('ALTER TABLE interfaces ADD COLUMN is_websocket INTEGER DEFAULT 0')
+    except sqlite3.OperationalError:
+        # 字段已经存在，跳过
+        pass
     
     # 创建参数表
     cursor.execute('''
@@ -540,13 +591,16 @@ def get_interfaces():
         
         result = []
         for interface in interfaces:
+            # 检查接口字段数量，确保is_websocket字段存在
+            is_websocket = bool(interface[6]) if len(interface) > 6 else False
             result.append({
                 'id': interface[0],
                 'name': interface[1],
                 'path': interface[2],
                 'method': interface[3],
                 'description': interface[4],
-                'file_id': interface[5]
+                'file_id': interface[5],
+                'is_websocket': is_websocket
             })
         
         return jsonify(result)
@@ -727,12 +781,293 @@ def generate_interface(interface_id):
         'interface_name': interface[1],
         'interface_path': interface[2],
         'interface_method': interface[3],
+        'is_websocket': bool(interface[6]) if len(interface) > 6 else False,
         'mock_config': {
             'enabled': bool(mock_config[2]),
             'default_count': mock_config[3]
         },
         'doc_generated': True
     })
+
+# API路由：生成WebSocket接口服务
+@app.route('/api/interfaces/generate-websocket/<int:interface_id>', methods=['POST'])
+def generate_websocket_interface(interface_id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    try:
+        # 更新接口为WebSocket类型
+        cursor.execute('''
+            UPDATE interfaces 
+            SET is_websocket = 1 
+            WHERE id = ?
+        ''', (interface_id,))
+        
+        # 检查是否已经生成过Mock配置
+        cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface_id,))
+        mock_config = cursor.fetchone()
+        
+        if not mock_config:
+            # 创建默认Mock配置
+            cursor.execute('''
+                INSERT INTO mock_configs (interface_id, enabled, default_count)
+                VALUES (?, ?, ?)
+            ''', (interface_id, 1, 10))
+            conn.commit()
+            # 重新查询获取刚刚插入的记录
+            cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface_id,))
+            mock_config = cursor.fetchone()
+        
+        # 获取更新后的接口信息
+        cursor.execute('SELECT * FROM interfaces WHERE id = ?', (interface_id,))
+        interface = cursor.fetchone()
+        
+        conn.commit()
+        
+        return jsonify({
+            'status': 'success',
+            'message': 'WebSocket接口服务生成成功',
+            'interface_id': interface_id,
+            'interface_name': interface[1],
+            'interface_path': interface[2],
+            'interface_method': interface[3],
+            'is_websocket': True,
+            'mock_config': {
+                'enabled': bool(mock_config[2]),
+                'default_count': mock_config[3]
+            },
+            'doc_generated': True
+        })
+    except Exception as e:
+        logger.error(f'Error generating WebSocket interface: {e}')
+        conn.rollback()
+        return jsonify({'error': str(e)}), 500
+    finally:
+        conn.close()
+
+# API路由：切换接口为HTTP类型
+@app.route('/api/interfaces/switch-to-http/<int:interface_id>', methods=['POST'])
+def switch_to_http_interface(interface_id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    try:
+        # 更新接口为HTTP类型
+        cursor.execute('''
+            UPDATE interfaces 
+            SET is_websocket = 0 
+            WHERE id = ?
+        ''', (interface_id,))
+        
+        # 获取更新后的接口信息
+        cursor.execute('SELECT * FROM interfaces WHERE id = ?', (interface_id,))
+        interface = cursor.fetchone()
+        
+        if not interface:
+            # 接口不存在
+            conn.commit()
+            return jsonify({
+                'status': 'error',
+                'message': f'接口ID {interface_id} 不存在'
+            }), 404
+        
+        # 获取Mock配置
+        cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface_id,))
+        mock_config = cursor.fetchone()
+        
+        conn.commit()
+        
+        return jsonify({
+            'status': 'success',
+            'message': '接口已切换为HTTP类型',
+            'interface_id': interface_id,
+            'interface_name': interface[1],
+            'interface_path': interface[2],
+            'interface_method': interface[3],
+            'is_websocket': False,
+            'mock_config': {
+                'enabled': bool(mock_config[2] if mock_config else True),
+                'default_count': mock_config[3] if mock_config else 10
+            },
+            'doc_generated': True
+        })
+    except Exception as e:
+        logger.error(f'Error switching interface to HTTP: {e}')
+        conn.rollback()
+        return jsonify({'error': str(e)}), 500
+    finally:
+        conn.close()
+
+# WebSocket事件处理
+if socketio is not None:
+    # 导入所需的模块
+    from flask_socketio import emit
+    
+    # 连接事件
+    @socketio.on('connect')
+    def handle_connect():
+        try:
+            logger.info('Client connected via WebSocket, sid: %s', request.sid)
+            # 检查request对象是否有transport属性
+            transport = getattr(request, 'transport', 'unknown')
+            logger.debug('WebSocket connection details: transport=%s', transport)
+            emit('connection_response', {'message': 'Connected to WebSocket server'})
+        except Exception as e:
+            logger.error(f'Error in WebSocket connect handler: {type(e).__name__}: {e}')
+            import traceback
+            traceback.print_exc()
+            # 确保发送错误响应，避免客户端一直等待
+            try:
+                emit('error', {'message': f'连接失败: {str(e)}'})
+            except Exception as emit_error:
+                logger.error(f'Error emitting error response: {emit_error}')
+
+    # 断开连接事件
+    @socketio.on('disconnect')
+    def handle_disconnect():
+        try:
+            logger.info('Client disconnected from WebSocket, sid: %s', request.sid)
+            # 检查request对象是否有transport属性
+            transport = getattr(request, 'transport', 'unknown')
+            logger.debug('WebSocket disconnect details: transport=%s', transport)
+        except Exception as e:
+            logger.error(f'Error in WebSocket disconnect handler: {type(e).__name__}: {e}')
+            import traceback
+            traceback.print_exc()
+
+    # 获取接口列表事件
+    @socketio.on('get_interfaces')
+    def handle_get_interfaces(data):
+        conn = None
+        try:
+            logger.info('Handling get_interfaces request from sid: %s, data: %s', request.sid, data)
+            file_id = data.get('file_id')
+            conn = sqlite3.connect(DATABASE)
+            cursor = conn.cursor()
+            
+            if file_id:
+                cursor.execute('SELECT * FROM interfaces WHERE file_id = ?', (file_id,))
+            else:
+                cursor.execute('SELECT * FROM interfaces')
+            
+            interfaces = cursor.fetchall()
+            logger.debug('Found %d interfaces for file_id %s', len(interfaces), file_id)
+            
+            result = []
+            for interface in interfaces:
+                result.append({
+                    'id': interface[0],
+                    'name': interface[1],
+                    'path': interface[2],
+                    'method': interface[3],
+                    'description': interface[4],
+                    'file_id': interface[5],
+                    'is_websocket': interface[6] if len(interface) > 6 else False
+                })
+            
+            emit('interfaces_response', {'interfaces': result})
+            logger.info('Successfully handled get_interfaces request for sid: %s', request.sid)
+        except Exception as e:
+            logger.error(f'Error getting interfaces via WebSocket: {type(e).__name__}: {e}')
+            import traceback
+            traceback.print_exc()
+            emit('error', {'message': f'获取接口列表失败: {str(e)}'})
+        finally:
+            if conn:
+                conn.close()
+
+    # 动态接口请求事件（WebSocket版本）
+    @socketio.on('dynamic_interface')
+    def handle_dynamic_interface(data):
+        conn = None
+        try:
+            logger.info('Handling dynamic_interface request from sid: %s, data: %s', request.sid, data)
+            full_path = data.get('path', '')
+            method = data.get('method', 'GET')
+            params = data.get('params', {})
+            
+            conn = sqlite3.connect(DATABASE)
+            cursor = conn.cursor()
+            
+            # 查找匹配的接口
+            cursor.execute('''
+                SELECT * FROM interfaces WHERE path = ? AND method = ?
+            ''', (full_path, method))
+            interface = cursor.fetchone()
+            
+            if not interface:
+                logger.warning(f'Interface {method} {full_path} not found for sid: {request.sid}')
+                emit('dynamic_response', {
+                    'code': 404,
+                    'message': f'接口 {method} {full_path} 不存在',
+                    'data': None
+                })
+                return
+            
+            # 获取Mock配置
+            cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface[0],))
+            mock_config = cursor.fetchone()
+            
+            if not mock_config or not mock_config[2]:
+                logger.warning(f'Mock service not enabled for interface {method} {full_path}, sid: {request.sid}')
+                emit('dynamic_response', {
+                    'code': 500,
+                    'message': '该接口的Mock服务未启用',
+                    'data': None
+                })
+                return
+            
+            # 优先使用请求中的mock_count，否则使用数据库默认值
+            request_mock_count = data.get('mock_count')
+            mock_count = int(request_mock_count) if request_mock_count else mock_config[3]
+            logger.debug('Using mock_count: %d for interface %s %s', mock_count, method, full_path)
+            
+            # 获取响应字段
+            cursor.execute('SELECT * FROM interface_responses WHERE interface_id = ?', (interface[0],))
+            response_fields = cursor.fetchall()
+            logger.debug('Found %d response fields for interface %s %s', len(response_fields), method, full_path)
+            
+            # 生成Mock数据
+            mock_data = []
+            for _ in range(mock_count):
+                data_item = {}
+                if response_fields:
+                    for field in response_fields:
+                        data_item[field[1]] = generate_mock_value(field[2])
+                else:
+                    # 如果没有响应字段，生成默认的mock数据
+                    data_item['id'] = str(uuid.uuid4())
+                    data_item['message'] = f'Success response from {full_path}'
+                    data_item['status'] = 'success'
+                    data_item['timestamp'] = datetime.now().isoformat()
+                    data_item['random_data'] = generate_mock_value('string')
+                    data_item['random_number'] = generate_mock_value('int')
+                    data_item['random_boolean'] = generate_mock_value('boolean')
+                mock_data.append(data_item)
+            
+            # 发送响应
+            emit('dynamic_response', {
+                'code': 0,
+                'message': 'success',
+                'data': mock_data
+            })
+            logger.info('Successfully handled dynamic_interface request: %s %s for sid: %s', method, full_path, request.sid)
+        except Exception as e:
+            logger.error(f'Error handling dynamic interface via WebSocket for sid: {request.sid}: {type(e).__name__}: {e}')
+            import traceback
+            traceback.print_exc()
+            # 确保发送错误响应
+            try:
+                emit('dynamic_response', {
+                    'code': 500,
+                    'message': f'处理动态接口失败: {str(e)}',
+                    'data': None
+                })
+            except Exception as emit_error:
+                logger.error(f'Error emitting dynamic response for sid: {request.sid}: {emit_error}')
+        finally:
+            if conn:
+                conn.close()
 
 # API路由：动态接口请求
 @app.route('/api/dynamic/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH'])
@@ -831,6 +1166,17 @@ def health_check():
         'version': '1.0.0'
     })
 
+# WebSocket状态检查路由
+@app.route('/api/websocket-status', methods=['GET'])
+def websocket_status():
+    """返回WebSocket服务状态"""
+    return jsonify({
+        'available': socketio is not None,
+        'async_mode': 'threading' if socketio else None,
+        'version': '1.0.0',
+        'status': 'available' if socketio else 'unavailable'
+    })
+
 # 调试端点
 @app.route('/debug', methods=['GET'])
 def debug_info():
@@ -839,7 +1185,8 @@ def debug_info():
         'frontend_dir': FRONTEND_DIR,
         'frontend_exists': os.path.exists(FRONTEND_DIR),
         'index_exists': os.path.exists(os.path.join(FRONTEND_DIR, 'index.html')),
-        'app_version': config.APP_VERSION
+        'app_version': config.APP_VERSION,
+        'websocket_available': socketio is not None
     })
 
 # 前端资源路由
@@ -876,11 +1223,6 @@ def static_files(filename):
     })
 
 # 命令行参数处理
-import argparse
-
-import webbrowser
-import threading
-import time
 
 def open_browser(host, port):
     """自动打开浏览器"""
@@ -888,11 +1230,12 @@ def open_browser(host, port):
         # 将0.0.0.0转换为localhost，便于浏览器访问
         browser_host = host if host != '0.0.0.0' else 'localhost'
         url = f'http://{browser_host}:{port}'
-        # 等待服务器启动（给3秒延迟）
-        time.sleep(3)
+        # 等待服务器启动（增加等待时间到5秒，确保应用有足够的时间启动）
+        time.sleep(5)
         # 使用默认浏览器打开
         webbrowser.open(url)
         logger.info(f"已自动打开浏览器，访问地址: {url}")
+        print(f"已自动打开浏览器，访问地址: {url}")
     except Exception as e:
         logger.error(f"自动打开浏览器失败: {e}")
         # 提示信息也使用转换后的地址
@@ -957,13 +1300,40 @@ if __name__ == '__main__':
     print(f"访问地址: {access_url}")
     print(f"按 Ctrl+C 停止应用\n")
     
-    # 自动打开浏览器（使用线程，避免阻塞）
-    if not args.no_browser:
-        # 使用线程打开浏览器，在服务器启动后3秒打开
-        browser_thread = threading.Thread(target=open_browser, args=(args.host, args.port))
-        browser_thread.daemon = True  # 设置为守护线程，随主线程退出而退出
-        browser_thread.start()
-    
-    # 启动应用，确保使用正确的参数
-    print(f"启动应用，监听 {args.host}:{args.port}")
-    app.run(host=args.host, port=args.port, debug=False, use_reloader=False, threaded=True, use_debugger=False)
+    try:
+        # 自动打开浏览器（使用线程，避免阻塞）
+        if not args.no_browser:
+            # 使用线程打开浏览器，在服务器启动后3秒打开
+            browser_thread = threading.Thread(target=open_browser, args=(args.host, args.port))
+            browser_thread.daemon = True  # 设置为守护线程，随主线程退出而退出
+            browser_thread.start()
+        
+        # 启动应用，确保使用正确的参数
+        print(f"启动应用，监听 {args.host}:{args.port}")
+        print(f"应用正在运行中...")
+        print(f"访问地址: http://{args.host}:{args.port}")
+        print(f"按 Ctrl+C 停止应用\n")
+        # 根据SocketIO初始化情况选择启动方式
+        if socketio is not None:
+            # 使用socketio.run()替代app.run()以支持WebSocket
+            socketio.run(app, host=args.host, port=args.port, debug=False, use_reloader=False)
+        else:
+            # 如果SocketIO初始化失败，使用app.run()启动应用
+            app.run(host=args.host, port=args.port, debug=False, use_reloader=False, threaded=True)
+    except KeyboardInterrupt:
+        print("\n应用已被用户中断")
+    except Exception as e:
+        print(f"\n应用启动失败，错误信息: {e}")
+        logger.error(f"应用启动失败: {e}")
+        import traceback
+        traceback.print_exc()
+    finally:
+        # 应用停止后的提示信息
+        print("\n应用已停止运行")
+        print("如果您想再次运行应用，请重新双击可执行文件")
+        print("按任意键退出...")
+        # 使用try-except块，防止在非控制台环境下input()函数报错
+        try:
+            input()
+        except:
+            pass

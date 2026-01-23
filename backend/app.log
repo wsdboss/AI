@@ -3239,3 +3239,1607 @@
 2026-01-21 14:35:38,467 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:38] "GET /api/interfaces HTTP/1.1" 200 -
 2026-01-21 14:35:45,378 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:45] "DELETE /api/files/72 HTTP/1.1" 200 -
 2026-01-21 14:35:45,700 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [21/Jan/2026 14:35:45] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:08:13,955 - __main__ - INFO - simple_app.py:57 - 日志系统初始化完成
+2026-01-22 10:08:14,031 - __main__ - INFO - simple_app.py:117 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 10:08:14,031 - __main__ - INFO - simple_app.py:118 - 前端目录是否存在: True
+2026-01-22 10:08:14,032 - __main__ - INFO - simple_app.py:119 - index.html是否存在: True
+2026-01-22 10:08:14,033 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-22 10:08:14,044 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-22 10:08:14,075 - __main__ - INFO - simple_app.py:1136 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 10:08:14,102 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 10:08:14,103 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 10:08:15,688 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:15] "GET /?ide_webview_request_time=1769047695209 HTTP/1.1" 200 -
+2026-01-22 10:08:15,786 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:15] "GET /assets/index-e9f94686.css HTTP/1.1" 200 -
+2026-01-22 10:08:16,016 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:16] "GET /assets/index-9bad6f21.js HTTP/1.1" 200 -
+2026-01-22 10:08:16,206 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:16] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:08:16,499 - __main__ - INFO - simple_app.py:805 - Client connected via WebSocket
+2026-01-22 10:08:16,559 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:16] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 10:08:16,819 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:16] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 10:08:17,527 - __main__ - INFO - simple_app.py:1076 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 10:08:18,102 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:18] "GET / HTTP/1.1" 200 -
+2026-01-22 10:08:18,249 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:18] "GET /assets/index-e9f94686.css HTTP/1.1" 200 -
+2026-01-22 10:08:18,353 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:18] "GET /assets/index-9bad6f21.js HTTP/1.1" 200 -
+2026-01-22 10:08:18,475 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:18] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:08:18,772 - __main__ - INFO - simple_app.py:805 - Client connected via WebSocket
+2026-01-22 10:08:18,846 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:18] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 10:08:19,093 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:19] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 10:08:24,011 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:24] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 10:08:24,326 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:08:24] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 10:09:54,744 - __main__ - INFO - simple_app.py:57 - 日志系统初始化完成
+2026-01-22 10:09:54,813 - __main__ - INFO - simple_app.py:117 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 10:09:54,813 - __main__ - INFO - simple_app.py:118 - 前端目录是否存在: True
+2026-01-22 10:09:54,814 - __main__ - INFO - simple_app.py:119 - index.html是否存在: True
+2026-01-22 10:09:54,814 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-22 10:09:54,816 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-22 10:09:54,827 - __main__ - INFO - simple_app.py:1136 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 10:09:54,846 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 10:09:54,846 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 10:09:58,125 - __main__ - INFO - simple_app.py:1076 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 10:09:58,693 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:09:58] "[36mGET / HTTP/1.1[0m" 304 -
+2026-01-22 10:09:58,702 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:09:58] "[36mGET /assets/index-9bad6f21.js HTTP/1.1[0m" 304 -
+2026-01-22 10:09:58,811 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:09:58] "[36mGET /assets/index-e9f94686.css HTTP/1.1[0m" 304 -
+2026-01-22 10:09:59,169 - __main__ - INFO - simple_app.py:805 - Client connected via WebSocket
+2026-01-22 10:09:59,173 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:09:59] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 10:09:59,215 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:09:59] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:09:59,443 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:09:59] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 10:11:00,977 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:00] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 10:11:01,241 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:01] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 10:11:19,113 - __main__ - INFO - simple_app.py:273 - 收到文件上传请求
+2026-01-22 10:11:19,115 - __main__ - INFO - simple_app.py:285 - 开始上传文件: api.JSON
+2026-01-22 10:11:19,119 - __main__ - INFO - simple_app.py:293 - 文件保存成功: E:\traeAiProject\GenerateInterTool\backend\uploads\506a70eb-1d4e-4021-a620-ffd6a0804020_api.JSON
+2026-01-22 10:11:19,120 - __main__ - INFO - simple_app.py:307 - 准备插入数据库，文件信息: filename=api.JSON, file_path=E:\traeAiProject\GenerateInterTool\backend\uploads\506a70eb-1d4e-4021-a620-ffd6a0804020_api.JSON, file_type=application/json, size=9400, uploaded_at=2026-01-22T10:11:19.120509, parsed=1
+2026-01-22 10:11:19,121 - __main__ - INFO - simple_app.py:312 - 表结构: [(0, 'id', 'INTEGER', 0, None, 1), (1, 'filename', 'TEXT', 1, None, 0), (2, 'file_path', 'TEXT', 1, None, 0), (3, 'file_type', 'TEXT', 1, None, 0), (4, 'size', 'INTEGER', 1, None, 0), (5, 'uploaded_at', 'TEXT', 1, None, 0), (6, 'parsed', 'INTEGER', 0, '0', 0), (7, 'parsed_interfaces', 'INTEGER', 0, '0', 0), (8, 'parsed_params', 'INTEGER', 0, '0', 0), (9, 'parsed_responses', 'INTEGER', 0, '0', 0)]
+2026-01-22 10:11:19,202 - __main__ - INFO - simple_app.py:324 - 文件记录已添加到数据库，文件ID: 75
+2026-01-22 10:11:19,202 - __main__ - INFO - simple_app.py:327 - 准备执行文件解析，文件ID: 75
+2026-01-22 10:11:19,366 - __main__ - INFO - simple_app.py:330 - 文件解析任务已执行，文件ID: 75
+2026-01-22 10:11:19,366 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:19] "POST /api/files/upload HTTP/1.1" 200 -
+2026-01-22 10:11:19,683 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:19] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:11:19,683 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:19] "GET /api/interfaces HTTP/1.1" 200 -
+2026-01-22 10:11:22,803 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:22] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:11:23,120 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:23] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:11:24,008 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:24] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:11:24,315 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:24] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:11:24,360 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:24] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 10:11:24,637 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:24] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:11:24,959 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:11:24] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:14:48,042 - __main__ - INFO - simple_app.py:57 - 日志系统初始化完成
+2026-01-22 10:14:48,079 - __main__ - INFO - simple_app.py:117 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 10:14:48,079 - __main__ - INFO - simple_app.py:118 - 前端目录是否存在: True
+2026-01-22 10:14:48,079 - __main__ - INFO - simple_app.py:119 - index.html是否存在: True
+2026-01-22 10:14:48,080 - __main__ - INFO - simple_app.py:240 - 初始化数据库...
+2026-01-22 10:14:48,083 - __main__ - INFO - simple_app.py:243 - 数据库初始化成功
+2026-01-22 10:14:48,094 - __main__ - INFO - simple_app.py:1139 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 10:14:48,121 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 10:14:48,122 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 10:14:48,768 - __main__ - INFO - simple_app.py:808 - Client connected via WebSocket
+2026-01-22 10:14:51,415 - __main__ - INFO - simple_app.py:1079 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 10:14:51,971 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:14:51] "[36mGET / HTTP/1.1[0m" 304 -
+2026-01-22 10:14:51,980 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:14:51] "[36mGET /assets/index-9bad6f21.js HTTP/1.1[0m" 304 -
+2026-01-22 10:14:52,094 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:14:52] "[36mGET /assets/index-e9f94686.css HTTP/1.1[0m" 304 -
+2026-01-22 10:14:52,467 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:14:52] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 10:14:52,473 - __main__ - INFO - simple_app.py:808 - Client connected via WebSocket
+2026-01-22 10:14:52,512 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:14:52] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:14:52,727 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:14:52] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 10:15:16,139 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:16] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:15:16,462 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:16] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:15:17,434 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:17] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 10:15:17,753 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:17] "GET /api/interfaces/415/params HTTP/1.1" 200 -
+2026-01-22 10:15:17,781 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:17] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 10:15:18,074 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:18] "GET /api/interfaces/415/responses HTTP/1.1" 200 -
+2026-01-22 10:15:18,228 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:18] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:15:18,228 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:18] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:15:18,231 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:18] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 10:15:18,396 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:18] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 10:15:18,555 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:18] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:15:18,874 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:18] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:15:27,418 - __main__ - INFO - simple_app.py:814 - Client disconnected from WebSocket
+2026-01-22 10:15:27,439 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 10:15:27,443 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 10:15:39,101 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:39] "[36mGET /assets/index-e9f94686.css HTTP/1.1[0m" 304 -
+2026-01-22 10:15:39,423 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:39] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 200 -
+2026-01-22 10:15:52,075 - __main__ - INFO - simple_app.py:814 - Client disconnected from WebSocket
+2026-01-22 10:15:52,079 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:52] "GET /interface/414 HTTP/1.1" 200 -
+2026-01-22 10:15:52,090 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:52] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 10:15:52,092 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 10:15:52,392 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:52] "[36mGET /assets/index-e9f94686.css HTTP/1.1[0m" 304 -
+2026-01-22 10:15:52,397 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:52] "[36mGET /assets/index-9bad6f21.js HTTP/1.1[0m" 304 -
+2026-01-22 10:15:52,453 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:52] "[36mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 304 -
+2026-01-22 10:15:52,824 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:52] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 10:15:52,827 - __main__ - INFO - simple_app.py:808 - Client connected via WebSocket
+2026-01-22 10:15:52,849 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:52] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:15:53,083 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:15:53] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 10:16:00,917 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:16:00] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:16:01,233 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:16:01] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:16:05,922 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:16:05] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:16:06,231 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:16:06] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:16:06,554 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:16:06] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:16:06,808 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:16:06] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:18:55,865 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:18:55] "GET /?ide_webview_request_time=1769047695209 HTTP/1.1" 200 -
+2026-01-22 10:18:56,132 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:18:56] "GET /assets/index-1fa42e15.css HTTP/1.1" 200 -
+2026-01-22 10:18:56,189 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:18:56] "GET /assets/index-204aff8a.js HTTP/1.1" 200 -
+2026-01-22 10:18:56,347 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:18:56] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:18:56,654 - __main__ - INFO - simple_app.py:808 - Client connected via WebSocket
+2026-01-22 10:18:56,665 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:18:56] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 10:18:56,925 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:18:56] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 10:18:58,870 - __main__ - INFO - simple_app.py:814 - Client disconnected from WebSocket
+2026-01-22 10:18:58,873 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:18:58] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 10:18:58,874 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 10:18:59,142 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:18:59] "GET /api/files/download/75?ide_webview_request_time=1769048339122 HTTP/1.1" 200 -
+2026-01-22 10:19:02,504 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:02] "[36mGET /?ide_webview_request_time=1769047695209 HTTP/1.1[0m" 304 -
+2026-01-22 10:19:02,764 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:02] "[36mGET /assets/index-1fa42e15.css HTTP/1.1[0m" 304 -
+2026-01-22 10:19:02,824 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:02] "[36mGET /assets/index-204aff8a.js HTTP/1.1[0m" 304 -
+2026-01-22 10:19:02,982 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:02] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:19:03,287 - __main__ - INFO - simple_app.py:808 - Client connected via WebSocket
+2026-01-22 10:19:03,344 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:03] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 10:19:03,590 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:03] "[36mGET /@vite/client HTTP/1.1[0m" 304 -
+2026-01-22 10:19:05,450 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:05] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:19:05,763 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:05] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:19:07,495 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:07] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:19:07,495 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:07] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:19:07,753 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:07] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:19:07,813 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:07] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:19:24,049 - __main__ - ERROR - simple_app.py:797 - Error generating WebSocket interface: no such column: is_websocket
+2026-01-22 10:19:24,051 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:19:24] "[35m[1mPOST /api/interfaces/generate-websocket/414 HTTP/1.1[0m" 500 -
+2026-01-22 10:21:15,654 - __main__ - INFO - simple_app.py:814 - Client disconnected from WebSocket
+2026-01-22 10:21:15,667 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:21:15] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 10:21:15,670 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 10:25:16,601 - __main__ - INFO - simple_app.py:57 - 日志系统初始化完成
+2026-01-22 10:25:16,638 - __main__ - INFO - simple_app.py:117 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 10:25:16,639 - __main__ - INFO - simple_app.py:118 - 前端目录是否存在: True
+2026-01-22 10:25:16,639 - __main__ - INFO - simple_app.py:119 - index.html是否存在: True
+2026-01-22 10:25:16,640 - __main__ - INFO - simple_app.py:246 - 初始化数据库...
+2026-01-22 10:25:16,724 - __main__ - INFO - simple_app.py:249 - 数据库初始化成功
+2026-01-22 10:25:16,745 - __main__ - INFO - simple_app.py:1145 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 10:25:16,807 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 10:25:16,808 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 10:25:17,757 - __main__ - INFO - simple_app.py:814 - Client connected via WebSocket
+2026-01-22 10:25:20,079 - __main__ - INFO - simple_app.py:1085 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 10:25:20,813 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:20] "GET / HTTP/1.1" 200 -
+2026-01-22 10:25:20,845 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:20] "GET /assets/index-1fa42e15.css HTTP/1.1" 200 -
+2026-01-22 10:25:20,854 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:20] "GET /assets/index-204aff8a.js HTTP/1.1" 200 -
+2026-01-22 10:25:21,138 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:21] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 10:25:21,339 - __main__ - INFO - simple_app.py:814 - Client connected via WebSocket
+2026-01-22 10:25:21,360 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:21] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:25:21,416 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:21] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 10:25:24,016 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:24] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:25:24,336 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:24] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:25:24,906 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:24] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 10:25:25,209 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:25] "GET /api/interfaces/415/params HTTP/1.1" 200 -
+2026-01-22 10:25:25,254 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:25] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 10:25:25,519 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:25] "GET /api/interfaces/415/responses HTTP/1.1" 200 -
+2026-01-22 10:25:25,687 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:25] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:25:25,688 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:25] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:25:25,716 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:25] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 10:25:25,838 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:25] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 10:25:26,006 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:26] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:25:26,315 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:26] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:25:27,158 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:27] "POST /api/interfaces/generate-websocket/414 HTTP/1.1" 200 -
+2026-01-22 10:25:27,473 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:27] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:25:27,474 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:27] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:25:27,732 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:27] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:25:27,794 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:25:27] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:26:43,313 - __main__ - INFO - simple_app.py:57 - 日志系统初始化完成
+2026-01-22 10:26:43,346 - __main__ - INFO - simple_app.py:117 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 10:26:43,346 - __main__ - INFO - simple_app.py:118 - 前端目录是否存在: True
+2026-01-22 10:26:43,346 - __main__ - INFO - simple_app.py:119 - index.html是否存在: True
+2026-01-22 10:26:43,347 - __main__ - INFO - simple_app.py:246 - 初始化数据库...
+2026-01-22 10:26:43,349 - __main__ - INFO - simple_app.py:249 - 数据库初始化成功
+2026-01-22 10:26:43,365 - __main__ - INFO - simple_app.py:1145 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 10:26:43,387 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 10:26:43,388 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 10:26:45,768 - __main__ - INFO - simple_app.py:814 - Client connected via WebSocket
+2026-01-22 10:26:45,769 - __main__ - INFO - simple_app.py:814 - Client connected via WebSocket
+2026-01-22 10:26:46,699 - __main__ - INFO - simple_app.py:1085 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 10:26:47,248 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:26:47] "[36mGET / HTTP/1.1[0m" 304 -
+2026-01-22 10:26:47,299 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:26:47] "[36mGET /assets/index-1fa42e15.css HTTP/1.1[0m" 304 -
+2026-01-22 10:26:47,389 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:26:47] "[36mGET /assets/index-204aff8a.js HTTP/1.1[0m" 304 -
+2026-01-22 10:26:47,559 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:26:47] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 10:26:47,792 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:26:47] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:26:47,822 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:26:47] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 10:26:47,829 - __main__ - INFO - simple_app.py:814 - Client connected via WebSocket
+2026-01-22 10:35:27,100 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:27] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 10:35:27,346 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:27] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 10:35:29,541 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:29] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:35:29,856 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:29] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:35:30,916 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:30] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:35:31,224 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:31] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:35:31,270 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:31] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 10:35:31,532 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:31] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:35:31,854 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:31] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:35:49,387 - __main__ - INFO - simple_app.py:820 - Client disconnected from WebSocket
+2026-01-22 10:35:49,388 - __main__ - INFO - simple_app.py:820 - Client disconnected from WebSocket
+2026-01-22 10:35:49,400 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:49] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 10:35:49,400 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:35:49] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 10:35:49,411 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 10:35:49,411 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 10:36:47,970 - __main__ - INFO - simple_app.py:820 - Client disconnected from WebSocket
+2026-01-22 10:36:47,984 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:47] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 10:36:47,988 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 10:36:48,287 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:48] "GET /?ide_webview_request_time=1769049407964 HTTP/1.1" 200 -
+2026-01-22 10:36:48,541 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:48] "GET /assets/index-a13e4528.css HTTP/1.1" 200 -
+2026-01-22 10:36:48,603 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:48] "GET /assets/index-238edc16.js HTTP/1.1" 200 -
+2026-01-22 10:36:48,767 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:48] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:36:49,070 - __main__ - INFO - simple_app.py:814 - Client connected via WebSocket
+2026-01-22 10:36:49,082 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:49] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 10:36:49,343 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:49] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 10:36:50,904 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:50] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:36:51,216 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:51] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:36:52,293 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:52] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:36:52,293 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:52] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:36:52,553 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:52] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:36:52,630 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:52] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:36:57,465 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:36:57] "PUT /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:57:51,734 - __main__ - INFO - simple_app.py:820 - Client disconnected from WebSocket
+2026-01-22 10:57:51,757 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:51] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 10:57:51,760 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 10:57:52,053 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:52] "GET /?ide_webview_request_time=1769050671731 HTTP/1.1" 200 -
+2026-01-22 10:57:52,311 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:52] "GET /assets/index-24da7627.css HTTP/1.1" 200 -
+2026-01-22 10:57:52,373 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:52] "GET /assets/index-2405782f.js HTTP/1.1" 200 -
+2026-01-22 10:57:52,546 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:52] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 10:57:52,858 - __main__ - INFO - simple_app.py:814 - Client connected via WebSocket
+2026-01-22 10:57:52,860 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:52] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 10:57:53,126 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:53] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 10:57:54,894 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:54] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:57:55,204 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:55] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 10:57:56,051 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:56] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:57:56,051 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:56] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:57:56,311 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:56] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:57:56,374 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:57:56] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:59:54,476 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:54] "GET /api/interfaces/415/params HTTP/1.1" 200 -
+2026-01-22 10:59:54,477 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:54] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 10:59:54,721 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:54] "GET /api/interfaces/415/responses HTTP/1.1" 200 -
+2026-01-22 10:59:54,798 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:54] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 10:59:56,335 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:56] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:59:56,638 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:56] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:59:56,950 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:56] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:59:57,199 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:57] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:59:57,421 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:57] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 10:59:57,733 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:57] "GET /api/interfaces/415/params HTTP/1.1" 200 -
+2026-01-22 10:59:58,056 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:58] "GET /api/interfaces/415/responses HTTP/1.1" 200 -
+2026-01-22 10:59:58,300 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:58] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 10:59:58,366 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:58] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:59:58,517 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:58] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 10:59:58,523 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:58] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 10:59:58,839 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:58] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 10:59:59,088 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:59] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 10:59:59,142 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:59] "GET /api/interfaces/415/params HTTP/1.1" 200 -
+2026-01-22 10:59:59,147 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:59] "GET /api/interfaces/415/responses HTTP/1.1" 200 -
+2026-01-22 10:59:59,454 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 10:59:59] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 11:00:00,886 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:00] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:00:01,189 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:01] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 11:00:01,502 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:01] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 11:00:01,749 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:01] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:00:01,902 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:01] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 11:00:02,206 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:02] "GET /api/interfaces/415/params HTTP/1.1" 200 -
+2026-01-22 11:00:02,521 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:02] "GET /api/interfaces/415/responses HTTP/1.1" 200 -
+2026-01-22 11:00:02,777 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:02] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 11:00:02,830 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:02] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:00:03,012 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:03] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 11:00:03,020 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:03] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 11:00:03,329 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:03] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:00:53,576 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:53] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 11:00:53,877 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:53] "GET /api/interfaces/415/params HTTP/1.1" 200 -
+2026-01-22 11:00:54,201 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:54] "GET /api/interfaces/415/responses HTTP/1.1" 200 -
+2026-01-22 11:00:54,445 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:00:54] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 11:04:11,964 - __main__ - INFO - simple_app.py:820 - Client disconnected from WebSocket
+2026-01-22 11:04:11,986 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:11] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 11:04:11,989 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 11:04:12,286 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:12] "GET /interface/415 HTTP/1.1" 200 -
+2026-01-22 11:04:12,542 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:12] "GET /assets/index-ea4eab18.css HTTP/1.1" 200 -
+2026-01-22 11:04:12,620 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:12] "GET /assets/index-4f2dab94.js HTTP/1.1" 200 -
+2026-01-22 11:04:12,781 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:12] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 11:04:13,082 - __main__ - INFO - simple_app.py:814 - Client connected via WebSocket
+2026-01-22 11:04:13,125 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:13] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 11:04:13,373 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:13] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 11:04:14,319 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:14] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 11:04:14,636 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:14] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 11:04:15,678 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:15] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:04:15,678 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:15] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 11:04:15,946 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:15] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 11:04:15,988 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:04:15] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:12:20,569 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:12:20] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 11:12:20,573 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 11:15:32,931 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:15:32] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 11:15:32,934 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 11:15:34,431 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:15:34] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 11:15:34,435 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 11:15:56,118 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:15:56] "PUT /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:18:59,677 - __main__ - INFO - simple_app.py:820 - Client disconnected from WebSocket
+2026-01-22 11:18:59,700 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:18:59] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 11:18:59,704 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 11:19:00,006 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:00] "GET /interface/414 HTTP/1.1" 200 -
+2026-01-22 11:19:00,253 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:00] "GET /assets/index-ea4eab18.css HTTP/1.1" 200 -
+2026-01-22 11:19:00,330 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:00] "GET /assets/index-4f2dab94.js HTTP/1.1" 200 -
+2026-01-22 11:19:00,498 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:00] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 11:19:00,794 - __main__ - INFO - simple_app.py:814 - Client connected via WebSocket
+2026-01-22 11:19:00,822 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:00] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 11:19:01,067 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:01] "[36mGET /@vite/client HTTP/1.1[0m" 304 -
+2026-01-22 11:19:03,145 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:03] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 11:19:03,455 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:03] "GET /api/interfaces?file_id=75 HTTP/1.1" 200 -
+2026-01-22 11:19:04,657 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:04] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:19:04,657 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:04] "GET /api/interfaces/414/params HTTP/1.1" 200 -
+2026-01-22 11:19:04,919 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:04] "GET /api/interfaces/414/responses HTTP/1.1" 200 -
+2026-01-22 11:19:04,966 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:04] "GET /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:19:06,241 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:06] "PUT /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:19:22,033 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:22] "PUT /api/interfaces/414/mock-config HTTP/1.1" 200 -
+2026-01-22 11:19:39,376 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:39] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 11:19:39,694 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:39] "GET /api/interfaces/415/params HTTP/1.1" 200 -
+2026-01-22 11:19:40,005 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:40] "GET /api/interfaces/415/responses HTTP/1.1" 200 -
+2026-01-22 11:19:40,267 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 11:19:40] "GET /api/interfaces/415/mock-config HTTP/1.1" 200 -
+2026-01-22 13:22:32,174 - __main__ - INFO - simple_app.py:57 - 日志系统初始化完成
+2026-01-22 13:22:32,261 - __main__ - INFO - simple_app.py:117 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 13:22:32,262 - __main__ - INFO - simple_app.py:118 - 前端目录是否存在: True
+2026-01-22 13:22:32,262 - __main__ - INFO - simple_app.py:119 - index.html是否存在: True
+2026-01-22 13:22:32,262 - __main__ - INFO - simple_app.py:246 - 初始化数据库...
+2026-01-22 13:22:32,265 - __main__ - INFO - simple_app.py:249 - 数据库初始化成功
+2026-01-22 13:22:32,288 - __main__ - INFO - simple_app.py:1145 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 13:22:32,363 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 13:22:32,363 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 13:22:36,159 - __main__ - INFO - simple_app.py:814 - Client connected via WebSocket
+2026-01-22 13:25:01,766 - __main__ - INFO - simple_app.py:57 - 日志系统初始化完成
+2026-01-22 13:25:01,802 - __main__ - INFO - simple_app.py:117 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 13:25:01,802 - __main__ - INFO - simple_app.py:118 - 前端目录是否存在: True
+2026-01-22 13:25:01,802 - __main__ - INFO - simple_app.py:119 - index.html是否存在: True
+2026-01-22 13:25:01,803 - __main__ - INFO - simple_app.py:246 - 初始化数据库...
+2026-01-22 13:25:01,806 - __main__ - INFO - simple_app.py:249 - 数据库初始化成功
+2026-01-22 13:25:01,817 - __main__ - WARNING - simple_app.py:1128 - 端口 8000 已被占用，尝试下一个可用端口
+2026-01-22 13:25:01,817 - __main__ - INFO - simple_app.py:1140 - 已切换到可用端口 8001
+2026-01-22 13:25:01,817 - __main__ - INFO - simple_app.py:1145 - 应用即将启动，访问地址: http://0.0.0.0:8001
+2026-01-22 13:25:01,838 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-01-22 13:25:01,839 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 13:25:07,322 - __main__ - INFO - simple_app.py:1086 - 已自动打开浏览器，访问地址: http://0.0.0.0:8001
+2026-01-22 15:46:53,673 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 15:46:53,712 - __main__ - INFO - simple_app.py:75 - SocketIO初始化成功
+2026-01-22 15:46:53,712 - __main__ - INFO - simple_app.py:139 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 15:46:53,712 - __main__ - INFO - simple_app.py:140 - 前端目录是否存在: True
+2026-01-22 15:46:53,713 - __main__ - INFO - simple_app.py:141 - index.html是否存在: True
+2026-01-22 15:46:53,713 - __main__ - INFO - simple_app.py:268 - 初始化数据库...
+2026-01-22 15:46:53,716 - __main__ - INFO - simple_app.py:271 - 数据库初始化成功
+2026-01-22 15:46:53,725 - __main__ - INFO - simple_app.py:1165 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 15:46:53,747 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 15:46:53,747 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 15:46:58,497 - __main__ - INFO - simple_app.py:836 - Client connected via WebSocket
+2026-01-22 15:46:59,075 - __main__ - INFO - simple_app.py:1104 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 15:46:59,622 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:46:59] "GET / HTTP/1.1" 200 -
+2026-01-22 15:46:59,630 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:46:59] "GET /assets/index-f85acfd6.js HTTP/1.1" 200 -
+2026-01-22 15:46:59,745 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:46:59] "GET /assets/index-ea4eab18.css HTTP/1.1" 200 -
+2026-01-22 15:47:00,132 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:00] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 15:47:00,134 - __main__ - INFO - simple_app.py:836 - Client connected via WebSocket
+2026-01-22 15:47:00,223 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:00] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 15:47:00,399 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:00] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 15:47:08,271 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:08] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 15:47:08,591 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:08] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 15:47:09,514 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:09] "GET /api/interfaces/401/mock-config HTTP/1.1" 200 -
+2026-01-22 15:47:09,819 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:09] "GET /api/interfaces/401/params HTTP/1.1" 200 -
+2026-01-22 15:47:09,864 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:09] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 15:47:10,141 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:10] "GET /api/interfaces/401/responses HTTP/1.1" 200 -
+2026-01-22 15:47:10,448 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:10] "GET /api/interfaces/401/mock-config HTTP/1.1" 200 -
+2026-01-22 15:47:20,122 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:20] "POST /api/interfaces/generate-websocket/401 HTTP/1.1" 200 -
+2026-01-22 15:47:20,437 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:20] "GET /api/interfaces/401/params HTTP/1.1" 200 -
+2026-01-22 15:47:20,437 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:20] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 15:47:20,696 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:20] "GET /api/interfaces/401/responses HTTP/1.1" 200 -
+2026-01-22 15:47:20,758 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:20] "GET /api/interfaces/401/mock-config HTTP/1.1" 200 -
+2026-01-22 15:47:31,429 - __main__ - INFO - simple_app.py:842 - Client disconnected from WebSocket
+2026-01-22 15:47:31,447 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:47:31] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 15:47:31,452 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 15:49:26,773 - __main__ - INFO - simple_app.py:842 - Client disconnected from WebSocket
+2026-01-22 15:49:26,789 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:26] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 15:49:26,793 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 15:49:27,081 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:27] "GET /?ide_webview_request_time=1769068166769 HTTP/1.1" 200 -
+2026-01-22 15:49:27,348 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:27] "GET /assets/index-ea4eab18.css HTTP/1.1" 200 -
+2026-01-22 15:49:27,421 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:27] "GET /assets/index-f85acfd6.js HTTP/1.1" 200 -
+2026-01-22 15:49:27,593 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:27] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 15:49:27,900 - __main__ - INFO - simple_app.py:836 - Client connected via WebSocket
+2026-01-22 15:49:27,912 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:27] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 15:49:28,171 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:28] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 15:49:28,928 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:28] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 15:49:29,248 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:29] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 15:49:29,954 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:29] "GET /api/interfaces/401/mock-config HTTP/1.1" 200 -
+2026-01-22 15:49:29,959 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:29] "GET /api/interfaces/401/params HTTP/1.1" 200 -
+2026-01-22 15:49:30,215 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:30] "GET /api/interfaces/401/responses HTTP/1.1" 200 -
+2026-01-22 15:49:30,277 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:49:30] "GET /api/interfaces/401/mock-config HTTP/1.1" 200 -
+2026-01-22 15:59:15,138 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 15:59:15,195 - __main__ - INFO - simple_app.py:75 - SocketIO初始化成功
+2026-01-22 15:59:15,196 - __main__ - INFO - simple_app.py:139 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 15:59:15,196 - __main__ - INFO - simple_app.py:140 - 前端目录是否存在: True
+2026-01-22 15:59:15,196 - __main__ - INFO - simple_app.py:141 - index.html是否存在: True
+2026-01-22 15:59:15,197 - __main__ - INFO - simple_app.py:268 - 初始化数据库...
+2026-01-22 15:59:15,200 - __main__ - INFO - simple_app.py:271 - 数据库初始化成功
+2026-01-22 15:59:15,218 - __main__ - INFO - simple_app.py:1210 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 15:59:15,245 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 15:59:15,246 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 15:59:15,261 - __main__ - INFO - simple_app.py:881 - Client connected via WebSocket
+2026-01-22 15:59:15,299 - __main__ - INFO - simple_app.py:881 - Client connected via WebSocket
+2026-01-22 15:59:20,550 - __main__ - INFO - simple_app.py:1149 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 15:59:21,103 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:21] "GET / HTTP/1.1" 200 -
+2026-01-22 15:59:21,111 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:21] "GET /assets/index-f85acfd6.js HTTP/1.1" 200 -
+2026-01-22 15:59:21,223 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:21] "GET /assets/index-ea4eab18.css HTTP/1.1" 200 -
+2026-01-22 15:59:21,630 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:21] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 15:59:21,663 - __main__ - INFO - simple_app.py:881 - Client connected via WebSocket
+2026-01-22 15:59:21,693 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:21] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 15:59:21,898 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:21] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 15:59:23,023 - __main__ - INFO - simple_app.py:887 - Client disconnected from WebSocket
+2026-01-22 15:59:23,023 - __main__ - INFO - simple_app.py:887 - Client disconnected from WebSocket
+2026-01-22 15:59:23,045 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:23] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 15:59:23,045 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:23] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 15:59:23,050 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 15:59:23,051 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 15:59:24,506 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:24] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 15:59:24,819 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:24] "GET /api/interfaces?file_id=73 HTTP/1.1" 200 -
+2026-01-22 15:59:26,346 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:26] "GET /api/interfaces/401/mock-config HTTP/1.1" 200 -
+2026-01-22 15:59:26,665 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:26] "GET /api/interfaces/401/params HTTP/1.1" 200 -
+2026-01-22 15:59:26,707 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:26] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 15:59:26,984 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:26] "GET /api/interfaces/401/responses HTTP/1.1" 200 -
+2026-01-22 15:59:27,308 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:27] "GET /api/interfaces/401/mock-config HTTP/1.1" 200 -
+2026-01-22 15:59:36,536 - __main__ - INFO - simple_app.py:887 - Client disconnected from WebSocket
+2026-01-22 15:59:36,542 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:36] "GET /interface/401 HTTP/1.1" 200 -
+2026-01-22 15:59:36,551 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:36] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 15:59:36,552 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 15:59:36,862 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:36] "GET /assets/index-bd99a963.css HTTP/1.1" 200 -
+2026-01-22 15:59:36,864 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:36] "GET /assets/index-59c457b7.js HTTP/1.1" 200 -
+2026-01-22 15:59:37,286 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:37] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 15:59:37,287 - __main__ - INFO - simple_app.py:881 - Client connected via WebSocket
+2026-01-22 15:59:37,295 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:37] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 15:59:37,547 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:37] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 15:59:41,131 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:41] "DELETE /api/files/73 HTTP/1.1" 200 -
+2026-01-22 15:59:41,451 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:41] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 15:59:43,322 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:43] "DELETE /api/files/74 HTTP/1.1" 200 -
+2026-01-22 15:59:43,634 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:43] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 15:59:45,173 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:45] "DELETE /api/files/75 HTTP/1.1" 200 -
+2026-01-22 15:59:45,492 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:45] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 15:59:47,530 - __main__ - INFO - simple_app.py:887 - Client disconnected from WebSocket
+2026-01-22 15:59:47,533 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:47] "[36mGET /interface/401 HTTP/1.1[0m" 304 -
+2026-01-22 15:59:47,540 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:47] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 15:59:47,541 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 15:59:47,836 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:47] "[36mGET /assets/index-bd99a963.css HTTP/1.1[0m" 304 -
+2026-01-22 15:59:47,852 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:47] "[36mGET /assets/index-59c457b7.js HTTP/1.1[0m" 304 -
+2026-01-22 15:59:48,181 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:48] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 15:59:48,182 - __main__ - INFO - simple_app.py:881 - Client connected via WebSocket
+2026-01-22 15:59:48,184 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:48] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 15:59:48,439 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:48] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 15:59:49,780 - __main__ - INFO - simple_app.py:887 - Client disconnected from WebSocket
+2026-01-22 15:59:49,802 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:49] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 15:59:49,805 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 15:59:49,807 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:49] "GET / HTTP/1.1" 200 -
+2026-01-22 15:59:50,131 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:50] "[36mGET /assets/index-bd99a963.css HTTP/1.1[0m" 304 -
+2026-01-22 15:59:50,136 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:50] "[36mGET /assets/index-59c457b7.js HTTP/1.1[0m" 304 -
+2026-01-22 15:59:50,383 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:50] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 15:59:50,477 - __main__ - INFO - simple_app.py:881 - Client connected via WebSocket
+2026-01-22 15:59:50,478 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:50] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 15:59:50,491 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 15:59:50] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 16:00:05,078 - __main__ - ERROR - simple_app.py:870 - Error switching interface to HTTP: 'NoneType' object is not subscriptable
+2026-01-22 16:00:05,080 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:05] "[35m[1mPOST /api/interfaces/switch-to-http/1 HTTP/1.1[0m" 500 -
+2026-01-22 16:00:33,081 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 16:00:33,118 - __main__ - INFO - simple_app.py:75 - SocketIO初始化成功
+2026-01-22 16:00:33,118 - __main__ - INFO - simple_app.py:139 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 16:00:33,118 - __main__ - INFO - simple_app.py:140 - 前端目录是否存在: True
+2026-01-22 16:00:33,119 - __main__ - INFO - simple_app.py:141 - index.html是否存在: True
+2026-01-22 16:00:33,119 - __main__ - INFO - simple_app.py:268 - 初始化数据库...
+2026-01-22 16:00:33,122 - __main__ - INFO - simple_app.py:271 - 数据库初始化成功
+2026-01-22 16:00:33,133 - __main__ - INFO - simple_app.py:1218 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 16:00:33,160 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 16:00:33,161 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 16:00:33,812 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:00:38,497 - __main__ - INFO - simple_app.py:1157 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 16:00:39,024 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:39] "[36mGET / HTTP/1.1[0m" 304 -
+2026-01-22 16:00:39,035 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:39] "[36mGET /assets/index-59c457b7.js HTTP/1.1[0m" 304 -
+2026-01-22 16:00:39,160 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:39] "[36mGET /assets/index-bd99a963.css HTTP/1.1[0m" 304 -
+2026-01-22 16:00:39,541 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:39] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 16:00:39,545 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:00:39,586 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:39] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:00:39,801 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:39] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 16:00:44,494 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:44] "GET /?ide_webview_request_time=1769068844174 HTTP/1.1" 200 -
+2026-01-22 16:00:44,756 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:44] "GET /assets/index-bd99a963.css HTTP/1.1" 200 -
+2026-01-22 16:00:44,821 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:44] "GET /assets/index-59c457b7.js HTTP/1.1" 200 -
+2026-01-22 16:00:45,015 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:45] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:00:45,314 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:00:45,388 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:45] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:00:45,650 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:45] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 16:00:49,223 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:00:49,224 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:00:49,243 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:49] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:00:49,244 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:00:49] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:00:49,251 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:00:49,251 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:01:00,305 - __main__ - INFO - simple_app.py:301 - 收到文件上传请求
+2026-01-22 16:01:00,314 - __main__ - INFO - simple_app.py:313 - 开始上传文件: api.JSON
+2026-01-22 16:01:00,317 - __main__ - INFO - simple_app.py:321 - 文件保存成功: E:\traeAiProject\GenerateInterTool\backend\uploads\afe4dceb-10e7-46a4-8f5a-a4303032e1a5_api.JSON
+2026-01-22 16:01:00,318 - __main__ - INFO - simple_app.py:335 - 准备插入数据库，文件信息: filename=api.JSON, file_path=E:\traeAiProject\GenerateInterTool\backend\uploads\afe4dceb-10e7-46a4-8f5a-a4303032e1a5_api.JSON, file_type=application/json, size=9400, uploaded_at=2026-01-22T16:01:00.318611, parsed=1
+2026-01-22 16:01:00,319 - __main__ - INFO - simple_app.py:340 - 表结构: [(0, 'id', 'INTEGER', 0, None, 1), (1, 'filename', 'TEXT', 1, None, 0), (2, 'file_path', 'TEXT', 1, None, 0), (3, 'file_type', 'TEXT', 1, None, 0), (4, 'size', 'INTEGER', 1, None, 0), (5, 'uploaded_at', 'TEXT', 1, None, 0), (6, 'parsed', 'INTEGER', 0, '0', 0), (7, 'parsed_interfaces', 'INTEGER', 0, '0', 0), (8, 'parsed_params', 'INTEGER', 0, '0', 0), (9, 'parsed_responses', 'INTEGER', 0, '0', 0)]
+2026-01-22 16:01:00,417 - __main__ - INFO - simple_app.py:352 - 文件记录已添加到数据库，文件ID: 76
+2026-01-22 16:01:00,418 - __main__ - INFO - simple_app.py:355 - 准备执行文件解析，文件ID: 76
+2026-01-22 16:01:00,630 - __main__ - INFO - simple_app.py:358 - 文件解析任务已执行，文件ID: 76
+2026-01-22 16:01:00,631 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:00] "POST /api/files/upload HTTP/1.1" 200 -
+2026-01-22 16:01:00,952 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:00] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:01:00,953 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:00] "GET /api/interfaces HTTP/1.1" 200 -
+2026-01-22 16:01:02,086 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:02] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:01:02,407 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:02] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:01:03,408 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:03] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:01:03,409 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:03] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:01:03,656 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:03] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:01:03,730 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:03] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:01:16,504 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:16] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:01:16,828 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:16] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:01:16,829 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:16] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:01:17,086 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:17] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:01:17,147 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:17] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:01:18,320 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:18] "PUT /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:01:30,772 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:01:30] "PUT /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:03:01,682 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:03:01,713 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:01] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:03:01,716 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:03:24,203 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:24] "POST /api/interfaces/switch-to-http/416 HTTP/1.1" 200 -
+2026-01-22 16:03:24,391 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:24] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:03:24,517 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:24] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:03:24,551 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:24] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:03:24,889 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:24] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:03:26,475 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:26] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-22 16:03:34,134 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 16:03:34,176 - __main__ - INFO - simple_app.py:75 - SocketIO初始化成功
+2026-01-22 16:03:34,177 - __main__ - INFO - simple_app.py:139 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 16:03:34,177 - __main__ - INFO - simple_app.py:140 - 前端目录是否存在: True
+2026-01-22 16:03:34,178 - __main__ - INFO - simple_app.py:141 - index.html是否存在: True
+2026-01-22 16:03:34,179 - __main__ - INFO - simple_app.py:268 - 初始化数据库...
+2026-01-22 16:03:34,182 - __main__ - INFO - simple_app.py:271 - 数据库初始化成功
+2026-01-22 16:03:34,192 - __main__ - INFO - simple_app.py:1218 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 16:03:34,215 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 16:03:34,215 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 16:03:35,194 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:35] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-22 16:03:39,530 - __main__ - INFO - simple_app.py:1157 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 16:03:40,282 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:40] "GET / HTTP/1.1" 200 -
+2026-01-22 16:03:40,299 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:40] "GET /assets/index-590121b6.css HTTP/1.1" 200 -
+2026-01-22 16:03:40,308 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:40] "GET /assets/index-8dfcb892.js HTTP/1.1" 200 -
+2026-01-22 16:03:40,635 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:40] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:03:40,737 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:03:40,751 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:40] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:03:40,870 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:40] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 16:03:43,370 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:03:43,396 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:43] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:03:43,410 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:03:48,304 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:48] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-22 16:03:51,469 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:51] "PUT /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:03:52,958 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:03:52] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-01-22 16:04:00,667 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:04:00] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:04:00,844 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:04:00] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:04:00,980 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:04:00] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:04:00,989 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:04:00] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:04:01,304 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:04:01] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:04:01,677 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:04:01] "PUT /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:04:07,448 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:07:43,490 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 16:07:43,527 - __main__ - INFO - simple_app.py:75 - SocketIO初始化成功
+2026-01-22 16:07:43,528 - __main__ - INFO - simple_app.py:139 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 16:07:43,528 - __main__ - INFO - simple_app.py:140 - 前端目录是否存在: True
+2026-01-22 16:07:43,528 - __main__ - INFO - simple_app.py:141 - index.html是否存在: True
+2026-01-22 16:07:43,529 - __main__ - INFO - simple_app.py:268 - 初始化数据库...
+2026-01-22 16:07:43,531 - __main__ - INFO - simple_app.py:271 - 数据库初始化成功
+2026-01-22 16:07:43,541 - __main__ - INFO - simple_app.py:1218 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 16:07:43,562 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 16:07:43,563 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 16:07:44,452 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:07:48,895 - __main__ - INFO - simple_app.py:1157 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 16:07:49,621 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:49] "GET / HTTP/1.1" 200 -
+2026-01-22 16:07:49,636 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:49] "GET /assets/index-f425496c.js HTTP/1.1" 200 -
+2026-01-22 16:07:49,669 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:49] "GET /assets/index-0c5ec3b4.css HTTP/1.1" 200 -
+2026-01-22 16:07:50,067 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:07:50,068 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:50] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:07:50,133 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:50] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:07:50,323 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:50] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 16:07:51,455 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:07:51,466 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:51] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:07:51,471 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:07:52,914 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:07:52,927 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:52] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:07:52,931 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:07:53,220 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:53] "GET /?ide_webview_request_time=1769069272910 HTTP/1.1" 200 -
+2026-01-22 16:07:53,485 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:53] "GET /assets/index-0c5ec3b4.css HTTP/1.1" 200 -
+2026-01-22 16:07:53,541 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:53] "GET /assets/index-f425496c.js HTTP/1.1" 200 -
+2026-01-22 16:07:53,741 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:53] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:07:54,034 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:07:54,062 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:54] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:07:54,320 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:07:54] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 16:08:18,566 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:08:18] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:08:18,884 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:08:18] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:08:19,559 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:08:19] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:08:19,559 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:08:19] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:08:19,820 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:08:19] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:08:19,882 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:08:19] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:09:12,382 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:09:12] "GET /api/interfaces/417/mock-config HTTP/1.1" 200 -
+2026-01-22 16:09:12,697 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:09:12] "GET /api/interfaces/417/params HTTP/1.1" 200 -
+2026-01-22 16:09:13,006 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:09:13] "GET /api/interfaces/417/responses HTTP/1.1" 200 -
+2026-01-22 16:09:13,269 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:09:13] "GET /api/interfaces/417/mock-config HTTP/1.1" 200 -
+2026-01-22 16:09:28,404 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:09:28] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:09:28,712 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:09:28] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:09:29,020 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:09:29] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:09:29,281 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:09:29] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:10:47,472 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:10:47,491 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:10:47] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:10:47,494 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:10:47,784 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:10:47] "GET /interface/416 HTTP/1.1" 200 -
+2026-01-22 16:10:48,052 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:10:48] "GET /assets/index-0c5ec3b4.css HTTP/1.1" 200 -
+2026-01-22 16:10:48,108 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:10:48] "GET /assets/index-f425496c.js HTTP/1.1" 200 -
+2026-01-22 16:10:48,190 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:10:48] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:10:48,496 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:10:48,498 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:10:48] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:10:48,769 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:10:48] "[36mGET /@vite/client HTTP/1.1[0m" 304 -
+2026-01-22 16:14:30,206 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 16:14:30,240 - __main__ - INFO - simple_app.py:75 - SocketIO初始化成功
+2026-01-22 16:14:30,241 - __main__ - INFO - simple_app.py:139 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 16:14:30,241 - __main__ - INFO - simple_app.py:140 - 前端目录是否存在: True
+2026-01-22 16:14:30,241 - __main__ - INFO - simple_app.py:141 - index.html是否存在: True
+2026-01-22 16:14:30,242 - __main__ - INFO - simple_app.py:268 - 初始化数据库...
+2026-01-22 16:14:30,245 - __main__ - INFO - simple_app.py:271 - 数据库初始化成功
+2026-01-22 16:14:30,255 - __main__ - INFO - simple_app.py:1218 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 16:14:30,274 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 16:14:30,274 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 16:14:31,229 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:14:35,604 - __main__ - INFO - simple_app.py:1157 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 16:14:36,318 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:36] "GET / HTTP/1.1" 200 -
+2026-01-22 16:14:36,326 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:36] "GET /assets/index-9a6774a2.js HTTP/1.1" 200 -
+2026-01-22 16:14:36,361 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:36] "GET /assets/index-3f89c4ae.css HTTP/1.1" 200 -
+2026-01-22 16:14:36,745 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:14:36,750 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:36] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:14:36,808 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:36] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:14:37,017 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:37] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 16:14:38,832 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:38] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:14:39,145 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:39] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:14:39,839 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:39] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:14:39,859 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:14:39,876 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:39] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:14:39,880 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:14:40,144 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:40] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:14:40,173 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:40] "GET /?ide_webview_request_time=1769069679856 HTTP/1.1" 200 -
+2026-01-22 16:14:40,191 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:40] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 16:14:40,435 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:40] "GET /assets/index-3f89c4ae.css HTTP/1.1" 200 -
+2026-01-22 16:14:40,452 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:40] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:14:40,495 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:40] "GET /assets/index-9a6774a2.js HTTP/1.1" 200 -
+2026-01-22 16:14:40,658 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:40] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:14:40,775 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:40] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:14:40,958 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:14:40,973 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:40] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:14:41,232 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:14:41] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 16:15:02,728 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:02] "PUT /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:15:14,415 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:14] "POST /api/interfaces/switch-to-http/416 HTTP/1.1" 200 -
+2026-01-22 16:15:14,583 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:14] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:15:14,737 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:14] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:15:14,743 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:14] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:15:15,056 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:15] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:15:49,334 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:49] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:15:49,596 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:49] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:15:49,985 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:49] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:15:50,302 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:50] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:15:50,626 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:50] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:15:50,871 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:15:50] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:17:44,079 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:44] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:17:47,207 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:47] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:17:47,533 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:47] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:17:47,534 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:47] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:17:47,778 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:47] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:17:47,854 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:47] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:17:49,336 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:49] "POST /api/interfaces/switch-to-http/416 HTTP/1.1" 200 -
+2026-01-22 16:17:49,656 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:49] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:17:49,656 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:49] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:17:49,900 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:49] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:17:49,977 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:17:49] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:11,236 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 16:34:11,269 - __main__ - INFO - simple_app.py:75 - SocketIO初始化成功
+2026-01-22 16:34:11,269 - __main__ - INFO - simple_app.py:139 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 16:34:11,270 - __main__ - INFO - simple_app.py:140 - 前端目录是否存在: True
+2026-01-22 16:34:11,270 - __main__ - INFO - simple_app.py:141 - index.html是否存在: True
+2026-01-22 16:34:11,271 - __main__ - INFO - simple_app.py:268 - 初始化数据库...
+2026-01-22 16:34:11,274 - __main__ - INFO - simple_app.py:271 - 数据库初始化成功
+2026-01-22 16:34:11,284 - __main__ - INFO - simple_app.py:1218 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 16:34:11,304 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 16:34:11,305 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 16:34:12,235 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:34:12,240 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:34:16,656 - __main__ - INFO - simple_app.py:1157 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 16:34:17,198 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:17] "GET / HTTP/1.1" 200 -
+2026-01-22 16:34:17,211 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:17] "GET /assets/index-e7d8c81d.js HTTP/1.1" 200 -
+2026-01-22 16:34:17,331 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:17] "GET /assets/index-5eeb53ac.css HTTP/1.1" 200 -
+2026-01-22 16:34:17,698 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:17] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:34:17,700 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:34:17,744 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:17] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:34:17,957 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:17] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 16:34:19,125 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:19] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:19,434 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:19] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:20,214 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:20] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:20,523 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:20] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:20,567 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:20] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 16:34:20,845 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:20] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:21,165 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:21] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:24,340 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:34:24,366 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:24] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:34:24,371 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:34:24,647 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:24] "GET /?ide_webview_request_time=1769070864337 HTTP/1.1" 200 -
+2026-01-22 16:34:24,906 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:24] "GET /assets/index-5eeb53ac.css HTTP/1.1" 200 -
+2026-01-22 16:34:24,969 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:24] "GET /assets/index-e7d8c81d.js HTTP/1.1" 200 -
+2026-01-22 16:34:25,143 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:25] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:34:25,446 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:34:25,474 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:25] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:34:25,736 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:25] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 16:34:34,530 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:34] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:34:34,843 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:34] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:34,843 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:34] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:35,102 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:35] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:35,164 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:35] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:35,512 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:35] "POST /api/interfaces/switch-to-http/416 HTTP/1.1" 200 -
+2026-01-22 16:34:35,718 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:35] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:35,825 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:35] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:35,830 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:35] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:36,150 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:36] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:37,231 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:37] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:34:37,547 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:37] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:37,561 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:37] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:37,807 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:37] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:37,884 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:37] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:38,186 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:38] "POST /api/interfaces/switch-to-http/416 HTTP/1.1" 200 -
+2026-01-22 16:34:38,211 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:38] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:38,498 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:38] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:38,506 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:38] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:38,824 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:38] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:39,161 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:39] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:34:39,280 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:39] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:39,481 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:39] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:39,487 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:39] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:39,807 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:39] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:40,131 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:40] "POST /api/interfaces/switch-to-http/416 HTTP/1.1" 200 -
+2026-01-22 16:34:40,178 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:40] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:40,452 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:40] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:40,475 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:40] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:40,817 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:40] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:41,139 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:41] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:34:41,149 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:41] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:41,451 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:41] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:41,778 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:41] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:42,019 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:42] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:42,614 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:42] "POST /api/interfaces/switch-to-http/416 HTTP/1.1" 200 -
+2026-01-22 16:34:42,938 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:42] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:42,938 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:42] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:43,184 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:43] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:43,261 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:43] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:43,806 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:43] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:34:44,122 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:44] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:44,122 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:44] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:44,385 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:44] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:44,432 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:44] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:45,731 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:45] "POST /api/interfaces/switch-to-http/416 HTTP/1.1" 200 -
+2026-01-22 16:34:46,051 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:46] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:46,052 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:46] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:46,311 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:46] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:46,372 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:46] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:34:46,972 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:46] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:34:47,305 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:47] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:34:47,306 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:47] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:34:47,537 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:47] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:34:47,629 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:34:47] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:39:29,212 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 16:39:29,246 - __main__ - INFO - simple_app.py:75 - SocketIO初始化成功
+2026-01-22 16:39:29,246 - __main__ - INFO - simple_app.py:139 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 16:39:29,247 - __main__ - INFO - simple_app.py:140 - 前端目录是否存在: True
+2026-01-22 16:39:29,247 - __main__ - INFO - simple_app.py:141 - index.html是否存在: True
+2026-01-22 16:39:29,248 - __main__ - INFO - simple_app.py:268 - 初始化数据库...
+2026-01-22 16:39:29,251 - __main__ - INFO - simple_app.py:271 - 数据库初始化成功
+2026-01-22 16:39:29,265 - __main__ - INFO - simple_app.py:1218 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 16:39:29,287 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 16:39:29,288 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 16:39:30,253 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:39:30,253 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:39:31,255 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:39:34,632 - __main__ - INFO - simple_app.py:1157 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 16:39:35,255 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:35] "GET / HTTP/1.1" 200 -
+2026-01-22 16:39:35,263 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:35] "GET /assets/index-540192bc.js HTTP/1.1" 200 -
+2026-01-22 16:39:35,289 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:35] "GET /assets/index-2f932675.css HTTP/1.1" 200 -
+2026-01-22 16:39:35,682 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:39:35,683 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:35] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:39:35,741 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:35] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:39:35,941 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:35] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 16:39:37,162 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:37] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:39:37,474 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:37] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:39:38,329 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:38] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:39:38,646 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:38] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:39:38,691 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:38] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 16:39:38,955 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:38] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:39:39,284 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:39] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:39:39,746 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:39:39,764 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:39] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:39:39,768 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:39:40,060 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:40] "GET /?ide_webview_request_time=1769071179744 HTTP/1.1" 200 -
+2026-01-22 16:39:40,320 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:40] "GET /assets/index-2f932675.css HTTP/1.1" 200 -
+2026-01-22 16:39:40,382 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:40] "GET /assets/index-540192bc.js HTTP/1.1" 200 -
+2026-01-22 16:39:40,574 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:40] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:39:40,877 - __main__ - INFO - simple_app.py:889 - Client connected via WebSocket
+2026-01-22 16:39:40,887 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:40] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:39:41,145 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:41] "GET /@vite/client HTTP/1.1" 200 -
+2026-01-22 16:39:44,248 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:44] "POST /api/interfaces/switch-to-http/416 HTTP/1.1" 200 -
+2026-01-22 16:39:44,560 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:44] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:39:44,560 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:44] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:39:44,817 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:44] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:39:44,880 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:44] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:39:46,401 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:46] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:39:46,720 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:46] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:39:46,721 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:46] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:39:46,980 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:46] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:39:47,041 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:47] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:39:47,561 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:47] "POST /api/interfaces/switch-to-http/416 HTTP/1.1" 200 -
+2026-01-22 16:39:47,885 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:47] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:39:47,885 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:47] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:39:48,133 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:48] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:39:48,194 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:48] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:39:50,225 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:50] "POST /api/interfaces/generate-websocket/416 HTTP/1.1" 200 -
+2026-01-22 16:39:50,545 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:50] "GET /api/interfaces/416/params HTTP/1.1" 200 -
+2026-01-22 16:39:50,553 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:50] "GET /api/interfaces?file_id=76 HTTP/1.1" 200 -
+2026-01-22 16:39:50,800 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:50] "GET /api/interfaces/416/responses HTTP/1.1" 200 -
+2026-01-22 16:39:50,862 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:50] "GET /api/interfaces/416/mock-config HTTP/1.1" 200 -
+2026-01-22 16:39:53,112 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:53] "GET /api/interfaces/417/mock-config HTTP/1.1" 200 -
+2026-01-22 16:39:53,424 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:53] "GET /api/interfaces/417/params HTTP/1.1" 200 -
+2026-01-22 16:39:53,439 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:53] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 16:39:53,734 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:53] "GET /api/interfaces/417/responses HTTP/1.1" 200 -
+2026-01-22 16:39:54,056 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:39:54] "GET /api/interfaces/417/mock-config HTTP/1.1" 200 -
+2026-01-22 16:40:18,782 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:40:18] "GET /api/interfaces HTTP/1.1" 200 -
+2026-01-22 16:40:22,147 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:40:22] "DELETE /api/files/76 HTTP/1.1" 200 -
+2026-01-22 16:40:22,327 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:40:22] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:40:22,881 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:40:22,883 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:40:22,884 - __main__ - INFO - simple_app.py:895 - Client disconnected from WebSocket
+2026-01-22 16:40:22,894 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:40:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:40:22,895 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:40:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:40:22,900 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:40:22,900 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:40:22,909 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:40:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:40:22,913 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:51:04,920 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 16:51:04,923 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-01-22 16:51:04,969 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-01-22 16:51:04,971 - __main__ - INFO - simple_app.py:86 - SocketIO初始化成功，配置: async_mode=threading, cors_allowed_origins=*
+2026-01-22 16:51:04,971 - __main__ - INFO - simple_app.py:152 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 16:51:04,972 - __main__ - INFO - simple_app.py:153 - 前端目录是否存在: True
+2026-01-22 16:51:04,972 - __main__ - INFO - simple_app.py:154 - index.html是否存在: True
+2026-01-22 16:51:04,973 - __main__ - INFO - simple_app.py:281 - 初始化数据库...
+2026-01-22 16:51:04,975 - __main__ - INFO - simple_app.py:284 - 数据库初始化成功
+2026-01-22 16:51:04,990 - __main__ - INFO - simple_app.py:1269 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-01-22 16:51:05,028 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-01-22 16:51:05,029 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 16:51:06,242 - engineio.server - INFO - socket.py:78 - xH1Y7kZNUGy6ivmAAAAA: Sending packet OPEN data {'sid': 'xH1Y7kZNUGy6ivmAAAAA', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-01-22 16:51:06,242 - engineio.server - INFO - socket.py:90 - xH1Y7kZNUGy6ivmAAAAA: Received request to upgrade to websocket
+2026-01-22 16:51:06,244 - engineio.server - INFO - socket.py:219 - xH1Y7kZNUGy6ivmAAAAA: Upgrade to websocket successful
+2026-01-22 16:51:06,248 - engineio.server - INFO - socket.py:39 - xH1Y7kZNUGy6ivmAAAAA: Received packet MESSAGE data 0
+2026-01-22 16:51:06,249 - __main__ - INFO - simple_app.py:906 - Client connected via WebSocket
+2026-01-22 16:51:06,250 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to fvrnNA8dsM8tHtGZAAAB [/]
+2026-01-22 16:51:06,250 - engineio.server - INFO - socket.py:78 - xH1Y7kZNUGy6ivmAAAAA: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-01-22 16:51:06,250 - engineio.server - INFO - socket.py:78 - xH1Y7kZNUGy6ivmAAAAA: Sending packet MESSAGE data 0{"sid":"fvrnNA8dsM8tHtGZAAAB"}
+2026-01-22 16:51:10,305 - __main__ - INFO - simple_app.py:1208 - 已自动打开浏览器，访问地址: http://localhost:8000
+2026-01-22 16:51:10,889 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:10] "[36mGET / HTTP/1.1[0m" 304 -
+2026-01-22 16:51:10,919 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:10] "[36mGET /assets/index-540192bc.js HTTP/1.1[0m" 304 -
+2026-01-22 16:51:11,005 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:11] "[36mGET /assets/index-2f932675.css HTTP/1.1[0m" 304 -
+2026-01-22 16:51:11,368 - engineio.server - INFO - socket.py:78 - 4yqTby6w0Xx5wez7AAAC: Sending packet OPEN data {'sid': '4yqTby6w0Xx5wez7AAAC', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-01-22 16:51:11,369 - engineio.server - INFO - socket.py:90 - 4yqTby6w0Xx5wez7AAAC: Received request to upgrade to websocket
+2026-01-22 16:51:11,371 - engineio.server - INFO - socket.py:219 - 4yqTby6w0Xx5wez7AAAC: Upgrade to websocket successful
+2026-01-22 16:51:11,373 - engineio.server - INFO - socket.py:39 - 4yqTby6w0Xx5wez7AAAC: Received packet MESSAGE data 0
+2026-01-22 16:51:11,374 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:11] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 16:51:11,374 - __main__ - INFO - simple_app.py:906 - Client connected via WebSocket
+2026-01-22 16:51:11,375 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to UENQ0p7FX3W_5GKwAAAD [/]
+2026-01-22 16:51:11,375 - engineio.server - INFO - socket.py:78 - 4yqTby6w0Xx5wez7AAAC: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-01-22 16:51:11,376 - engineio.server - INFO - socket.py:78 - 4yqTby6w0Xx5wez7AAAC: Sending packet MESSAGE data 0{"sid":"UENQ0p7FX3W_5GKwAAAD"}
+2026-01-22 16:51:11,445 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:11] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:51:11,643 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:11] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 16:51:19,089 - __main__ - INFO - simple_app.py:920 - Client disconnected from WebSocket
+2026-01-22 16:51:19,098 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:19] "[36mGET / HTTP/1.1[0m" 304 -
+2026-01-22 16:51:19,107 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:19] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:51:19,112 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 16:51:19,414 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:19] "[36mGET /assets/index-2f932675.css HTTP/1.1[0m" 304 -
+2026-01-22 16:51:19,415 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:19] "[36mGET /assets/index-540192bc.js HTTP/1.1[0m" 304 -
+2026-01-22 16:51:19,754 - engineio.server - INFO - socket.py:78 - GmNHaFqLu55z_Z0RAAAE: Sending packet OPEN data {'sid': 'GmNHaFqLu55z_Z0RAAAE', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-01-22 16:51:19,755 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:19] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 16:51:19,755 - engineio.server - INFO - socket.py:90 - GmNHaFqLu55z_Z0RAAAE: Received request to upgrade to websocket
+2026-01-22 16:51:19,758 - engineio.server - INFO - socket.py:219 - GmNHaFqLu55z_Z0RAAAE: Upgrade to websocket successful
+2026-01-22 16:51:19,761 - engineio.server - INFO - socket.py:39 - GmNHaFqLu55z_Z0RAAAE: Received packet MESSAGE data 0
+2026-01-22 16:51:19,762 - __main__ - INFO - simple_app.py:906 - Client connected via WebSocket
+2026-01-22 16:51:19,763 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to 9CNBN_dzv-1FEFFRAAAF [/]
+2026-01-22 16:51:19,763 - engineio.server - INFO - socket.py:78 - GmNHaFqLu55z_Z0RAAAE: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-01-22 16:51:19,764 - engineio.server - INFO - socket.py:78 - GmNHaFqLu55z_Z0RAAAE: Sending packet MESSAGE data 0{"sid":"9CNBN_dzv-1FEFFRAAAF"}
+2026-01-22 16:51:19,785 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:19] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:51:20,034 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:51:20] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 16:56:35,101 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 16:56:35,104 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-01-22 16:56:35,136 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-01-22 16:56:35,137 - __main__ - INFO - simple_app.py:86 - SocketIO初始化成功，配置: async_mode=threading, cors_allowed_origins=*
+2026-01-22 16:56:35,138 - __main__ - INFO - simple_app.py:152 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 16:56:35,138 - __main__ - INFO - simple_app.py:153 - 前端目录是否存在: True
+2026-01-22 16:56:35,138 - __main__ - INFO - simple_app.py:154 - index.html是否存在: True
+2026-01-22 16:56:35,139 - __main__ - INFO - simple_app.py:281 - 初始化数据库...
+2026-01-22 16:56:35,143 - __main__ - INFO - simple_app.py:284 - 数据库初始化成功
+2026-01-22 16:56:35,155 - __main__ - WARNING - simple_app.py:1252 - 端口 8000 已被占用，尝试下一个可用端口
+2026-01-22 16:56:35,156 - __main__ - WARNING - simple_app.py:1252 - 端口 8001 已被占用，尝试下一个可用端口
+2026-01-22 16:56:35,157 - __main__ - INFO - simple_app.py:1264 - 已切换到可用端口 8002
+2026-01-22 16:56:35,158 - __main__ - INFO - simple_app.py:1269 - 应用即将启动，访问地址: http://0.0.0.0:8002
+2026-01-22 16:56:35,183 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8002
+ * Running on http://10.203.224.140:8002
+2026-01-22 16:56:35,183 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 16:56:40,496 - __main__ - INFO - simple_app.py:1208 - 已自动打开浏览器，访问地址: http://localhost:8002
+2026-01-22 16:56:41,068 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:56:41] "GET / HTTP/1.1" 200 -
+2026-01-22 16:56:41,076 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:56:41] "GET /assets/index-540192bc.js HTTP/1.1" 200 -
+2026-01-22 16:56:41,152 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:56:41] "GET /assets/index-2f932675.css HTTP/1.1" 200 -
+2026-01-22 16:56:41,523 - engineio.server - INFO - socket.py:78 - 3JUqjQiVNFl0Zk-pAAAA: Sending packet OPEN data {'sid': '3JUqjQiVNFl0Zk-pAAAA', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-01-22 16:56:41,524 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:56:41] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 16:56:41,524 - engineio.server - INFO - socket.py:90 - 3JUqjQiVNFl0Zk-pAAAA: Received request to upgrade to websocket
+2026-01-22 16:56:41,526 - engineio.server - INFO - socket.py:219 - 3JUqjQiVNFl0Zk-pAAAA: Upgrade to websocket successful
+2026-01-22 16:56:41,529 - engineio.server - INFO - socket.py:39 - 3JUqjQiVNFl0Zk-pAAAA: Received packet MESSAGE data 0
+2026-01-22 16:56:41,530 - __main__ - INFO - simple_app.py:906 - Client connected via WebSocket
+2026-01-22 16:56:41,530 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to -xYuUWYWrlAE9A0QAAAB [/]
+2026-01-22 16:56:41,531 - engineio.server - INFO - socket.py:78 - 3JUqjQiVNFl0Zk-pAAAA: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-01-22 16:56:41,531 - engineio.server - INFO - socket.py:78 - 3JUqjQiVNFl0Zk-pAAAA: Sending packet MESSAGE data 0{"sid":"-xYuUWYWrlAE9A0QAAAB"}
+2026-01-22 16:56:41,569 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:56:41] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:56:41,783 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:56:41] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 16:56:59,369 - __main__ - INFO - simple_app.py:314 - 收到文件上传请求
+2026-01-22 16:56:59,370 - __main__ - INFO - simple_app.py:326 - 开始上传文件: api.JSON
+2026-01-22 16:56:59,374 - __main__ - INFO - simple_app.py:334 - 文件保存成功: E:\traeAiProject\GenerateInterTool\backend\uploads\d51b92df-8b3f-4c6b-b18e-42e1efd079d4_api.JSON
+2026-01-22 16:56:59,376 - __main__ - INFO - simple_app.py:348 - 准备插入数据库，文件信息: filename=api.JSON, file_path=E:\traeAiProject\GenerateInterTool\backend\uploads\d51b92df-8b3f-4c6b-b18e-42e1efd079d4_api.JSON, file_type=application/json, size=9400, uploaded_at=2026-01-22T16:56:59.375984, parsed=1
+2026-01-22 16:56:59,377 - __main__ - INFO - simple_app.py:353 - 表结构: [(0, 'id', 'INTEGER', 0, None, 1), (1, 'filename', 'TEXT', 1, None, 0), (2, 'file_path', 'TEXT', 1, None, 0), (3, 'file_type', 'TEXT', 1, None, 0), (4, 'size', 'INTEGER', 1, None, 0), (5, 'uploaded_at', 'TEXT', 1, None, 0), (6, 'parsed', 'INTEGER', 0, '0', 0), (7, 'parsed_interfaces', 'INTEGER', 0, '0', 0), (8, 'parsed_params', 'INTEGER', 0, '0', 0), (9, 'parsed_responses', 'INTEGER', 0, '0', 0)]
+2026-01-22 16:56:59,462 - __main__ - INFO - simple_app.py:365 - 文件记录已添加到数据库，文件ID: 77
+2026-01-22 16:56:59,463 - __main__ - INFO - simple_app.py:368 - 准备执行文件解析，文件ID: 77
+2026-01-22 16:56:59,583 - __main__ - INFO - simple_app.py:371 - 文件解析任务已执行，文件ID: 77
+2026-01-22 16:56:59,584 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:56:59] "POST /api/files/upload HTTP/1.1" 200 -
+2026-01-22 16:56:59,921 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:56:59] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 16:56:59,925 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:56:59] "GET /api/interfaces HTTP/1.1" 200 -
+2026-01-22 16:57:01,109 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:01] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-01-22 16:57:01,424 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:01] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-01-22 16:57:01,821 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:01] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-01-22 16:57:02,130 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:02] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-01-22 16:57:02,159 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:02] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 16:57:02,438 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:02] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-01-22 16:57:02,748 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:02] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-01-22 16:57:04,051 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:04] "POST /api/interfaces/generate-websocket/418 HTTP/1.1" 200 -
+2026-01-22 16:57:04,373 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:04] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-01-22 16:57:04,374 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:04] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-01-22 16:57:04,617 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:04] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-01-22 16:57:04,710 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:04] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-01-22 16:57:06,525 - engineio.server - INFO - socket.py:78 - 3JUqjQiVNFl0Zk-pAAAA: Sending packet PING data None
+2026-01-22 16:57:06,525 - engineio.server - INFO - socket.py:39 - 3JUqjQiVNFl0Zk-pAAAA: Received packet PONG data 
+2026-01-22 16:57:07,860 - __main__ - INFO - simple_app.py:920 - Client disconnected from WebSocket
+2026-01-22 16:57:07,872 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 16:57:07] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 16:57:07,876 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 17:20:42,289 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 17:20:42,293 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-01-22 17:20:42,295 - __main__ - ERROR - simple_app.py:93 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-01-22 17:20:42,301 - __main__ - INFO - simple_app.py:156 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 17:20:42,301 - __main__ - INFO - simple_app.py:157 - 前端目录是否存在: True
+2026-01-22 17:20:42,301 - __main__ - INFO - simple_app.py:158 - index.html是否存在: True
+2026-01-22 17:20:42,302 - __main__ - INFO - simple_app.py:285 - 初始化数据库...
+2026-01-22 17:20:42,305 - __main__ - INFO - simple_app.py:288 - 数据库初始化成功
+2026-01-22 17:20:42,319 - __main__ - WARNING - simple_app.py:1266 - 端口 8000 已被占用，尝试下一个可用端口
+2026-01-22 17:20:42,319 - __main__ - INFO - simple_app.py:1278 - 已切换到可用端口 8001
+2026-01-22 17:20:42,320 - __main__ - INFO - simple_app.py:1283 - 应用即将启动，访问地址: http://0.0.0.0:8001
+2026-01-22 17:20:42,344 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-01-22 17:20:42,344 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 17:20:47,625 - __main__ - INFO - simple_app.py:1222 - 已自动打开浏览器，访问地址: http://localhost:8001
+2026-01-22 17:20:48,291 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:20:48] "GET / HTTP/1.1" 200 -
+2026-01-22 17:20:48,334 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:20:48] "GET /assets/index-2f932675.css HTTP/1.1" 200 -
+2026-01-22 17:20:48,397 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:20:48] "GET /assets/index-540192bc.js HTTP/1.1" 200 -
+2026-01-22 17:20:48,613 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:20:48] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-01-22 17:20:48,813 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:20:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2026-01-22 17:20:48,817 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:20:48] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 17:20:48,875 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:20:48] "GET /favicon.ico HTTP/1.1" 200 -
+2026-01-22 17:20:51,264 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:20:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2026-01-22 17:20:53,281 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:20:53] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2026-01-22 17:20:59,270 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:20:59] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2026-01-22 17:21:05,271 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2026-01-22 17:21:11,294 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:11] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2026-01-22 17:21:27,669 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 17:21:27,671 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-01-22 17:21:27,718 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-01-22 17:21:27,719 - __main__ - INFO - simple_app.py:88 - SocketIO初始化成功，使用自动选择的async_mode, cors_allowed_origins=*
+2026-01-22 17:21:27,719 - __main__ - INFO - simple_app.py:155 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 17:21:27,719 - __main__ - INFO - simple_app.py:156 - 前端目录是否存在: True
+2026-01-22 17:21:27,720 - __main__ - INFO - simple_app.py:157 - index.html是否存在: True
+2026-01-22 17:21:27,721 - __main__ - INFO - simple_app.py:284 - 初始化数据库...
+2026-01-22 17:21:27,724 - __main__ - INFO - simple_app.py:287 - 数据库初始化成功
+2026-01-22 17:21:27,736 - __main__ - WARNING - simple_app.py:1265 - 端口 8000 已被占用，尝试下一个可用端口
+2026-01-22 17:21:27,737 - __main__ - INFO - simple_app.py:1277 - 已切换到可用端口 8001
+2026-01-22 17:21:27,737 - __main__ - INFO - simple_app.py:1282 - 应用即将启动，访问地址: http://0.0.0.0:8001
+2026-01-22 17:21:27,762 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-01-22 17:21:27,762 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 17:21:33,103 - __main__ - INFO - simple_app.py:1221 - 已自动打开浏览器，访问地址: http://localhost:8001
+2026-01-22 17:21:33,666 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:33] "[36mGET / HTTP/1.1[0m" 304 -
+2026-01-22 17:21:33,693 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:33] "[36mGET /assets/index-2f932675.css HTTP/1.1[0m" 304 -
+2026-01-22 17:21:33,785 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:33] "[36mGET /assets/index-540192bc.js HTTP/1.1[0m" 304 -
+2026-01-22 17:21:33,988 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:33] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 17:21:34,184 - engineio.server - INFO - socket.py:78 - 4q099eDXeFwqb4SpAAAA: Sending packet OPEN data {'sid': '4q099eDXeFwqb4SpAAAA', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-01-22 17:21:34,185 - engineio.server - INFO - socket.py:90 - 4q099eDXeFwqb4SpAAAA: Received request to upgrade to websocket
+2026-01-22 17:21:34,186 - engineio.server - INFO - socket.py:219 - 4q099eDXeFwqb4SpAAAA: Upgrade to websocket successful
+2026-01-22 17:21:34,188 - engineio.server - INFO - socket.py:39 - 4q099eDXeFwqb4SpAAAA: Received packet MESSAGE data 0
+2026-01-22 17:21:34,189 - __main__ - INFO - simple_app.py:909 - Client connected via WebSocket, sid: OxubkdD080G6bgTcAAAB
+2026-01-22 17:21:34,189 - __main__ - ERROR - simple_app.py:914 - Error in WebSocket connect handler: AttributeError: 'Request' object has no attribute 'transport'
+2026-01-22 17:21:34,190 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:34] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 17:21:34,195 - socketio.server - INFO - server.py:164 - emitting event "error" to OxubkdD080G6bgTcAAAB [/]
+2026-01-22 17:21:34,195 - engineio.server - INFO - socket.py:78 - 4q099eDXeFwqb4SpAAAA: Sending packet MESSAGE data 2["error",{"message":"\u8fde\u63a5\u5931\u8d25: 'Request' object has no attribute 'transport'"}]
+2026-01-22 17:21:34,196 - engineio.server - INFO - socket.py:78 - 4q099eDXeFwqb4SpAAAA: Sending packet MESSAGE data 0{"sid":"OxubkdD080G6bgTcAAAB"}
+2026-01-22 17:21:34,276 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:34] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 17:21:36,450 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:36] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-01-22 17:21:36,764 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:36] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-01-22 17:21:39,575 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:21:39] "GET /health HTTP/1.1" 200 -
+2026-01-22 17:21:59,188 - engineio.server - INFO - socket.py:78 - 4q099eDXeFwqb4SpAAAA: Sending packet PING data None
+2026-01-22 17:21:59,189 - engineio.server - INFO - socket.py:39 - 4q099eDXeFwqb4SpAAAA: Received packet PONG data 
+2026-01-22 17:22:22,786 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 17:22:22,788 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-01-22 17:22:22,821 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-01-22 17:22:22,821 - __main__ - INFO - simple_app.py:88 - SocketIO初始化成功，使用自动选择的async_mode, cors_allowed_origins=*
+2026-01-22 17:22:22,822 - __main__ - INFO - simple_app.py:155 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 17:22:22,822 - __main__ - INFO - simple_app.py:156 - 前端目录是否存在: True
+2026-01-22 17:22:22,822 - __main__ - INFO - simple_app.py:157 - index.html是否存在: True
+2026-01-22 17:22:22,823 - __main__ - INFO - simple_app.py:284 - 初始化数据库...
+2026-01-22 17:22:22,825 - __main__ - INFO - simple_app.py:287 - 数据库初始化成功
+2026-01-22 17:22:22,837 - __main__ - WARNING - simple_app.py:1268 - 端口 8000 已被占用，尝试下一个可用端口
+2026-01-22 17:22:22,838 - __main__ - INFO - simple_app.py:1280 - 已切换到可用端口 8001
+2026-01-22 17:22:22,838 - __main__ - INFO - simple_app.py:1285 - 应用即将启动，访问地址: http://0.0.0.0:8001
+2026-01-22 17:22:22,862 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-01-22 17:22:22,863 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-01-22 17:22:23,297 - engineio.server - INFO - socket.py:78 - 71PAPcG48t7S55pDAAAA: Sending packet OPEN data {'sid': '71PAPcG48t7S55pDAAAA', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-01-22 17:22:23,297 - engineio.server - INFO - socket.py:90 - 71PAPcG48t7S55pDAAAA: Received request to upgrade to websocket
+2026-01-22 17:22:23,298 - engineio.server - INFO - socket.py:219 - 71PAPcG48t7S55pDAAAA: Upgrade to websocket successful
+2026-01-22 17:22:23,299 - engineio.server - INFO - socket.py:39 - 71PAPcG48t7S55pDAAAA: Received packet MESSAGE data 0
+2026-01-22 17:22:23,300 - __main__ - INFO - simple_app.py:909 - Client connected via WebSocket, sid: bGDX94LgB9-2cQ3BAAAB
+2026-01-22 17:22:23,300 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to bGDX94LgB9-2cQ3BAAAB [/]
+2026-01-22 17:22:23,300 - engineio.server - INFO - socket.py:78 - 71PAPcG48t7S55pDAAAA: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-01-22 17:22:23,301 - engineio.server - INFO - socket.py:78 - 71PAPcG48t7S55pDAAAA: Sending packet MESSAGE data 0{"sid":"bGDX94LgB9-2cQ3BAAAB"}
+2026-01-22 17:22:28,166 - __main__ - INFO - simple_app.py:1224 - 已自动打开浏览器，访问地址: http://localhost:8001
+2026-01-22 17:22:28,701 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:28] "[36mGET / HTTP/1.1[0m" 304 -
+2026-01-22 17:22:28,709 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:28] "[36mGET /assets/index-540192bc.js HTTP/1.1[0m" 304 -
+2026-01-22 17:22:28,831 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:28] "[36mGET /assets/index-2f932675.css HTTP/1.1[0m" 304 -
+2026-01-22 17:22:29,186 - engineio.server - INFO - socket.py:78 - OQg1BKeYXc4mnRLIAAAC: Sending packet OPEN data {'sid': 'OQg1BKeYXc4mnRLIAAAC', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-01-22 17:22:29,187 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:29] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-01-22 17:22:29,187 - engineio.server - INFO - socket.py:90 - OQg1BKeYXc4mnRLIAAAC: Received request to upgrade to websocket
+2026-01-22 17:22:29,189 - engineio.server - INFO - socket.py:219 - OQg1BKeYXc4mnRLIAAAC: Upgrade to websocket successful
+2026-01-22 17:22:29,191 - engineio.server - INFO - socket.py:39 - OQg1BKeYXc4mnRLIAAAC: Received packet MESSAGE data 0
+2026-01-22 17:22:29,192 - __main__ - INFO - simple_app.py:909 - Client connected via WebSocket, sid: wbbe-sAxM-eiawWCAAAD
+2026-01-22 17:22:29,192 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to wbbe-sAxM-eiawWCAAAD [/]
+2026-01-22 17:22:29,193 - engineio.server - INFO - socket.py:78 - OQg1BKeYXc4mnRLIAAAC: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-01-22 17:22:29,193 - engineio.server - INFO - socket.py:78 - OQg1BKeYXc4mnRLIAAAC: Sending packet MESSAGE data 0{"sid":"wbbe-sAxM-eiawWCAAAD"}
+2026-01-22 17:22:29,247 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:29] "GET /api/files HTTP/1.1" 200 -
+2026-01-22 17:22:29,445 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:29] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 17:22:31,332 - __main__ - INFO - simple_app.py:928 - Client disconnected from WebSocket, sid: bGDX94LgB9-2cQ3BAAAB
+2026-01-22 17:22:31,351 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:31] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 17:22:31,355 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 17:22:33,151 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:33] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-01-22 17:22:33,471 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:33] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-01-22 17:22:33,791 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:33] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-01-22 17:22:34,103 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:34] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-01-22 17:22:34,146 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:34] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-01-22 17:22:34,421 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:34] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-01-22 17:22:34,755 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:22:34] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-01-22 17:22:37,252 - engineio.server - INFO - socket.py:39 - OQg1BKeYXc4mnRLIAAAC: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10,"message":""}}]
+2026-01-22 17:22:37,252 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from wbbe-sAxM-eiawWCAAAD [/]
+2026-01-22 17:22:37,253 - __main__ - INFO - simple_app.py:983 - Handling dynamic_interface request from sid: wbbe-sAxM-eiawWCAAAD, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10, 'message': ''}}
+2026-01-22 17:22:37,255 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to wbbe-sAxM-eiawWCAAAD [/]
+2026-01-22 17:22:37,256 - engineio.server - INFO - socket.py:78 - OQg1BKeYXc4mnRLIAAAC: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"QcNrVDwpqa","message":"bMNOwGsnHf","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"bKzWQTBxIq","body.rows[rivalName":"HnSWqQuodu","body.rows[rivalFullname":"unmvEtHPeK","body.rows[rivalCode":"FvjyyElLlT","body.rows[rivalStatus":"iFmHgMoisf"},{"code":"CBwelFaSMc","message":"jsVmaYMGeB","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"DZBovRsEOP","body.rows[rivalName":"iUviOwQJgG","body.rows[rivalFullname":"lwXZKKEbtK","body.rows[rivalCode":"OcWnvzSLAC","body.rows[rivalStatus":"WeOCzYxVos"},{"code":"SDuDhWFSXC","message":"XtrShWunyP","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"zlIcwTwOcV","body.rows[rivalName":"vwjgGNKoDm","body.rows[rivalFullname":"fRRZAWeloP","body.rows[rivalCode":"ylCFSPSPWP","body.rows[rivalStatus":"EaLdFZyWEs"},{"code":"AYlbdxWszr","message":"TbNUDixzlU","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"SLrTVKzyjm","body.rows[rivalName":"CzfCuhvthe","body.rows[rivalFullname":"KRfcmXKliV","body.rows[rivalCode":"hUnNkzmQOP","body.rows[rivalStatus":"KwSFOSjUoD"},{"code":"FKWoPTQQef","message":"EpzSMveiLZ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"RxVwWuDDta","body.rows[rivalName":"BPjePwuGXM","body.rows[rivalFullname":"nSuFEXTFGz","body.rows[rivalCode":"JLTFIFihct","body.rows[rivalStatus":"sRPrWLHKms"},{"code":"DXcwpswxrV","message":"uCMRDEOekT","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"SfhGedfkYF","body.rows[rivalName":"HjNNmJyDQc","body.rows[rivalFullname":"OSBOWoumbE","body.rows[rivalCode":"DXGWnkPzfZ","body.rows[rivalStatus":"WJTxupObxn"},{"code":"vxycWotcTx","message":"xWOoxdtFLt","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"XWCrpMzEjd","body.rows[rivalName":"KcaweOaCmO","body.rows[rivalFullname":"hFeomfARBL","body.rows[rivalCode":"rhPtvunYZC","body.rows[rivalStatus":"OumLpJilkD"},{"code":"BnaHotLxJA","message":"wIhOcVMyhU","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"koEMgYJKqZ","body.rows[rivalName":"JyPOIimJhO","body.rows[rivalFullname":"muhKJUkVcz","body.rows[rivalCode":"smgvCXUIAA","body.rows[rivalStatus":"hFingzzEzh"},{"code":"qgnZTgWLNl","message":"OpYcKmMnYp","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"uZcAHryBeG","body.rows[rivalName":"DiBFjJLglx","body.rows[rivalFullname":"TPKgpvoPqP","body.rows[rivalCode":"TvpKQOHQfI","body.rows[rivalStatus":"wTkGIdefxB"},{"code":"OtKVobLMKd","message":"OzqgLiPebA","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"tVUzJKcqHX","body.rows[rivalName":"ZppEbxpoux","body.rows[rivalFullname":"JvbFGfQaAL","body.rows[rivalCode":"euHnOyLpbE","body.rows[rivalStatus":"sceLZyZoEI"}]}]
+2026-01-22 17:22:37,259 - __main__ - INFO - simple_app.py:1053 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: wbbe-sAxM-eiawWCAAAD
+2026-01-22 17:22:54,188 - engineio.server - INFO - socket.py:78 - OQg1BKeYXc4mnRLIAAAC: Sending packet PING data None
+2026-01-22 17:22:54,188 - engineio.server - INFO - socket.py:39 - OQg1BKeYXc4mnRLIAAAC: Received packet PONG data 
+2026-01-22 17:23:19,190 - engineio.server - INFO - socket.py:78 - OQg1BKeYXc4mnRLIAAAC: Sending packet PING data None
+2026-01-22 17:23:19,191 - engineio.server - INFO - socket.py:39 - OQg1BKeYXc4mnRLIAAAC: Received packet PONG data 
+2026-01-22 17:23:44,192 - engineio.server - INFO - socket.py:78 - OQg1BKeYXc4mnRLIAAAC: Sending packet PING data None
+2026-01-22 17:23:44,193 - engineio.server - INFO - socket.py:39 - OQg1BKeYXc4mnRLIAAAC: Received packet PONG data 
+2026-01-22 17:23:49,177 - __main__ - INFO - simple_app.py:928 - Client disconnected from WebSocket, sid: wbbe-sAxM-eiawWCAAAD
+2026-01-22 17:23:49,202 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [22/Jan/2026 17:23:49] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-01-22 17:23:49,209 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-01-22 17:30:47,722 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 17:30:47,726 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-01-22 17:30:48,208 - engineio.server - INFO - base_server.py:112 - Server initialized for eventlet.
+2026-01-22 17:30:48,208 - __main__ - INFO - simple_app.py:88 - SocketIO初始化成功，使用自动选择的async_mode, cors_allowed_origins=*
+2026-01-22 17:30:48,209 - __main__ - INFO - simple_app.py:155 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 17:30:48,209 - __main__ - INFO - simple_app.py:156 - 前端目录是否存在: True
+2026-01-22 17:30:48,209 - __main__ - INFO - simple_app.py:157 - index.html是否存在: True
+2026-01-22 17:30:48,210 - __main__ - INFO - simple_app.py:284 - 初始化数据库...
+2026-01-22 17:30:48,212 - __main__ - INFO - simple_app.py:287 - 数据库初始化成功
+2026-01-22 17:30:48,227 - __main__ - WARNING - simple_app.py:1268 - 端口 8000 已被占用，尝试下一个可用端口
+2026-01-22 17:30:48,227 - __main__ - WARNING - simple_app.py:1268 - 端口 8001 已被占用，尝试下一个可用端口
+2026-01-22 17:30:48,228 - __main__ - WARNING - simple_app.py:1268 - 端口 8002 已被占用，尝试下一个可用端口
+2026-01-22 17:30:48,228 - __main__ - INFO - simple_app.py:1280 - 已切换到可用端口 8003
+2026-01-22 17:30:48,229 - __main__ - INFO - simple_app.py:1285 - 应用即将启动，访问地址: http://0.0.0.0:8003
+2026-01-22 17:30:53,597 - __main__ - INFO - simple_app.py:1224 - 已自动打开浏览器，访问地址: http://localhost:8003
+2026-01-22 17:30:54,663 - engineio.server - INFO - socket.py:78 - Htm0dWb1_7JES58wAAAA: Sending packet OPEN data {'sid': 'Htm0dWb1_7JES58wAAAA', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-01-22 17:30:54,664 - engineio.server - INFO - socket.py:90 - Htm0dWb1_7JES58wAAAA: Received request to upgrade to websocket
+2026-01-22 17:30:54,664 - engineio.server - INFO - socket.py:219 - Htm0dWb1_7JES58wAAAA: Upgrade to websocket successful
+2026-01-22 17:30:54,666 - engineio.server - INFO - socket.py:39 - Htm0dWb1_7JES58wAAAA: Received packet MESSAGE data 0
+2026-01-22 17:30:54,667 - __main__ - INFO - simple_app.py:909 - Client connected via WebSocket, sid: N2MVVY0sAqaHD__rAAAB
+2026-01-22 17:30:54,667 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to N2MVVY0sAqaHD__rAAAB [/]
+2026-01-22 17:30:54,668 - engineio.server - INFO - socket.py:78 - Htm0dWb1_7JES58wAAAA: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-01-22 17:30:54,668 - engineio.server - INFO - socket.py:78 - Htm0dWb1_7JES58wAAAA: Sending packet MESSAGE data 0{"sid":"N2MVVY0sAqaHD__rAAAB"}
+2026-01-22 17:31:19,667 - engineio.server - INFO - socket.py:78 - Htm0dWb1_7JES58wAAAA: Sending packet PING data None
+2026-01-22 17:31:19,669 - __main__ - INFO - simple_app.py:928 - Client disconnected from WebSocket, sid: N2MVVY0sAqaHD__rAAAB
+2026-01-22 17:33:13,928 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-01-22 17:33:13,930 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-01-22 17:33:14,118 - engineio.server - INFO - base_server.py:112 - Server initialized for eventlet.
+2026-01-22 17:33:14,119 - __main__ - INFO - simple_app.py:88 - SocketIO初始化成功，使用自动选择的async_mode, cors_allowed_origins=*
+2026-01-22 17:33:14,119 - __main__ - INFO - simple_app.py:155 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-01-22 17:33:14,119 - __main__ - INFO - simple_app.py:156 - 前端目录是否存在: True
+2026-01-22 17:33:14,120 - __main__ - INFO - simple_app.py:157 - index.html是否存在: True
+2026-01-22 17:33:14,120 - __main__ - INFO - simple_app.py:284 - 初始化数据库...
+2026-01-22 17:33:14,123 - __main__ - INFO - simple_app.py:287 - 数据库初始化成功
+2026-01-22 17:33:14,133 - __main__ - WARNING - simple_app.py:1268 - 端口 8000 已被占用，尝试下一个可用端口
+2026-01-22 17:33:14,134 - __main__ - WARNING - simple_app.py:1268 - 端口 8001 已被占用，尝试下一个可用端口
+2026-01-22 17:33:14,134 - __main__ - WARNING - simple_app.py:1268 - 端口 8002 已被占用，尝试下一个可用端口
+2026-01-22 17:33:14,135 - __main__ - INFO - simple_app.py:1280 - 已切换到可用端口 8003
+2026-01-22 17:33:14,135 - __main__ - INFO - simple_app.py:1285 - 应用即将启动，访问地址: http://0.0.0.0:8003
+2026-01-22 17:33:19,523 - __main__ - INFO - simple_app.py:1224 - 已自动打开浏览器，访问地址: http://localhost:8003
+2026-01-22 17:33:20,557 - engineio.server - INFO - socket.py:78 - ltC6USBfnohU2fpNAAAA: Sending packet OPEN data {'sid': 'ltC6USBfnohU2fpNAAAA', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-01-22 17:33:20,557 - engineio.server - INFO - socket.py:90 - ltC6USBfnohU2fpNAAAA: Received request to upgrade to websocket
+2026-01-22 17:33:20,558 - engineio.server - INFO - socket.py:219 - ltC6USBfnohU2fpNAAAA: Upgrade to websocket successful
+2026-01-22 17:33:20,560 - engineio.server - INFO - socket.py:39 - ltC6USBfnohU2fpNAAAA: Received packet MESSAGE data 0
+2026-01-22 17:33:20,561 - __main__ - INFO - simple_app.py:909 - Client connected via WebSocket, sid: P__PJ5B_1asFaIfpAAAB
+2026-01-22 17:33:20,561 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to P__PJ5B_1asFaIfpAAAB [/]
+2026-01-22 17:33:20,561 - engineio.server - INFO - socket.py:78 - ltC6USBfnohU2fpNAAAA: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-01-22 17:33:20,562 - engineio.server - INFO - socket.py:78 - ltC6USBfnohU2fpNAAAA: Sending packet MESSAGE data 0{"sid":"P__PJ5B_1asFaIfpAAAB"}
+2026-01-22 17:33:45,567 - engineio.server - INFO - socket.py:78 - ltC6USBfnohU2fpNAAAA: Sending packet PING data None
+2026-01-22 17:33:45,568 - engineio.server - INFO - socket.py:39 - ltC6USBfnohU2fpNAAAA: Received packet PONG data 
+2026-01-22 17:34:10,582 - engineio.server - INFO - socket.py:78 - ltC6USBfnohU2fpNAAAA: Sending packet PING data None
+2026-01-22 17:34:10,583 - engineio.server - INFO - socket.py:39 - ltC6USBfnohU2fpNAAAA: Received packet PONG data 
+2026-01-22 17:34:35,584 - engineio.server - INFO - socket.py:78 - ltC6USBfnohU2fpNAAAA: Sending packet PING data None
+2026-01-22 17:34:35,586 - engineio.server - INFO - socket.py:39 - ltC6USBfnohU2fpNAAAA: Received packet PONG data 
+2026-01-22 17:34:36,312 - __main__ - INFO - simple_app.py:928 - Client disconnected from WebSocket, sid: P__PJ5B_1asFaIfpAAAB
