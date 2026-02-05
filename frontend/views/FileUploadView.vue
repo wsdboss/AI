@@ -91,7 +91,7 @@ export default {
     return {
       showUploadDialog: false,
       files: [],
-      uploadUrl: '/api/files/upload' // 使用相对路径，通过代理转发到后端
+      uploadUrl: '/files/upload' // 使用相对路径，直接访问后端
     }
   },
   created() {
@@ -217,8 +217,8 @@ export default {
     // 导出文件
     downloadFile(file) {
       try {
-        // 使用window.open直接打开下载链接，需要包含完整的/api前缀
-        window.open(`/api/files/download/${file.id}`, '_blank')
+        // 使用window.open直接打开下载链接，使用正确的路径（无前缀）
+        window.open(`/files/download/${file.id}`, '_blank')
       } catch (error) {
         this.$message.error('文件下载失败')
         console.error('文件下载失败:', error)

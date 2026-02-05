@@ -24,7 +24,17 @@
           <div class="detail-section">
             <el-descriptions :column="1" border>
               <el-descriptions-item label="接口名称">{{ currentInterface.name }}</el-descriptions-item>
-              <el-descriptions-item label="请求方式">{{ currentInterface.method }}</el-descriptions-item>
+              <el-descriptions-item label="请求方式">
+                <div style="display: flex; align-items: center;">
+                  <el-select v-model="interfaceMethod" size="small" @change="handleMethodChange" style="width: 120px; margin-right: 10px;">
+                    <el-option label="GET" value="GET"></el-option>
+                    <el-option label="POST" value="POST"></el-option>
+                  </el-select>
+                  <el-button type="primary" size="small" @click="saveInterfaceMethod" :loading="savingMethod">
+                    保存
+                  </el-button>
+                </div>
+              </el-descriptions-item>
               <el-descriptions-item label="接口路径">{{ currentInterface.path }}</el-descriptions-item>
               <el-descriptions-item label="接口描述" v-if="currentInterface.description">
                 {{ currentInterface.description }}
@@ -277,6 +287,8 @@ export default {
       },
       requestUrl: '',
       isBrowserSupported: true,
+      interfaceMethod: 'GET',
+      savingMethod: false,
 
       requestForm: {
         params: '{}',
@@ -329,8 +341,10 @@ export default {
         // 更新接口类型开关状态
         if (newInterface) {
           this.interfaceTypeSwitch = newInterface.is_websocket
+          this.interfaceMethod = newInterface.method
         } else {
           this.interfaceTypeSwitch = false
+          this.interfaceMethod = 'GET'
         }
       },
       deep: true
@@ -500,7 +514,7 @@ export default {
       if (this.currentInterface && this.currentInterface.path) {
         // 生成完整的请求URL，包含/api前缀
         const baseUrl = window.location.origin
-        this.requestUrl = `${baseUrl}/api/dynamic${this.currentInterface.path}`
+        this.requestUrl = `${baseUrl}/dynamic${this.currentInterface.path}`
         
         // 检查浏览器是否支持直接访问该地址
         // 这里简单检查是否为标准HTTP/HTTPS协议
@@ -883,6 +897,47 @@ export default {
         this.websocketUrl = `${protocol}//${host}${normalizedPath}`
       } else {
         this.websocketUrl = ''
+      }
+    },
+    
+    // 处理接口调用方式变更
+    handleMethodChange() {
+      console.log('接口调用方式变更为:', this.interfaceMethod)
+    },
+    
+    // 保存接口调用方式
+    async saveInterfaceMethod() {
+      if (!this.currentInterface) {
+        this.$message.error('请先选择一个接口')
+        return
+      }
+      
+      try {
+        this.savingMethod = true
+        
+        // 调用后端API更新接口调用方式
+        const response = await this.$axios.post(`/interfaces/update-method/${this.currentInterface.id}`, {
+          method: this.interfaceMethod
+        })
+        
+        this.$message.success('接口调用方式更新成功')
+        
+        // 更新当前接口的method属性（使用大写形式）
+        this.currentInterface.method = this.interfaceMethod.toUpperCase()
+        
+        // 更新Vuex中的接口信息
+        this.$store.commit('SET_CURRENT_INTERFACE', this.currentInterface)
+        
+        // 重新加载接口列表，确保其他组件也能看到更新
+        this.$store.dispatch('loadInterfaces', this.currentFile?.id)
+        
+      } catch (error) {
+        this.$message.error(`接口调用方式更新失败: ${error.response?.data?.message || error.message}`)
+        console.error('接口调用方式更新失败:', error)
+        // 恢复原来的调用方式
+        this.interfaceMethod = this.currentInterface.method
+      } finally {
+        this.savingMethod = false
       }
     }
   }

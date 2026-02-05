@@ -4843,3 +4843,834 @@ AssertionError: write() before start_response
 2026-01-22 17:34:35,584 - engineio.server - INFO - socket.py:78 - ltC6USBfnohU2fpNAAAA: Sending packet PING data None
 2026-01-22 17:34:35,586 - engineio.server - INFO - socket.py:39 - ltC6USBfnohU2fpNAAAA: Received packet PONG data 
 2026-01-22 17:34:36,312 - __main__ - INFO - simple_app.py:928 - Client disconnected from WebSocket, sid: P__PJ5B_1asFaIfpAAAB
+2026-02-05 13:28:29,800 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-05 13:28:29,812 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-02-05 13:28:29,908 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-02-05 13:28:29,908 - __main__ - INFO - simple_app.py:89 - SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*
+2026-02-05 13:28:29,908 - __main__ - INFO - simple_app.py:156 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-02-05 13:28:29,909 - __main__ - INFO - simple_app.py:157 - 前端目录是否存在: True
+2026-02-05 13:28:29,909 - __main__ - INFO - simple_app.py:158 - index.html是否存在: True
+2026-02-05 13:28:29,909 - __main__ - INFO - simple_app.py:285 - 初始化数据库...
+2026-02-05 13:28:29,911 - __main__ - INFO - simple_app.py:288 - 数据库初始化成功
+2026-02-05 13:28:29,922 - __main__ - INFO - simple_app.py:1353 - 应用即将启动，访问地址: http://0.0.0.0:8004
+2026-02-05 13:28:30,017 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8004
+ * Running on http://10.203.224.140:8004
+2026-02-05 13:28:30,017 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-05 13:28:35,116 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:35] "GET /interface/1 HTTP/1.1" 200 -
+2026-02-05 13:28:35,166 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:35] "GET /assets/index-3ea71d54.js HTTP/1.1" 200 -
+2026-02-05 13:28:35,186 - __main__ - INFO - simple_app.py:1292 - 已自动打开浏览器，访问地址: http://localhost:8004
+2026-02-05 13:28:35,276 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:35] "GET /assets/index-2f932675.css HTTP/1.1" 200 -
+2026-02-05 13:28:35,534 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:35] "GET / HTTP/1.1" 200 -
+2026-02-05 13:28:35,610 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:35] "[36mGET /assets/index-2f932675.css HTTP/1.1[0m" 304 -
+2026-02-05 13:28:35,656 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:35] "GET /api/api/websocket-status HTTP/1.1" 200 -
+2026-02-05 13:28:35,860 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:35] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-05 13:28:35,869 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:35] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-02-05 13:28:35,981 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:35] "[36mGET /assets/index-3ea71d54.js HTTP/1.1[0m" 304 -
+2026-02-05 13:28:36,137 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:36] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 13:28:36,366 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:36] "[36mGET /api/api/websocket-status HTTP/1.1[0m" 304 -
+2026-02-05 13:28:36,388 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:36] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:28:36,685 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:36] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-02-05 13:28:36,717 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:36] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 13:28:38,437 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:38] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:28:38,682 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:38] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:28:39,435 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:39] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:28:39,754 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:39] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 13:28:39,785 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:39] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:28:40,064 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:40] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 13:28:40,372 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:40] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:28:49,508 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:49] "GET /api/interfaces/419/mock-config HTTP/1.1" 200 -
+2026-02-05 13:28:49,826 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:49] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:28:49,826 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:49] "GET /api/interfaces/419/params HTTP/1.1" 200 -
+2026-02-05 13:28:50,134 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:50] "GET /api/interfaces/419/responses HTTP/1.1" 200 -
+2026-02-05 13:28:50,396 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:50] "GET /api/interfaces/419/mock-config HTTP/1.1" 200 -
+2026-02-05 13:28:58,112 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:28:58] "[33mPOST /api/interfaces/update-method/1 HTTP/1.1[0m" 404 -
+2026-02-05 13:29:02,771 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:02] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:29:03,078 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:03] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 13:29:03,094 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:03] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:29:03,388 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:03] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 13:29:03,695 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:03] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:29:03,959 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:03] "GET /api/interfaces/419/mock-config HTTP/1.1" 200 -
+2026-02-05 13:29:04,174 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:04] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:29:04,175 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:04] "GET /api/interfaces/419/params HTTP/1.1" 200 -
+2026-02-05 13:29:04,180 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:04] "GET /api/interfaces/419/responses HTTP/1.1" 200 -
+2026-02-05 13:29:04,496 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:04] "GET /api/interfaces/419/mock-config HTTP/1.1" 200 -
+2026-02-05 13:29:06,689 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:06] "POST /api/dynamic/cash/outer/rivalInfo/query666 HTTP/1.1" 200 -
+2026-02-05 13:29:11,048 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:11] "POST /api/interfaces/generate-websocket/419 HTTP/1.1" 200 -
+2026-02-05 13:29:11,240 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:11] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:29:11,363 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:11] "GET /api/interfaces/419/params HTTP/1.1" 200 -
+2026-02-05 13:29:11,368 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:11] "GET /api/interfaces/419/responses HTTP/1.1" 200 -
+2026-02-05 13:29:11,683 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:29:11] "GET /api/interfaces/419/mock-config HTTP/1.1" 200 -
+2026-02-05 13:30:53,816 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:30:53] "[33mPOST /api/interfaces/update-method/2 HTTP/1.1[0m" 404 -
+2026-02-05 13:33:32,787 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-05 13:33:32,790 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-02-05 13:33:32,821 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-02-05 13:33:32,822 - __main__ - INFO - simple_app.py:89 - SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*
+2026-02-05 13:33:32,822 - __main__ - INFO - simple_app.py:156 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-02-05 13:33:32,822 - __main__ - INFO - simple_app.py:157 - 前端目录是否存在: True
+2026-02-05 13:33:32,822 - __main__ - INFO - simple_app.py:158 - index.html是否存在: True
+2026-02-05 13:33:32,823 - __main__ - INFO - simple_app.py:285 - 初始化数据库...
+2026-02-05 13:33:32,825 - __main__ - INFO - simple_app.py:288 - 数据库初始化成功
+2026-02-05 13:33:32,837 - __main__ - INFO - simple_app.py:1353 - 应用即将启动，访问地址: http://0.0.0.0:8004
+2026-02-05 13:33:32,857 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8004
+ * Running on http://10.203.224.140:8004
+2026-02-05 13:33:32,857 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-05 13:33:38,062 - __main__ - INFO - simple_app.py:1292 - 已自动打开浏览器，访问地址: http://localhost:8004
+2026-02-05 13:33:38,519 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:33:38] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 13:33:38,526 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:33:38] "[36mGET /assets/index-3ea71d54.js HTTP/1.1[0m" 304 -
+2026-02-05 13:33:38,655 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:33:38] "[36mGET /assets/index-2f932675.css HTTP/1.1[0m" 304 -
+2026-02-05 13:33:39,023 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:33:39] "[36mGET /api/api/websocket-status HTTP/1.1[0m" 304 -
+2026-02-05 13:33:39,026 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:33:39] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:33:39,269 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:33:39] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-02-05 13:33:39,346 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:33:39] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 13:52:22,718 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-05 13:52:22,720 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-02-05 13:52:22,748 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-02-05 13:52:22,749 - __main__ - INFO - simple_app.py:89 - SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*
+2026-02-05 13:52:22,749 - __main__ - INFO - simple_app.py:156 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-02-05 13:52:22,749 - __main__ - INFO - simple_app.py:157 - 前端目录是否存在: True
+2026-02-05 13:52:22,749 - __main__ - INFO - simple_app.py:158 - index.html是否存在: True
+2026-02-05 13:52:22,750 - __main__ - INFO - simple_app.py:285 - 初始化数据库...
+2026-02-05 13:52:22,752 - __main__ - INFO - simple_app.py:288 - 数据库初始化成功
+2026-02-05 13:52:22,763 - __main__ - WARNING - simple_app.py:1336 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-05 13:52:22,763 - __main__ - WARNING - simple_app.py:1336 - 端口 8001 已被占用，尝试下一个可用端口
+2026-02-05 13:52:22,764 - __main__ - WARNING - simple_app.py:1336 - 端口 8002 已被占用，尝试下一个可用端口
+2026-02-05 13:52:22,764 - __main__ - WARNING - simple_app.py:1336 - 端口 8003 已被占用，尝试下一个可用端口
+2026-02-05 13:52:22,765 - __main__ - INFO - simple_app.py:1348 - 已切换到可用端口 8004
+2026-02-05 13:52:22,765 - __main__ - INFO - simple_app.py:1353 - 应用即将启动，访问地址: http://0.0.0.0:8004
+2026-02-05 13:52:22,786 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8004
+ * Running on http://10.203.224.140:8004
+2026-02-05 13:52:22,787 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-05 13:52:27,990 - __main__ - INFO - simple_app.py:1292 - 已自动打开浏览器，访问地址: http://localhost:8004
+2026-02-05 13:52:28,454 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:28] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 13:52:28,462 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:28] "[36mGET /assets/index-3ea71d54.js HTTP/1.1[0m" 304 -
+2026-02-05 13:52:28,585 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:28] "[36mGET /assets/index-2f932675.css HTTP/1.1[0m" 304 -
+2026-02-05 13:52:28,938 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:28] "[36mGET /api/api/websocket-status HTTP/1.1[0m" 304 -
+2026-02-05 13:52:28,949 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:28] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:52:29,199 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:29] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-02-05 13:52:29,261 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:29] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 13:52:30,725 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:30] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:52:31,038 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:31] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:52:31,337 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:31] "GET /?ide_webview_request_time=1770270750994 HTTP/1.1" 200 -
+2026-02-05 13:52:31,584 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:31] "GET /assets/index-2f932675.css HTTP/1.1" 200 -
+2026-02-05 13:52:31,660 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:31] "GET /assets/index-3ea71d54.js HTTP/1.1" 200 -
+2026-02-05 13:52:31,781 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:31] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:52:31,826 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:31] "GET /api/api/websocket-status HTTP/1.1" 200 -
+2026-02-05 13:52:32,091 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:32] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 13:52:32,135 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:32] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:52:32,153 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:32] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 13:52:32,160 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:32] "GET /@vite/client HTTP/1.1" 200 -
+2026-02-05 13:52:32,398 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:32] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 13:52:32,719 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:32] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:52:39,257 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:39] "POST /api/interfaces/switch-to-http/418 HTTP/1.1" 200 -
+2026-02-05 13:52:39,597 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:39] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 13:52:39,597 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:39] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:52:39,844 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:39] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 13:52:39,906 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:39] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:52:41,326 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:41] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-02-05 13:52:51,672 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:52:51] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-02-05 13:55:09,128 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-05 13:55:09,130 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-02-05 13:55:09,157 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-02-05 13:55:09,158 - __main__ - INFO - simple_app.py:89 - SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*
+2026-02-05 13:55:09,158 - __main__ - INFO - simple_app.py:156 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-02-05 13:55:09,158 - __main__ - INFO - simple_app.py:157 - 前端目录是否存在: True
+2026-02-05 13:55:09,159 - __main__ - INFO - simple_app.py:158 - index.html是否存在: True
+2026-02-05 13:55:09,159 - __main__ - INFO - simple_app.py:285 - 初始化数据库...
+2026-02-05 13:55:09,161 - __main__ - INFO - simple_app.py:288 - 数据库初始化成功
+2026-02-05 13:55:09,173 - __main__ - WARNING - simple_app.py:1336 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-05 13:55:09,173 - __main__ - WARNING - simple_app.py:1336 - 端口 8001 已被占用，尝试下一个可用端口
+2026-02-05 13:55:09,173 - __main__ - WARNING - simple_app.py:1336 - 端口 8002 已被占用，尝试下一个可用端口
+2026-02-05 13:55:09,173 - __main__ - WARNING - simple_app.py:1336 - 端口 8003 已被占用，尝试下一个可用端口
+2026-02-05 13:55:09,174 - __main__ - INFO - simple_app.py:1348 - 已切换到可用端口 8004
+2026-02-05 13:55:09,174 - __main__ - INFO - simple_app.py:1353 - 应用即将启动，访问地址: http://0.0.0.0:8004
+2026-02-05 13:55:09,192 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8004
+ * Running on http://10.203.224.140:8004
+2026-02-05 13:55:09,192 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-05 13:55:14,385 - __main__ - INFO - simple_app.py:1292 - 已自动打开浏览器，访问地址: http://localhost:8004
+2026-02-05 13:55:14,836 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:14] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 13:55:14,847 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:14] "[36mGET /assets/index-3ea71d54.js HTTP/1.1[0m" 304 -
+2026-02-05 13:55:14,980 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:14] "[36mGET /assets/index-2f932675.css HTTP/1.1[0m" 304 -
+2026-02-05 13:55:15,347 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:15] "[36mGET /api/api/websocket-status HTTP/1.1[0m" 304 -
+2026-02-05 13:55:15,359 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:15] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:55:15,606 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:15] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-02-05 13:55:15,668 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:15] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 13:55:17,649 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:17] "GET /?ide_webview_request_time=1770270917329 HTTP/1.1" 200 -
+2026-02-05 13:55:17,909 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:17] "[36mGET /assets/index-2f932675.css HTTP/1.1[0m" 304 -
+2026-02-05 13:55:17,970 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:17] "[36mGET /assets/index-3ea71d54.js HTTP/1.1[0m" 304 -
+2026-02-05 13:55:18,102 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:18] "[36mGET /api/api/websocket-status HTTP/1.1[0m" 304 -
+2026-02-05 13:55:18,433 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:18] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-02-05 13:55:18,451 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:18] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 13:55:18,453 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:55:18] "[36mGET /@vite/client HTTP/1.1[0m" 304 -
+2026-02-05 13:57:19,618 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-05 13:57:19,620 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-02-05 13:57:19,648 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-02-05 13:57:19,649 - __main__ - INFO - simple_app.py:89 - SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*
+2026-02-05 13:57:19,649 - __main__ - INFO - simple_app.py:156 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-02-05 13:57:19,649 - __main__ - INFO - simple_app.py:157 - 前端目录是否存在: True
+2026-02-05 13:57:19,649 - __main__ - INFO - simple_app.py:158 - index.html是否存在: True
+2026-02-05 13:57:19,650 - __main__ - INFO - simple_app.py:285 - 初始化数据库...
+2026-02-05 13:57:19,652 - __main__ - INFO - simple_app.py:288 - 数据库初始化成功
+2026-02-05 13:57:19,662 - __main__ - WARNING - simple_app.py:1336 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-05 13:57:19,663 - __main__ - WARNING - simple_app.py:1336 - 端口 8001 已被占用，尝试下一个可用端口
+2026-02-05 13:57:19,663 - __main__ - WARNING - simple_app.py:1336 - 端口 8002 已被占用，尝试下一个可用端口
+2026-02-05 13:57:19,664 - __main__ - WARNING - simple_app.py:1336 - 端口 8003 已被占用，尝试下一个可用端口
+2026-02-05 13:57:19,664 - __main__ - INFO - simple_app.py:1348 - 已切换到可用端口 8004
+2026-02-05 13:57:19,665 - __main__ - INFO - simple_app.py:1353 - 应用即将启动，访问地址: http://0.0.0.0:8004
+2026-02-05 13:57:19,680 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8004
+ * Running on http://10.203.224.140:8004
+2026-02-05 13:57:19,680 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-05 13:57:24,099 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:24] "GET / HTTP/1.1" 200 -
+2026-02-05 13:57:24,105 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:24] "GET /assets/index-fdd431f3.js HTTP/1.1" 200 -
+2026-02-05 13:57:24,253 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:24] "GET /assets/index-cd190ec7.css HTTP/1.1" 200 -
+2026-02-05 13:57:24,624 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:24] "GET /api/websocket-status HTTP/1.1" 200 -
+2026-02-05 13:57:24,641 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:24] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-05 13:57:24,868 - __main__ - INFO - simple_app.py:1292 - 已自动打开浏览器，访问地址: http://localhost:8004
+2026-02-05 13:57:24,883 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:24] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-02-05 13:57:24,934 - engineio.server - INFO - socket.py:78 - nHZXvY2rIn9nxVlzAAAA: Sending packet OPEN data {'sid': 'nHZXvY2rIn9nxVlzAAAA', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-02-05 13:57:24,935 - engineio.server - INFO - socket.py:90 - nHZXvY2rIn9nxVlzAAAA: Received request to upgrade to websocket
+2026-02-05 13:57:24,936 - engineio.server - INFO - socket.py:219 - nHZXvY2rIn9nxVlzAAAA: Upgrade to websocket successful
+2026-02-05 13:57:24,937 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:24] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 13:57:24,938 - engineio.server - INFO - socket.py:39 - nHZXvY2rIn9nxVlzAAAA: Received packet MESSAGE data 0
+2026-02-05 13:57:24,938 - __main__ - INFO - simple_app.py:965 - Client connected via WebSocket, sid: QMZkyNVwZmnYzOHQAAAB
+2026-02-05 13:57:24,939 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to QMZkyNVwZmnYzOHQAAAB [/]
+2026-02-05 13:57:24,940 - engineio.server - INFO - socket.py:78 - nHZXvY2rIn9nxVlzAAAA: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-02-05 13:57:24,940 - engineio.server - INFO - socket.py:78 - nHZXvY2rIn9nxVlzAAAA: Sending packet MESSAGE data 0{"sid":"QMZkyNVwZmnYzOHQAAAB"}
+2026-02-05 13:57:24,949 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:24] "[36mGET /assets/index-cd190ec7.css HTTP/1.1[0m" 304 -
+2026-02-05 13:57:25,210 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:25] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 13:57:25,255 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:25] "[36mGET /assets/index-fdd431f3.js HTTP/1.1[0m" 304 -
+2026-02-05 13:57:25,321 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:25] "GET /api/websocket-status HTTP/1.1" 200 -
+2026-02-05 13:57:25,652 - engineio.server - INFO - socket.py:78 - NFZWHVZxwxR23nsRAAAC: Sending packet OPEN data {'sid': 'NFZWHVZxwxR23nsRAAAC', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-02-05 13:57:25,653 - engineio.server - INFO - socket.py:90 - NFZWHVZxwxR23nsRAAAC: Received request to upgrade to websocket
+2026-02-05 13:57:25,654 - engineio.server - INFO - socket.py:219 - NFZWHVZxwxR23nsRAAAC: Upgrade to websocket successful
+2026-02-05 13:57:25,655 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:25] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-02-05 13:57:25,656 - engineio.server - INFO - socket.py:39 - NFZWHVZxwxR23nsRAAAC: Received packet MESSAGE data 0
+2026-02-05 13:57:25,656 - __main__ - INFO - simple_app.py:965 - Client connected via WebSocket, sid: -EaIHUVtGk_hdARuAAAD
+2026-02-05 13:57:25,656 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to -EaIHUVtGk_hdARuAAAD [/]
+2026-02-05 13:57:25,657 - engineio.server - INFO - socket.py:78 - NFZWHVZxwxR23nsRAAAC: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-02-05 13:57:25,657 - engineio.server - INFO - socket.py:78 - NFZWHVZxwxR23nsRAAAC: Sending packet MESSAGE data 0{"sid":"-EaIHUVtGk_hdARuAAAD"}
+2026-02-05 13:57:25,685 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:25] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:57:25,687 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:25] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 13:57:26,292 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:26] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:57:26,607 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:26] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:57:27,765 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:27] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:57:28,072 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:28] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 13:57:28,119 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:28] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:57:28,381 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:28] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 13:57:28,689 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:28] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:57:29,587 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:29] "POST /api/interfaces/update-method/418 HTTP/1.1" 200 -
+2026-02-05 13:57:29,823 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:29] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 13:57:29,838 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:29] "GET /?ide_webview_request_time=1770271049514 HTTP/1.1" 200 -
+2026-02-05 13:57:29,899 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:29] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:57:30,083 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:30] "GET /assets/index-cd190ec7.css HTTP/1.1" 200 -
+2026-02-05 13:57:30,132 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:30] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 13:57:30,161 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:30] "GET /assets/index-fdd431f3.js HTTP/1.1" 200 -
+2026-02-05 13:57:30,350 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:30] "GET /api/websocket-status HTTP/1.1" 200 -
+2026-02-05 13:57:30,458 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:30] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:57:30,661 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet OPEN data {'sid': 'b1c8IrYbCWR5wbNcAAAE', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-02-05 13:57:30,662 - engineio.server - INFO - socket.py:90 - b1c8IrYbCWR5wbNcAAAE: Received request to upgrade to websocket
+2026-02-05 13:57:30,663 - engineio.server - INFO - socket.py:219 - b1c8IrYbCWR5wbNcAAAE: Upgrade to websocket successful
+2026-02-05 13:57:30,665 - engineio.server - INFO - socket.py:39 - b1c8IrYbCWR5wbNcAAAE: Received packet MESSAGE data 0
+2026-02-05 13:57:30,665 - __main__ - INFO - simple_app.py:965 - Client connected via WebSocket, sid: Tgthayf0DJPGfwWRAAAF
+2026-02-05 13:57:30,666 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to Tgthayf0DJPGfwWRAAAF [/]
+2026-02-05 13:57:30,666 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-02-05 13:57:30,666 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet MESSAGE data 0{"sid":"Tgthayf0DJPGfwWRAAAF"}
+2026-02-05 13:57:30,685 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:30] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-02-05 13:57:30,685 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:30] "GET /@vite/client HTTP/1.1" 200 -
+2026-02-05 13:57:30,687 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:30] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 13:57:31,332 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:31] "POST /api/interfaces/update-method/418 HTTP/1.1" 200 -
+2026-02-05 13:57:31,652 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:31] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:57:34,225 - engineio.server - INFO - socket.py:39 - NFZWHVZxwxR23nsRAAAC: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"POST","params":{"params":{},"mock_count":10}}]
+2026-02-05 13:57:34,225 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from -EaIHUVtGk_hdARuAAAD [/]
+2026-02-05 13:57:34,226 - __main__ - INFO - simple_app.py:1039 - Handling dynamic_interface request from sid: -EaIHUVtGk_hdARuAAAD, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'POST', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 13:57:34,227 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to -EaIHUVtGk_hdARuAAAD [/]
+2026-02-05 13:57:34,227 - engineio.server - INFO - socket.py:78 - NFZWHVZxwxR23nsRAAAC: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"ByeWsAQNRK","message":"bgCRyErYBZ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"XcrDJvkLOc","body.rows[rivalName":"rJqFUHmBJb","body.rows[rivalFullname":"UksjLrpaoT","body.rows[rivalCode":"dFkbsGxPmV","body.rows[rivalStatus":"YpcApPnkTh"},{"code":"hHyjCaxisk","message":"WQEGkWmejH","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"nQaNnCYETp","body.rows[rivalName":"UUahqDmqTt","body.rows[rivalFullname":"iHdzOzwKvW","body.rows[rivalCode":"XdkMVSFaNi","body.rows[rivalStatus":"ULzMLWGoKn"},{"code":"TcRwWnFbuS","message":"KTJZrBfrMq","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"fqgZxJuuai","body.rows[rivalName":"vuAAgCyVEj","body.rows[rivalFullname":"ZQlwfRDSEg","body.rows[rivalCode":"HMigkjmLbg","body.rows[rivalStatus":"gUiyMIxPid"},{"code":"VyzZdqsPCu","message":"cRyOJqsIBq","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"rmLhWmMSud","body.rows[rivalName":"riiYiBklxG","body.rows[rivalFullname":"MnjKDZkvFv","body.rows[rivalCode":"JFdwEvRWHO","body.rows[rivalStatus":"LqZgfBIWMn"},{"code":"cntxiqAaNH","message":"MKxVnuxZLf","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"Wafhholaee","body.rows[rivalName":"zZmCZSqtrG","body.rows[rivalFullname":"LmuIpHXocO","body.rows[rivalCode":"gTrSBRiScA","body.rows[rivalStatus":"QSfksbeMSc"},{"code":"rGUubEANHi","message":"GaIDPUcqdu","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"XQKxgWYZJD","body.rows[rivalName":"SjMkYdkoJr","body.rows[rivalFullname":"JnFdjManEE","body.rows[rivalCode":"VnWNiLySWK","body.rows[rivalStatus":"ptRfgQHzIT"},{"code":"YXgOjFITui","message":"IBKYLtqnHz","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"jDMjFMbZnW","body.rows[rivalName":"SbRwonMYUN","body.rows[rivalFullname":"cijXpqPshh","body.rows[rivalCode":"EkNAeJuiSW","body.rows[rivalStatus":"fIRoHXBPZh"},{"code":"gxqYXvmYlv","message":"IhxzEchGhc","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"sowfzdUKqd","body.rows[rivalName":"TBRAKxPjpH","body.rows[rivalFullname":"UxFSCWNZFj","body.rows[rivalCode":"TlUiSssXFI","body.rows[rivalStatus":"BaHoMdbWhe"},{"code":"XkxSizpBrD","message":"VVKbkOgZBy","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"mwWpKJUFbd","body.rows[rivalName":"ofcpYWDEhg","body.rows[rivalFullname":"xVOwATiaVB","body.rows[rivalCode":"EbfiebBUbT","body.rows[rivalStatus":"wsHSJVDQZf"},{"code":"mgEyJNwtLL","message":"uYALIuXfXU","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"WhxutERgbW","body.rows[rivalName":"fTbmbBtzth","body.rows[rivalFullname":"ukhkhBGGvM","body.rows[rivalCode":"XFNpGFCfoY","body.rows[rivalStatus":"OhFCOhIWIh"}]}]
+2026-02-05 13:57:34,229 - __main__ - INFO - simple_app.py:1109 - Successfully handled dynamic_interface request: POST /cash/outer/rivalInfo/query for sid: -EaIHUVtGk_hdARuAAAD
+2026-02-05 13:57:42,511 - __main__ - INFO - simple_app.py:984 - Client disconnected from WebSocket, sid: QMZkyNVwZmnYzOHQAAAB
+2026-02-05 13:57:42,522 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:42] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-02-05 13:57:42,526 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-02-05 13:57:42,541 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:42] "GET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-02-05 13:57:42,850 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:57:42] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 13:57:50,655 - engineio.server - INFO - socket.py:78 - NFZWHVZxwxR23nsRAAAC: Sending packet PING data None
+2026-02-05 13:57:50,656 - engineio.server - INFO - socket.py:39 - NFZWHVZxwxR23nsRAAAC: Received packet PONG data 
+2026-02-05 13:57:55,663 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet PING data None
+2026-02-05 13:57:55,664 - engineio.server - INFO - socket.py:39 - b1c8IrYbCWR5wbNcAAAE: Received packet PONG data 
+2026-02-05 13:58:00,460 - __main__ - INFO - simple_app.py:984 - Client disconnected from WebSocket, sid: -EaIHUVtGk_hdARuAAAD
+2026-02-05 13:58:00,485 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:58:00] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-02-05 13:58:00,488 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-02-05 13:58:19,639 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:58:19] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:58:19,947 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:58:19] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 13:58:20,666 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet PING data None
+2026-02-05 13:58:20,666 - engineio.server - INFO - socket.py:39 - b1c8IrYbCWR5wbNcAAAE: Received packet PONG data 
+2026-02-05 13:58:20,835 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:58:20] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:58:20,838 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:58:20] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 13:58:21,099 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:58:21] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 13:58:21,159 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 13:58:21] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 13:58:45,668 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet PING data None
+2026-02-05 13:58:45,669 - engineio.server - INFO - socket.py:39 - b1c8IrYbCWR5wbNcAAAE: Received packet PONG data 
+2026-02-05 13:59:10,670 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet PING data None
+2026-02-05 13:59:10,671 - engineio.server - INFO - socket.py:39 - b1c8IrYbCWR5wbNcAAAE: Received packet PONG data 
+2026-02-05 13:59:35,673 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet PING data None
+2026-02-05 13:59:35,674 - engineio.server - INFO - socket.py:39 - b1c8IrYbCWR5wbNcAAAE: Received packet PONG data 
+2026-02-05 14:00:00,675 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet PING data None
+2026-02-05 14:00:00,676 - engineio.server - INFO - socket.py:39 - b1c8IrYbCWR5wbNcAAAE: Received packet PONG data 
+2026-02-05 14:00:25,678 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet PING data None
+2026-02-05 14:00:25,679 - engineio.server - INFO - socket.py:39 - b1c8IrYbCWR5wbNcAAAE: Received packet PONG data 
+2026-02-05 14:00:50,680 - engineio.server - INFO - socket.py:78 - b1c8IrYbCWR5wbNcAAAE: Sending packet PING data None
+2026-02-05 14:00:50,681 - engineio.server - INFO - socket.py:39 - b1c8IrYbCWR5wbNcAAAE: Received packet PONG data 
+2026-02-05 14:01:09,863 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-05 14:01:09,865 - __main__ - INFO - simple_app.py:78 - 开始初始化SocketIO...
+2026-02-05 14:01:09,892 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-02-05 14:01:09,893 - __main__ - INFO - simple_app.py:89 - SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*
+2026-02-05 14:01:09,893 - __main__ - INFO - simple_app.py:156 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-02-05 14:01:09,893 - __main__ - INFO - simple_app.py:157 - 前端目录是否存在: True
+2026-02-05 14:01:09,893 - __main__ - INFO - simple_app.py:158 - index.html是否存在: True
+2026-02-05 14:01:09,894 - __main__ - INFO - simple_app.py:285 - 初始化数据库...
+2026-02-05 14:01:09,896 - __main__ - INFO - simple_app.py:288 - 数据库初始化成功
+2026-02-05 14:01:09,907 - __main__ - WARNING - simple_app.py:1336 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-05 14:01:09,907 - __main__ - WARNING - simple_app.py:1336 - 端口 8001 已被占用，尝试下一个可用端口
+2026-02-05 14:01:09,907 - __main__ - WARNING - simple_app.py:1336 - 端口 8002 已被占用，尝试下一个可用端口
+2026-02-05 14:01:09,908 - __main__ - WARNING - simple_app.py:1336 - 端口 8003 已被占用，尝试下一个可用端口
+2026-02-05 14:01:09,908 - __main__ - INFO - simple_app.py:1348 - 已切换到可用端口 8004
+2026-02-05 14:01:09,908 - __main__ - INFO - simple_app.py:1353 - 应用即将启动，访问地址: http://0.0.0.0:8004
+2026-02-05 14:01:09,924 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8004
+ * Running on http://10.203.224.140:8004
+2026-02-05 14:01:09,925 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-05 14:01:11,556 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:11] "GET /api/websocket-status HTTP/1.1" 200 -
+2026-02-05 14:01:15,109 - __main__ - INFO - simple_app.py:1292 - 已自动打开浏览器，访问地址: http://localhost:8004
+2026-02-05 14:01:15,557 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:15] "GET / HTTP/1.1" 200 -
+2026-02-05 14:01:15,564 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:15] "GET /assets/index-e07838ba.js HTTP/1.1" 200 -
+2026-02-05 14:01:15,695 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:15] "GET /assets/index-ae4601f8.css HTTP/1.1" 200 -
+2026-02-05 14:01:16,066 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:16] "GET /api/websocket-status HTTP/1.1" 200 -
+2026-02-05 14:01:16,069 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:16] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-05 14:01:16,328 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:16] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-02-05 14:01:16,373 - engineio.server - INFO - socket.py:78 - bmxQ6J83OwSecxRCAAAA: Sending packet OPEN data {'sid': 'bmxQ6J83OwSecxRCAAAA', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-02-05 14:01:16,374 - engineio.server - INFO - socket.py:90 - bmxQ6J83OwSecxRCAAAA: Received request to upgrade to websocket
+2026-02-05 14:01:16,375 - engineio.server - INFO - socket.py:219 - bmxQ6J83OwSecxRCAAAA: Upgrade to websocket successful
+2026-02-05 14:01:16,377 - engineio.server - INFO - socket.py:39 - bmxQ6J83OwSecxRCAAAA: Received packet MESSAGE data 0
+2026-02-05 14:01:16,377 - __main__ - INFO - simple_app.py:965 - Client connected via WebSocket, sid: Wovyf5Ni7kXMHpc6AAAB
+2026-02-05 14:01:16,378 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to Wovyf5Ni7kXMHpc6AAAB [/]
+2026-02-05 14:01:16,378 - engineio.server - INFO - socket.py:78 - bmxQ6J83OwSecxRCAAAA: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-02-05 14:01:16,378 - engineio.server - INFO - socket.py:78 - bmxQ6J83OwSecxRCAAAA: Sending packet MESSAGE data 0{"sid":"Wovyf5Ni7kXMHpc6AAAB"}
+2026-02-05 14:01:16,381 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:16] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 14:01:20,542 - engineio.server - INFO - socket.py:78 - fMOSp41TXNqoP5i5AAAC: Sending packet OPEN data {'sid': 'fMOSp41TXNqoP5i5AAAC', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-02-05 14:01:20,542 - engineio.server - INFO - socket.py:90 - fMOSp41TXNqoP5i5AAAC: Received request to upgrade to websocket
+2026-02-05 14:01:20,543 - engineio.server - INFO - socket.py:219 - fMOSp41TXNqoP5i5AAAC: Upgrade to websocket successful
+2026-02-05 14:01:20,544 - engineio.server - INFO - socket.py:39 - fMOSp41TXNqoP5i5AAAC: Received packet MESSAGE data 0
+2026-02-05 14:01:20,545 - __main__ - INFO - simple_app.py:965 - Client connected via WebSocket, sid: taeOtDcERVsaI1usAAAD
+2026-02-05 14:01:20,545 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to taeOtDcERVsaI1usAAAD [/]
+2026-02-05 14:01:20,546 - engineio.server - INFO - socket.py:78 - fMOSp41TXNqoP5i5AAAC: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-02-05 14:01:20,546 - engineio.server - INFO - socket.py:78 - fMOSp41TXNqoP5i5AAAC: Sending packet MESSAGE data 0{"sid":"taeOtDcERVsaI1usAAAD"}
+2026-02-05 14:01:22,958 - __main__ - INFO - simple_app.py:984 - Client disconnected from WebSocket, sid: taeOtDcERVsaI1usAAAD
+2026-02-05 14:01:22,961 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:22] "GET /?ide_webview_request_time=1770271282956 HTTP/1.1" 200 -
+2026-02-05 14:01:22,970 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:22] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-02-05 14:01:22,973 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-02-05 14:01:23,289 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:23] "GET /assets/index-ae4601f8.css HTTP/1.1" 200 -
+2026-02-05 14:01:23,289 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:23] "GET /assets/index-e07838ba.js HTTP/1.1" 200 -
+2026-02-05 14:01:23,531 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:23] "GET /api/websocket-status HTTP/1.1" 200 -
+2026-02-05 14:01:23,746 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:23] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-02-05 14:01:23,746 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:23] "GET /@vite/client HTTP/1.1" 200 -
+2026-02-05 14:01:23,839 - engineio.server - INFO - socket.py:78 - VFjjLwZ2Xv8CEZVQAAAE: Sending packet OPEN data {'sid': 'VFjjLwZ2Xv8CEZVQAAAE', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-02-05 14:01:23,839 - engineio.server - INFO - socket.py:90 - VFjjLwZ2Xv8CEZVQAAAE: Received request to upgrade to websocket
+2026-02-05 14:01:23,840 - engineio.server - INFO - socket.py:219 - VFjjLwZ2Xv8CEZVQAAAE: Upgrade to websocket successful
+2026-02-05 14:01:23,841 - engineio.server - INFO - socket.py:39 - VFjjLwZ2Xv8CEZVQAAAE: Received packet MESSAGE data 0
+2026-02-05 14:01:23,842 - __main__ - INFO - simple_app.py:965 - Client connected via WebSocket, sid: mWlBg0DpQOxxiG8dAAAF
+2026-02-05 14:01:23,842 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to mWlBg0DpQOxxiG8dAAAF [/]
+2026-02-05 14:01:23,842 - engineio.server - INFO - socket.py:78 - VFjjLwZ2Xv8CEZVQAAAE: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-02-05 14:01:23,842 - engineio.server - INFO - socket.py:78 - VFjjLwZ2Xv8CEZVQAAAE: Sending packet MESSAGE data 0{"sid":"mWlBg0DpQOxxiG8dAAAF"}
+2026-02-05 14:01:23,856 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:23] "GET /api/files HTTP/1.1" 200 -
+2026-02-05 14:01:41,375 - engineio.server - INFO - socket.py:78 - bmxQ6J83OwSecxRCAAAA: Sending packet PING data None
+2026-02-05 14:01:41,376 - engineio.server - INFO - socket.py:39 - bmxQ6J83OwSecxRCAAAA: Received packet PONG data 
+2026-02-05 14:01:46,193 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:46] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 14:01:46,498 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:46] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 14:01:47,475 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:47] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 14:01:47,475 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:47] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 14:01:47,717 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:47] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 14:01:47,796 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:47] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 14:01:48,840 - engineio.server - INFO - socket.py:78 - VFjjLwZ2Xv8CEZVQAAAE: Sending packet PING data None
+2026-02-05 14:01:48,841 - engineio.server - INFO - socket.py:39 - VFjjLwZ2Xv8CEZVQAAAE: Received packet PONG data 
+2026-02-05 14:01:49,767 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:49] "POST /api/interfaces/update-method/418 HTTP/1.1" 200 -
+2026-02-05 14:01:50,076 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:50] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 14:01:50,077 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:50] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 14:01:50,328 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:50] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 14:01:50,396 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:50] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 14:01:52,774 - engineio.server - INFO - socket.py:39 - VFjjLwZ2Xv8CEZVQAAAE: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10}}]
+2026-02-05 14:01:52,775 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from mWlBg0DpQOxxiG8dAAAF [/]
+2026-02-05 14:01:52,776 - __main__ - INFO - simple_app.py:1039 - Handling dynamic_interface request from sid: mWlBg0DpQOxxiG8dAAAF, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 14:01:52,777 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to mWlBg0DpQOxxiG8dAAAF [/]
+2026-02-05 14:01:52,778 - engineio.server - INFO - socket.py:78 - VFjjLwZ2Xv8CEZVQAAAE: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"ZAopXmsRvD","message":"tkxBtFwGYj","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"iyrWBspojv","body.rows[rivalName":"jBdjaFBJAh","body.rows[rivalFullname":"fHeDuYrhuc","body.rows[rivalCode":"IQAxgMIOds","body.rows[rivalStatus":"uhwFfQBumX"},{"code":"LgumSRPWBe","message":"ffTNbzVqex","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"MDGzhsaTEB","body.rows[rivalName":"TUlMHRYEoW","body.rows[rivalFullname":"fppcDvyBww","body.rows[rivalCode":"nLmlgNufzF","body.rows[rivalStatus":"hiGXKFzwQp"},{"code":"GxTlyRWRzt","message":"ZCdqnkXpsy","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"ZojikrokbO","body.rows[rivalName":"fimjapoQNc","body.rows[rivalFullname":"YnfuLtxXzm","body.rows[rivalCode":"XASzyaFFqw","body.rows[rivalStatus":"UUtgLOQnJM"},{"code":"rIfVxOSMVk","message":"zSOWphAPQN","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"PZseItJTAT","body.rows[rivalName":"pZKSxSgncl","body.rows[rivalFullname":"eRTliVlAbS","body.rows[rivalCode":"VHNzvfufLP","body.rows[rivalStatus":"XnhipikJxf"},{"code":"YzlgRPJJdc","message":"YMVZQWCjYc","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"mIJgAYEHly","body.rows[rivalName":"WrBmEXfNGd","body.rows[rivalFullname":"MSdqgyqLoL","body.rows[rivalCode":"GQjRrilWFS","body.rows[rivalStatus":"UgJEVVTryK"},{"code":"gxUkbmlflg","message":"OPErHEhnCk","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"ADgThAIfgt","body.rows[rivalName":"tmTRejCZsV","body.rows[rivalFullname":"LVprpGnxBl","body.rows[rivalCode":"uPsKwBLtCe","body.rows[rivalStatus":"BSyxqPKDqq"},{"code":"sLsLhbQXOU","message":"tPmxLsBxHw","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"bhWNjiblpP","body.rows[rivalName":"QwYDKYafUc","body.rows[rivalFullname":"BwKLFWgbWa","body.rows[rivalCode":"zdhhyFkjsw","body.rows[rivalStatus":"quLscJSFYN"},{"code":"ZyDLnXGwcx","message":"WPjTLuJGeJ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"uqwVQtiDLG","body.rows[rivalName":"YeirekLFYD","body.rows[rivalFullname":"kaXmwpCPbL","body.rows[rivalCode":"WtUvBFXugP","body.rows[rivalStatus":"nJDMphTIDu"},{"code":"WTTpZEVHRV","message":"JPEZPOpQjY","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"JXnkvsrTvA","body.rows[rivalName":"aSadHMrmDS","body.rows[rivalFullname":"baIwMTbQwl","body.rows[rivalCode":"sQplYsGnxu","body.rows[rivalStatus":"xpAERHiURf"},{"code":"eiHMUcugJx","message":"abzbtJOXEA","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"oRLyjvUYIj","body.rows[rivalName":"JRxikpYpht","body.rows[rivalFullname":"rwRaGuCXSk","body.rows[rivalCode":"FTGXqTntLS","body.rows[rivalStatus":"wdMhlbxWrg"}]}]
+2026-02-05 14:01:52,780 - __main__ - INFO - simple_app.py:1109 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: mWlBg0DpQOxxiG8dAAAF
+2026-02-05 14:01:54,531 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:54] "POST /api/interfaces/generate-websocket/418 HTTP/1.1" 200 -
+2026-02-05 14:01:54,844 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:54] "GET /api/interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 14:01:54,844 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:54] "GET /api/interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 14:01:55,107 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:55] "GET /api/interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 14:01:55,155 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:01:55] "GET /api/interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 14:01:57,280 - engineio.server - INFO - socket.py:39 - VFjjLwZ2Xv8CEZVQAAAE: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10,"message":""}}]
+2026-02-05 14:01:57,280 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from mWlBg0DpQOxxiG8dAAAF [/]
+2026-02-05 14:01:57,281 - __main__ - INFO - simple_app.py:1039 - Handling dynamic_interface request from sid: mWlBg0DpQOxxiG8dAAAF, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10, 'message': ''}}
+2026-02-05 14:01:57,282 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to mWlBg0DpQOxxiG8dAAAF [/]
+2026-02-05 14:01:57,282 - engineio.server - INFO - socket.py:78 - VFjjLwZ2Xv8CEZVQAAAE: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"WGGQiwEKBU","message":"KovqpHJssD","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"wxAqjsWwsq","body.rows[rivalName":"bUbLDyxiOQ","body.rows[rivalFullname":"reZoSSRvOl","body.rows[rivalCode":"KIsglMMCLP","body.rows[rivalStatus":"BdwIFudGQU"},{"code":"TScbsaBlKf","message":"xjGLBEJYhZ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"HkxpQmrvIs","body.rows[rivalName":"LcaXGhrxgP","body.rows[rivalFullname":"htokBVfyHh","body.rows[rivalCode":"OhGHOMDlYO","body.rows[rivalStatus":"qFmqGSRHhG"},{"code":"jxrGoHlEkZ","message":"FRkEwTnOQI","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"lMYoXgnXaB","body.rows[rivalName":"qHZZPfaDek","body.rows[rivalFullname":"TIRhqwTtbo","body.rows[rivalCode":"GxXOqfjQhv","body.rows[rivalStatus":"qbkLrOyhuF"},{"code":"edQwJbTkvZ","message":"YtSGRJwdrB","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"hRQfXAVcQy","body.rows[rivalName":"pWVJTDdEAi","body.rows[rivalFullname":"oDAmTXnkZP","body.rows[rivalCode":"LwpDdSKyGr","body.rows[rivalStatus":"yaXsJMhDkC"},{"code":"YRqFkmlgsD","message":"hRZeTpvnvz","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"lyZNGulpdL","body.rows[rivalName":"EDGarFcTOU","body.rows[rivalFullname":"BbZAzUXVtd","body.rows[rivalCode":"LWDzjkkyDr","body.rows[rivalStatus":"KeuNYXLfnu"},{"code":"qjvilYdFPt","message":"MfdqJatuxf","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"TwQJxEhSAu","body.rows[rivalName":"hguMsQhxWH","body.rows[rivalFullname":"hlFxkoEmdt","body.rows[rivalCode":"qhWZWHZUBr","body.rows[rivalStatus":"RJAqbvjOGj"},{"code":"VitWZyMuek","message":"MmHZMqrSUT","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"mhWkqnLLnn","body.rows[rivalName":"xwibxjrwBH","body.rows[rivalFullname":"HTIGhWdukr","body.rows[rivalCode":"uSGvgZnXKO","body.rows[rivalStatus":"wFDlcpxzBf"},{"code":"dFWUSbFqeq","message":"qkMFjKGjXd","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"AlgvwBoClY","body.rows[rivalName":"jynMFoarfD","body.rows[rivalFullname":"AIbYtvHeTq","body.rows[rivalCode":"oodJvpODDe","body.rows[rivalStatus":"OczqekiWwU"},{"code":"PqgJgHnxgd","message":"kKuoQRtOJI","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"damPTYEZmC","body.rows[rivalName":"etnWBcgMoa","body.rows[rivalFullname":"quvUCRfYHX","body.rows[rivalCode":"ebWuOKALyt","body.rows[rivalStatus":"zbdWgXbgLL"},{"code":"gGuWHqTodi","message":"DIAsrioZfE","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"BjCxecDGBF","body.rows[rivalName":"HOIjXHmgRA","body.rows[rivalFullname":"cCMGJovAsH","body.rows[rivalCode":"PaMjMjwTYj","body.rows[rivalStatus":"NxpQXPeVlc"}]}]
+2026-02-05 14:01:57,284 - __main__ - INFO - simple_app.py:1109 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: mWlBg0DpQOxxiG8dAAAF
+2026-02-05 14:02:06,378 - engineio.server - INFO - socket.py:78 - bmxQ6J83OwSecxRCAAAA: Sending packet PING data None
+2026-02-05 14:02:06,378 - engineio.server - INFO - socket.py:39 - bmxQ6J83OwSecxRCAAAA: Received packet PONG data 
+2026-02-05 14:02:12,537 - engineio.server - INFO - socket.py:39 - VFjjLwZ2Xv8CEZVQAAAE: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10,"message":""}}]
+2026-02-05 14:02:12,537 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from mWlBg0DpQOxxiG8dAAAF [/]
+2026-02-05 14:02:12,538 - __main__ - INFO - simple_app.py:1039 - Handling dynamic_interface request from sid: mWlBg0DpQOxxiG8dAAAF, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10, 'message': ''}}
+2026-02-05 14:02:12,539 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to mWlBg0DpQOxxiG8dAAAF [/]
+2026-02-05 14:02:12,540 - engineio.server - INFO - socket.py:78 - VFjjLwZ2Xv8CEZVQAAAE: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"ORaFRiXQhg","message":"KKXRsnPLCX","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"qRCWyrGMiB","body.rows[rivalName":"LuLuzbFMEu","body.rows[rivalFullname":"qEHvfPGkvm","body.rows[rivalCode":"ogANCPcXyT","body.rows[rivalStatus":"EAOhZqHDvb"},{"code":"oNJyOAlerc","message":"lBQlcTCDZi","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"WTIZjVlLKs","body.rows[rivalName":"XNeHUrJava","body.rows[rivalFullname":"kPYGLXBozN","body.rows[rivalCode":"rHiIxsbpgb","body.rows[rivalStatus":"JxenfVDnAF"},{"code":"KvmbxKqdfy","message":"KGedeNzFsP","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"BZdqRmRCnY","body.rows[rivalName":"QziXhIuGiQ","body.rows[rivalFullname":"lTvJDePwEw","body.rows[rivalCode":"mSmTmNGjsY","body.rows[rivalStatus":"DMtJeKKgId"},{"code":"uRZsCCxywr","message":"iotyCEtodg","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"aqrQPxxhoM","body.rows[rivalName":"uyjwZYwunM","body.rows[rivalFullname":"MGhFMxKwIR","body.rows[rivalCode":"yQiAUDbVQZ","body.rows[rivalStatus":"DcGjLqvlvM"},{"code":"fgzcBuAtEX","message":"HRYlsVpQzP","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"UUfbVjYoGh","body.rows[rivalName":"RVNChsyxoS","body.rows[rivalFullname":"JKAWvgEStf","body.rows[rivalCode":"iwOeWECLgX","body.rows[rivalStatus":"uRooKbTOOO"},{"code":"bRQZfnWwtm","message":"iiJnaDoZee","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"QMVrcFRkTT","body.rows[rivalName":"paqGqsMbbR","body.rows[rivalFullname":"dSmQJalUyG","body.rows[rivalCode":"ktVHtpHiTo","body.rows[rivalStatus":"WuEgruCWsO"},{"code":"LcGrRMQzQa","message":"PWWeIRhvZl","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"jNrtDYgLaf","body.rows[rivalName":"ZVtyAbFSXj","body.rows[rivalFullname":"HUrXkIjQNQ","body.rows[rivalCode":"XjBcvXGiGB","body.rows[rivalStatus":"cmtoaHXOgf"},{"code":"FSeKpMcyVw","message":"dXFrkMiTCs","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"FBPXeuzXCu","body.rows[rivalName":"FcirxqRLXg","body.rows[rivalFullname":"JkOcDPKLWP","body.rows[rivalCode":"iovNJTyFwo","body.rows[rivalStatus":"WtKHIEzqul"},{"code":"ZLCptfPhbH","message":"deDtmDShir","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"vaEZNWACjt","body.rows[rivalName":"qzNFftdFXi","body.rows[rivalFullname":"pPrKkkLaNh","body.rows[rivalCode":"GmlMPZuuas","body.rows[rivalStatus":"UTBlRPfeFI"},{"code":"dxmFLDgvpP","message":"kIWFrDNdMX","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"FgDZCREzxi","body.rows[rivalName":"pHvlweesvO","body.rows[rivalFullname":"rWqLWfwENW","body.rows[rivalCode":"mLWvBcpriq","body.rows[rivalStatus":"NXyemUqjVn"}]}]
+2026-02-05 14:02:12,542 - __main__ - INFO - simple_app.py:1109 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: mWlBg0DpQOxxiG8dAAAF
+2026-02-05 14:02:13,842 - engineio.server - INFO - socket.py:78 - VFjjLwZ2Xv8CEZVQAAAE: Sending packet PING data None
+2026-02-05 14:02:13,843 - engineio.server - INFO - socket.py:39 - VFjjLwZ2Xv8CEZVQAAAE: Received packet PONG data 
+2026-02-05 14:02:19,457 - engineio.server - INFO - socket.py:39 - VFjjLwZ2Xv8CEZVQAAAE: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10,"message":""}}]
+2026-02-05 14:02:19,458 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from mWlBg0DpQOxxiG8dAAAF [/]
+2026-02-05 14:02:19,460 - __main__ - INFO - simple_app.py:1039 - Handling dynamic_interface request from sid: mWlBg0DpQOxxiG8dAAAF, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10, 'message': ''}}
+2026-02-05 14:02:19,462 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to mWlBg0DpQOxxiG8dAAAF [/]
+2026-02-05 14:02:19,463 - engineio.server - INFO - socket.py:78 - VFjjLwZ2Xv8CEZVQAAAE: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"OaMToSGxog","message":"uOKFCxGjMj","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"KKrizdNGNT","body.rows[rivalName":"pLeTecEBqq","body.rows[rivalFullname":"pdrBzTbGDV","body.rows[rivalCode":"OvNUasNasA","body.rows[rivalStatus":"KmGJKdTKfV"},{"code":"VZOSrMdUdq","message":"CxSAsmXXNG","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"WInjcTeFsn","body.rows[rivalName":"ppVsuXLDET","body.rows[rivalFullname":"xZYtQjdgzW","body.rows[rivalCode":"OqoEGSPfVq","body.rows[rivalStatus":"fZtbEOThQx"},{"code":"FSsgmnuSRs","message":"TxCIVPexhk","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"cvCMrCUELO","body.rows[rivalName":"FnXfPMFmGm","body.rows[rivalFullname":"RdnScCrlSQ","body.rows[rivalCode":"apqpONURjy","body.rows[rivalStatus":"OrfjMopxYz"},{"code":"bRRUEztTiD","message":"URrNWFxKPB","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"CJEzRnSnNk","body.rows[rivalName":"ZvfeUxAXNq","body.rows[rivalFullname":"ndsBAvIayw","body.rows[rivalCode":"dijonMecFH","body.rows[rivalStatus":"QbERfDVSqf"},{"code":"IvmMtPBmMJ","message":"epvjfOTNoq","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"QufnBjHevP","body.rows[rivalName":"xHVcYJoEPO","body.rows[rivalFullname":"YQjfRHWhQd","body.rows[rivalCode":"vgKWlhcmRx","body.rows[rivalStatus":"izuouOeRUT"},{"code":"QMcQAtlqNj","message":"sryGrsOSRo","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"tDBwMtEzDC","body.rows[rivalName":"QErIHBnyvN","body.rows[rivalFullname":"kJnqshhbKJ","body.rows[rivalCode":"KYuHLLjMlh","body.rows[rivalStatus":"HaLDOouOns"},{"code":"zPazSaWOSD","message":"CSLIwBxTQF","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"XGcouRsSng","body.rows[rivalName":"EVvkjDlsMc","body.rows[rivalFullname":"mrPVKDnsAE","body.rows[rivalCode":"sdfpEQtMHX","body.rows[rivalStatus":"WlXJDXnfyX"},{"code":"NpfxXCLIqV","message":"qIkEYeepTJ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"vlFgxoLwna","body.rows[rivalName":"DDoJLOSLlM","body.rows[rivalFullname":"mJElTaMMrb","body.rows[rivalCode":"bkDBRhSXGA","body.rows[rivalStatus":"miAcyntXaH"},{"code":"WrVwBEkruH","message":"IOWclsnFDJ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"GQgyVepaMW","body.rows[rivalName":"KHWJeiwrbv","body.rows[rivalFullname":"tATdQqKWQJ","body.rows[rivalCode":"LSPTfHIDxK","body.rows[rivalStatus":"hdputVGzJA"},{"code":"jddDYTFTEU","message":"JfxXhWFgyO","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"ATyenoVCzO","body.rows[rivalName":"yOOHDleIUv","body.rows[rivalFullname":"PzYBmuEmqK","body.rows[rivalCode":"HloplTiopa","body.rows[rivalStatus":"kAPOaYAZEE"}]}]
+2026-02-05 14:02:19,467 - __main__ - INFO - simple_app.py:1109 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: mWlBg0DpQOxxiG8dAAAF
+2026-02-05 14:02:31,380 - engineio.server - INFO - socket.py:78 - bmxQ6J83OwSecxRCAAAA: Sending packet PING data None
+2026-02-05 14:02:31,381 - engineio.server - INFO - socket.py:39 - bmxQ6J83OwSecxRCAAAA: Received packet PONG data 
+2026-02-05 14:02:38,845 - engineio.server - INFO - socket.py:78 - VFjjLwZ2Xv8CEZVQAAAE: Sending packet PING data None
+2026-02-05 14:02:38,845 - engineio.server - INFO - socket.py:39 - VFjjLwZ2Xv8CEZVQAAAE: Received packet PONG data 
+2026-02-05 14:02:55,569 - engineio.server - INFO - socket.py:39 - VFjjLwZ2Xv8CEZVQAAAE: Received packet MESSAGE data 1
+2026-02-05 14:02:55,570 - __main__ - INFO - simple_app.py:984 - Client disconnected from WebSocket, sid: mWlBg0DpQOxxiG8dAAAF
+2026-02-05 14:02:55,589 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 14:02:55] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-02-05 14:02:55,592 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-02-05 14:02:56,383 - engineio.server - INFO - socket.py:78 - bmxQ6J83OwSecxRCAAAA: Sending packet PING data None
+2026-02-05 14:02:56,383 - engineio.server - INFO - socket.py:39 - bmxQ6J83OwSecxRCAAAA: Received packet PONG data 
+2026-02-05 16:09:52,868 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-05 16:09:52,878 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-05 16:09:52,907 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-02-05 16:09:52,908 - __main__ - INFO - simple_app.py:96 - SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*
+2026-02-05 16:09:52,908 - __main__ - INFO - simple_app.py:168 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-02-05 16:09:52,908 - __main__ - INFO - simple_app.py:169 - 前端目录是否存在: True
+2026-02-05 16:09:52,909 - __main__ - INFO - simple_app.py:170 - index.html是否存在: True
+2026-02-05 16:09:52,909 - __main__ - INFO - simple_app.py:297 - 初始化数据库...
+2026-02-05 16:09:52,910 - __main__ - INFO - simple_app.py:300 - 数据库初始化成功
+2026-02-05 16:09:52,922 - __main__ - WARNING - simple_app.py:1378 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-05 16:09:52,922 - __main__ - WARNING - simple_app.py:1378 - 端口 8001 已被占用，尝试下一个可用端口
+2026-02-05 16:09:52,923 - __main__ - WARNING - simple_app.py:1378 - 端口 8002 已被占用，尝试下一个可用端口
+2026-02-05 16:09:52,923 - __main__ - WARNING - simple_app.py:1378 - 端口 8003 已被占用，尝试下一个可用端口
+2026-02-05 16:09:52,924 - __main__ - WARNING - simple_app.py:1378 - 端口 8004 已被占用，尝试下一个可用端口
+2026-02-05 16:09:52,924 - __main__ - INFO - simple_app.py:1390 - 已切换到可用端口 8005
+2026-02-05 16:09:52,925 - __main__ - INFO - simple_app.py:1395 - 应用即将启动，访问地址: http://0.0.0.0:8005
+2026-02-05 16:09:52,943 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8005
+ * Running on http://10.203.224.140:8005
+2026-02-05 16:09:52,944 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-05 16:09:58,149 - __main__ - INFO - simple_app.py:1302 - 已自动打开浏览器，访问地址: http://localhost:8005
+2026-02-05 16:09:58,588 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:09:58] "GET / HTTP/1.1" 200 -
+2026-02-05 16:09:58,596 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:09:58] "GET /assets/index-f5f2f1d0.js HTTP/1.1" 200 -
+2026-02-05 16:09:58,741 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:09:58] "GET /assets/index-8942ec0a.css HTTP/1.1" 200 -
+2026-02-05 16:09:59,066 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:09:59] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-05 16:12:32,265 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:12:32] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-05 16:12:55,627 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:12:55] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-05 16:13:19,307 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:13:19] "GET /interfaces HTTP/1.1" 200 -
+2026-02-05 16:13:38,635 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:13:38] "GET /cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-02-05 16:17:52,546 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:17:52] "GET /?ide_webview_request_time=1770279472220 HTTP/1.1" 200 -
+2026-02-05 16:17:52,807 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:17:52] "GET /assets/index-8942ec0a.css HTTP/1.1" 200 -
+2026-02-05 16:17:52,867 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:17:52] "GET /assets/index-f5f2f1d0.js HTTP/1.1" 200 -
+2026-02-05 16:17:52,881 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:17:52] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-05 16:18:03,362 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:03] "GET /?ide_webview_request_time=1770279483047 HTTP/1.1" 200 -
+2026-02-05 16:18:03,607 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:03] "GET /assets/index-8942ec0a.css HTTP/1.1" 200 -
+2026-02-05 16:18:03,675 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:03] "GET /assets/index-f5f2f1d0.js HTTP/1.1" 200 -
+2026-02-05 16:18:03,682 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:03] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-05 16:18:11,556 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:11] "GET /assets/index-8942ec0a.css HTTP/1.1" 200 -
+2026-02-05 16:18:11,570 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:11] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 200 -
+2026-02-05 16:18:14,979 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:14] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-05 16:18:15,301 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:15] "GET /assets/index-8942ec0a.css HTTP/1.1" 200 -
+2026-02-05 16:18:15,302 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:15] "GET /assets/index-f5f2f1d0.js HTTP/1.1" 200 -
+2026-02-05 16:18:15,333 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:15] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-05 16:18:15,563 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:18:15] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 200 -
+2026-02-05 16:19:29,512 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:19:29] "GET /assets/index-f5f2f1d0.js HTTP/1.1" 200 -
+2026-02-05 16:31:48,393 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-05 16:31:48,395 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-05 16:31:48,421 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-02-05 16:31:48,422 - __main__ - INFO - simple_app.py:96 - SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*
+2026-02-05 16:31:48,422 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-02-05 16:31:48,422 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-05 16:31:48,422 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-05 16:31:48,422 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-05 16:31:48,423 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-05 16:31:48,437 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://127.0.0.1:8000
+2026-02-05 16:31:48,452 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000
+2026-02-05 16:31:48,452 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-05 16:32:08,615 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:32:08] "GET /health HTTP/1.1" 200 -
+2026-02-05 16:32:21,886 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:32:21] "GET /health HTTP/1.1" 200 -
+2026-02-05 16:32:47,255 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-05 16:32:47,258 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-05 16:32:47,288 - engineio.server - INFO - base_server.py:112 - Server initialized for threading.
+2026-02-05 16:32:47,288 - __main__ - INFO - simple_app.py:96 - SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*
+2026-02-05 16:32:47,289 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\frontend
+2026-02-05 16:32:47,289 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-05 16:32:47,289 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-05 16:32:47,290 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-05 16:32:47,292 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-05 16:32:47,307 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-05 16:32:47,307 - __main__ - INFO - simple_app.py:1386 - 已切换到可用端口 8001
+2026-02-05 16:32:47,308 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://127.0.0.1:8001
+2026-02-05 16:32:47,321 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8001
+2026-02-05 16:32:47,322 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-05 16:33:36,519 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:33:36] "GET /health HTTP/1.1" 200 -
+2026-02-05 16:34:02,242 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:34:02] "GET /?ide_webview_request_time=1770280442100 HTTP/1.1" 200 -
+2026-02-05 16:34:02,257 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:34:02] "GET /assets/index-8942ec0a.css HTTP/1.1" 200 -
+2026-02-05 16:34:02,257 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:34:02] "GET /assets/index-f5f2f1d0.js HTTP/1.1" 200 -
+2026-02-05 16:34:02,412 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:34:02] "[33mGET /api/websocket-status HTTP/1.1[0m" 404 -
+2026-02-05 16:34:02,430 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:34:02] "[33mGET /api/files HTTP/1.1[0m" 404 -
+2026-02-05 16:34:02,456 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:34:02] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-05 16:34:06,463 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:34:06] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-02-05 16:35:33,932 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:33] "GET /?ide_webview_request_time=1770280533924 HTTP/1.1" 200 -
+2026-02-05 16:35:33,943 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:33] "GET /assets/index-13154681.js HTTP/1.1" 200 -
+2026-02-05 16:35:33,944 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:33] "GET /assets/index-8942ec0a.css HTTP/1.1" 200 -
+2026-02-05 16:35:34,124 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:34] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-05 16:35:34,128 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:34] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-05 16:35:34,149 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet OPEN data {'sid': 'dhUHAHLNHhWdkDZRAAAA', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-02-05 16:35:34,187 - engineio.server - INFO - socket.py:90 - dhUHAHLNHhWdkDZRAAAA: Received request to upgrade to websocket
+2026-02-05 16:35:34,188 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:34] "GET /files HTTP/1.1" 200 -
+2026-02-05 16:35:34,197 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:34] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-02-05 16:35:34,208 - engineio.server - INFO - socket.py:219 - dhUHAHLNHhWdkDZRAAAA: Upgrade to websocket successful
+2026-02-05 16:35:34,227 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet MESSAGE data 0
+2026-02-05 16:35:34,228 - __main__ - INFO - simple_app.py:976 - Client connected via WebSocket, sid: P9Pc_kaGSyRmAbwSAAAB
+2026-02-05 16:35:34,228 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to P9Pc_kaGSyRmAbwSAAAB [/]
+2026-02-05 16:35:34,228 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-02-05 16:35:34,228 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet MESSAGE data 0{"sid":"P9Pc_kaGSyRmAbwSAAAB"}
+2026-02-05 16:35:35,780 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:35] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:35:35,784 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:35] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:35:36,602 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:36] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:35:36,604 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:36] "GET /interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 16:35:36,646 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:36] "GET /interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 16:35:36,667 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:36] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:35:44,065 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:44] "POST /interfaces/switch-to-http/418 HTTP/1.1" 200 -
+2026-02-05 16:35:44,075 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:44] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:35:44,076 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:44] "GET /interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 16:35:44,092 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:44] "GET /interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 16:35:44,103 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:35:44] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:35:44,902 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10}}]
+2026-02-05 16:35:44,903 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from P9Pc_kaGSyRmAbwSAAAB [/]
+2026-02-05 16:35:44,903 - __main__ - INFO - simple_app.py:1050 - Handling dynamic_interface request from sid: P9Pc_kaGSyRmAbwSAAAB, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 16:35:44,904 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to P9Pc_kaGSyRmAbwSAAAB [/]
+2026-02-05 16:35:44,904 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"pLVWJCgdTz","message":"JZqupoGqux","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"gsEstYARaZ","body.rows[rivalName":"liGRGpjqkC","body.rows[rivalFullname":"cMOXLrknqQ","body.rows[rivalCode":"BUDEfbeCfO","body.rows[rivalStatus":"WShaGvQjLv"},{"code":"GWEVgnvLca","message":"oGCoQEExak","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"cqHpEQNHrb","body.rows[rivalName":"ZBTDzDyBkD","body.rows[rivalFullname":"vGGezRLwwR","body.rows[rivalCode":"PFoZFpIRue","body.rows[rivalStatus":"EcNFjLbAff"},{"code":"IfgoHwAice","message":"RxuboPpVlf","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"KVKXROgQGh","body.rows[rivalName":"rdPOSRKnQL","body.rows[rivalFullname":"GTToCAxiAx","body.rows[rivalCode":"gTffrNxQKu","body.rows[rivalStatus":"rKeaCCKumk"},{"code":"XcaMXIqOuK","message":"NFNYaHaXPu","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"BKKwxrGpdp","body.rows[rivalName":"eDNZtItlrP","body.rows[rivalFullname":"inTPOgoMxR","body.rows[rivalCode":"pURaptXUQQ","body.rows[rivalStatus":"mLuOKUCsPB"},{"code":"ShPSAKnhOI","message":"QghzLGALjk","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"cevlnCGqXt","body.rows[rivalName":"hYSGSWTvVh","body.rows[rivalFullname":"bETtLIfiLC","body.rows[rivalCode":"kUqrtwVoFk","body.rows[rivalStatus":"DLBtUJFTnh"},{"code":"RFYXfbxdmn","message":"bAYBRecGiX","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"jDhOvPgYiA","body.rows[rivalName":"azXZxQbCKh","body.rows[rivalFullname":"RwuPowVzSZ","body.rows[rivalCode":"IoDuOrGjwm","body.rows[rivalStatus":"lYKOyAOTqC"},{"code":"zyEYoySGze","message":"THcNCXIiZH","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"FqzBTqBulX","body.rows[rivalName":"cSUzlzBiQX","body.rows[rivalFullname":"CmbvDKLgdy","body.rows[rivalCode":"EHsLWROzIt","body.rows[rivalStatus":"TyQbyJarup"},{"code":"exDqALDiUV","message":"ncGUMwAPvw","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"rEvqWzWTTi","body.rows[rivalName":"PPwvbktJsR","body.rows[rivalFullname":"ecLsFpCFfe","body.rows[rivalCode":"uNkRXDiGze","body.rows[rivalStatus":"FjPtMzwgSu"},{"code":"fGpjnsGkhD","message":"ZWboBQyahd","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"BjKdirFRrC","body.rows[rivalName":"dseVdCjVFo","body.rows[rivalFullname":"mRBuKKGbUA","body.rows[rivalCode":"CwpUNggrXV","body.rows[rivalStatus":"IlHacfySKk"},{"code":"NitURDXkZC","message":"AVwiGfjjda","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"zKbvsmetQl","body.rows[rivalName":"zOTtUSscaj","body.rows[rivalFullname":"OQBQcorgnN","body.rows[rivalCode":"fpmPbzNCxk","body.rows[rivalStatus":"luStgXcAiA"}]}]
+2026-02-05 16:35:44,908 - __main__ - INFO - simple_app.py:1120 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: P9Pc_kaGSyRmAbwSAAAB
+2026-02-05 16:35:46,774 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10}}]
+2026-02-05 16:35:46,774 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from P9Pc_kaGSyRmAbwSAAAB [/]
+2026-02-05 16:35:46,775 - __main__ - INFO - simple_app.py:1050 - Handling dynamic_interface request from sid: P9Pc_kaGSyRmAbwSAAAB, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 16:35:46,776 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to P9Pc_kaGSyRmAbwSAAAB [/]
+2026-02-05 16:35:46,776 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"gxZuohGdni","message":"uSrhtYwUdh","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"PPAxwoveUM","body.rows[rivalName":"QlHbrwcNpu","body.rows[rivalFullname":"JguXHJumLR","body.rows[rivalCode":"qHenpqtQZw","body.rows[rivalStatus":"BEliOZJaYe"},{"code":"qiHmCvpJxz","message":"owBJPXGsuf","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"AIsdpkvRSv","body.rows[rivalName":"YEkDOuxhTe","body.rows[rivalFullname":"xLosZIrcFC","body.rows[rivalCode":"VjxkFkLUWn","body.rows[rivalStatus":"GjqZIOhrql"},{"code":"CWnXuslYEK","message":"RUxofPnlrD","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"lZUkyfzZhN","body.rows[rivalName":"xrIYLqKkLR","body.rows[rivalFullname":"ZOdTEgwvBZ","body.rows[rivalCode":"VaBNIDBXjR","body.rows[rivalStatus":"MaETGFligN"},{"code":"PMTkSbYubv","message":"RpbpRdImVE","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"YGwEvxLChk","body.rows[rivalName":"VihCGJRnuZ","body.rows[rivalFullname":"ZCljehzZLa","body.rows[rivalCode":"OGtRyGmclA","body.rows[rivalStatus":"TcHsVifyfp"},{"code":"ehYrIrpZJe","message":"fbkzyARwLk","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"ufHnypMdQv","body.rows[rivalName":"ZRpYyITMBp","body.rows[rivalFullname":"uccPfOGzCy","body.rows[rivalCode":"uXzTCZiVwg","body.rows[rivalStatus":"tGdSarxqoy"},{"code":"cVrptRSGEl","message":"RqgHhnNemP","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"zhXOJEkYay","body.rows[rivalName":"HskOIPiGBB","body.rows[rivalFullname":"cdOTuOshjL","body.rows[rivalCode":"iRDQsjHWSh","body.rows[rivalStatus":"NhyXhJBLBU"},{"code":"jUvaJypxES","message":"nWlvmNIzkz","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"BuwAZDTPNf","body.rows[rivalName":"tDDQxgAgNG","body.rows[rivalFullname":"AoAwELEtsC","body.rows[rivalCode":"usTDZECmkX","body.rows[rivalStatus":"WDOwWVAFbp"},{"code":"hxoQAElkYu","message":"WKXSVjkuLD","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"oqRyBjtisX","body.rows[rivalName":"VkukCfBloR","body.rows[rivalFullname":"erskEMOXKx","body.rows[rivalCode":"VHpIWtuQOa","body.rows[rivalStatus":"vPrxbSDiSd"},{"code":"vwThqqdjFD","message":"mRlHvEDyPU","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"grlDyPMDRB","body.rows[rivalName":"KECUdWagXP","body.rows[rivalFullname":"TqqcKoCIwR","body.rows[rivalCode":"AROJSphoDF","body.rows[rivalStatus":"WuBJqvvorr"},{"code":"BxKLXcHWwa","message":"JEnKEKFgtb","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"LVVELlaAnU","body.rows[rivalName":"FWzaADFHds","body.rows[rivalFullname":"FTwOhcwWcG","body.rows[rivalCode":"oMIQMKWLlF","body.rows[rivalStatus":"uBhfyRggch"}]}]
+2026-02-05 16:35:46,778 - __main__ - INFO - simple_app.py:1120 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: P9Pc_kaGSyRmAbwSAAAB
+2026-02-05 16:35:47,206 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10}}]
+2026-02-05 16:35:47,206 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from P9Pc_kaGSyRmAbwSAAAB [/]
+2026-02-05 16:35:47,207 - __main__ - INFO - simple_app.py:1050 - Handling dynamic_interface request from sid: P9Pc_kaGSyRmAbwSAAAB, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 16:35:47,208 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to P9Pc_kaGSyRmAbwSAAAB [/]
+2026-02-05 16:35:47,208 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"OvCezKaTkK","message":"cXGAMpYjos","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"buGLhnikNS","body.rows[rivalName":"xFZYipXDLs","body.rows[rivalFullname":"iFQPgOhfSM","body.rows[rivalCode":"CejIEnOAFP","body.rows[rivalStatus":"xSzHqHJvBb"},{"code":"mQzavLpcaZ","message":"XgxEXsFCir","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"HSlUXdDyLU","body.rows[rivalName":"XQDpmeonyR","body.rows[rivalFullname":"wcksAWVvZL","body.rows[rivalCode":"CjseFewJCJ","body.rows[rivalStatus":"YBEJspXOhJ"},{"code":"njMinIKVdi","message":"mwzyzHjKac","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"IoFSQueGcT","body.rows[rivalName":"PzQYMlVKcK","body.rows[rivalFullname":"crgHhcZiFL","body.rows[rivalCode":"xUfiebcjlM","body.rows[rivalStatus":"EiuRsLYIAG"},{"code":"PXMcpWBCcC","message":"lAGlxvVjaH","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"bFBRTVuUym","body.rows[rivalName":"jkgsSrVIjn","body.rows[rivalFullname":"fPCgiZpBje","body.rows[rivalCode":"tgKZkqaKMb","body.rows[rivalStatus":"sfONskUdVp"},{"code":"TVJkiseuYC","message":"fUMdskvtaI","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"ECVMyvVYme","body.rows[rivalName":"jmOJNmobJc","body.rows[rivalFullname":"pXyJYaWHJT","body.rows[rivalCode":"HLtpvdHOex","body.rows[rivalStatus":"DVJtWSMGCt"},{"code":"JtMCPeyJng","message":"axYAeHfGHL","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"tEfokvcBqb","body.rows[rivalName":"rizSYppuUo","body.rows[rivalFullname":"fZkbQwvkwK","body.rows[rivalCode":"uKANXpkrLz","body.rows[rivalStatus":"bJcfjMQRxq"},{"code":"vtYGwrwqDO","message":"SpZJDvyEyj","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"jsvHPqqXrR","body.rows[rivalName":"jFYMVKwxoH","body.rows[rivalFullname":"ZTgrzANCsO","body.rows[rivalCode":"lxoYHyLJir","body.rows[rivalStatus":"iHywCOoRaE"},{"code":"TfnHDTMeSH","message":"yOqcMNlRHT","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"lFVcjGsHKG","body.rows[rivalName":"PPjRFONfON","body.rows[rivalFullname":"xDbjsMqUvb","body.rows[rivalCode":"mBsJJHWMtr","body.rows[rivalStatus":"PxfRKyHlcS"},{"code":"ulqxDtsTSV","message":"TILuHvnROu","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"mIncoINlgY","body.rows[rivalName":"jLNWIuwXfR","body.rows[rivalFullname":"TsOGnOuvke","body.rows[rivalCode":"OSCFwOlgmK","body.rows[rivalStatus":"sRCfpTZeYG"},{"code":"RQsjJVsrMQ","message":"QWvynibChZ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"tbxznmcSFi","body.rows[rivalName":"eauFABQbtf","body.rows[rivalFullname":"wPDJisubSs","body.rows[rivalCode":"truzZjzrNt","body.rows[rivalStatus":"qLDtrOeEOr"}]}]
+2026-02-05 16:35:47,210 - __main__ - INFO - simple_app.py:1120 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: P9Pc_kaGSyRmAbwSAAAB
+2026-02-05 16:35:47,406 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10}}]
+2026-02-05 16:35:47,407 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from P9Pc_kaGSyRmAbwSAAAB [/]
+2026-02-05 16:35:47,408 - __main__ - INFO - simple_app.py:1050 - Handling dynamic_interface request from sid: P9Pc_kaGSyRmAbwSAAAB, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 16:35:47,409 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to P9Pc_kaGSyRmAbwSAAAB [/]
+2026-02-05 16:35:47,409 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"dLMTUZGTpt","message":"DkXhAsRBcp","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"YOeaLTyZmn","body.rows[rivalName":"pKjtQLWNTe","body.rows[rivalFullname":"bMXOpIDKDr","body.rows[rivalCode":"eISMTnscsH","body.rows[rivalStatus":"CRhWfVOvTs"},{"code":"KheTnWNJdw","message":"dPmVLJlTtb","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"drzQIyYSeI","body.rows[rivalName":"HSlqHivKmz","body.rows[rivalFullname":"XmzwibkTXP","body.rows[rivalCode":"UNtFTPPdzS","body.rows[rivalStatus":"VNvxEBCpSW"},{"code":"rbByecCLBk","message":"IlGmoBIRtF","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"hmqAAbXdXs","body.rows[rivalName":"ntTfUeUJVe","body.rows[rivalFullname":"LfDvYbBxWu","body.rows[rivalCode":"TggLFTnZZa","body.rows[rivalStatus":"dxZfbXfgxU"},{"code":"RiTvCloIkj","message":"nELuyXKmLI","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"fyMzcOPgBM","body.rows[rivalName":"mCzUwqWXsH","body.rows[rivalFullname":"mtWKabbMAw","body.rows[rivalCode":"GLWbJAFLsK","body.rows[rivalStatus":"XKlmknteTV"},{"code":"CrcovIzvMP","message":"feXoIsCIbp","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"yClvdBehOv","body.rows[rivalName":"cOnDyJnOQB","body.rows[rivalFullname":"OxKzaLSZGf","body.rows[rivalCode":"sWqHpKstyl","body.rows[rivalStatus":"vbuHbYscyJ"},{"code":"devIkmrgXc","message":"bcSHBKMMZc","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"LzVCsrlBZX","body.rows[rivalName":"zKmegUfaPm","body.rows[rivalFullname":"JwMpDCOnzd","body.rows[rivalCode":"HvQZzQPbbV","body.rows[rivalStatus":"MvICTSISxa"},{"code":"OKJscYWuqX","message":"PZoHphyHQz","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"EAQizfyWby","body.rows[rivalName":"AymkRDWHle","body.rows[rivalFullname":"WOmhiCFTGy","body.rows[rivalCode":"CGfxyIySGB","body.rows[rivalStatus":"fetTDkmbjF"},{"code":"rpHGxYPlgc","message":"fKeQauBQbk","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"TUpmFyGEtY","body.rows[rivalName":"YZTiZuDSuG","body.rows[rivalFullname":"MCfULBhAeF","body.rows[rivalCode":"iMOmDoBgcH","body.rows[rivalStatus":"HrVhuZhqNV"},{"code":"axGNUwQeia","message":"ikSOMOBAwW","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"KvlnUnRdei","body.rows[rivalName":"wBFnMUymBj","body.rows[rivalFullname":"naGwtYKBsI","body.rows[rivalCode":"KzhKDJsyHV","body.rows[rivalStatus":"PyHhhPeWzT"},{"code":"sgcBiDwmIP","message":"IbgTlQBHGN","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"aEyTsiNXVs","body.rows[rivalName":"BkaKKdJbod","body.rows[rivalFullname":"hqswWtotVC","body.rows[rivalCode":"vYeAOyZPCG","body.rows[rivalStatus":"KPxybnOXOJ"}]}]
+2026-02-05 16:35:47,411 - __main__ - INFO - simple_app.py:1120 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: P9Pc_kaGSyRmAbwSAAAB
+2026-02-05 16:35:59,187 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:35:59,188 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:36:24,188 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:36:24,189 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:36:49,190 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:36:49,191 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:37:14,192 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:37:14,193 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:37:39,195 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:37:39,196 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:38:04,197 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:38:04,197 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:38:29,199 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:38:29,200 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:38:54,201 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:38:54,202 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:39:19,203 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:39:19,205 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:39:44,206 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:39:44,208 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:40:09,209 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:40:09,210 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:40:34,211 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:40:34,212 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:40:59,213 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:40:59,214 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:41:24,215 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:41:24,216 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:41:49,217 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:41:49,218 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:42:14,220 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:42:14,220 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:42:39,222 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:42:39,223 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:43:04,224 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:43:04,225 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:43:29,227 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:43:29,228 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:43:54,229 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:43:54,230 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:44:19,230 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:44:19,231 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:44:44,233 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:44:44,233 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:44:47,013 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:44:47] "GET /health HTTP/1.1" 200 -
+2026-02-05 16:45:09,234 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:45:09,235 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:45:34,236 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:45:34,237 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:45:59,239 - engineio.server - INFO - socket.py:78 - dhUHAHLNHhWdkDZRAAAA: Sending packet PING data None
+2026-02-05 16:45:59,240 - engineio.server - INFO - socket.py:39 - dhUHAHLNHhWdkDZRAAAA: Received packet PONG data 
+2026-02-05 16:46:01,873 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:46:01] "GET /debug HTTP/1.1" 200 -
+2026-02-05 16:46:23,351 - __main__ - INFO - simple_app.py:995 - Client disconnected from WebSocket, sid: P9Pc_kaGSyRmAbwSAAAB
+2026-02-05 16:46:23,357 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:46:23] "GET /?ide_webview_request_time=1770281183346 HTTP/1.1" 200 -
+2026-02-05 16:46:23,368 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:46:23] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-02-05 16:46:23,372 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:46:23] "[36mGET /assets/index-8942ec0a.css HTTP/1.1[0m" 304 -
+2026-02-05 16:46:23,373 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:46:23] "[36mGET /assets/index-13154681.js HTTP/1.1[0m" 304 -
+2026-02-05 16:46:23,375 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-02-05 16:46:23,530 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:46:23] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-05 16:46:23,550 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet OPEN data {'sid': 'iC_MKxuRA41nTydQAAAC', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-02-05 16:46:23,550 - engineio.server - INFO - socket.py:90 - iC_MKxuRA41nTydQAAAC: Received request to upgrade to websocket
+2026-02-05 16:46:23,552 - engineio.server - INFO - socket.py:219 - iC_MKxuRA41nTydQAAAC: Upgrade to websocket successful
+2026-02-05 16:46:23,563 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:46:23] "GET /files HTTP/1.1" 200 -
+2026-02-05 16:46:23,576 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:46:23] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-02-05 16:46:23,595 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet MESSAGE data 0
+2026-02-05 16:46:23,596 - __main__ - INFO - simple_app.py:976 - Client connected via WebSocket, sid: o2kkkh-mUbHtB44WAAAD
+2026-02-05 16:46:23,596 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to o2kkkh-mUbHtB44WAAAD [/]
+2026-02-05 16:46:23,597 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-02-05 16:46:23,597 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet MESSAGE data 0{"sid":"o2kkkh-mUbHtB44WAAAD"}
+2026-02-05 16:46:23,599 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:46:23] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-05 16:46:48,551 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:46:48,552 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:47:07,214 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:07] "GET /files HTTP/1.1" 200 -
+2026-02-05 16:47:13,553 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:47:13,554 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:47:30,215 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:30] "GET /interfaces HTTP/1.1" 200 -
+2026-02-05 16:47:38,555 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:47:38,556 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:47:42,215 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:42] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:47:42,220 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:42] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:47:42,990 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:42] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:47:42,996 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:42] "GET /interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 16:47:43,035 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:43] "GET /interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 16:47:43,058 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:43] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:47:45,863 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:45] "POST /interfaces/update-method/418 HTTP/1.1" 200 -
+2026-02-05 16:47:45,872 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:45] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:47:45,874 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:45] "GET /interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 16:47:45,890 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:45] "GET /interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 16:47:45,902 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:47:45] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:47:48,881 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"POST","params":{"params":{},"mock_count":10}}]
+2026-02-05 16:47:48,881 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from o2kkkh-mUbHtB44WAAAD [/]
+2026-02-05 16:47:48,882 - __main__ - INFO - simple_app.py:1050 - Handling dynamic_interface request from sid: o2kkkh-mUbHtB44WAAAD, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'POST', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 16:47:48,883 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to o2kkkh-mUbHtB44WAAAD [/]
+2026-02-05 16:47:48,883 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"VlssoUMiUP","message":"LkBSMhUrQi","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"nOrCMCZVTA","body.rows[rivalName":"ZOTbLxErpH","body.rows[rivalFullname":"cnPeCkVnUl","body.rows[rivalCode":"OglyOxpciw","body.rows[rivalStatus":"KdEioqzvlZ"},{"code":"AiEnuKMKVe","message":"ooxYKxpeYl","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"pQttgGUxpq","body.rows[rivalName":"uRFSpmFluk","body.rows[rivalFullname":"NtFpqujGBN","body.rows[rivalCode":"bESLqAYIfo","body.rows[rivalStatus":"LFApAmeJqW"},{"code":"yAxDLvNltV","message":"IFFxNYJxJE","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"kDKtgXnPHM","body.rows[rivalName":"tTuANozWCk","body.rows[rivalFullname":"tGIkNrRrjy","body.rows[rivalCode":"tbUNFrVDCq","body.rows[rivalStatus":"hRXmLNUPjL"},{"code":"uJcwituXXh","message":"BlElwqAkMZ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"BEZRANFSrD","body.rows[rivalName":"nFOqAvwkLN","body.rows[rivalFullname":"QPgUZwcIVf","body.rows[rivalCode":"terWWUmPPN","body.rows[rivalStatus":"jmIBAifbtb"},{"code":"cnrPQZXunL","message":"MSWBeLrTZw","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"vRdEkdwXCb","body.rows[rivalName":"VHnTYmaBWU","body.rows[rivalFullname":"kTtGKVuPCm","body.rows[rivalCode":"MXZpwszgNi","body.rows[rivalStatus":"KCTcvlAZdE"},{"code":"RAaYYyKcQo","message":"lVcvIIopFJ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"YXcDWcwhga","body.rows[rivalName":"iMRCtBVrVe","body.rows[rivalFullname":"VhSExHMrNu","body.rows[rivalCode":"IzozGqXrdf","body.rows[rivalStatus":"puEVPRdcka"},{"code":"RWLiWLWxQy","message":"qCRhtkCFkU","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"hWAXLoLwwL","body.rows[rivalName":"ZuqMDtRmhj","body.rows[rivalFullname":"lxwRANBytH","body.rows[rivalCode":"BsrCYqLTiR","body.rows[rivalStatus":"LIAPWHaFxs"},{"code":"bEjWCSNLtU","message":"JHjSoROlUg","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"OekwMtmRMW","body.rows[rivalName":"ZDOVoZdUkf","body.rows[rivalFullname":"aIGHMocodg","body.rows[rivalCode":"unjAtsPWLI","body.rows[rivalStatus":"vSWguDnFkw"},{"code":"gKMqnXTTGT","message":"bAlhitBfJy","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"sKmVYyRqhh","body.rows[rivalName":"kYfmqEMPVw","body.rows[rivalFullname":"xLFKlHoiGa","body.rows[rivalCode":"MddAanQVMe","body.rows[rivalStatus":"YDkmeZbcpg"},{"code":"QInTVPipZe","message":"UDJBrIOQvc","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"BdxVwkKsRE","body.rows[rivalName":"jSemSWsVlW","body.rows[rivalFullname":"tAjVkDnRMH","body.rows[rivalCode":"AqOXebabUg","body.rows[rivalStatus":"OPrLsFVcOG"}]}]
+2026-02-05 16:47:48,885 - __main__ - INFO - simple_app.py:1120 - Successfully handled dynamic_interface request: POST /cash/outer/rivalInfo/query for sid: o2kkkh-mUbHtB44WAAAD
+2026-02-05 16:48:03,558 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:48:03,559 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:48:04,205 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:48:04] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-05 16:48:22,912 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"POST","params":{"params":{},"mock_count":10}}]
+2026-02-05 16:48:22,913 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from o2kkkh-mUbHtB44WAAAD [/]
+2026-02-05 16:48:22,913 - __main__ - INFO - simple_app.py:1050 - Handling dynamic_interface request from sid: o2kkkh-mUbHtB44WAAAD, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'POST', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 16:48:22,914 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to o2kkkh-mUbHtB44WAAAD [/]
+2026-02-05 16:48:22,915 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"mpgOiDAxMr","message":"DmTlrbrQLU","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"zfwsnOtNWk","body.rows[rivalName":"iyArnRjclh","body.rows[rivalFullname":"NjBLDStfNT","body.rows[rivalCode":"TAlNqVDGev","body.rows[rivalStatus":"GuZKZbjuor"},{"code":"fICbFmvFoN","message":"zcdLjLlGvf","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"oiBMKbqAEh","body.rows[rivalName":"IqehYcKqKh","body.rows[rivalFullname":"HJKQbzuyFK","body.rows[rivalCode":"ibmcghVEzL","body.rows[rivalStatus":"HdIZFcMlpJ"},{"code":"bQaxucDlOS","message":"WCorAvnXyq","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"zufgvUyQxA","body.rows[rivalName":"HdjjRnbwBn","body.rows[rivalFullname":"kkaBYIdKbY","body.rows[rivalCode":"EsUGGhxeDR","body.rows[rivalStatus":"gzWUVRlwHb"},{"code":"ESbJXcPbKt","message":"jeKssaldSY","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"OYpVvVkDJI","body.rows[rivalName":"gnxuzDPhIX","body.rows[rivalFullname":"OfwYJewifU","body.rows[rivalCode":"hIwektctTk","body.rows[rivalStatus":"tsrMwCvAUc"},{"code":"VdDaondSXC","message":"wGHbMQivod","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"ULBgePnnbY","body.rows[rivalName":"bNYKiUkwXn","body.rows[rivalFullname":"UNRXCSscuR","body.rows[rivalCode":"jJuBuweSMA","body.rows[rivalStatus":"NHsrtjxfRG"},{"code":"JOgrtiCDAt","message":"TyDODDNTRA","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"BgDBlrNWNI","body.rows[rivalName":"wuvlgFKEzI","body.rows[rivalFullname":"RUssDVYaLg","body.rows[rivalCode":"ZnVQqUQOSV","body.rows[rivalStatus":"ipJCKzOvYr"},{"code":"viDFbFgWlt","message":"DpvfRekLFd","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"spKJLPaHhC","body.rows[rivalName":"BdcGacRTPM","body.rows[rivalFullname":"eheztNYpFd","body.rows[rivalCode":"dkjtvghyBm","body.rows[rivalStatus":"oxgfkmEQqC"},{"code":"XgQHZFrrHf","message":"BIftvMCCVO","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"OuLLhJtKki","body.rows[rivalName":"nTFFcZvCQY","body.rows[rivalFullname":"aFsxjqvAoW","body.rows[rivalCode":"TlGDYxhnKf","body.rows[rivalStatus":"qleLCzoGQq"},{"code":"BNTwHxvkXT","message":"pWxfxpNxZW","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"mcMErUpEIP","body.rows[rivalName":"nsgSzsixxj","body.rows[rivalFullname":"zkEGXysYSu","body.rows[rivalCode":"BDIAwVKAys","body.rows[rivalStatus":"skYhxLpQdO"},{"code":"BDGQJQzfLD","message":"mFsCAILKcT","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"OPJbvCjSDb","body.rows[rivalName":"QkvBZlhiDL","body.rows[rivalFullname":"tyHRFRABtf","body.rows[rivalCode":"WBDWdrNBGE","body.rows[rivalStatus":"VgWxBtAMnI"}]}]
+2026-02-05 16:48:22,917 - __main__ - INFO - simple_app.py:1120 - Successfully handled dynamic_interface request: POST /cash/outer/rivalInfo/query for sid: o2kkkh-mUbHtB44WAAAD
+2026-02-05 16:48:28,561 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:48:28,562 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:48:53,564 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:48:53,565 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:49:18,566 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:49:18,567 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:49:40,045 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:49:40] "GET /dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-02-05 16:49:43,568 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:49:43,569 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:49:57,562 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:49:57] "GET /cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-02-05 16:50:08,570 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:50:08,571 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:50:13,290 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:50:13] "POST /interfaces/generate/418 HTTP/1.1" 200 -
+2026-02-05 16:50:33,572 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:50:33,572 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:50:41,253 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:50:41] "POST /dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-02-05 16:50:58,573 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:50:58,574 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:51:23,576 - engineio.server - INFO - socket.py:78 - iC_MKxuRA41nTydQAAAC: Sending packet PING data None
+2026-02-05 16:51:23,577 - engineio.server - INFO - socket.py:39 - iC_MKxuRA41nTydQAAAC: Received packet PONG data 
+2026-02-05 16:51:47,508 - __main__ - INFO - simple_app.py:995 - Client disconnected from WebSocket, sid: o2kkkh-mUbHtB44WAAAD
+2026-02-05 16:51:47,515 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:47] "GET /?ide_webview_request_time=1770281507505 HTTP/1.1" 200 -
+2026-02-05 16:51:47,528 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:47] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-02-05 16:51:47,531 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-02-05 16:51:47,538 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:47] "[36mGET /assets/index-13154681.js HTTP/1.1[0m" 304 -
+2026-02-05 16:51:47,540 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:47] "[36mGET /assets/index-8942ec0a.css HTTP/1.1[0m" 304 -
+2026-02-05 16:51:47,646 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:47] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-05 16:51:47,658 - engineio.server - INFO - socket.py:78 - sRX7qYRnaqvTKGtFAAAE: Sending packet OPEN data {'sid': 'sRX7qYRnaqvTKGtFAAAE', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-02-05 16:51:47,659 - engineio.server - INFO - socket.py:90 - sRX7qYRnaqvTKGtFAAAE: Received request to upgrade to websocket
+2026-02-05 16:51:47,665 - engineio.server - INFO - socket.py:219 - sRX7qYRnaqvTKGtFAAAE: Upgrade to websocket successful
+2026-02-05 16:51:47,668 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:47] "GET /files HTTP/1.1" 200 -
+2026-02-05 16:51:47,679 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:47] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-05 16:51:47,681 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:47] "[36mGET /assets/element-icons-ab40a589.woff HTTP/1.1[0m" 304 -
+2026-02-05 16:51:47,700 - engineio.server - INFO - socket.py:39 - sRX7qYRnaqvTKGtFAAAE: Received packet MESSAGE data 0
+2026-02-05 16:51:47,701 - __main__ - INFO - simple_app.py:976 - Client connected via WebSocket, sid: 3MjOX3SZCoIR4bp4AAAF
+2026-02-05 16:51:47,701 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to 3MjOX3SZCoIR4bp4AAAF [/]
+2026-02-05 16:51:47,701 - engineio.server - INFO - socket.py:78 - sRX7qYRnaqvTKGtFAAAE: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-02-05 16:51:47,702 - engineio.server - INFO - socket.py:78 - sRX7qYRnaqvTKGtFAAAE: Sending packet MESSAGE data 0{"sid":"3MjOX3SZCoIR4bp4AAAF"}
+2026-02-05 16:51:52,579 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:52] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:51:52,584 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:52] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:51:53,514 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:53] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:51:53,519 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:53] "GET /interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 16:51:53,548 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:53] "GET /interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 16:51:53,566 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:51:53] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:51:57,876 - engineio.server - INFO - socket.py:39 - sRX7qYRnaqvTKGtFAAAE: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"POST","params":{"params":{},"mock_count":10}}]
+2026-02-05 16:51:57,876 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from 3MjOX3SZCoIR4bp4AAAF [/]
+2026-02-05 16:51:57,877 - __main__ - INFO - simple_app.py:1050 - Handling dynamic_interface request from sid: 3MjOX3SZCoIR4bp4AAAF, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'POST', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 16:51:57,878 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to 3MjOX3SZCoIR4bp4AAAF [/]
+2026-02-05 16:51:57,878 - engineio.server - INFO - socket.py:78 - sRX7qYRnaqvTKGtFAAAE: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"hQnmjzgFjd","message":"LdRzuXHrVX","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"xVjyQzcyhi","body.rows[rivalName":"ObfpbdsQrb","body.rows[rivalFullname":"PQserUXVGB","body.rows[rivalCode":"iIySLbBtHa","body.rows[rivalStatus":"CHebpXhaCn"},{"code":"lxHQVuFtDT","message":"kfklRzIoxm","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"JhsMfUMDIb","body.rows[rivalName":"vXaNbdkaWq","body.rows[rivalFullname":"caPqYiRTYf","body.rows[rivalCode":"zFgDpNdpcF","body.rows[rivalStatus":"nUBMKSieSo"},{"code":"ebguhtuVdf","message":"nsNLwuIrgx","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"NCxIhVxcAz","body.rows[rivalName":"MbraxzFGUw","body.rows[rivalFullname":"YiLojEDgqb","body.rows[rivalCode":"yRPegqosgp","body.rows[rivalStatus":"SNeackmGwo"},{"code":"AeFHWBvWNq","message":"yVPOHHBGVW","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"JxCcrASEQu","body.rows[rivalName":"lfRHojnrLp","body.rows[rivalFullname":"nuKGANMLuk","body.rows[rivalCode":"qCEPkQEcQr","body.rows[rivalStatus":"VHXefGMedJ"},{"code":"kgrdYnuKVn","message":"fCGIpMbtHA","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"QneNgKtFbL","body.rows[rivalName":"JKQhomxvfg","body.rows[rivalFullname":"DUVEejXPqO","body.rows[rivalCode":"slsDTZWZLP","body.rows[rivalStatus":"sfldnbNzCe"},{"code":"eMSWWkAnKs","message":"smDgQLjyVd","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"FZhsfQxKwI","body.rows[rivalName":"rFLzieDVwx","body.rows[rivalFullname":"gScxufUaBB","body.rows[rivalCode":"XHXnXhWZrH","body.rows[rivalStatus":"IhMEAkJpEQ"},{"code":"YkQtIOzdWJ","message":"wbCikqqUDq","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"KPFaNnYKIw","body.rows[rivalName":"zOgsLzFOwS","body.rows[rivalFullname":"yxOaHNnURZ","body.rows[rivalCode":"rvtyKzpSDJ","body.rows[rivalStatus":"zyZsrMsfZh"},{"code":"aYwyPEzeSd","message":"SYcfDIGSPT","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"tnszDOSdKp","body.rows[rivalName":"FfLTUJmRbk","body.rows[rivalFullname":"jVKzdEHuLd","body.rows[rivalCode":"iOIRutJoLz","body.rows[rivalStatus":"HFUVnfVAic"},{"code":"bxteBAzRSm","message":"ZKNEYvidkX","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"hpUtrkrBmj","body.rows[rivalName":"RjnkuwQqpY","body.rows[rivalFullname":"qSNcxlqeJy","body.rows[rivalCode":"OYPbFBrlLA","body.rows[rivalStatus":"HDQfLzvVEv"},{"code":"xThANfWNcf","message":"uXYdWYAWTg","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"TnvAbUrHDd","body.rows[rivalName":"UwWQtkOIwU","body.rows[rivalFullname":"PjYIpHGEUX","body.rows[rivalCode":"jDrLhwcaYD","body.rows[rivalStatus":"nDdzwzetLI"}]}]
+2026-02-05 16:51:57,881 - __main__ - INFO - simple_app.py:1120 - Successfully handled dynamic_interface request: POST /cash/outer/rivalInfo/query for sid: 3MjOX3SZCoIR4bp4AAAF
+2026-02-05 16:52:02,491 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:02] "POST /interfaces/update-method/418 HTTP/1.1" 200 -
+2026-02-05 16:52:02,500 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:02] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:52:02,502 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:02] "GET /interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 16:52:02,512 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:02] "GET /interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 16:52:02,525 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:02] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:52:05,036 - engineio.server - INFO - socket.py:39 - sRX7qYRnaqvTKGtFAAAE: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10}}]
+2026-02-05 16:52:05,037 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from 3MjOX3SZCoIR4bp4AAAF [/]
+2026-02-05 16:52:05,037 - __main__ - INFO - simple_app.py:1050 - Handling dynamic_interface request from sid: 3MjOX3SZCoIR4bp4AAAF, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 16:52:05,039 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to 3MjOX3SZCoIR4bp4AAAF [/]
+2026-02-05 16:52:05,039 - engineio.server - INFO - socket.py:78 - sRX7qYRnaqvTKGtFAAAE: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"ftqVqmUxFG","message":"BSOLxtpzOv","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"UxUATmanKc","body.rows[rivalName":"ZPeTUDsFEY","body.rows[rivalFullname":"MISppDfvND","body.rows[rivalCode":"fxaVvAtyvU","body.rows[rivalStatus":"flVwNubcTH"},{"code":"kWNOVcDVBm","message":"bcTThyHisV","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"GprckPDKXl","body.rows[rivalName":"UTfLZMhqex","body.rows[rivalFullname":"zsGhCGbvso","body.rows[rivalCode":"JgWfwIbBJX","body.rows[rivalStatus":"qwstKLHwdA"},{"code":"oeTRahwlXo","message":"RYLOqTaHAa","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"oNJbSgcNzt","body.rows[rivalName":"yoBXfRNwgO","body.rows[rivalFullname":"puRGsPHkiD","body.rows[rivalCode":"vHgHdNGtUX","body.rows[rivalStatus":"WHpejMbqCe"},{"code":"QkzpOnkYGs","message":"YfSkwWcnbw","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"ClJGpblYoG","body.rows[rivalName":"UFCpvKrZLN","body.rows[rivalFullname":"UBiWYouCiU","body.rows[rivalCode":"gmGrCEKDTu","body.rows[rivalStatus":"EvKRIyojNx"},{"code":"ZCYDCgZxiX","message":"TjRFCBwhrY","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"yhpVeXXEga","body.rows[rivalName":"FQWBBHaukf","body.rows[rivalFullname":"IRlQFNEtqD","body.rows[rivalCode":"mKdsyijIKJ","body.rows[rivalStatus":"PwZWruJiMs"},{"code":"cmzmIkHWMN","message":"XWUQFrEsTZ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"rllbflYWCw","body.rows[rivalName":"zlhPveqjdp","body.rows[rivalFullname":"fLUXvNhbME","body.rows[rivalCode":"OqnUVtnwwO","body.rows[rivalStatus":"qZMdEVyCID"},{"code":"ONElAwdkmr","message":"opnUoSPArp","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"NpAqvcbJlL","body.rows[rivalName":"HTwBvjlsOG","body.rows[rivalFullname":"QlvjkRXkRN","body.rows[rivalCode":"fnBDBERblG","body.rows[rivalStatus":"DQVKeaqIOw"},{"code":"uoWGNMlFvP","message":"BuIENSTRPV","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"AtuWFySfFm","body.rows[rivalName":"WCnqpZYPEQ","body.rows[rivalFullname":"PDyNrMLPCd","body.rows[rivalCode":"ANlBAUuhFD","body.rows[rivalStatus":"fTxGmxqFIQ"},{"code":"uCHmQKlHtP","message":"SwYwYXlrRX","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"FwWeUtvUNX","body.rows[rivalName":"owxcrfWNNg","body.rows[rivalFullname":"oRCHIdQZmN","body.rows[rivalCode":"ROgpKBVZVs","body.rows[rivalStatus":"tGTwgMdPZj"},{"code":"CXjqvsKxou","message":"eLlADIcqfh","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"YSzvrMdKcG","body.rows[rivalName":"KNJutkhbMH","body.rows[rivalFullname":"IHbPvIzSRo","body.rows[rivalCode":"BjtMJgBTQp","body.rows[rivalStatus":"VjHaTrYVVM"}]}]
+2026-02-05 16:52:05,042 - __main__ - INFO - simple_app.py:1120 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: 3MjOX3SZCoIR4bp4AAAF
+2026-02-05 16:52:11,305 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:11] "[33mGET /api/dynamic/cash/outer/rivalInfo/query HTTP/1.1[0m" 404 -
+2026-02-05 16:52:11,403 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:11] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 200 -
+2026-02-05 16:52:11,421 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:11] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-05 16:52:12,660 - engineio.server - INFO - socket.py:78 - sRX7qYRnaqvTKGtFAAAE: Sending packet PING data None
+2026-02-05 16:52:12,661 - engineio.server - INFO - socket.py:39 - sRX7qYRnaqvTKGtFAAAE: Received packet PONG data 
+2026-02-05 16:52:37,662 - engineio.server - INFO - socket.py:78 - sRX7qYRnaqvTKGtFAAAE: Sending packet PING data None
+2026-02-05 16:52:37,663 - engineio.server - INFO - socket.py:39 - sRX7qYRnaqvTKGtFAAAE: Received packet PONG data 
+2026-02-05 16:52:48,437 - __main__ - INFO - simple_app.py:995 - Client disconnected from WebSocket, sid: 3MjOX3SZCoIR4bp4AAAF
+2026-02-05 16:52:48,442 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:48] "GET /?ide_webview_request_time=1770281568435 HTTP/1.1" 200 -
+2026-02-05 16:52:48,451 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:48] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-02-05 16:52:48,453 - werkzeug - ERROR - _internal.py:97 - Error on request:
+Traceback (most recent call last):
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 336, in execute
+    write(b"")
+    ~~~~~^^^^^
+  File "E:\traeAiProject\GenerateInterTool\.venv\Lib\site-packages\werkzeug\serving.py", line 261, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-02-05 16:52:48,457 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:48] "GET /assets/index-3e0ca16e.css HTTP/1.1" 200 -
+2026-02-05 16:52:48,459 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:48] "GET /assets/index-f42045f6.js HTTP/1.1" 200 -
+2026-02-05 16:52:48,619 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:48] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-05 16:52:48,624 - engineio.server - INFO - socket.py:78 - ZgNyq_5afteuf-dUAAAG: Sending packet OPEN data {'sid': 'ZgNyq_5afteuf-dUAAAG', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000, 'maxPayload': 1000000}
+2026-02-05 16:52:48,625 - engineio.server - INFO - socket.py:90 - ZgNyq_5afteuf-dUAAAG: Received request to upgrade to websocket
+2026-02-05 16:52:48,626 - engineio.server - INFO - socket.py:219 - ZgNyq_5afteuf-dUAAAG: Upgrade to websocket successful
+2026-02-05 16:52:48,634 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:48] "GET /files HTTP/1.1" 200 -
+2026-02-05 16:52:48,643 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:48] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-05 16:52:48,648 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:48] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-02-05 16:52:48,666 - engineio.server - INFO - socket.py:39 - ZgNyq_5afteuf-dUAAAG: Received packet MESSAGE data 0
+2026-02-05 16:52:48,667 - __main__ - INFO - simple_app.py:976 - Client connected via WebSocket, sid: I69FajJzewqXdGw2AAAH
+2026-02-05 16:52:48,667 - socketio.server - INFO - server.py:164 - emitting event "connection_response" to I69FajJzewqXdGw2AAAH [/]
+2026-02-05 16:52:48,668 - engineio.server - INFO - socket.py:78 - ZgNyq_5afteuf-dUAAAG: Sending packet MESSAGE data 2["connection_response",{"message":"Connected to WebSocket server"}]
+2026-02-05 16:52:48,668 - engineio.server - INFO - socket.py:78 - ZgNyq_5afteuf-dUAAAG: Sending packet MESSAGE data 0{"sid":"I69FajJzewqXdGw2AAAH"}
+2026-02-05 16:52:58,388 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:58] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:52:58,393 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:58] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:52:59,065 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:59] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:52:59,068 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:59] "GET /interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 16:52:59,096 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:59] "GET /interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 16:52:59,118 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:52:59] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:53:02,917 - engineio.server - INFO - socket.py:39 - ZgNyq_5afteuf-dUAAAG: Received packet MESSAGE data 2["dynamic_interface",{"path":"/cash/outer/rivalInfo/query","method":"GET","params":{"params":{},"mock_count":10}}]
+2026-02-05 16:53:02,917 - socketio.server - INFO - server.py:579 - received event "dynamic_interface" from I69FajJzewqXdGw2AAAH [/]
+2026-02-05 16:53:02,918 - __main__ - INFO - simple_app.py:1050 - Handling dynamic_interface request from sid: I69FajJzewqXdGw2AAAH, data: {'path': '/cash/outer/rivalInfo/query', 'method': 'GET', 'params': {'params': {}, 'mock_count': 10}}
+2026-02-05 16:53:02,918 - socketio.server - INFO - server.py:164 - emitting event "dynamic_response" to I69FajJzewqXdGw2AAAH [/]
+2026-02-05 16:53:02,919 - engineio.server - INFO - socket.py:78 - ZgNyq_5afteuf-dUAAAG: Sending packet MESSAGE data 2["dynamic_response",{"code":0,"message":"success","data":[{"code":"hbXdoHMnhE","message":"JQLfbMKxLX","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"JxxOfdsmdJ","body.rows[rivalName":"kugAbYjTKQ","body.rows[rivalFullname":"pdgXnNxcFL","body.rows[rivalCode":"rAsOrMTauC","body.rows[rivalStatus":"crzBsKhysA"},{"code":"cvcbSGOguE","message":"RAkSAEDjWO","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"JLOrYgFbBx","body.rows[rivalName":"RrXzzZiKeK","body.rows[rivalFullname":"QPBWnFQHJK","body.rows[rivalCode":"ugNAVhCwzj","body.rows[rivalStatus":"ALnkpRgxHb"},{"code":"xpTtjzlXjJ","message":"SDIbXpTQsM","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"hexPBvLBGZ","body.rows[rivalName":"ghwcJpKhEQ","body.rows[rivalFullname":"xPMmWqowdY","body.rows[rivalCode":"clFmGxWlYu","body.rows[rivalStatus":"mRlHLNpgQv"},{"code":"zhHYpCLqku","message":"axihMrGovn","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"vKSFZFHWcG","body.rows[rivalName":"FgvIfXHvIR","body.rows[rivalFullname":"ogrfpCLKbg","body.rows[rivalCode":"aHPVVZEjdX","body.rows[rivalStatus":"AwJLrRFFMm"},{"code":"eEqIbPJFHd","message":"AOeZNVHerZ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"ByjaMuNRTR","body.rows[rivalName":"oGiRwWsgRE","body.rows[rivalFullname":"CNDruTnWID","body.rows[rivalCode":"hleSnoXGdb","body.rows[rivalStatus":"AJlbExlnOG"},{"code":"iqhRhbrdHe","message":"ievGxpjaOQ","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"OSUuIiESZX","body.rows[rivalName":"CBsWZCfqpI","body.rows[rivalFullname":"bEhvTUGVBi","body.rows[rivalCode":"OLHjHSmkXY","body.rows[rivalStatus":"AKetDGRzSx"},{"code":"OqOTYEAQtR","message":"EhRZVFZwHU","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"TCXoyNkMvZ","body.rows[rivalName":"gWgetEtdVv","body.rows[rivalFullname":"bfHQOuXdxv","body.rows[rivalCode":"nUZBsagrnI","body.rows[rivalStatus":"NcYGNaZQSx"},{"code":"ALWwKbgVph","message":"YRRrybsHTg","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"cqVGATbrUD","body.rows[rivalName":"hlXMJgnXcA","body.rows[rivalFullname":"MeMlKTxLpQ","body.rows[rivalCode":"vbqRqpFXcr","body.rows[rivalStatus":"tWhfViNaNl"},{"code":"vXtqKRAUiN","message":"cOKUyakYhg","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"EGgupMmeSL","body.rows[rivalName":"evCdbGOdAm","body.rows[rivalFullname":"kafjglkaDd","body.rows[rivalCode":"AXPOBRZoQw","body.rows[rivalStatus":"sbpaAsgfCU"},{"code":"LcbrNEhfcq","message":"CnZbgxsoyB","body.total":"mock_value","body.page":"mock_value","body.size":"mock_value","body.rows[rivalId":"EIvSoFgjRc","body.rows[rivalName":"EbwVDxFIPi","body.rows[rivalFullname":"OLXcvsZtaD","body.rows[rivalCode":"NEwgfZdHQf","body.rows[rivalStatus":"xdTAheskrE"}]}]
+2026-02-05 16:53:02,920 - __main__ - INFO - simple_app.py:1120 - Successfully handled dynamic_interface request: GET /cash/outer/rivalInfo/query for sid: I69FajJzewqXdGw2AAAH
+2026-02-05 16:53:08,369 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:08] "GET /dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-02-05 16:53:08,411 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:08] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 200 -
+2026-02-05 16:53:08,412 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:08] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-05 16:53:13,625 - engineio.server - INFO - socket.py:78 - ZgNyq_5afteuf-dUAAAG: Sending packet PING data None
+2026-02-05 16:53:13,626 - engineio.server - INFO - socket.py:39 - ZgNyq_5afteuf-dUAAAG: Received packet PONG data 
+2026-02-05 16:53:17,649 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:17] "POST /interfaces/update-method/418 HTTP/1.1" 200 -
+2026-02-05 16:53:17,657 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:17] "GET /interfaces?file_id=77 HTTP/1.1" 200 -
+2026-02-05 16:53:17,658 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:17] "GET /interfaces/418/params HTTP/1.1" 200 -
+2026-02-05 16:53:17,669 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:17] "GET /interfaces/418/responses HTTP/1.1" 200 -
+2026-02-05 16:53:17,678 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:17] "GET /interfaces/418/mock-config HTTP/1.1" 200 -
+2026-02-05 16:53:20,031 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:20] "GET /dynamic/cash/outer/rivalInfo/query HTTP/1.1" 200 -
+2026-02-05 16:53:20,070 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:20] "[36mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 304 -
+2026-02-05 16:53:20,075 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:53:20] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -

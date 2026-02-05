@@ -14,7 +14,7 @@ class SocketService {
   // 检查WebSocket服务可用性
   async checkWebSocketAvailability() {
     try {
-      const response = await axios.get('/api/websocket-status', {
+      const response = await axios.get('/websocket-status', {
         timeout: 5000 // 5秒超时
       })
       return response.data.available
@@ -36,7 +36,11 @@ class SocketService {
     
     // 首先检查WebSocket服务是否可用
     try {
+      // 限制WebSocket可用性检查的超时时间，避免用户等待太久
+      const checkStart = Date.now()
       this.websocketAvailable = await this.checkWebSocketAvailability()
+      const checkEnd = Date.now()
+      console.log(`WebSocket可用性检查完成，耗时${checkEnd - checkStart}ms，结果: ${this.websocketAvailable}`)
       
       if (!this.websocketAvailable) {
         console.warn('WebSocket服务不可用，将使用HTTP API作为备选方案')
@@ -54,14 +58,14 @@ class SocketService {
       this.socket = io(url, {
         path: '/socket.io',
         transports: ['websocket', 'polling'],
-        timeout: 30000, // 增加超时时间到30秒
+        timeout: 10000, // 减少超时时间到10秒，避免用户等待太久
         reconnection: true, // 启用自动重连
-        reconnectionAttempts: 5, // 减少重连尝试次数，避免大量错误日志
-        reconnectionDelay: 3000, // 增加重连延迟到3秒
-        reconnectionDelayMax: 30000, // 最大重连延迟30秒
+        reconnectionAttempts: 3, // 进一步减少重连尝试次数
+        reconnectionDelay: 2000, // 减少重连延迟到2秒
+        reconnectionDelayMax: 10000, // 最大重连延迟10秒
         randomizationFactor: 0.5, // 重连延迟随机因子
-        pingTimeout: 60000, // 心跳超时时间60秒
-        pingInterval: 25000 // 心跳发送间隔25秒
+        pingTimeout: 30000, // 心跳超时时间30秒
+        pingInterval: 15000 // 心跳发送间隔15秒
       })
 
       // 连接成功事件
@@ -82,7 +86,14 @@ class SocketService {
       this.socket.on('connect_error', (error) => {
         console.error('WebSocket连接错误:', error)
         // 只在控制台打印，不发送到UI，避免用户看到过多错误信息
-        // this.emitEvent('error', error)
+        // 连接错误后，立即检查WebSocket可用性
+        setTimeout(async () => {
+          const stillAvailable = await this.checkWebSocketAvailability()
+          if (!stillAvailable) {
+            this.websocketAvailable = false
+            this.emitEvent('websocket_unavailable')
+          }
+        }, 1000)
       })
 
       // 重连尝试事件
@@ -130,6 +141,8 @@ class SocketService {
       console.log('WebSocket服务初始化完成')
     } catch (error) {
       console.error('WebSocket初始化失败:', error)
+      // 初始化失败后，立即标记服务不可用
+      this.websocketAvailable = false
       this.emitEvent('websocket_unavailable')
     }
   }
@@ -181,7 +194,7 @@ class SocketService {
       // 降级使用HTTP API
       console.warn('WebSocket未连接，使用HTTP API获取接口列表')
       try {
-        const response = await axios.get('/api/interfaces', {
+        const response = await axios.get('/interfaces', {
           params: fileId ? { file_id: fileId } : {}
         })
         this.emitEvent('interfaces_response', { interfaces: response.data })
@@ -206,7 +219,7 @@ class SocketService {
       console.warn('WebSocket未连接，使用HTTP API调用动态接口')
       try {
         const response = await axios({
-          url: `/api/dynamic${path}`,
+          url: `/dynamic${path}`,
           method: method,
           data: { params }
         })

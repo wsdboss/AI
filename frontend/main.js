@@ -8,7 +8,7 @@ import axios from 'axios'
 import socketService from './utils/socketService'
 
 // 配置axios
-axios.defaults.baseURL = '/api'
+axios.defaults.baseURL = ''
 Vue.prototype.$axios = axios
 
 // 使用ElementUI

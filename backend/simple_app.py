@@ -63,7 +63,14 @@ logger.info("日志系统初始化完成")
 from async_parser import parse_file_async
 
 app = Flask(__name__)
-CORS(app)  # 允许跨域请求
+# 配置CORS，支持跨域请求，包括OPTIONS预检请求
+CORS(app, resources={
+    r"/*": {
+        "origins": "*",
+        "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization", "X-Requested-With"]
+    }
+})
 
 # 初始化SocketIO，确保在所有中间件和扩展初始化之前完成
 app.config['SECRET_KEY'] = 'your-secret-key-here'  # SocketIO需要的密钥
@@ -139,15 +146,19 @@ else:
     # Windows系统不支持SIGALRM，跳过超时设置
     pass
 
-# 前端资源目录处理
 # 硬编码前端资源目录路径，确保使用恢复的v1.0.0版本
 import os
 import sys
 
 # 根据运行模式设置前端资源目录
 if getattr(sys, 'frozen', False):
-    # 打包后运行 - 使用PyInstaller的临时目录
-    FRONTEND_DIR = os.path.abspath(os.path.join(sys._MEIPASS, 'frontend'))
+    # 打包后运行 - 首先尝试使用PyInstaller的临时目录
+    temp_frontend_dir = os.path.abspath(os.path.join(sys._MEIPASS, 'frontend'))
+    if os.path.exists(temp_frontend_dir) and os.path.exists(os.path.join(temp_frontend_dir, 'index.html')):
+        FRONTEND_DIR = temp_frontend_dir
+    else:
+        # 如果临时目录中没有前端资源，使用当前目录的frontend子目录
+        FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(sys.executable), 'frontend'))
 else:
     # 开发模式运行
     FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), 'frontend'))
@@ -313,7 +324,7 @@ def generate_mock_value(field_type):
         return 'mock_value'
 
 # API路由：文件上传
-@app.route('/api/files/upload', methods=['POST'])
+@app.route('/files/upload', methods=['POST'])
 def upload_file():
     logger.info("收到文件上传请求")
     try:
@@ -431,7 +442,7 @@ def upload_file():
         }), 500
 
 # API路由：获取文件列表
-@app.route('/api/files', methods=['GET'])
+@app.route('/files', methods=['GET'])
 def get_files():
     file_id = request.args.get('file_id')
     try:
@@ -478,7 +489,7 @@ def get_files():
         return jsonify([])
 
 # API路由：删除文件
-@app.route('/api/files/<int:file_id>', methods=['DELETE'])
+@app.route('/files/<int:file_id>', methods=['DELETE'])
 def delete_file(file_id):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -532,7 +543,7 @@ def delete_file(file_id):
         return jsonify({'error': str(e)}), 500
 
 # API路由：下载文件
-@app.route('/api/files/download/<int:file_id>', methods=['GET'])
+@app.route('/files/download/<int:file_id>', methods=['GET'])
 def download_file(file_id):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -562,7 +573,7 @@ def get_uploaded_file(filename):
     return send_from_directory(UPLOAD_DIR, filename)
 
 # API路由：获取接口列表
-@app.route('/api/interfaces', methods=['GET'])
+@app.route('/interfaces', methods=['GET'])
 def get_interfaces():
     file_id = request.args.get('file_id')
     conn = sqlite3.connect(DATABASE)
@@ -611,7 +622,7 @@ def get_interfaces():
         conn.close()
 
 # API路由：获取接口参数
-@app.route('/api/interfaces/<int:interface_id>/params', methods=['GET'])
+@app.route('/interfaces/<int:interface_id>/params', methods=['GET'])
 def get_interface_params(interface_id):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -642,7 +653,7 @@ def get_interface_params(interface_id):
     return jsonify(result)
 
 # API路由：获取接口响应字段
-@app.route('/api/interfaces/<int:interface_id>/responses', methods=['GET'])
+@app.route('/interfaces/<int:interface_id>/responses', methods=['GET'])
 def get_interface_responses(interface_id):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -673,7 +684,7 @@ def get_interface_responses(interface_id):
     return jsonify(result)
 
 # API路由：获取Mock配置
-@app.route('/api/interfaces/<int:interface_id>/mock-config', methods=['GET'])
+@app.route('/interfaces/<int:interface_id>/mock-config', methods=['GET'])
 def get_mock_config(interface_id):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -697,7 +708,7 @@ def get_mock_config(interface_id):
         })
 
 # API路由：保存Mock配置
-@app.route('/api/interfaces/<int:interface_id>/mock', methods=['POST'])
+@app.route('/interfaces/<int:interface_id>/mock', methods=['POST'])
 def save_mock_config(interface_id):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -742,13 +753,13 @@ def save_mock_config(interface_id):
         return jsonify({'error': str(e)}), 500
 
 # API路由：更新Mock配置（PUT方法）
-@app.route('/api/interfaces/<int:interface_id>/mock-config', methods=['PUT'])
+@app.route('/interfaces/<int:interface_id>/mock-config', methods=['PUT'])
 def update_mock_config(interface_id):
     # 复用save_mock_config逻辑
     return save_mock_config(interface_id)
 
 # API路由：生成接口服务
-@app.route('/api/interfaces/generate/<int:interface_id>', methods=['POST'])
+@app.route('/interfaces/generate/<int:interface_id>', methods=['POST'])
 def generate_interface(interface_id):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -790,7 +801,7 @@ def generate_interface(interface_id):
     })
 
 # API路由：生成WebSocket接口服务
-@app.route('/api/interfaces/generate-websocket/<int:interface_id>', methods=['POST'])
+@app.route('/interfaces/generate-websocket/<int:interface_id>', methods=['POST'])
 def generate_websocket_interface(interface_id):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -846,7 +857,7 @@ def generate_websocket_interface(interface_id):
         conn.close()
 
 # API路由：切换接口为HTTP类型
-@app.route('/api/interfaces/switch-to-http/<int:interface_id>', methods=['POST'])
+@app.route('/interfaces/switch-to-http/<int:interface_id>', methods=['POST'])
 def switch_to_http_interface(interface_id):
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -893,6 +904,61 @@ def switch_to_http_interface(interface_id):
         })
     except Exception as e:
         logger.error(f'Error switching interface to HTTP: {e}')
+        conn.rollback()
+        return jsonify({'error': str(e)}), 500
+    finally:
+        conn.close()
+
+# API路由：更新接口调用方式（GET/POST）
+@app.route('/interfaces/update-method/<int:interface_id>', methods=['POST'])
+def update_interface_method(interface_id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    try:
+        # 获取请求数据
+        data = request.get_json()
+        method = data.get('method', 'GET').upper()
+        
+        # 验证方法是否合法
+        if method not in ['GET', 'POST']:
+            return jsonify({
+                'status': 'error',
+                'message': '不支持的HTTP方法，请使用GET或POST'
+            }), 400
+        
+        # 检查接口是否存在
+        cursor.execute('SELECT * FROM interfaces WHERE id = ?', (interface_id,))
+        interface = cursor.fetchone()
+        
+        if not interface:
+            conn.close()
+            return jsonify({
+                'status': 'error',
+                'message': f'接口ID {interface_id} 不存在'
+            }), 404
+        
+        # 更新接口方法
+        cursor.execute('''
+            UPDATE interfaces 
+            SET method = ? 
+            WHERE id = ?
+        ''', (method, interface_id))
+        
+        conn.commit()
+        
+        # 返回更新后的接口信息
+        return jsonify({
+            'status': 'success',
+            'message': '接口调用方式更新成功',
+            'interface_id': interface_id,
+            'interface_name': interface[1],
+            'interface_path': interface[2],
+            'interface_method': method,
+            'is_websocket': bool(interface[6] if len(interface) > 6 else False)
+        })
+    except Exception as e:
+        logger.error(f'Error updating interface method: {e}')
         conn.rollback()
         return jsonify({'error': str(e)}), 500
     finally:
@@ -1069,9 +1135,94 @@ if socketio is not None:
             if conn:
                 conn.close()
 
-# API路由：动态接口请求
-@app.route('/api/dynamic/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH'])
+# API路由：动态接口请求（带/dynamic前缀）
+@app.route('/dynamic/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'])
 def dynamic_interface(path):
+    # 处理OPTIONS预检请求
+    if request.method == 'OPTIONS':
+        return jsonify({}), 204
+    return handle_dynamic_request(path)
+
+# 健康检查路由
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({
+        'status': 'healthy',
+        'app': '动态接口生成工具',
+        'version': '1.0.0'
+    })
+
+# WebSocket状态检查路由
+@app.route('/websocket-status', methods=['GET'])
+def websocket_status():
+    """返回WebSocket服务状态"""
+    return jsonify({
+        'available': socketio is not None,
+        'async_mode': 'threading' if socketio else None,
+        'version': '1.0.0',
+        'status': 'available' if socketio else 'unavailable'
+    })
+
+# 调试端点
+@app.route('/debug', methods=['GET'])
+def debug_info():
+    return jsonify({
+        'base_dir': config.BASE_DIR,
+        'frontend_dir': FRONTEND_DIR,
+        'frontend_exists': os.path.exists(FRONTEND_DIR),
+        'index_exists': os.path.exists(os.path.join(FRONTEND_DIR, 'index.html')),
+        'app_version': config.APP_VERSION,
+        'websocket_available': socketio is not None
+    })
+
+# 前端资源路由
+@app.route('/')
+def index():
+    """返回首页"""
+    index_path = os.path.join(FRONTEND_DIR, 'index.html')
+    if os.path.exists(index_path):
+        return send_from_directory(FRONTEND_DIR, 'index.html')
+    else:
+        return jsonify({
+            'status': 'error',
+            'message': '前端资源未找到，请确保已正确构建前端项目',
+            'version': '1.0.0'
+        })
+
+# 特殊路由：处理/@vite/client请求，返回404错误
+@app.route('/@vite/client')
+def vite_client():
+    """返回404错误，因为Vite客户端脚本在生产环境中不可用"""
+    return jsonify({
+        'status': 'error',
+        'message': 'Vite客户端脚本在生产环境中不可用',
+        'version': '1.0.0'
+    }), 404
+
+# 静态文件路由 - 放在所有API路由之后
+@app.route('/<path:filename>')
+def static_files(filename):
+    """返回静态文件，支持SPA路由"""
+    file_path = os.path.join(FRONTEND_DIR, filename)
+    if os.path.exists(file_path):
+        return send_from_directory(FRONTEND_DIR, filename)
+    
+    # 检查是否是前端路由路径（不是以/assets/开头，不是API路径）
+    # 对于前端路由路径，返回index.html，用于SPA路由
+    if not filename.startswith('assets/') and not filename.startswith('api/'):
+        index_path = os.path.join(FRONTEND_DIR, 'index.html')
+        if os.path.exists(index_path):
+            return send_from_directory(FRONTEND_DIR, 'index.html')
+    
+    # 如果是静态资源文件或API路径，且文件不存在，返回404错误
+    return jsonify({
+        'status': 'error',
+        'message': f'文件不存在: {filename}',
+        'version': '1.0.0'
+    }), 404
+
+# 处理动态请求的通用函数
+def handle_dynamic_request(path):
     full_path = f"/{path}"
     method = request.method
     
@@ -1157,73 +1308,15 @@ def dynamic_interface(path):
         'data': mock_data
     })
 
-# 健康检查路由
-@app.route('/health', methods=['GET'])
-def health_check():
-    return jsonify({
-        'status': 'healthy',
-        'app': '动态接口生成工具',
-        'version': '1.0.0'
-    })
-
-# WebSocket状态检查路由
-@app.route('/api/websocket-status', methods=['GET'])
-def websocket_status():
-    """返回WebSocket服务状态"""
-    return jsonify({
-        'available': socketio is not None,
-        'async_mode': 'threading' if socketio else None,
-        'version': '1.0.0',
-        'status': 'available' if socketio else 'unavailable'
-    })
-
-# 调试端点
-@app.route('/debug', methods=['GET'])
-def debug_info():
-    return jsonify({
-        'base_dir': config.BASE_DIR,
-        'frontend_dir': FRONTEND_DIR,
-        'frontend_exists': os.path.exists(FRONTEND_DIR),
-        'index_exists': os.path.exists(os.path.join(FRONTEND_DIR, 'index.html')),
-        'app_version': config.APP_VERSION,
-        'websocket_available': socketio is not None
-    })
-
-# 前端资源路由
-@app.route('/')
-def index():
-    """返回首页"""
-    index_path = os.path.join(FRONTEND_DIR, 'index.html')
-    if os.path.exists(index_path):
-        return send_from_directory(FRONTEND_DIR, 'index.html')
-    else:
-        return jsonify({
-            'status': 'error',
-            'message': '前端资源未找到，请确保已正确构建前端项目',
-            'version': '1.0.0'
-        })
-
-# 静态文件路由
-@app.route('/<path:filename>')
-def static_files(filename):
-    """返回静态文件，支持SPA路由"""
-    file_path = os.path.join(FRONTEND_DIR, filename)
-    if os.path.exists(file_path):
-        return send_from_directory(FRONTEND_DIR, filename)
-    # 对所有找不到的文件请求返回index.html，用于SPA路由
-    # 这确保前端路由系统能接管处理所有路由
-    index_path = os.path.join(FRONTEND_DIR, 'index.html')
-    if os.path.exists(index_path):
-        return send_from_directory(FRONTEND_DIR, 'index.html')
-    # 如果index.html也找不到，返回错误
-    return jsonify({
-        'status': 'error',
-        'message': f'前端资源未找到，请确保已正确构建前端项目',
-        'version': '1.0.0'
-    })
+# API路由：动态接口请求（直接路径，无前缀） - 放在静态文件路由之后
+@app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'])
+def dynamic_interface_direct(path):
+    # 处理OPTIONS预检请求
+    if request.method == 'OPTIONS':
+        return jsonify({}), 204
+    return handle_dynamic_request(path)
 
 # 命令行参数处理
-
 def open_browser(host, port):
     """自动打开浏览器"""
     try:
