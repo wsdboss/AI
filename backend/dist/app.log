@@ -2064,3 +2064,38 @@
 2026-02-05 16:09:09,998 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:09:09] "POST /api/files/upload HTTP/1.1" 200 -
 2026-02-05 16:09:10,327 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:09:10] "GET /api/files HTTP/1.1" 200 -
 2026-02-05 16:09:10,327 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:09:10] "GET /api/interfaces HTTP/1.1" 200 -
+2026-02-05 16:57:32,076 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-05 16:57:32,079 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-05 16:57:32,080 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-05 16:57:32,085 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI647002\frontend
+2026-02-05 16:57:32,086 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-05 16:57:32,086 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-05 16:57:32,087 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-05 16:57:32,113 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-05 16:57:32,124 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-05 16:57:32,125 - __main__ - WARNING - simple_app.py:1374 - 端口 8001 已被占用，尝试下一个可用端口
+2026-02-05 16:57:32,125 - __main__ - WARNING - simple_app.py:1374 - 端口 8002 已被占用，尝试下一个可用端口
+2026-02-05 16:57:32,125 - __main__ - INFO - simple_app.py:1386 - 已切换到可用端口 8003
+2026-02-05 16:57:32,126 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8003
+2026-02-05 16:57:32,142 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8003
+ * Running on http://10.203.224.140:8003
+2026-02-05 16:57:32,143 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-05 16:57:37,347 - __main__ - INFO - simple_app.py:1330 - 已自动打开浏览器，访问地址: http://localhost:8003
+2026-02-05 16:57:37,810 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:37] "GET / HTTP/1.1" 200 -
+2026-02-05 16:57:37,818 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:37] "GET /assets/index-f42045f6.js HTTP/1.1" 200 -
+2026-02-05 16:57:37,934 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:37] "GET /assets/index-3e0ca16e.css HTTP/1.1" 200 -
+2026-02-05 16:57:38,302 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:38] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-05 16:57:38,321 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:38] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-05 16:57:38,564 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:38] "GET /assets/element-icons-ab40a589.woff HTTP/1.1" 200 -
+2026-02-05 16:57:38,626 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:38] "GET /files HTTP/1.1" 200 -
+2026-02-05 16:57:41,322 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:41] "GET /interfaces?file_id=1 HTTP/1.1" 200 -
+2026-02-05 16:57:41,637 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:41] "GET /interfaces?file_id=1 HTTP/1.1" 200 -
+2026-02-05 16:57:42,018 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:42] "GET /interfaces/1/mock-config HTTP/1.1" 200 -
+2026-02-05 16:57:42,331 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:42] "GET /interfaces/1/params HTTP/1.1" 200 -
+2026-02-05 16:57:42,393 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:42] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-05 16:57:42,594 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:42] "GET /interfaces/1/responses HTTP/1.1" 200 -
+2026-02-05 16:57:42,639 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:42] "GET /interfaces/1/mock-config HTTP/1.1" 200 -
+2026-02-05 16:57:47,324 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:47] "POST /dynamic/prodPosition/query HTTP/1.1" 200 -
+2026-02-05 16:57:50,230 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:50] "GET /health HTTP/1.1" 200 -
