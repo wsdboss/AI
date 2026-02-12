@@ -11,7 +11,6 @@ import config
 
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
-from flask_socketio import SocketIO, emit
 # 移除对flask_executor的依赖
 # from flask_executor import Executor
 import sqlite3
@@ -20,6 +19,227 @@ import re
 from datetime import datetime
 import json
 import signal
+
+# 导入工具函数
+from utils import (
+    safe_get,
+    safe_set,
+    ensure_type,
+    standardize_response,
+    normalize_data_structure,
+    process_item,
+    extract_field
+)
+
+# 安全访问工具函数
+def safe_get(data, keys, default=None):
+    """安全地获取嵌套数据
+    
+    Args:
+        data: 要访问的数据结构（字典或列表）
+        keys: 键路径列表，如 ['data', 'items', 0, 'id']
+        default: 当路径不存在时返回的默认值
+        
+    Returns:
+        访问到的值或默认值
+    """
+    try:
+        current = data
+        for key in keys:
+            if isinstance(current, dict) and key in current:
+                current = current[key]
+            elif isinstance(current, list) and isinstance(key, int) and 0 <= key < len(current):
+                current = current[key]
+            else:
+                return default
+        return current
+    except (TypeError, IndexError, KeyError):
+        return default
+
+def safe_set(data, keys, value):
+    """安全地设置嵌套数据
+    
+    Args:
+        data: 要修改的数据结构（字典）
+        keys: 键路径列表，如 ['data', 'items', 0, 'id']
+        value: 要设置的值
+        
+    Returns:
+        是否设置成功
+    """
+    try:
+        current = data
+        for i, key in enumerate(keys):
+            if i == len(keys) - 1:
+                # 最后一个键，直接设置值
+                if isinstance(current, dict):
+                    current[key] = value
+                    return True
+                elif isinstance(current, list) and isinstance(key, int) and 0 <= key < len(current):
+                    current[key] = value
+                    return True
+                else:
+                    return False
+            else:
+                # 中间键，确保存在且类型正确
+                next_key = keys[i+1]
+                if isinstance(current, dict):
+                    if key not in current:
+                        # 根据下一个键的类型初始化
+                        if isinstance(next_key, int):
+                            current[key] = []
+                        else:
+                            current[key] = {}
+                    elif not isinstance(current[key], (dict, list)):
+                        # 类型不正确，重新初始化
+                        if isinstance(next_key, int):
+                            current[key] = []
+                        else:
+                            current[key] = {}
+                    current = current[key]
+                elif isinstance(current, list) and isinstance(key, int):
+                    if len(current) <= key:
+                        # 列表长度不足，补充空元素
+                        while len(current) <= key:
+                            current.append({} if isinstance(next_key, str) else [])
+                    elif not isinstance(current[key], (dict, list)):
+                        # 类型不正确，重新初始化
+                        current[key] = {} if isinstance(next_key, str) else []
+                    current = current[key]
+                else:
+                    return False
+        return True
+    except (TypeError, IndexError):
+        return False
+
+def ensure_type(value, expected_type, default=None):
+    """确保值的类型正确
+    
+    Args:
+        value: 要检查的值
+        expected_type: 期望的类型
+        default: 类型不正确时返回的默认值
+        
+    Returns:
+        类型正确的值或默认值
+    """
+    if value is None:
+        return default
+    
+    if isinstance(value, expected_type):
+        return value
+    try:
+        # 尝试类型转换
+        if expected_type == int:
+            return int(value)
+        elif expected_type == float:
+            return float(value)
+        elif expected_type == bool:
+            if isinstance(value, str):
+                return value.lower() in ('true', '1', 'yes', 'y')
+            return bool(value)
+        elif expected_type == str:
+            return str(value)
+        elif expected_type == list:
+            return list(value)
+        elif expected_type == dict:
+            return dict(value)
+    except (ValueError, TypeError):
+        pass
+    return default
+
+# 数据标准化函数
+def standardize_response(data):
+    """标准化API响应数据
+    
+    Args:
+        data: 原始响应数据
+        
+    Returns:
+        标准化后的响应数据
+    """
+    try:
+        # 确保data是字典
+        if not isinstance(data, dict):
+            data = {}
+        
+        # 确保包含code字段，默认为0
+        if 'code' not in data:
+            data['code'] = 0
+        else:
+            data['code'] = ensure_type(data['code'], int, 0)
+        
+        # 保留message字段，尊重响应参数定义
+        # 不再强制删除message字段
+        
+        # 保留data字段，只有在原始数据中存在时才处理
+        if 'data' in data:
+            data['data'] = ensure_type(data['data'], (dict, list), {})
+        
+        return data
+    except Exception as e:
+        logger.error(f"标准化响应数据失败: {str(e)}")
+        return {
+            'code': 500,
+            'message': f'标准化响应数据失败: {str(e)}'
+        }
+
+def normalize_data_structure(data, structure=None):
+    """标准化数据结构，确保符合预期格式
+    
+    Args:
+        data: 要标准化的数据
+        structure: 预期的数据结构模板
+        
+    Returns:
+        标准化后的数据
+    """
+    try:
+        if structure is None:
+            return data
+        
+        if isinstance(structure, dict):
+            if not isinstance(data, dict):
+                data = {}
+            
+            for key, expected_type in structure.items():
+                if key not in data:
+                    # 为缺失字段提供默认值
+                    if expected_type == list:
+                        data[key] = []
+                    elif expected_type == dict or isinstance(expected_type, dict):
+                        data[key] = {}
+                    elif expected_type == int:
+                        data[key] = 0
+                    elif expected_type == float:
+                        data[key] = 0.0
+                    elif expected_type == bool:
+                        data[key] = False
+                    elif expected_type == str:
+                        data[key] = ""
+                    else:
+                        data[key] = None
+                else:
+                    # 递归标准化嵌套结构
+                    if isinstance(expected_type, dict):
+                        data[key] = normalize_data_structure(data[key], expected_type)
+                    elif expected_type == list:
+                        if not isinstance(data[key], list):
+                            data[key] = []
+        
+        elif isinstance(structure, list):
+            if not isinstance(data, list):
+                data = []
+            
+            # 如果列表有模板元素，标准化每个元素
+            if structure and isinstance(structure[0], dict):
+                for i, item in enumerate(data):
+                    data[i] = normalize_data_structure(item, structure[0])
+        
+        return data
+    except Exception as e:
+        logger.error(f"标准化数据结构失败: {str(e)}")
+        return data
 
 # 配置日志 - 添加日志轮转
 import logging.handlers
@@ -71,37 +291,6 @@ CORS(app, resources={
         "allow_headers": ["Content-Type", "Authorization", "X-Requested-With"]
     }
 })
-
-# 初始化SocketIO，确保在所有中间件和扩展初始化之前完成
-app.config['SECRET_KEY'] = 'your-secret-key-here'  # SocketIO需要的密钥
-
-# 初始化SocketIO，确保在打包环境中能正常工作
-socketio = None
-try:
-    # 提前导入，确保在所有扩展初始化之前完成
-    from flask_socketio import SocketIO as FlaskSocketIO
-    
-    # 配置SocketIO，添加详细日志
-    logger.info("开始初始化SocketIO...")
-    
-    # 在PyInstaller打包环境中，明确指定async_mode为threading，这是最兼容的模式
-    # threading模式在各种环境下都能稳定运行，避免自动检测失败
-    socketio = FlaskSocketIO(
-        app, 
-        cors_allowed_origins="*",
-        logger=True,
-        engineio_logger=True,
-        async_mode='threading'  # 明确指定async_mode为threading，确保在打包环境中正常工作
-    )
-    logger.info("SocketIO初始化成功, 使用async_mode=threading, cors_allowed_origins=*")
-
-except Exception as e:
-    # 如果SocketIO初始化失败，记录详细错误并继续运行应用程序
-    logger.error(f"SocketIO初始化失败: {type(e).__name__}: {e}")
-    print(f"SocketIO初始化失败: {type(e).__name__}: {e}")
-    print("应用程序将继续运行，但WebSocket功能将不可用")
-    import traceback
-    traceback.print_exc()
 
 # 移除Executor初始化
 # executor = Executor(app)
@@ -306,21 +495,33 @@ def generate_mock_value(field_type):
     import random
     import string
     
-    if field_type in ['java.lang.String', 'string', 'java.lang.Object']:
-        return ''.join(random.choices(string.ascii_letters, k=10))
-    elif field_type in ['java.lang.Integer', 'int', 'java.lang.Long', 'long']:
-        return random.randint(0, 1000)
-    elif field_type in ['java.lang.Boolean', 'boolean']:
-        return random.choice([True, False])
-    elif field_type in ['java.lang.Double', 'double', 'java.lang.Float', 'float', 'java.math.BigDecimal', 'decimal']:
-        return round(random.uniform(0, 1000), 2)
-    elif field_type in ['java.util.Date', 'date', 'java.time.LocalDate']:
-        return datetime.now().strftime('%Y-%m-%d')
-    elif field_type in ['java.util.List', 'list', 'java.util.ArrayList']:
-        return [generate_mock_value('string') for _ in range(random.randint(1, 5))]
-    elif field_type in ['java.util.Map', 'map', 'java.util.HashMap']:
-        return {generate_mock_value('string'): generate_mock_value('string') for _ in range(random.randint(1, 3))}
-    else:
+    try:
+        # 类型检查：确保field_type是字符串
+        field_type = ensure_type(field_type, str, '')
+        if not field_type:
+            logger.error(f"Invalid field_type: {field_type}")
+            return 'mock_value'
+        
+        print(f"Generating mock value for type: {field_type}")
+        
+        if field_type in ['java.lang.String', 'string', 'java.lang.Object']:
+            return ''.join(random.choices(string.ascii_letters, k=10))
+        elif field_type in ['java.lang.Integer', 'int', 'java.lang.Long', 'long']:
+            return ensure_type(random.randint(0, 1000), int, 0)
+        elif field_type in ['java.lang.Boolean', 'boolean']:
+            return ensure_type(random.choice([True, False]), bool, False)
+        elif field_type in ['java.lang.Double', 'double', 'java.lang.Float', 'float', 'java.math.BigDecimal', 'decimal']:
+            return ensure_type(round(random.uniform(0, 1000), 2), float, 0.0)
+        elif field_type in ['java.util.Date', 'date', 'java.time.LocalDate']:
+            return ensure_type(datetime.now().strftime('%Y-%m-%d'), str, '')
+        elif field_type in ['java.util.List', 'list', 'java.util.ArrayList']:
+            return ensure_type([generate_mock_value('string') for _ in range(random.randint(1, 5))], list, [])
+        elif field_type in ['java.util.Map', 'map', 'java.util.HashMap']:
+            return ensure_type({generate_mock_value('string'): generate_mock_value('string') for _ in range(random.randint(1, 3))}, dict, {})
+        else:
+            return 'mock_value'
+    except Exception as e:
+        logger.error(f"Error generating mock value: {type(e).__name__}: {e}")
         return 'mock_value'
 
 # API路由：文件上传
@@ -602,16 +803,13 @@ def get_interfaces():
         
         result = []
         for interface in interfaces:
-            # 检查接口字段数量，确保is_websocket字段存在
-            is_websocket = bool(interface[6]) if len(interface) > 6 else False
             result.append({
                 'id': interface[0],
                 'name': interface[1],
                 'path': interface[2],
                 'method': interface[3],
                 'description': interface[4],
-                'file_id': interface[5],
-                'is_websocket': is_websocket
+                'file_id': interface[5]
             })
         
         return jsonify(result)
@@ -710,13 +908,40 @@ def get_mock_config(interface_id):
 # API路由：保存Mock配置
 @app.route('/interfaces/<int:interface_id>/mock', methods=['POST'])
 def save_mock_config(interface_id):
-    conn = sqlite3.connect(DATABASE)
-    cursor = conn.cursor()
+    conn = None
+    cursor = None
     
     try:
+        # 类型检查：确保interface_id是整数
+        if not isinstance(interface_id, int):
+            logger.error(f"Invalid interface_id type: {type(interface_id).__name__}")
+            return jsonify({'error': '无效的接口ID'}), 400
+        
+        conn = sqlite3.connect(DATABASE)
+        cursor = conn.cursor()
+        
         data = request.get_json()
-        enabled = 1 if data.get('enabled', True) else 0
-        default_count = int(data.get('default_count', 10))
+        # 类型检查：确保data是字典
+        if not isinstance(data, dict):
+            data = {}
+        
+        # 类型检查：确保enabled是布尔值
+        enabled_value = data.get('enabled', True)
+        if not isinstance(enabled_value, bool):
+            try:
+                enabled_value = bool(enabled_value)
+            except (ValueError, TypeError):
+                logger.error(f"Invalid enabled type: {type(enabled_value).__name__}")
+                enabled_value = True
+        enabled = 1 if enabled_value else 0
+        
+        # 类型检查：确保default_count是整数
+        default_count_value = data.get('default_count', 10)
+        try:
+            default_count = int(default_count_value)
+        except (ValueError, TypeError):
+            logger.error(f"Invalid default_count type: {type(default_count_value).__name__}")
+            default_count = 10  # 默认值
         
         # 检查Mock配置是否存在
         cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface_id,))
@@ -737,7 +962,6 @@ def save_mock_config(interface_id):
             ''', (interface_id, enabled, default_count))
         
         conn.commit()
-        conn.close()
         
         return jsonify({
             'status': 'success',
@@ -748,9 +972,24 @@ def save_mock_config(interface_id):
             }
         })
     except Exception as e:
-        conn.rollback()
-        conn.close()
+        logger.error(f"Error saving mock config: {type(e).__name__}: {e}")
+        if conn:
+            try:
+                conn.rollback()
+            except Exception as rollback_error:
+                logger.error(f"Error rolling back transaction: {type(rollback_error).__name__}: {rollback_error}")
         return jsonify({'error': str(e)}), 500
+    finally:
+        if cursor:
+            try:
+                cursor.close()
+            except Exception as close_error:
+                logger.error(f"Error closing cursor: {type(close_error).__name__}: {close_error}")
+        if conn:
+            try:
+                conn.close()
+            except Exception as close_error:
+                logger.error(f"Error closing connection: {type(close_error).__name__}: {close_error}")
 
 # API路由：更新Mock配置（PUT方法）
 @app.route('/interfaces/<int:interface_id>/mock-config', methods=['PUT'])
@@ -792,122 +1031,12 @@ def generate_interface(interface_id):
         'interface_name': interface[1],
         'interface_path': interface[2],
         'interface_method': interface[3],
-        'is_websocket': bool(interface[6]) if len(interface) > 6 else False,
         'mock_config': {
             'enabled': bool(mock_config[2]),
             'default_count': mock_config[3]
         },
         'doc_generated': True
     })
-
-# API路由：生成WebSocket接口服务
-@app.route('/interfaces/generate-websocket/<int:interface_id>', methods=['POST'])
-def generate_websocket_interface(interface_id):
-    conn = sqlite3.connect(DATABASE)
-    cursor = conn.cursor()
-    
-    try:
-        # 更新接口为WebSocket类型
-        cursor.execute('''
-            UPDATE interfaces 
-            SET is_websocket = 1 
-            WHERE id = ?
-        ''', (interface_id,))
-        
-        # 检查是否已经生成过Mock配置
-        cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface_id,))
-        mock_config = cursor.fetchone()
-        
-        if not mock_config:
-            # 创建默认Mock配置
-            cursor.execute('''
-                INSERT INTO mock_configs (interface_id, enabled, default_count)
-                VALUES (?, ?, ?)
-            ''', (interface_id, 1, 10))
-            conn.commit()
-            # 重新查询获取刚刚插入的记录
-            cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface_id,))
-            mock_config = cursor.fetchone()
-        
-        # 获取更新后的接口信息
-        cursor.execute('SELECT * FROM interfaces WHERE id = ?', (interface_id,))
-        interface = cursor.fetchone()
-        
-        conn.commit()
-        
-        return jsonify({
-            'status': 'success',
-            'message': 'WebSocket接口服务生成成功',
-            'interface_id': interface_id,
-            'interface_name': interface[1],
-            'interface_path': interface[2],
-            'interface_method': interface[3],
-            'is_websocket': True,
-            'mock_config': {
-                'enabled': bool(mock_config[2]),
-                'default_count': mock_config[3]
-            },
-            'doc_generated': True
-        })
-    except Exception as e:
-        logger.error(f'Error generating WebSocket interface: {e}')
-        conn.rollback()
-        return jsonify({'error': str(e)}), 500
-    finally:
-        conn.close()
-
-# API路由：切换接口为HTTP类型
-@app.route('/interfaces/switch-to-http/<int:interface_id>', methods=['POST'])
-def switch_to_http_interface(interface_id):
-    conn = sqlite3.connect(DATABASE)
-    cursor = conn.cursor()
-    
-    try:
-        # 更新接口为HTTP类型
-        cursor.execute('''
-            UPDATE interfaces 
-            SET is_websocket = 0 
-            WHERE id = ?
-        ''', (interface_id,))
-        
-        # 获取更新后的接口信息
-        cursor.execute('SELECT * FROM interfaces WHERE id = ?', (interface_id,))
-        interface = cursor.fetchone()
-        
-        if not interface:
-            # 接口不存在
-            conn.commit()
-            return jsonify({
-                'status': 'error',
-                'message': f'接口ID {interface_id} 不存在'
-            }), 404
-        
-        # 获取Mock配置
-        cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface_id,))
-        mock_config = cursor.fetchone()
-        
-        conn.commit()
-        
-        return jsonify({
-            'status': 'success',
-            'message': '接口已切换为HTTP类型',
-            'interface_id': interface_id,
-            'interface_name': interface[1],
-            'interface_path': interface[2],
-            'interface_method': interface[3],
-            'is_websocket': False,
-            'mock_config': {
-                'enabled': bool(mock_config[2] if mock_config else True),
-                'default_count': mock_config[3] if mock_config else 10
-            },
-            'doc_generated': True
-        })
-    except Exception as e:
-        logger.error(f'Error switching interface to HTTP: {e}')
-        conn.rollback()
-        return jsonify({'error': str(e)}), 500
-    finally:
-        conn.close()
 
 # API路由：更新接口调用方式（GET/POST）
 @app.route('/interfaces/update-method/<int:interface_id>', methods=['POST'])
@@ -954,8 +1083,7 @@ def update_interface_method(interface_id):
             'interface_id': interface_id,
             'interface_name': interface[1],
             'interface_path': interface[2],
-            'interface_method': method,
-            'is_websocket': bool(interface[6] if len(interface) > 6 else False)
+            'interface_method': method
         })
     except Exception as e:
         logger.error(f'Error updating interface method: {e}')
@@ -963,177 +1091,6 @@ def update_interface_method(interface_id):
         return jsonify({'error': str(e)}), 500
     finally:
         conn.close()
-
-# WebSocket事件处理
-if socketio is not None:
-    # 导入所需的模块
-    from flask_socketio import emit
-    
-    # 连接事件
-    @socketio.on('connect')
-    def handle_connect():
-        try:
-            logger.info('Client connected via WebSocket, sid: %s', request.sid)
-            # 检查request对象是否有transport属性
-            transport = getattr(request, 'transport', 'unknown')
-            logger.debug('WebSocket connection details: transport=%s', transport)
-            emit('connection_response', {'message': 'Connected to WebSocket server'})
-        except Exception as e:
-            logger.error(f'Error in WebSocket connect handler: {type(e).__name__}: {e}')
-            import traceback
-            traceback.print_exc()
-            # 确保发送错误响应，避免客户端一直等待
-            try:
-                emit('error', {'message': f'连接失败: {str(e)}'})
-            except Exception as emit_error:
-                logger.error(f'Error emitting error response: {emit_error}')
-
-    # 断开连接事件
-    @socketio.on('disconnect')
-    def handle_disconnect():
-        try:
-            logger.info('Client disconnected from WebSocket, sid: %s', request.sid)
-            # 检查request对象是否有transport属性
-            transport = getattr(request, 'transport', 'unknown')
-            logger.debug('WebSocket disconnect details: transport=%s', transport)
-        except Exception as e:
-            logger.error(f'Error in WebSocket disconnect handler: {type(e).__name__}: {e}')
-            import traceback
-            traceback.print_exc()
-
-    # 获取接口列表事件
-    @socketio.on('get_interfaces')
-    def handle_get_interfaces(data):
-        conn = None
-        try:
-            logger.info('Handling get_interfaces request from sid: %s, data: %s', request.sid, data)
-            file_id = data.get('file_id')
-            conn = sqlite3.connect(DATABASE)
-            cursor = conn.cursor()
-            
-            if file_id:
-                cursor.execute('SELECT * FROM interfaces WHERE file_id = ?', (file_id,))
-            else:
-                cursor.execute('SELECT * FROM interfaces')
-            
-            interfaces = cursor.fetchall()
-            logger.debug('Found %d interfaces for file_id %s', len(interfaces), file_id)
-            
-            result = []
-            for interface in interfaces:
-                result.append({
-                    'id': interface[0],
-                    'name': interface[1],
-                    'path': interface[2],
-                    'method': interface[3],
-                    'description': interface[4],
-                    'file_id': interface[5],
-                    'is_websocket': interface[6] if len(interface) > 6 else False
-                })
-            
-            emit('interfaces_response', {'interfaces': result})
-            logger.info('Successfully handled get_interfaces request for sid: %s', request.sid)
-        except Exception as e:
-            logger.error(f'Error getting interfaces via WebSocket: {type(e).__name__}: {e}')
-            import traceback
-            traceback.print_exc()
-            emit('error', {'message': f'获取接口列表失败: {str(e)}'})
-        finally:
-            if conn:
-                conn.close()
-
-    # 动态接口请求事件（WebSocket版本）
-    @socketio.on('dynamic_interface')
-    def handle_dynamic_interface(data):
-        conn = None
-        try:
-            logger.info('Handling dynamic_interface request from sid: %s, data: %s', request.sid, data)
-            full_path = data.get('path', '')
-            method = data.get('method', 'GET')
-            params = data.get('params', {})
-            
-            conn = sqlite3.connect(DATABASE)
-            cursor = conn.cursor()
-            
-            # 查找匹配的接口
-            cursor.execute('''
-                SELECT * FROM interfaces WHERE path = ? AND method = ?
-            ''', (full_path, method))
-            interface = cursor.fetchone()
-            
-            if not interface:
-                logger.warning(f'Interface {method} {full_path} not found for sid: {request.sid}')
-                emit('dynamic_response', {
-                    'code': 404,
-                    'message': f'接口 {method} {full_path} 不存在',
-                    'data': None
-                })
-                return
-            
-            # 获取Mock配置
-            cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface[0],))
-            mock_config = cursor.fetchone()
-            
-            if not mock_config or not mock_config[2]:
-                logger.warning(f'Mock service not enabled for interface {method} {full_path}, sid: {request.sid}')
-                emit('dynamic_response', {
-                    'code': 500,
-                    'message': '该接口的Mock服务未启用',
-                    'data': None
-                })
-                return
-            
-            # 优先使用请求中的mock_count，否则使用数据库默认值
-            request_mock_count = data.get('mock_count')
-            mock_count = int(request_mock_count) if request_mock_count else mock_config[3]
-            logger.debug('Using mock_count: %d for interface %s %s', mock_count, method, full_path)
-            
-            # 获取响应字段
-            cursor.execute('SELECT * FROM interface_responses WHERE interface_id = ?', (interface[0],))
-            response_fields = cursor.fetchall()
-            logger.debug('Found %d response fields for interface %s %s', len(response_fields), method, full_path)
-            
-            # 生成Mock数据
-            mock_data = []
-            for _ in range(mock_count):
-                data_item = {}
-                if response_fields:
-                    for field in response_fields:
-                        data_item[field[1]] = generate_mock_value(field[2])
-                else:
-                    # 如果没有响应字段，生成默认的mock数据
-                    data_item['id'] = str(uuid.uuid4())
-                    data_item['message'] = f'Success response from {full_path}'
-                    data_item['status'] = 'success'
-                    data_item['timestamp'] = datetime.now().isoformat()
-                    data_item['random_data'] = generate_mock_value('string')
-                    data_item['random_number'] = generate_mock_value('int')
-                    data_item['random_boolean'] = generate_mock_value('boolean')
-                mock_data.append(data_item)
-            
-            # 发送响应
-            emit('dynamic_response', {
-                'code': 0,
-                'message': 'success',
-                'data': mock_data
-            })
-            logger.info('Successfully handled dynamic_interface request: %s %s for sid: %s', method, full_path, request.sid)
-        except Exception as e:
-            logger.error(f'Error handling dynamic interface via WebSocket for sid: {request.sid}: {type(e).__name__}: {e}')
-            import traceback
-            traceback.print_exc()
-            # 确保发送错误响应
-            try:
-                emit('dynamic_response', {
-                    'code': 500,
-                    'message': f'处理动态接口失败: {str(e)}',
-                    'data': None
-                })
-            except Exception as emit_error:
-                logger.error(f'Error emitting dynamic response for sid: {request.sid}: {emit_error}')
-        finally:
-            if conn:
-                conn.close()
 
 # API路由：动态接口请求（带/dynamic前缀）
 @app.route('/dynamic/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'])
@@ -1152,17 +1109,6 @@ def health_check():
         'version': '1.0.0'
     })
 
-# WebSocket状态检查路由
-@app.route('/websocket-status', methods=['GET'])
-def websocket_status():
-    """返回WebSocket服务状态"""
-    return jsonify({
-        'available': socketio is not None,
-        'async_mode': 'threading' if socketio else None,
-        'version': '1.0.0',
-        'status': 'available' if socketio else 'unavailable'
-    })
-
 # 调试端点
 @app.route('/debug', methods=['GET'])
 def debug_info():
@@ -1171,9 +1117,76 @@ def debug_info():
         'frontend_dir': FRONTEND_DIR,
         'frontend_exists': os.path.exists(FRONTEND_DIR),
         'index_exists': os.path.exists(os.path.join(FRONTEND_DIR, 'index.html')),
-        'app_version': config.APP_VERSION,
-        'websocket_available': socketio is not None
+        'app_version': config.APP_VERSION
     })
+
+# 日志查询接口
+@app.route('/logs', methods=['GET'])
+def get_request_logs():
+    """获取请求日志"""
+    try:
+        # 获取查询参数
+        interface_id = request.args.get('interface_id', type=int)
+        limit = request.args.get('limit', 100, type=int)
+        offset = request.args.get('offset', 0, type=int)
+        
+        conn = sqlite3.connect(DATABASE)
+        cursor = conn.cursor()
+        
+        # 构建查询语句
+        query = """
+            SELECT rl.id, rl.interface_id, rl.method, rl.path, rl.params, 
+                   rl.headers, rl.response_status, rl.response_body, 
+                   rl.execution_time, rl.request_time, 
+                   i.name as interface_name
+            FROM request_logs rl
+            LEFT JOIN interfaces i ON rl.interface_id = i.id
+        """
+        
+        # 添加WHERE条件
+        where_conditions = []
+        params = []
+        
+        if interface_id:
+            where_conditions.append("rl.interface_id = ?")
+            params.append(interface_id)
+        
+        if where_conditions:
+            query += " WHERE " + " AND ".join(where_conditions)
+        
+        # 添加排序和分页
+        query += " ORDER BY rl.request_time DESC LIMIT ? OFFSET ?"
+        params.extend([limit, offset])
+        
+        cursor.execute(query, params)
+        logs = cursor.fetchall()
+        
+        # 转换结果
+        result = []
+        for log in logs:
+            result.append({
+                'id': log[0],
+                'interface_id': log[1],
+                'method': log[2],
+                'path': log[3],
+                'params': log[4],
+                'headers': log[5],
+                'response_status': log[6],
+                'response_body': log[7],
+                'execution_time': log[8],
+                'request_time': log[9],
+                'interface_name': log[10]
+            })
+        
+        conn.close()
+        
+        return jsonify(result)
+    except Exception as e:
+        logger.error(f"获取请求日志失败: {e}")
+        return jsonify({
+            'code': 500,
+            'message': f'获取请求日志失败: {str(e)}'
+        }), 500
 
 # 前端资源路由
 @app.route('/')
@@ -1223,90 +1236,442 @@ def static_files(filename):
 
 # 处理动态请求的通用函数
 def handle_dynamic_request(path):
-    full_path = f"/{path}"
-    method = request.method
-    
-    conn = sqlite3.connect(DATABASE)
-    cursor = conn.cursor()
-    
-    # 查找匹配的接口
-    cursor.execute('''
-        SELECT * FROM interfaces WHERE path = ? AND method = ?
-    ''', (full_path, method))
-    interface = cursor.fetchone()
-    
-    if not interface:
-        conn.close()
-        return jsonify({
-            'code': 404,
-            'message': f'接口 {method} {full_path} 不存在',
-            'data': None
-        })
-    
-    # 获取Mock配置
-    cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface[0],))
-    mock_config = cursor.fetchone()
-    
-    if not mock_config or not mock_config[2]:
-        conn.close()
-        return jsonify({
-            'code': 500,
-            'message': '该接口的Mock服务未启用',
-            'data': None
-        })
-    
-    # 获取请求参数
-    params = {}
-    mock_count = mock_config[3]
-    
-    # 解析请求参数
-    if method == 'GET':
-        # 处理GET请求参数
-        get_params = request.args.to_dict()
+    try:
+        # 类型检查：确保path是字符串
+        if not isinstance(path, str):
+            logger.error(f"Invalid path type: {type(path).__name__}")
+            return jsonify({
+                'code': 400,
+                'message': '无效的请求路径',
+                'data': None
+            })
         
-        # 提取并解析params
-        if 'params' in get_params:
-            try:
-                params = json.loads(get_params['params'])
-            except json.JSONDecodeError:
-                params = {}
-    else:
-        # 处理非GET请求
+        full_path = f"/{path}"
+        method = request.method
+        
+        # 类型检查：确保method是字符串
+        if not isinstance(method, str):
+            logger.error(f"Invalid method type: {type(method).__name__}")
+            return jsonify({
+                'code': 400,
+                'message': '无效的请求方法',
+                'data': None
+            })
+        
+        conn = None
+        cursor = None
+        
         try:
-            request_data = request.get_json() or {}
-            params = request_data.get('params', {})
-        except:
-            params = {}
+            conn = sqlite3.connect(DATABASE)
+            cursor = conn.cursor()
+        except Exception as e:
+            logger.error(f"Database connection error: {type(e).__name__}: {e}")
+            return jsonify({
+                'code': 500,
+                'message': '数据库连接失败',
+                'data': None
+            })
     
-    # 获取响应字段
-    cursor.execute('SELECT * FROM interface_responses WHERE interface_id = ?', (interface[0],))
-    response_fields = cursor.fetchall()
-    
-    conn.close()
-    
-    # 生成Mock数据
-    mock_data = []
-    for _ in range(mock_count):
-        data = {}
-        if response_fields:
-            for field in response_fields:
-                data[field[1]] = generate_mock_value(field[2])
+        # 查找匹配的接口
+        cursor.execute('''
+            SELECT * FROM interfaces WHERE path = ? AND method = ?
+        ''', (full_path, method))
+        interface = cursor.fetchone()
+        
+        if not interface:
+            conn.close()
+            return jsonify({
+                'code': 404,
+                'message': f'接口 {method} {full_path} 不存在',
+                'data': None
+            })
+        
+        # 获取Mock配置
+        cursor.execute('SELECT * FROM mock_configs WHERE interface_id = ?', (interface[0],))
+        mock_config = cursor.fetchone()
+        
+        if not mock_config or not mock_config[2]:
+            conn.close()
+            return jsonify({
+                'code': 500,
+                'message': '该接口的Mock服务未启用',
+                'data': None
+            })
+        
+        # 获取请求参数
+        params = {}
+        mock_count = mock_config[3]
+        
+        # 解析请求参数
+        if method == 'GET':
+            # 处理GET请求参数
+            get_params = request.args.to_dict()
+            
+            # 提取并解析params
+            if 'params' in get_params:
+                try:
+                    params = json.loads(get_params['params'])
+                except json.JSONDecodeError:
+                    params = {}
+            
+            # 提取mock_count参数
+            if 'mock_count' in get_params:
+                try:
+                    mock_count = int(get_params['mock_count'])
+                except (ValueError, TypeError):
+                    pass
         else:
-            # 如果没有响应字段，生成默认的mock数据
-            data['id'] = str(uuid.uuid4())
-            data['message'] = f'Success response from {full_path}'
-            data['status'] = 'success'
-            data['timestamp'] = datetime.now().isoformat()
-            data['random_data'] = generate_mock_value('string')
-            data['random_number'] = generate_mock_value('int')
-            data['random_boolean'] = generate_mock_value('boolean')
-        mock_data.append(data)
-    
-    return jsonify({
-        'code': 0,
-        'message': 'success',
-        'data': mock_data
-    })
+            # 处理非GET请求
+            try:
+                request_data = request.get_json() or {}
+                params = request_data.get('params', {})
+                # 提取mock_count参数
+                if 'mock_count' in request_data:
+                    try:
+                        mock_count = int(request_data['mock_count'])
+                    except (ValueError, TypeError):
+                        pass
+            except:
+                params = {}
+        
+        # 获取响应字段
+        cursor.execute('SELECT * FROM interface_responses WHERE interface_id = ?', (interface[0],))
+        response_fields = cursor.fetchall()
+        
+        conn.close()
+        
+        # 树形结构解析和递归生成Mock数据
+        def build_field_tree(fields):
+            """构建字段树形结构"""
+            tree = {}
+            
+            # 打印所有字段信息，用于调试
+            print("=== 所有响应字段 ===")
+            for field in fields:
+                print(f"字段名: {field[1]}, 类型: {field[2]}, 描述: {field[3]}")
+            
+            # 先创建所有字段的映射，用于后续处理
+            field_map = {}
+            for field in fields:
+                field_name = field[1]
+                field_type = field[2]
+                field_desc = field[3]
+                field_map[field_name] = (field_type, field_desc)
+            
+            # 检查是否存在[A.[].XXX]模式的字段
+            def is_field_array(field_name):
+                """检查字段是否应该是数组"""
+                # 1. 检查字段描述是否包含"数组"
+                for full_name, (ft, fd) in field_map.items():
+                    if full_name == field_name:
+                        if '数组' in (fd or ''):
+                            return True
+                
+                # 2. 检查是否存在[A.[].XXX]模式 (对象数组)
+                for full_name in field_map:
+                    if f"{field_name}[]" in full_name:
+                        return True
+                
+                # 3. 检查是否存在[A[]]模式 (字符串数组)
+                if f"{field_name}[]" in field_map:
+                    return True
+                
+                return False
+            
+            # 检查是否存在[A.XXX]模式的字段
+            def is_field_object(field_name):
+                """检查字段是否应该是对象"""
+                # 1. 优先检查是否存在[A.XXX]模式
+                for full_name in field_map:
+                    if f"{field_name}." in full_name:
+                        return True
+                
+                # 2. 检查字段类型是否是object
+                for full_name, (ft, fd) in field_map.items():
+                    if full_name == field_name and ft == 'object':
+                        return True
+                
+                return False
+            
+            for field in fields:
+                field_name = field[1]
+                field_type = field[2]
+                field_desc = field[3]
+                
+                # 处理数组标记，如body[] -> body
+                array_field = field_name
+                is_array = False
+                # 检查是否有数组标记
+                has_array_mark = '[]' in field_name
+                if has_array_mark:
+                    array_field = field_name.replace('[]', '')
+                    is_array = True
+                
+                # 检查描述是否包含数组
+                is_array_from_desc = '数组' in (field_desc or '')
+                is_array = is_array or is_array_from_desc
+                
+                print(f"\n处理字段: {field_name}")
+                print(f"数组标记: {is_array}")
+                print(f"处理后字段名: {array_field}")
+                print(f"是否有数组标记: {has_array_mark}")
+                
+                # 处理嵌套字段
+                if '.' in array_field:
+                    parts = array_field.split('.')
+                    current = tree
+                    
+                    for i, part in enumerate(parts):
+                        if part not in current:
+                            current[part] = {
+                                'is_array': False,
+                                'type': None,
+                                'desc': None,
+                                'children': {}
+                            }
+                        
+                        # 检查当前字段是否应该是数组
+                        current_is_array = is_field_array(part)
+                        print(f"  检查字段: {part}, 是否为数组: {current_is_array}")
+                        
+                        # 检查当前字段是否应该是对象
+                        is_object = is_field_object(part)
+                        print(f"  检查字段: {part}, 是否为对象: {is_object}")
+                        
+                        # 更新当前节点的属性
+                        current[part]['is_array'] = current[part]['is_array'] or current_is_array
+                        if is_object:
+                            current[part]['type'] = 'object'
+                        
+                        # 更新类型和描述
+                        if field_type and i == len(parts) - 1:
+                            current[part]['type'] = field_type
+                        if field_desc and i == len(parts) - 1:
+                            current[part]['desc'] = field_desc
+                        
+                        current = current[part]['children']
+                else:
+                    # 顶级字段
+                    # 检查是否应该是数组
+                    is_array = is_array or is_field_array(array_field)
+                    
+                    # 检查是否应该是对象
+                    is_object = is_field_object(array_field)
+                    
+                    if array_field not in tree:
+                        # 确定字段类型
+                        field_type_final = field_type
+                        if is_object:
+                            field_type_final = 'object'
+                        elif field_type_final is None:
+                            field_type_final = 'string'
+                        
+                        tree[array_field] = {
+                            'is_array': is_array,
+                            'type': field_type_final,
+                            'desc': field_desc,
+                            'children': {}
+                        }
+                        print(f"  创建顶级字段: {array_field}, 数组标记: {is_array}, 对象标记: {is_object}, 类型: {field_type_final}")
+                    else:
+                        # 更新已存在的字段信息
+                        tree[array_field]['is_array'] = tree[array_field]['is_array'] or is_array
+                        
+                        # 检查是否应该是对象
+                        if is_object:
+                            tree[array_field]['type'] = 'object'
+                        
+                        if field_type:
+                            tree[array_field]['type'] = field_type
+                        if field_desc:
+                            tree[array_field]['desc'] = field_desc
+                        print(f"  更新顶级字段: {array_field}, 数组标记: {tree[array_field]['is_array']}, 对象标记: {is_object}")
+            
+            # 打印构建的字段树，用于调试
+            print("\n=== 构建的字段树 ===")
+            import json
+            print(json.dumps(tree, indent=2, ensure_ascii=False))
+            
+            return tree
+        
+        def generate_mock_from_tree(node, mock_count, field_name=None):
+            """从树形结构递归生成Mock数据"""
+            # 检查字段是否应该是数组
+            should_be_array = False
+            
+            # 1. 检查字段本身是否标记为数组
+            if node['is_array']:
+                should_be_array = True
+            # 2. 检查字段描述是否包含数组
+            elif '数组' in (node.get('desc') or ''):
+                should_be_array = True
+            # 3. 检查字段名是否包含[]
+            elif field_name and '[]' in field_name:
+                should_be_array = True
+            
+            if should_be_array:
+                # 生成数组
+                result = []
+                for _ in range(mock_count):
+                    if node['children']:
+                        # 有子字段，生成对象数组
+                        item = {}
+                        for child_name, child_node in node['children'].items():
+                            item[child_name] = generate_mock_from_tree(child_node, mock_count, child_name)
+                        result.append(item)
+                    else:
+                        # 无子字段，生成简单类型数组
+                        result.append(generate_mock_value(node['type']))
+                return result
+            else:
+                if node['children']:
+                    # 生成对象，即使字段类型定义为string
+                    result = {}
+                    for child_name, child_node in node['children'].items():
+                        result[child_name] = generate_mock_from_tree(child_node, mock_count, child_name)
+                    return result
+                else:
+                    # 生成简单值
+                    return generate_mock_value(node['type'])
+        
+        # 生成Mock数据
+        if response_fields:
+            # 构建字段树
+            field_tree = build_field_tree(response_fields)
+            
+            # 生成Mock数据
+            mock_data = {}
+            
+            # 处理顶级字段
+            for field_name, field_node in field_tree.items():
+                if field_name == 'code':
+                    # 特殊处理code字段
+                    mock_data[field_name] = 0
+                else:
+                    mock_data[field_name] = generate_mock_from_tree(field_node, mock_count, field_name)
+            
+            # 确保包含所有必需的顶级字段
+            if 'code' not in mock_data:
+                mock_data['code'] = 0  # 使用数字0
+            # 保留message字段，尊重响应参数定义
+        else:
+            # 如果没有响应字段，生成默认的mock数据，使用{code:0,data:[{}]}格式
+            mock_data = {}
+            mock_data['code'] = 0  # 使用数字0
+            
+            # 生成data数组
+            data_array = []
+            for _ in range(mock_count):
+                data_item = {
+                    'id': str(uuid.uuid4()),
+                    'timestamp': datetime.now().isoformat(),
+                    'random_data': generate_mock_value('string'),
+                    'random_number': generate_mock_value('int'),
+                    'random_boolean': generate_mock_value('boolean')
+                }
+                data_array.append(data_item)
+            
+            mock_data['data'] = data_array
+        
+        # 清理响应数据，确保结构正确
+        def clean_response_data(data):
+            """清理响应数据，确保结构正确"""
+            if isinstance(data, dict):
+                for key, value in data.items():
+                    if isinstance(value, dict):
+                        data[key] = clean_response_data(value)
+                    elif isinstance(value, list):
+                        cleaned_list = []
+                        for item in value:
+                            if isinstance(item, dict):
+                                cleaned_list.append(clean_response_data(item))
+                            else:
+                                cleaned_list.append(item)
+                        data[key] = cleaned_list
+            return data
+        
+        # 清理响应数据
+        mock_data = clean_response_data(mock_data)
+        
+        # 标准化响应数据
+        standardized_data = standardize_response(mock_data)
+        
+        # 记录请求日志
+        try:
+            conn = sqlite3.connect(DATABASE)
+            cursor = conn.cursor()
+            
+            # 准备日志数据
+            request_time = datetime.now().isoformat()
+            params_json = json.dumps(params, ensure_ascii=False)
+            headers_json = json.dumps(dict(request.headers), ensure_ascii=False)
+            response_body = json.dumps(standardized_data, ensure_ascii=False)
+            response_status = 200
+            
+            # 插入日志记录
+            cursor.execute('''
+                INSERT INTO request_logs (interface_id, method, path, params, headers, response_status, response_body, request_time)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (interface[0], method, full_path, params_json, headers_json, response_status, response_body, request_time))
+            
+            conn.commit()
+            conn.close()
+        except Exception as log_error:
+            logger.error(f"记录请求日志失败: {log_error}")
+        
+        # 返回响应，直接返回响应参数定义的结构，不添加额外层级
+        return jsonify(standardized_data)
+    except Exception as e:
+        # 捕获详细错误信息
+        import traceback
+        error_info = traceback.format_exc()
+        logger.error(f"处理动态接口失败: {str(e)}")
+        logger.error(f"详细错误信息: {error_info}")
+        
+        # 分类处理不同类型的错误
+        error_message = "处理动态接口失败"
+        error_details = ""
+        
+        try:
+            error_type = type(e).__name__
+            
+            if "'str' object does not support item assignment" in str(e):
+                error_message = "处理动态接口失败: 类型错误，字符串对象不支持项赋值操作"
+                error_details = "字符串对象不支持项赋值操作，可能是由于响应字段定义不正确导致的。请检查接口的响应字段定义，确保字段名和字段类型都是正确的格式。"
+            elif isinstance(e, (KeyError, IndexError)):
+                error_message = f"处理动态接口失败: 访问错误 - {str(e)}"
+                error_details = "访问数据结构时发生错误，可能是由于字段路径不存在或索引越界导致的。请检查接口的响应字段定义。"
+            elif isinstance(e, TypeError):
+                error_message = f"处理动态接口失败: 类型错误 - {str(e)}"
+                error_details = "类型错误，可能是由于数据类型不匹配导致的。请检查接口的响应字段定义和类型设置。"
+            elif isinstance(e, ValueError):
+                error_message = f"处理动态接口失败: 值错误 - {str(e)}"
+                error_details = "值错误，可能是由于参数值不正确导致的。请检查接口的请求参数和响应字段定义。"
+            else:
+                error_message = f"处理动态接口失败: {str(e)}"
+                error_details = error_info[:500]  # 限制错误详情长度
+        except Exception as inner_e:
+            logger.error(f"处理错误信息时发生异常: {str(inner_e)}")
+            error_message = "处理动态接口失败"
+            error_details = "未知错误"
+        
+        # 返回标准化的错误响应
+        error_response = {
+            'code': 500,
+            'message': error_message
+        }
+        
+        # 开发环境下返回详细错误信息
+        if app.debug:
+            error_response['error_type'] = type(e).__name__
+            error_response['error_message'] = error_message
+            error_response['error_details'] = error_details
+        
+        # 确保错误响应包含message字段
+        if 'message' not in error_response:
+            error_response['message'] = error_message
+        
+        return jsonify(error_response), 500
 
 # API路由：动态接口请求（直接路径，无前缀） - 放在静态文件路由之后
 @app.route('/<path:path>', methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'])
@@ -1335,98 +1700,42 @@ def open_browser(host, port):
         browser_host = host if host != '0.0.0.0' else 'localhost'
         print(f"自动打开浏览器失败，请手动访问 http://{browser_host}:{port}")
 
-# 端口可用性检测函数
-def is_port_available(port, host='0.0.0.0'):
-    """
-    检测指定端口是否可用
-    :param port: 要检测的端口
-    :param host: 要检测的主机，默认0.0.0.0
-    :return: 端口是否可用，可用返回True，否则返回False
-    """
-    import socket
-    try:
-        # 创建socket对象
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            # 设置超时时间为1秒
-            s.settimeout(1)
-            # 尝试绑定端口
-            s.bind((host, port))
-            return True
-    except (socket.error, OSError):
-        return False
-
 if __name__ == '__main__':
+    # 解析命令行参数
     parser = argparse.ArgumentParser(description='动态接口生成工具')
-    parser.add_argument('--port', type=int, default=config.MOCK_SERVER_PORT, help='服务器端口，默认8000')
-    parser.add_argument('--host', type=str, default=config.MOCK_SERVER_HOST, help='服务器主机，默认0.0.0.0')
+    parser.add_argument('--host', type=str, default='127.0.0.1', help='服务器监听地址')
+    parser.add_argument('--port', type=int, default=8008, help='服务器监听端口')
+    parser.add_argument('--debug', action='store_true', help='启用调试模式')
     parser.add_argument('--no-browser', action='store_true', help='不自动打开浏览器')
     args = parser.parse_args()
     
-    # 检测指定端口是否可用，如果不可用，自动寻找下一个可用端口
-    original_port = args.port
-    max_attempts = 100  # 最多尝试100个端口
-    for attempt in range(max_attempts):
-        if is_port_available(args.port, args.host):
-            # 端口可用，使用该端口
-            break
-        else:
-            # 端口不可用，尝试下一个端口
-            logger.warning(f"端口 {args.port} 已被占用，尝试下一个可用端口")
-            print(f"端口 {args.port} 已被占用，尝试下一个可用端口...")
-            args.port += 1
+    # 设置调试模式
+    app.debug = args.debug
     
-    # 如果尝试了max_attempts个端口都不可用，退出应用
-    if attempt >= max_attempts - 1 and not is_port_available(args.port, args.host):
-        logger.error(f"无法找到可用端口，已尝试从 {original_port} 到 {args.port} 共 {max_attempts} 个端口")
-        print(f"无法找到可用端口，已尝试从 {original_port} 到 {args.port} 共 {max_attempts} 个端口")
-        sys.exit(1)
+    # 打印启动信息
+    print(f"动态接口生成工具启动中...")
+    print(f"监听地址: {args.host}")
+    print(f"监听端口: {args.port}")
+    print(f"调试模式: {args.debug}")
+    print(f"前端资源目录: {FRONTEND_DIR}")
+    print(f"上传文件目录: {UPLOAD_DIR}")
+    print(f"数据库路径: {DATABASE}")
+    print(f"日志文件: {config.LOG_FILE}")
+    print(f"\n服务启动后，请访问: http://{args.host}:{args.port}")
     
-    # 如果使用了不同的端口，打印提示信息
-    if args.port != original_port:
-        logger.info(f"已切换到可用端口 {args.port}")
-        print(f"已切换到可用端口 {args.port}\n")
+    # 启动后台线程自动打开浏览器
+    if not args.no_browser:
+        browser_thread = threading.Thread(target=open_browser, args=(args.host, args.port))
+        browser_thread.daemon = True
+        browser_thread.start()
     
-    # 启动应用前先打印访问地址
-    access_url = f'http://{args.host}:{args.port}'
-    logger.info(f"应用即将启动，访问地址: {access_url}")
-    print(f"\n应用即将启动...")
-    print(f"访问地址: {access_url}")
-    print(f"按 Ctrl+C 停止应用\n")
-    
+    # 启动服务器
     try:
-        # 自动打开浏览器（使用线程，避免阻塞）
-        if not args.no_browser:
-            # 使用线程打开浏览器，在服务器启动后3秒打开
-            browser_thread = threading.Thread(target=open_browser, args=(args.host, args.port))
-            browser_thread.daemon = True  # 设置为守护线程，随主线程退出而退出
-            browser_thread.start()
-        
-        # 启动应用，确保使用正确的参数
-        print(f"启动应用，监听 {args.host}:{args.port}")
-        print(f"应用正在运行中...")
-        print(f"访问地址: http://{args.host}:{args.port}")
-        print(f"按 Ctrl+C 停止应用\n")
-        # 根据SocketIO初始化情况选择启动方式
-        if socketio is not None:
-            # 使用socketio.run()替代app.run()以支持WebSocket
-            socketio.run(app, host=args.host, port=args.port, debug=False, use_reloader=False)
-        else:
-            # 如果SocketIO初始化失败，使用app.run()启动应用
-            app.run(host=args.host, port=args.port, debug=False, use_reloader=False, threaded=True)
+        app.run(host=args.host, port=args.port, threaded=True)
     except KeyboardInterrupt:
-        print("\n应用已被用户中断")
+        print("\n服务已停止")
+        sys.exit(0)
     except Exception as e:
-        print(f"\n应用启动失败，错误信息: {e}")
-        logger.error(f"应用启动失败: {e}")
-        import traceback
-        traceback.print_exc()
-    finally:
-        # 应用停止后的提示信息
-        print("\n应用已停止运行")
-        print("如果您想再次运行应用，请重新双击可执行文件")
-        print("按任意键退出...")
-        # 使用try-except块，防止在非控制台环境下input()函数报错
-        try:
-            input()
-        except:
-            pass
+        print(f"启动服务器失败: {e}")
+        logger.error(f"启动服务器失败: {e}")
+        sys.exit(1)

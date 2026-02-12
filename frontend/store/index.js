@@ -118,13 +118,13 @@ export default new Vuex.Store({
     // 加载请求日志
     async loadRequestLogs({ commit }, interfaceId = null) {
       try {
-        // 日志功能尚未实现，暂时返回空数组
-        commit('SET_REQUEST_LOGS', [])
-        // const url = interfaceId ? `/api/logs?interface_id=${interfaceId}` : '/api/logs'
-        // const response = await this._vm.$axios.get(url)
-        // commit('SET_REQUEST_LOGS', response.data)
+        // 调用后端API获取请求日志
+        const url = interfaceId ? `/logs?interface_id=${interfaceId}` : '/logs'
+        const response = await this._vm.$axios.get(url)
+        commit('SET_REQUEST_LOGS', response.data)
       } catch (error) {
         console.error('加载请求日志失败:', error)
+        commit('SET_REQUEST_LOGS', [])
       }
     },
     

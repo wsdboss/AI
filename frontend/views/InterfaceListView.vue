@@ -51,10 +51,9 @@
                 </div>
                 <div class="interface-path">{{ intf.path }}</div>
                 <div class="interface-tags">
-                  <el-tag :type="intf.is_websocket ? 'primary' : 'success'" size="mini">
-                    <i v-if="intf.is_websocket" class="el-icon-link"></i>
-                    <i v-else class="el-icon-document"></i>
-                    {{ intf.is_websocket ? 'WebSocket' : 'HTTP' }}
+                  <el-tag type="success" size="mini">
+                    <i class="el-icon-document"></i>
+                    HTTP
                   </el-tag>
                 </div>
               </div>

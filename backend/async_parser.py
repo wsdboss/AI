@@ -8,6 +8,266 @@ import json
 from datetime import datetime
 import sys
 
+# 导入工具函数
+from utils import (
+    safe_get,
+    safe_set,
+    ensure_type,
+    standardize_response,
+    normalize_data_structure,
+    process_item,
+    extract_field,
+    safe_get_varargs
+)
+
+class DynamicInterfaceHandler:
+    """动态接口处理器"""
+    
+    @staticmethod
+    def process_response(response, expected_structure=None):
+        """处理各种可能的响应格式
+        
+        Args:
+            response: 原始响应数据
+            expected_structure: 预期的数据结构（可选）
+            
+        Returns:
+            标准化后的响应数据
+        """
+        
+        # 1. 标准化响应为字典
+        if isinstance(response, str):
+            try:
+                import json
+                response = json.loads(response)
+            except:
+                response = {"raw": response}
+        
+        # 2. 检查是否为列表响应（有些API直接返回列表）
+        if isinstance(response, list):
+            return {
+                "code": "0",
+                "message": "success",
+                "data": response
+            }
+        
+        # 3. 确保有必要的字段
+        if not isinstance(response, dict):
+            return {
+                "code": "-1",
+                "message": "响应不是有效的JSON对象",
+                "data": None
+            }
+        
+        # 4. 处理data字段
+        data = response.get("data")
+        
+        # 如果data不存在，使用整个响应作为data
+        if data is None:
+            data = response
+        
+        # 确保data是列表（如果不是，包装成列表）
+        if not isinstance(data, list):
+            if data is None:
+                data = []
+            else:
+                data = [data]
+        
+        # 5. 返回标准化响应
+        return {
+            "code": response.get("code", "0"),
+            "message": response.get("message", "success"),
+            "data": data
+        }
+    
+    @staticmethod
+    def extract_data(response, path):
+        """
+        按路径提取数据
+        path: 路径字符串，如 "data[0].name" 或 "data.0.detail.0.id"
+        """
+        if isinstance(response, str):
+            try:
+                import json
+                response = json.loads(response)
+            except:
+                return None
+        
+        # 转换路径表示法
+        # 将 "data[0].name" 转换为 ["data", 0, "name"]
+        import re
+        parts = re.split(r'[\.\[\]]+', path)
+        parts = [p for p in parts if p]  # 移除空字符串
+        
+        # 转换为适当的类型
+        typed_parts = []
+        for part in parts:
+            if part.isdigit():
+                typed_parts.append(int(part))
+            else:
+                typed_parts.append(part)
+        
+        # 安全获取
+        return safe_get_varargs(response, *typed_parts)
+
+def handle_product_group_response(response):
+    """
+    专门处理产品/管理组接口响应
+    根据你提供的接口文档结构
+    """
+    
+    try:
+        # 解析响应
+        if isinstance(response, str):
+            import json
+            response = json.loads(response)
+        
+        # 检查基础字段
+        if not isinstance(response, dict):
+            return {"code": "-1", "message": "响应格式错误", "data": None}
+        
+        code = response.get("code")
+        message = response.get("message", "")
+        data = response.get("data")
+        
+        # 处理data字段
+        processed_data = []
+        
+        if isinstance(data, list):
+            # data是列表：遍历每个产品组
+            for product_group in data:
+                if isinstance(product_group, dict):
+                    # 安全提取字段
+                    processed_group = {
+                        "rid": product_group.get("rid", ""),
+                        "type": product_group.get("type", ""),
+                        "name": product_group.get("name", ""),
+                        "isShow": product_group.get("isShow", "0")
+                    }
+                    
+                    # 处理detail字段（可能是列表或字符串）
+                    detail = product_group.get("detail")
+                    if isinstance(detail, list):
+                        processed_group["detail"] = detail
+                    elif isinstance(detail, str):
+                        # 如果detail是字符串，尝试解析
+                        try:
+                            processed_group["detail"] = json.loads(detail)
+                        except:
+                            processed_group["detail"] = []
+                    else:
+                        processed_group["detail"] = []
+                    
+                    processed_data.append(processed_group)
+        
+        elif isinstance(data, dict):
+            # 如果data是单个字典，转换为列表
+            processed_data = [data]
+        
+        return {
+            "code": code,
+            "message": message,
+            "data": processed_data,
+            "count": len(processed_data)
+        }
+        
+    except Exception as e:
+        return {
+            "code": "-1",
+            "message": f"处理失败: {str(e)}",
+            "data": None
+        }
+
+def process_api_response(response_data):
+    """正确处理API响应数据
+    
+    Args:
+        response_data: API响应数据，可以是字典或字符串
+        
+    Returns:
+        处理后的响应数据
+    """
+    import json
+    
+    try:
+        # 确保是字典类型
+        if isinstance(response_data, str):
+            response_data = json.loads(response_data)
+        
+        # 检查响应结构
+        if not isinstance(response_data, dict):
+            return {"error": "响应不是有效的字典"}
+        
+        if "data" not in response_data:
+            return {"error": "响应缺少data字段"}
+        
+        data_field = response_data["data"]
+        
+        # 判断data字段的类型
+        if isinstance(data_field, list):
+            # data是列表：需要遍历
+            processed_items = []
+            for item in data_field:  # 使用for循环遍历列表
+                if isinstance(item, dict):
+                    # 处理每个字典项
+                    processed_item = {
+                        "id": item.get("id"),
+                        "name": item.get("name", "未知")
+                    }
+                    processed_items.append(processed_item)
+            return processed_items
+            
+        elif isinstance(data_field, dict):
+            # data是字典：可以直接访问
+            return {
+                "id": data_field.get("id"),
+                "name": data_field.get("name", "未知")
+            }
+        
+        else:
+            return {"error": f"data字段类型不支持: {type(data_field)}"}
+    except Exception as e:
+        return {"error": f"处理响应失败: {str(e)}"}
+
+def standardize_response(response):
+    """
+    将各种格式的响应标准化为统一格式
+    
+    Args:
+        response: 原始响应数据
+        
+    Returns:
+        标准化后的响应数据
+    """
+    import json
+    
+    try:
+        # 1. 确保是字典类型
+        if isinstance(response, str):
+            response = json.loads(response)
+        
+        # 2. 确保有基础字段
+        if not isinstance(response, dict):
+            response = {"data": response}
+        
+        # 3. 确保data字段是列表（统一处理方式）
+        data = response.get("data")
+        if not isinstance(data, list):
+            data = [data] if data is not None else []
+        
+        return {
+            "code": response.get("code", "0"),
+            "message": response.get("message", "success"),
+            "data": data
+        }
+    except Exception as e:
+        # 处理异常情况
+        return {
+            "code": "-1",
+            "message": f"处理失败: {str(e)}",
+            "data": []
+        }
+
 # 获取当前目录（支持打包后运行）
 if getattr(sys, 'frozen', False):
     # 打包后运行
@@ -142,31 +402,81 @@ def parse_file_async(file_id, file_path, file_name, file_content_type):
         
         # 尝试直接解析JSON内容
         try:
-            # 尝试解析JSON文件
-            json_data = json.loads(content)
-            
-            # 尝试解析Swagger/OpenAPI规范
-            if 'paths' in json_data:
-                print("检测到Swagger/OpenAPI规范的JSON文件")
-                swagger_data = json_data
-                
-                # 遍历所有路径
-                for path, methods in json_data['paths'].items():
-                    # 遍历该路径下的所有请求方法
-                    for method, details in methods.items():
-                        # 只处理HTTP方法
-                        if method in ['get', 'post', 'put', 'delete', 'patch']:
-                            method = method.upper()
-                            # 提取接口名称
-                            name = details.get('summary', f'{method} {path}')
-                            # 添加到匹配结果中，使用特殊的标记表示这是从JSON解析的
-                            interface_matches.append((None, name, method, path, swagger_data, details))
+            # 类型检查：确保content是字符串
+            if not isinstance(content, str):
+                print(f"Invalid content type: {type(content).__name__}")
+                # 继续使用Markdown解析
+                pass
             else:
-                print("JSON文件格式不支持，尝试Markdown解析")
-                # 即使是JSON文件，也继续执行Markdown解析的逻辑，确保能提取到接口
-        except json.JSONDecodeError:
-            print("JSON解析失败，尝试Markdown解析")
+                print(f"Attempting to parse JSON content, length: {len(content)}")
+                # 尝试解析JSON文件
+                json_data = json.loads(content)
+                
+                # 类型检查：确保json_data是字典
+                if not isinstance(json_data, dict):
+                    print(f"Invalid json_data type: {type(json_data).__name__}")
+                    # 继续使用Markdown解析
+                    pass
+                else:
+                    # 尝试解析Swagger/OpenAPI规范
+                    if 'paths' in json_data:
+                        print("检测到Swagger/OpenAPI规范的JSON文件")
+                        swagger_data = json_data
+                        
+                        # 类型检查：确保paths是字典
+                        if isinstance(json_data['paths'], dict):
+                            # 遍历所有路径
+                            for path, methods in json_data['paths'].items():
+                                # 类型检查：确保path是字符串
+                                if not isinstance(path, str):
+                                    print(f"Invalid path type: {type(path).__name__}")
+                                    continue
+                                
+                                # 类型检查：确保methods是字典
+                                if not isinstance(methods, dict):
+                                    print(f"Invalid methods type: {type(methods).__name__}")
+                                    continue
+                                
+                                # 遍历该路径下的所有请求方法
+                                for method, details in methods.items():
+                                    try:
+                                        # 类型检查：确保method是字符串
+                                        if not isinstance(method, str):
+                                            print(f"Invalid method type: {type(method).__name__}")
+                                            continue
+                                        
+                                        # 类型检查：确保details是字典
+                                        if not isinstance(details, dict):
+                                            print(f"Invalid details type: {type(details).__name__}")
+                                            continue
+                                        
+                                        # 只处理HTTP方法
+                                        if method in ['get', 'post', 'put', 'delete', 'patch']:
+                                            method = method.upper()
+                                            # 提取接口名称
+                                            name = details.get('summary', f'{method} {path}')
+                                            # 类型检查：确保name是字符串
+                                            if not isinstance(name, str):
+                                                print(f"Invalid name type: {type(name).__name__}")
+                                                name = f'{method} {path}'
+                                            # 添加到匹配结果中，使用特殊的标记表示这是从JSON解析的
+                                            interface_matches.append((None, name, method, path, swagger_data, details))
+                                    except Exception as e:
+                                        print(f"Error processing method: {type(e).__name__}: {e}")
+                                        continue
+                        else:
+                            print(f"Invalid paths type: {type(json_data['paths']).__name__}")
+                            # 继续使用Markdown解析
+                    else:
+                        print("JSON文件格式不支持，尝试Markdown解析")
+                        # 即使是JSON文件，也继续执行Markdown解析的逻辑，确保能提取到接口
+        except json.JSONDecodeError as e:
+            print(f"JSON解析失败，尝试Markdown解析: {e}")
             # JSON解析失败，继续使用Markdown解析
+            pass
+        except Exception as e:
+            print(f"Error during JSON parsing: {type(e).__name__}: {e}")
+            # 其他错误，继续使用Markdown解析
             pass
         
         # 如果没有从JSON解析到接口，尝试使用Markdown解析
@@ -369,118 +679,145 @@ def parse_file_async(file_id, file_path, file_name, file_content_type):
                             break
                     
                     if param_code:
-                        # 移除可能的变量声明和结束符
-                        param_code_clean = param_code.replace('let params =', '').replace('const params =', '').replace('var params =', '').rstrip(';').strip()
-                        
-                        try:
-                            # 解析JSON
-                            param_json = json.loads(param_code_clean)
-                            print(f"成功解析JSON参数")
-                            # 提取参数
-                            for param_name, param_value in param_json.items():
-                                # 简单参数，提取类型
-                                param_type = 'string'  # 默认类型
-                                if isinstance(param_value, str):
-                                    param_type = 'string'
-                                elif isinstance(param_value, int):
-                                    param_type = 'int'
-                                elif isinstance(param_value, bool):
-                                    param_type = 'boolean'
-                                elif isinstance(param_value, float):
-                                    param_type = 'double'
-                                elif isinstance(param_value, list):
-                                    param_type = 'list'
-                                elif isinstance(param_value, dict):
-                                    param_type = 'object'
-                                
-                                # 提取注释中的描述
-                                description = ''
-                                comment_pattern = f"{param_name}:[^/]*//(.*)"
-                                comment_match = re.search(comment_pattern, param_code)
-                                if comment_match:
-                                    description = comment_match.group(1).strip()
-                                
-                                # 提取示例值
-                                example = str(param_value)
-                                if isinstance(param_value, list):
-                                    example = '[]'
-                                elif isinstance(param_value, dict):
-                                    example = '{}'
-                                
-                                request_params.append((param_name, param_type, 1, description, example))
-                                parsed_params += 1
-                                print(f"提取到请求参数: {param_name} ({param_type})")
-                        except json.JSONDecodeError as e:
-                            print(f"JSON解析失败，尝试手动解析: {e}")
-                            # 手动解析优化，支持更复杂的格式
-                            # 1. 移除首尾的大括号和空格
-                            if param_code_clean.startswith('{'):
-                                param_code_clean = param_code_clean[1:].strip()
-                            if param_code_clean.endswith('}'):
-                                param_code_clean = param_code_clean[:-1].strip()
+                        # 类型检查：确保param_code是字符串
+                        if not isinstance(param_code, str):
+                            print(f"Invalid param_code type: {type(param_code).__name__}")
+                        else:
+                            # 移除可能的变量声明和结束符
+                            param_code_clean = param_code.replace('let params =', '').replace('const params =', '').replace('var params =', '').rstrip(';').strip()
                             
-                            # 2. 按行分割
-                            lines = param_code_clean.split('\n')
-                            for line in lines:
-                                line = line.strip()
-                                if not line or line.startswith('//'):
-                                    continue
+                            try:
+                                # 解析JSON
+                                param_json = json.loads(param_code_clean)
+                                print(f"成功解析JSON参数")
                                 
-                                # 3. 分割键值对，处理可能的逗号
-                                if ':' in line:
-                                    # 分割键和值，只分割第一个冒号
-                                    key_part, value_part = line.split(':', 1)
-                                    param_name = key_part.strip()
-                                    
-                                    # 处理值部分，移除逗号和注释
-                                    value_part = value_part.split('//')[0].strip().rstrip(',')
-                                    
-                                    # 提取描述（如果有）
-                                    description = ''
-                                    comment_match = re.search(r'//(.*)', line)
-                                    if comment_match:
-                                        description = comment_match.group(1).strip()
-                                    
-                                    # 确定参数类型和示例值
-                                    param_type = 'string'
-                                    example = ''
-                                    
-                                    # 处理空值
-                                    if value_part in ['', "''", '""']:
-                                        param_type = 'string'
-                                        example = ''
-                                    # 处理布尔值
-                                    elif value_part.lower() in ['true', 'false']:
-                                        param_type = 'boolean'
-                                        example = value_part.lower()
-                                    # 处理数字
-                                    elif re.match(r'^\d+$', value_part):
-                                        param_type = 'int'
-                                        example = value_part
-                                    elif re.match(r'^\d+\.\d+$', value_part):
-                                        param_type = 'double'
-                                        example = value_part
-                                    # 处理列表
-                                    elif value_part.startswith('[') and value_part.endswith(']'):
-                                        param_type = 'list'
-                                        example = '[]'
-                                    # 处理对象
-                                    elif value_part.startswith('{') and value_part.endswith('}'):
-                                        param_type = 'object'
-                                        example = '{}'
-                                    # 处理字符串
-                                    else:
-                                        param_type = 'string'
-                                        # 移除引号
-                                        if (value_part.startswith("'") and value_part.endswith("'") or 
-                                           (value_part.startswith('"') and value_part.endswith('"'))):
-                                            example = value_part[1:-1]
-                                        else:
-                                            example = value_part
-                                    
-                                    request_params.append((param_name, param_type, 1, description, example))
-                                    parsed_params += 1
-                                    print(f"手动提取到请求参数: {param_name} ({param_type})")
+                                # 类型检查：确保param_json是字典
+                                if isinstance(param_json, dict):
+                                    # 提取参数
+                                    for param_name, param_value in param_json.items():
+                                        try:
+                                            # 类型检查：确保param_name是字符串
+                                            if not isinstance(param_name, str):
+                                                print(f"Invalid param_name type: {type(param_name).__name__}")
+                                                continue
+                                            
+                                            # 简单参数，提取类型
+                                            param_type = 'string'  # 默认类型
+                                            if isinstance(param_value, str):
+                                                param_type = 'string'
+                                            elif isinstance(param_value, int):
+                                                param_type = 'int'
+                                            elif isinstance(param_value, bool):
+                                                param_type = 'boolean'
+                                            elif isinstance(param_value, float):
+                                                param_type = 'double'
+                                            elif isinstance(param_value, list):
+                                                param_type = 'list'
+                                            elif isinstance(param_value, dict):
+                                                param_type = 'object'
+                                            
+                                            # 提取注释中的描述
+                                            description = ''
+                                            comment_pattern = f"{param_name}:[^/]*//(.*)"
+                                            comment_match = re.search(comment_pattern, param_code)
+                                            if comment_match:
+                                                description = comment_match.group(1).strip()
+                                            
+                                            # 提取示例值
+                                            example = str(param_value)
+                                            if isinstance(param_value, list):
+                                                example = '[]'
+                                            elif isinstance(param_value, dict):
+                                                example = '{}'
+                                            
+                                            request_params.append((param_name, param_type, 1, description, example))
+                                            parsed_params += 1
+                                            print(f"提取到请求参数: {param_name} ({param_type})")
+                                        except Exception as e:
+                                            print(f"Error processing param: {type(e).__name__}: {e}")
+                                            continue
+                                else:
+                                    print(f"Invalid param_json type: {type(param_json).__name__}")
+                            except json.JSONDecodeError as e:
+                                print(f"JSON解析失败，尝试手动解析: {e}")
+                                # 手动解析优化，支持更复杂的格式
+                                # 1. 移除首尾的大括号和空格
+                                if param_code_clean.startswith('{'):
+                                    param_code_clean = param_code_clean[1:].strip()
+                                if param_code_clean.endswith('}'):
+                                    param_code_clean = param_code_clean[:-1].strip()
+                                
+                                # 2. 按行分割
+                                lines = param_code_clean.split('\n')
+                                for line in lines:
+                                    try:
+                                        line = line.strip()
+                                        if not line or line.startswith('//'):
+                                            continue
+                                        
+                                        # 3. 分割键值对，处理可能的逗号
+                                        if ':' in line:
+                                            # 分割键和值，只分割第一个冒号
+                                            key_part, value_part = line.split(':', 1)
+                                            param_name = key_part.strip()
+                                            
+                                            # 类型检查：确保param_name是字符串
+                                            if not isinstance(param_name, str):
+                                                print(f"Invalid param_name type: {type(param_name).__name__}")
+                                                continue
+                                            
+                                            # 处理值部分，移除逗号和注释
+                                            value_part = value_part.split('//')[0].strip().rstrip(',')
+                                            
+                                            # 提取描述（如果有）
+                                            description = ''
+                                            comment_match = re.search(r'//(.*)', line)
+                                            if comment_match:
+                                                description = comment_match.group(1).strip()
+                                            
+                                            # 确定参数类型和示例值
+                                            param_type = 'string'
+                                            example = ''
+                                            
+                                            # 处理空值
+                                            if value_part in ['', "''", '""']:
+                                                param_type = 'string'
+                                                example = ''
+                                            # 处理布尔值
+                                            elif value_part.lower() in ['true', 'false']:
+                                                param_type = 'boolean'
+                                                example = value_part.lower()
+                                            # 处理数字
+                                            elif re.match(r'^\d+$', value_part):
+                                                param_type = 'int'
+                                                example = value_part
+                                            elif re.match(r'^\d+\.\d+$', value_part):
+                                                param_type = 'double'
+                                                example = value_part
+                                            # 处理列表
+                                            elif value_part.startswith('[') and value_part.endswith(']'):
+                                                param_type = 'list'
+                                                example = '[]'
+                                            # 处理对象
+                                            elif value_part.startswith('{') and value_part.endswith('}'):
+                                                param_type = 'object'
+                                                example = '{}'
+                                            # 处理字符串
+                                            else:
+                                                param_type = 'string'
+                                                # 移除引号
+                                                if (value_part.startswith("'") and value_part.endswith("'") or 
+                                                   (value_part.startswith('"') and value_part.endswith('"'))):
+                                                    example = value_part[1:-1]
+                                                else:
+                                                    example = value_part
+                                            
+                                            request_params.append((param_name, param_type, 1, description, example))
+                                            parsed_params += 1
+                                            print(f"手动提取到请求参数: {param_name} ({param_type})")
+                                    except Exception as e:
+                                        print(f"Error processing line: {type(e).__name__}: {e}")
+                                        continue
                     else:
                         # 尝试匹配表格格式的参数
                         table_param_pattern = r'\*\*参数：\*\*\s*\n\|(.+?)\|(.+?)\|(.+?)\|(.+?)\|(.+?)\|'
@@ -508,54 +845,81 @@ def parse_file_async(file_id, file_path, file_name, file_content_type):
                             break
                     
                     if response_content:
-                        # 按行解析响应字段
-                        lines = response_content.strip().split('\n')
-                        for line in lines:
-                            line = line.strip()
-                            if not line:
-                                continue
-                            
-                            # 使用正则表达式分割，支持多个空格或制表符
-                            parts = re.split(r'\s{2,}|\t+', line)
-                            if len(parts) >= 3:
-                                field_name = parts[0]
-                                # 跳过表头行
-                                if field_name in ['字段名', '字段', 'name', '参数名', 'key']:
+                        # 类型检查：确保response_content是字符串
+                        if not isinstance(response_content, str):
+                            print(f"Invalid response_content type: {type(response_content).__name__}")
+                        else:
+                            # 按行解析响应字段
+                            lines = response_content.strip().split('\n')
+                            for line in lines:
+                                try:
+                                    line = line.strip()
+                                    if not line:
+                                        continue
+                                    
+                                    # 使用正则表达式分割，支持多个空格或制表符
+                                    parts = re.split(r'\s{2,}|\t+', line)
+                                    if len(parts) >= 3:
+                                        field_name = parts[0]
+                                        # 类型检查：确保field_name是字符串
+                                        if not isinstance(field_name, str):
+                                            print(f"Invalid field_name type: {type(field_name).__name__}")
+                                            continue
+                                        
+                                        # 跳过表头行
+                                        if field_name in ['字段名', '字段', 'name', '参数名', 'key']:
+                                            continue
+                                        
+                                        # 提取类型（最后一列）
+                                        field_type = parts[-1]
+                                        # 类型检查：确保field_type是字符串
+                                        if not isinstance(field_type, str):
+                                            print(f"Invalid field_type type: {type(field_type).__name__}")
+                                            field_type = 'string'
+                                        
+                                        # 提取示例值（第二列）
+                                        example = parts[1] if len(parts) > 1 else ''
+                                        # 类型检查：确保example是字符串
+                                        if not isinstance(example, str):
+                                            print(f"Invalid example type: {type(example).__name__}")
+                                            example = ''
+                                        
+                                        # 提取描述（中间列，从第二列到倒数第二列）
+                                        if len(parts) > 3:
+                                            field_description = ' '.join(parts[2:-1])
+                                        elif len(parts) == 3:
+                                            field_description = parts[1] if parts[1] != example else ''
+                                        else:
+                                            field_description = ''
+                                        # 类型检查：确保field_description是字符串
+                                        if not isinstance(field_description, str):
+                                            print(f"Invalid field_description type: {type(field_description).__name__}")
+                                            field_description = ''
+                                        
+                                        # 转换Java类型为通用类型
+                                        if 'java.lang.String' in field_type or 'java.lang.CharSequence' in field_type or field_type == 'string':
+                                            field_type = 'string'
+                                        elif 'java.lang.Integer' in field_type or 'java.lang.Long' in field_type or 'java.lang.Short' in field_type or 'java.lang.Byte' in field_type or field_type == 'int' or field_type == 'integer':
+                                            field_type = 'int'
+                                        elif 'java.lang.Boolean' in field_type or field_type == 'boolean':
+                                            field_type = 'boolean'
+                                        elif 'java.math.BigDecimal' in field_type or 'java.lang.Double' in field_type or 'java.lang.Float' in field_type or 'java.lang.Number' in field_type or field_type == 'double' or field_type == 'float' or field_type == 'number':
+                                            field_type = 'double'
+                                        elif 'java.lang.Object' in field_type or 'java.util.Map' in field_type or 'java.util.HashMap' in field_type or field_type == 'object':
+                                            field_type = 'object'
+                                        elif 'java.util.List' in field_type or 'java.util.ArrayList' in field_type or 'java.util.Set' in field_type or field_type == 'list' or field_type == 'array':
+                                            field_type = 'list'
+                                        elif 'java.util.Date' in field_type or 'java.time.LocalDate' in field_type or 'java.time.LocalDateTime' in field_type or field_type == 'date' or field_type == 'datetime' or field_type == 'time':
+                                            field_type = 'string'
+                                        else:
+                                            field_type = 'string'
+                                        
+                                        response_fields.append((field_name, field_type, field_description, example))
+                                        parsed_responses += 1
+                                        print(f"提取到响应字段: {field_name} ({field_type})")
+                                except Exception as e:
+                                    print(f"Error processing response line: {type(e).__name__}: {e}")
                                     continue
-                                
-                                # 提取类型（最后一列）
-                                field_type = parts[-1]
-                                # 提取示例值（第二列）
-                                example = parts[1] if len(parts) > 1 else ''
-                                # 提取描述（中间列，从第二列到倒数第二列）
-                                if len(parts) > 3:
-                                    field_description = ' '.join(parts[2:-1])
-                                elif len(parts) == 3:
-                                    field_description = parts[1] if parts[1] != example else ''
-                                else:
-                                    field_description = ''
-                                
-                                # 转换Java类型为通用类型
-                                if 'java.lang.String' in field_type or 'java.lang.CharSequence' in field_type or field_type == 'string':
-                                    field_type = 'string'
-                                elif 'java.lang.Integer' in field_type or 'java.lang.Long' in field_type or 'java.lang.Short' in field_type or 'java.lang.Byte' in field_type or field_type == 'int' or field_type == 'integer':
-                                    field_type = 'int'
-                                elif 'java.lang.Boolean' in field_type or field_type == 'boolean':
-                                    field_type = 'boolean'
-                                elif 'java.math.BigDecimal' in field_type or 'java.lang.Double' in field_type or 'java.lang.Float' in field_type or 'java.lang.Number' in field_type or field_type == 'double' or field_type == 'float' or field_type == 'number':
-                                    field_type = 'double'
-                                elif 'java.lang.Object' in field_type or 'java.util.Map' in field_type or 'java.util.HashMap' in field_type or field_type == 'object':
-                                    field_type = 'object'
-                                elif 'java.util.List' in field_type or 'java.util.ArrayList' in field_type or 'java.util.Set' in field_type or field_type == 'list' or field_type == 'array':
-                                    field_type = 'list'
-                                elif 'java.util.Date' in field_type or 'java.time.LocalDate' in field_type or 'java.time.LocalDateTime' in field_type or field_type == 'date' or field_type == 'datetime' or field_type == 'time':
-                                    field_type = 'string'
-                                else:
-                                    field_type = 'string'
-                                
-                                response_fields.append((field_name, field_type, field_description, example))
-                                parsed_responses += 1
-                                print(f"提取到响应字段: {field_name} ({field_type})")
             # 处理JSON文件（Swagger/OpenAPI）
             else:
                 print(f"处理JSON接口: {name} {method} {path}")
@@ -782,7 +1146,7 @@ def parse_file_async(file_id, file_path, file_name, file_content_type):
                 default_responses = [
                     ('code', 'int', '响应码', '0'),
                     ('message', 'string', '响应消息', 'success'),
-                    ('data', 'object', '响应数据', '{}'),
+                    ('body', 'object', '响应数据', '{}'),
                     ('timestamp', 'string', '时间戳', '2023-01-01 12:00:00')
                 ]
                 for field_name, field_type, description, example in default_responses:

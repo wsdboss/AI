@@ -2099,3 +2099,446 @@
 2026-02-05 16:57:42,639 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:42] "GET /interfaces/1/mock-config HTTP/1.1" 200 -
 2026-02-05 16:57:47,324 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:47] "POST /dynamic/prodPosition/query HTTP/1.1" 200 -
 2026-02-05 16:57:50,230 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [05/Feb/2026 16:57:50] "GET /health HTTP/1.1" 200 -
+2026-02-06 09:57:02,061 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 09:57:02,063 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 09:57:02,064 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 09:57:02,067 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI154602\frontend
+2026-02-06 09:57:02,067 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 09:57:02,068 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 09:57:02,068 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 09:57:02,090 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 09:57:02,100 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 09:57:02,117 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 09:57:02,117 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 09:59:09,766 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 09:59:09,768 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 09:59:09,769 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 09:59:09,771 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI606362\frontend
+2026-02-06 09:59:09,771 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 09:59:09,772 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 09:59:09,772 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 09:59:09,801 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 09:59:09,811 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-06 10:07:08,907 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:07:08] "GET /health HTTP/1.1" 200 -
+2026-02-06 10:11:27,943 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 10:11:27,945 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 10:11:27,945 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 10:11:27,948 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI121602\frontend
+2026-02-06 10:11:27,948 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 10:11:27,949 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 10:11:27,949 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 10:11:28,794 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 10:11:28,806 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-06 10:11:28,807 - __main__ - INFO - simple_app.py:1386 - 已切换到可用端口 8001
+2026-02-06 10:11:28,807 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8001
+2026-02-06 10:11:28,834 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-02-06 10:11:28,835 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 10:11:34,018 - __main__ - INFO - simple_app.py:1330 - 已自动打开浏览器，访问地址: http://localhost:8001
+2026-02-06 10:11:34,473 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:11:34] "GET / HTTP/1.1" 200 -
+2026-02-06 10:11:34,549 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:11:34] "GET /main.js HTTP/1.1" 200 -
+2026-02-06 10:11:34,607 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:11:34] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-06 10:12:28,526 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:12:28] "GET / HTTP/1.1" 200 -
+2026-02-06 10:12:28,540 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:12:28] "GET /main.js HTTP/1.1" 200 -
+2026-02-06 10:12:28,681 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:12:28] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-06 10:19:37,847 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 10:19:37,851 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 10:19:37,852 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 10:19:37,855 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI673282\frontend
+2026-02-06 10:19:37,855 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 10:19:37,855 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 10:19:37,856 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 10:19:37,860 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 10:19:37,875 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 10:19:37,894 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 10:19:37,895 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 10:25:06,712 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 10:25:06,714 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 10:25:06,715 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 10:25:06,718 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI411322\frontend
+2026-02-06 10:25:06,718 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 10:25:06,719 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 10:25:06,719 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 10:25:06,724 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 10:25:06,741 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 10:25:06,761 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 10:25:06,761 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 10:25:58,279 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 10:25:58,282 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 10:25:58,282 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 10:25:58,287 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI673642\frontend
+2026-02-06 10:25:58,287 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 10:25:58,288 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 10:25:58,288 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 10:25:58,292 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 10:25:58,305 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-06 10:25:58,306 - __main__ - INFO - simple_app.py:1386 - 已切换到可用端口 8001
+2026-02-06 10:25:58,306 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8001
+2026-02-06 10:25:58,333 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-02-06 10:25:58,334 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 10:26:03,596 - __main__ - INFO - simple_app.py:1330 - 已自动打开浏览器，访问地址: http://localhost:8001
+2026-02-06 10:26:04,194 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:26:04] "GET / HTTP/1.1" 200 -
+2026-02-06 10:26:04,209 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:26:04] "GET /main.js HTTP/1.1" 200 -
+2026-02-06 10:26:04,300 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:26:04] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-06 10:28:00,389 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 10:28:00,391 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 10:28:00,392 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 10:28:00,394 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI317202\frontend
+2026-02-06 10:28:00,394 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 10:28:00,394 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 10:28:00,395 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 10:28:00,416 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 10:28:00,426 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-06 10:28:00,426 - __main__ - WARNING - simple_app.py:1374 - 端口 8001 已被占用，尝试下一个可用端口
+2026-02-06 10:28:00,427 - __main__ - INFO - simple_app.py:1386 - 已切换到可用端口 8002
+2026-02-06 10:28:00,427 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8002
+2026-02-06 10:28:00,449 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8002
+ * Running on http://10.203.224.140:8002
+2026-02-06 10:28:00,449 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 10:28:05,643 - __main__ - INFO - simple_app.py:1330 - 已自动打开浏览器，访问地址: http://localhost:8002
+2026-02-06 10:28:06,088 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:28:06] "GET / HTTP/1.1" 200 -
+2026-02-06 10:28:06,099 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:28:06] "GET /main.js HTTP/1.1" 200 -
+2026-02-06 10:28:06,231 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:28:06] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-06 10:40:00,183 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 10:40:00,205 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 10:40:00,206 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 10:40:00,211 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI672922\frontend
+2026-02-06 10:40:00,212 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 10:40:00,212 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 10:40:00,213 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 10:40:00,233 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 10:40:00,245 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 10:40:00,265 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 10:40:00,265 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 10:41:06,592 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 10:41:06,594 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 10:41:06,594 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 10:41:06,597 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI393562\frontend
+2026-02-06 10:41:06,597 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 10:41:06,597 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 10:41:06,598 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 10:41:06,622 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 10:41:06,632 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-06 10:41:06,633 - __main__ - INFO - simple_app.py:1386 - 已切换到可用端口 8001
+2026-02-06 10:41:06,633 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8001
+2026-02-06 10:41:06,653 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-02-06 10:41:06,653 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 10:41:11,853 - __main__ - INFO - simple_app.py:1330 - 已自动打开浏览器，访问地址: http://localhost:8001
+2026-02-06 10:41:12,363 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:41:12] "GET / HTTP/1.1" 200 -
+2026-02-06 10:41:12,374 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:41:12] "GET /main.js HTTP/1.1" 200 -
+2026-02-06 10:41:12,513 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:41:12] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-06 10:41:23,150 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:41:23] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 200 -
+2026-02-06 10:47:42,625 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 10:47:42,641 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 10:47:42,642 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 10:47:42,646 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI117922\frontend
+2026-02-06 10:47:42,646 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 10:47:42,646 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 10:47:42,647 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 10:47:42,670 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 10:47:42,681 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 10:47:42,702 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 10:47:42,702 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 10:52:21,928 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 10:52:21,930 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 10:52:21,931 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 10:52:21,934 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI154642\frontend
+2026-02-06 10:52:21,934 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 10:52:21,934 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 10:52:21,935 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 10:52:22,014 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 10:52:22,028 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-06 10:52:22,030 - __main__ - INFO - simple_app.py:1386 - 已切换到可用端口 8001
+2026-02-06 10:52:22,031 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8001
+2026-02-06 10:52:22,057 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-02-06 10:52:22,057 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 10:52:27,278 - __main__ - INFO - simple_app.py:1330 - 已自动打开浏览器，访问地址: http://localhost:8001
+2026-02-06 10:52:27,983 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:52:27] "GET / HTTP/1.1" 200 -
+2026-02-06 10:52:27,995 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:52:27] "GET /main.js HTTP/1.1" 200 -
+2026-02-06 10:52:28,128 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:52:28] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-06 10:52:32,623 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 10:52:32] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 200 -
+2026-02-06 10:58:32,657 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 10:58:32,667 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 10:58:32,667 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 10:58:32,671 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI637402\frontend
+2026-02-06 10:58:32,672 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 10:58:32,672 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 10:58:32,673 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 10:58:32,691 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 10:58:32,702 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 10:58:32,720 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 10:58:32,721 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 11:00:10,609 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 11:00:10,612 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 11:00:10,613 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 11:00:10,617 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI126202\frontend
+2026-02-06 11:00:10,617 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 11:00:10,617 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 11:00:10,618 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 11:00:10,622 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 11:00:10,640 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-06 11:00:10,641 - __main__ - INFO - simple_app.py:1386 - 已切换到可用端口 8001
+2026-02-06 11:00:10,642 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8001
+2026-02-06 11:00:10,667 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-02-06 11:00:10,668 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 11:00:15,958 - __main__ - INFO - simple_app.py:1330 - 已自动打开浏览器，访问地址: http://localhost:8001
+2026-02-06 11:00:16,604 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:00:16] "GET / HTTP/1.1" 200 -
+2026-02-06 11:00:16,622 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:00:16] "GET /main.js HTTP/1.1" 200 -
+2026-02-06 11:00:16,680 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:00:16] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-06 11:02:26,614 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:02:26] "[36mGET / HTTP/1.1[0m" 304 -
+2026-02-06 11:02:26,626 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:02:26] "[36mGET /main.js HTTP/1.1[0m" 304 -
+2026-02-06 11:02:26,860 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:02:26] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-06 11:02:28,677 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:02:28] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 200 -
+2026-02-06 11:02:43,783 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:02:43] "GET / HTTP/1.1" 200 -
+2026-02-06 11:02:43,795 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:02:43] "GET /main.js HTTP/1.1" 200 -
+2026-02-06 11:02:43,919 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:02:43] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-06 11:02:44,144 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 11:02:44] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 200 -
+2026-02-06 11:05:20,388 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 11:05:20,391 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 11:05:20,392 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 11:05:20,396 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI705082\frontend
+2026-02-06 11:05:20,397 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 11:05:20,397 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 11:05:20,398 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 11:05:20,400 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 11:05:20,411 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-06 11:05:20,412 - __main__ - WARNING - simple_app.py:1374 - 端口 8001 已被占用，尝试下一个可用端口
+2026-02-06 11:05:20,413 - __main__ - INFO - simple_app.py:1386 - 已切换到可用端口 8002
+2026-02-06 11:05:20,413 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8002
+2026-02-06 11:05:20,430 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8002
+ * Running on http://10.203.224.140:8002
+2026-02-06 11:05:20,431 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 11:06:23,958 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 11:06:23,961 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 11:06:23,962 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 11:06:23,965 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI699562\frontend
+2026-02-06 11:06:23,965 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 11:06:23,966 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 11:06:23,967 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 11:06:23,969 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 11:06:23,980 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 11:06:23,998 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 11:06:23,999 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 13:34:47,277 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 13:34:47,279 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 13:34:47,280 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 13:34:47,283 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\dist\frontend
+2026-02-06 13:34:47,284 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: False
+2026-02-06 13:34:47,284 - __main__ - INFO - simple_app.py:169 - index.html是否存在: False
+2026-02-06 13:34:47,284 - __main__ - WARNING - simple_app.py:182 - 前端index.html文件不存在: E:\traeAiProject\GenerateInterTool\backend\dist\frontend\index.html
+2026-02-06 13:34:47,285 - __main__ - INFO - simple_app.py:183 - 当前BASE_DIR: E:\traeAiProject\GenerateInterTool\backend\dist
+2026-02-06 13:34:47,285 - __main__ - INFO - simple_app.py:184 - 当前FRONTEND_DIR: E:\traeAiProject\GenerateInterTool\backend\dist\frontend
+2026-02-06 13:34:47,285 - __main__ - INFO - simple_app.py:185 - 目录内容: ['api_generator.db', 'app.log', 'backups', 'config_custom.py', 'frontend', 'i18n', 'InterfaceGenerator.exe', 'plugins', 'templates', 'uploads']
+2026-02-06 13:34:47,286 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 13:34:47,288 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 13:34:47,302 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 13:34:47,338 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 13:34:47,338 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 13:35:53,590 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 13:35:53,594 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 13:35:53,595 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 13:35:53,601 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\dist\frontend
+2026-02-06 13:35:53,601 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 13:35:53,602 - __main__ - INFO - simple_app.py:169 - index.html是否存在: False
+2026-02-06 13:35:53,603 - __main__ - WARNING - simple_app.py:182 - 前端index.html文件不存在: E:\traeAiProject\GenerateInterTool\backend\dist\frontend\index.html
+2026-02-06 13:35:53,603 - __main__ - INFO - simple_app.py:183 - 当前BASE_DIR: E:\traeAiProject\GenerateInterTool\backend\dist
+2026-02-06 13:35:53,603 - __main__ - INFO - simple_app.py:184 - 当前FRONTEND_DIR: E:\traeAiProject\GenerateInterTool\backend\dist\frontend
+2026-02-06 13:35:53,604 - __main__ - INFO - simple_app.py:185 - 目录内容: ['api_generator.db', 'app.log', 'backups', 'config_custom.py', 'frontend', 'i18n', 'InterfaceGenerator.exe', 'plugins', 'templates', 'uploads']
+2026-02-06 13:35:53,604 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 13:35:53,606 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 13:35:53,619 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 13:35:53,641 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 13:35:53,642 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 13:42:21,588 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 13:42:21,589 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 13:42:21,590 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 13:42:21,593 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\dist\frontend
+2026-02-06 13:42:21,593 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 13:42:21,593 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 13:42:21,594 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 13:42:21,595 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 13:42:21,605 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 13:42:21,621 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 13:42:21,621 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 13:42:57,152 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:42:57] "GET /?ide_webview_request_time=1770356576969 HTTP/1.1" 200 -
+2026-02-06 13:42:57,164 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:42:57] "GET /style.css HTTP/1.1" 200 -
+2026-02-06 13:42:57,165 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:42:57] "GET /assets/index.js HTTP/1.1" 200 -
+2026-02-06 13:42:57,277 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:42:57] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-06 13:47:33,208 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 13:47:33,210 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 13:47:33,210 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 13:47:33,214 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\dist\frontend
+2026-02-06 13:47:33,214 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 13:47:33,214 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 13:47:33,215 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 13:47:33,216 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 13:47:33,227 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 13:47:33,244 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 13:47:33,244 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 13:47:45,741 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:47:45] "GET /?ide_webview_request_time=1770356865625 HTTP/1.1" 200 -
+2026-02-06 13:47:45,751 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:47:45] "GET /style.css HTTP/1.1" 200 -
+2026-02-06 13:47:45,751 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:47:45] "GET /assets/index.js HTTP/1.1" 200 -
+2026-02-06 13:47:45,980 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:47:45] "GET /files HTTP/1.1" 200 -
+2026-02-06 13:47:45,995 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:47:45] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-06 13:47:46,037 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:47:46] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-06 13:48:07,672 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 13:48:07,674 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 13:48:07,674 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 13:48:07,677 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: E:\traeAiProject\GenerateInterTool\backend\dist\frontend
+2026-02-06 13:48:07,677 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 13:48:07,677 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 13:48:07,678 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 13:48:07,679 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 13:48:07,690 - __main__ - WARNING - simple_app.py:1374 - 端口 8000 已被占用，尝试下一个可用端口
+2026-02-06 13:48:07,690 - __main__ - INFO - simple_app.py:1386 - 已切换到可用端口 8001
+2026-02-06 13:48:07,690 - __main__ - INFO - simple_app.py:1391 - 应用即将启动，访问地址: http://0.0.0.0:8001
+2026-02-06 13:48:07,706 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8001
+ * Running on http://10.203.224.140:8001
+2026-02-06 13:48:07,707 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 13:48:13,039 - __main__ - INFO - simple_app.py:1330 - 已自动打开浏览器，访问地址: http://localhost:8001
+2026-02-06 13:48:13,547 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:13] "GET / HTTP/1.1" 200 -
+2026-02-06 13:48:13,557 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:13] "GET /style.css HTTP/1.1" 200 -
+2026-02-06 13:48:13,696 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:13] "GET /assets/index.js HTTP/1.1" 200 -
+2026-02-06 13:48:14,122 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:14] "GET /files HTTP/1.1" 200 -
+2026-02-06 13:48:14,125 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:14] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-06 13:48:14,199 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:14] "GET /favicon.ico HTTP/1.1" 200 -
+2026-02-06 13:48:20,731 - __main__ - INFO - simple_app.py:329 - 收到文件上传请求
+2026-02-06 13:48:20,732 - __main__ - INFO - simple_app.py:341 - 开始上传文件: position-planning-api.md
+2026-02-06 13:48:20,734 - __main__ - INFO - simple_app.py:349 - 文件保存成功: E:\traeAiProject\GenerateInterTool\backend\dist\uploads\f64f10a1-2789-4e7a-9841-2d15a421d26a_position-planning-api.md
+2026-02-06 13:48:20,734 - __main__ - INFO - simple_app.py:363 - 准备插入数据库，文件信息: filename=position-planning-api.md, file_path=E:\traeAiProject\GenerateInterTool\backend\dist\uploads\f64f10a1-2789-4e7a-9841-2d15a421d26a_position-planning-api.md, file_type=application/octet-stream, size=13121, uploaded_at=2026-02-06T13:48:20.734636, parsed=1
+2026-02-06 13:48:20,735 - __main__ - INFO - simple_app.py:368 - 表结构: [(0, 'id', 'INTEGER', 0, None, 1), (1, 'filename', 'TEXT', 1, None, 0), (2, 'file_path', 'TEXT', 1, None, 0), (3, 'file_type', 'TEXT', 1, None, 0), (4, 'size', 'INTEGER', 1, None, 0), (5, 'uploaded_at', 'TEXT', 1, None, 0), (6, 'parsed', 'INTEGER', 0, '0', 0), (7, 'parsed_interfaces', 'INTEGER', 0, '0', 0), (8, 'parsed_params', 'INTEGER', 0, '0', 0), (9, 'parsed_responses', 'INTEGER', 0, '0', 0)]
+2026-02-06 13:48:20,904 - __main__ - INFO - simple_app.py:380 - 文件记录已添加到数据库，文件ID: 1
+2026-02-06 13:48:20,905 - __main__ - INFO - simple_app.py:383 - 准备执行文件解析，文件ID: 1
+2026-02-06 13:48:21,093 - __main__ - INFO - simple_app.py:386 - 文件解析任务已执行，文件ID: 1
+2026-02-06 13:48:21,095 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:21] "POST /files/upload HTTP/1.1" 200 -
+2026-02-06 13:48:21,423 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:21] "GET /files HTTP/1.1" 200 -
+2026-02-06 13:48:21,423 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:21] "GET /interfaces HTTP/1.1" 200 -
+2026-02-06 13:48:22,943 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:22] "GET /interfaces/1/mock-config HTTP/1.1" 200 -
+2026-02-06 13:48:23,261 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:23] "GET /interfaces/1/params HTTP/1.1" 200 -
+2026-02-06 13:48:23,307 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:23] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-06 13:48:23,570 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:23] "GET /interfaces/1/responses HTTP/1.1" 200 -
+2026-02-06 13:48:23,891 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:23] "GET /interfaces/1/mock-config HTTP/1.1" 200 -
+2026-02-06 13:48:25,261 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:25] "POST /dynamic/prodPosition/query HTTP/1.1" 200 -
+2026-02-06 13:48:33,213 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:33] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-06 13:48:33,214 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:33] "GET /interfaces/2/mock-config HTTP/1.1" 200 -
+2026-02-06 13:48:33,215 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:33] "GET /interfaces/2/params HTTP/1.1" 200 -
+2026-02-06 13:48:33,458 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:33] "GET /interfaces/2/responses HTTP/1.1" 200 -
+2026-02-06 13:48:33,535 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:33] "GET /interfaces/2/mock-config HTTP/1.1" 200 -
+2026-02-06 13:48:38,210 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:38] "GET /interfaces/3/mock-config HTTP/1.1" 200 -
+2026-02-06 13:48:38,520 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:38] "GET /interfaces/3/params HTTP/1.1" 200 -
+2026-02-06 13:48:38,523 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:38] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-06 13:48:38,842 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:38] "GET /interfaces/3/responses HTTP/1.1" 200 -
+2026-02-06 13:48:39,149 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:39] "GET /interfaces/3/mock-config HTTP/1.1" 200 -
+2026-02-06 13:48:41,361 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:41] "GET /interfaces/2/mock-config HTTP/1.1" 200 -
+2026-02-06 13:48:41,670 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:41] "GET /interfaces/2/params HTTP/1.1" 200 -
+2026-02-06 13:48:41,673 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:41] "[36mGET /favicon.ico HTTP/1.1[0m" 304 -
+2026-02-06 13:48:41,979 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:41] "GET /interfaces/2/responses HTTP/1.1" 200 -
+2026-02-06 13:48:42,288 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:42] "GET /interfaces/2/mock-config HTTP/1.1" 200 -
+2026-02-06 13:48:43,473 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:48:43] "POST /dynamic/prodPosition/updateFieldValue HTTP/1.1" 200 -
+2026-02-06 13:50:37,724 - __main__ - INFO - simple_app.py:329 - 收到文件上传请求
+2026-02-06 13:50:37,725 - __main__ - INFO - simple_app.py:341 - 开始上传文件: managementTeam.md
+2026-02-06 13:50:37,727 - __main__ - INFO - simple_app.py:349 - 文件保存成功: E:\traeAiProject\GenerateInterTool\backend\dist\uploads\55e0b7e7-af48-4cd5-86a3-8d80243b3670_managementTeam.md
+2026-02-06 13:50:37,727 - __main__ - INFO - simple_app.py:363 - 准备插入数据库，文件信息: filename=managementTeam.md, file_path=E:\traeAiProject\GenerateInterTool\backend\dist\uploads\55e0b7e7-af48-4cd5-86a3-8d80243b3670_managementTeam.md, file_type=application/octet-stream, size=4064, uploaded_at=2026-02-06T13:50:37.727691, parsed=1
+2026-02-06 13:50:37,728 - __main__ - INFO - simple_app.py:368 - 表结构: [(0, 'id', 'INTEGER', 0, None, 1), (1, 'filename', 'TEXT', 1, None, 0), (2, 'file_path', 'TEXT', 1, None, 0), (3, 'file_type', 'TEXT', 1, None, 0), (4, 'size', 'INTEGER', 1, None, 0), (5, 'uploaded_at', 'TEXT', 1, None, 0), (6, 'parsed', 'INTEGER', 0, '0', 0), (7, 'parsed_interfaces', 'INTEGER', 0, '0', 0), (8, 'parsed_params', 'INTEGER', 0, '0', 0), (9, 'parsed_responses', 'INTEGER', 0, '0', 0)]
+2026-02-06 13:50:37,836 - __main__ - INFO - simple_app.py:380 - 文件记录已添加到数据库，文件ID: 2
+2026-02-06 13:50:37,836 - __main__ - INFO - simple_app.py:383 - 准备执行文件解析，文件ID: 2
+2026-02-06 13:50:37,985 - __main__ - INFO - simple_app.py:386 - 文件解析任务已执行，文件ID: 2
+2026-02-06 13:50:37,986 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:50:37] "POST /files/upload HTTP/1.1" 200 -
+2026-02-06 13:50:37,993 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:50:37] "GET /files HTTP/1.1" 200 -
+2026-02-06 13:50:38,311 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:50:38] "GET /interfaces HTTP/1.1" 200 -
+2026-02-06 13:50:41,001 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:50:41] "GET /interfaces?file_id=2 HTTP/1.1" 200 -
+2026-02-06 13:50:41,229 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 13:50:41] "GET /interfaces?file_id=2 HTTP/1.1" 200 -
+2026-02-06 13:58:53,159 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 13:58:53,161 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 13:58:53,161 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 13:58:53,164 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI613842\frontend
+2026-02-06 13:58:53,165 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 13:58:53,165 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 13:58:53,166 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 13:58:53,168 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 13:58:53,178 - __main__ - INFO - simple_app.py:1406 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 13:58:53,194 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 13:58:53,194 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 14:53:52,759 - __main__ - INFO - simple_app.py:60 - 日志系统初始化完成
+2026-02-06 14:53:52,761 - __main__ - INFO - simple_app.py:85 - 开始初始化SocketIO...
+2026-02-06 14:53:52,761 - __main__ - ERROR - simple_app.py:100 - SocketIO初始化失败: ValueError: Invalid async_mode specified
+2026-02-06 14:53:52,763 - __main__ - INFO - simple_app.py:167 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI638402\frontend
+2026-02-06 14:53:52,764 - __main__ - INFO - simple_app.py:168 - 前端目录是否存在: True
+2026-02-06 14:53:52,764 - __main__ - INFO - simple_app.py:169 - index.html是否存在: True
+2026-02-06 14:53:52,765 - __main__ - INFO - simple_app.py:296 - 初始化数据库...
+2026-02-06 14:53:52,767 - __main__ - INFO - simple_app.py:299 - 数据库初始化成功
+2026-02-06 14:53:52,778 - __main__ - INFO - simple_app.py:1406 - 应用即将启动，访问地址: http://0.0.0.0:8000
+2026-02-06 14:53:52,792 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://10.203.224.140:8000
+2026-02-06 14:53:52,793 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-06 14:54:34,585 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:34] "GET /?ide_webview_request_time=1770360874398 HTTP/1.1" 200 -
+2026-02-06 14:54:34,598 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:34] "GET /style.css HTTP/1.1" 200 -
+2026-02-06 14:54:34,598 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:34] "GET /assets/index.js HTTP/1.1" 200 -
+2026-02-06 14:54:34,778 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:34] "GET /files HTTP/1.1" 200 -
+2026-02-06 14:54:34,792 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:34] "GET /websocket-status HTTP/1.1" 200 -
+2026-02-06 14:54:34,922 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:34] "[33mGET /@vite/client HTTP/1.1[0m" 404 -
+2026-02-06 14:54:36,284 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:36] "GET /interfaces?file_id=1 HTTP/1.1" 200 -
+2026-02-06 14:54:36,289 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:36] "GET /interfaces?file_id=1 HTTP/1.1" 200 -
+2026-02-06 14:54:36,948 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:36] "GET /interfaces/1/mock-config HTTP/1.1" 200 -
+2026-02-06 14:54:36,954 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:36] "GET /interfaces/1/params HTTP/1.1" 200 -
+2026-02-06 14:54:36,998 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:36] "GET /interfaces/1/responses HTTP/1.1" 200 -
+2026-02-06 14:54:37,025 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:37] "GET /interfaces/1/mock-config HTTP/1.1" 200 -
+2026-02-06 14:54:44,084 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:44] "POST /dynamic/prodPosition/query HTTP/1.1" 200 -
