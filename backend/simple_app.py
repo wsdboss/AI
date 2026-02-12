@@ -850,6 +850,154 @@ def get_interface_params(interface_id):
     
     return jsonify(result)
 
+# API路由：创建请求参数
+@app.route('/interfaces/<int:interface_id>/params', methods=['POST'])
+def create_param_field(interface_id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({'error': 'No data provided'}), 400
+        
+        name = data.get('name')
+        param_type = data.get('param_type')
+        required = data.get('required', True)
+        description = data.get('description', '')
+        example = data.get('example', '')
+        
+        if not name or not param_type:
+            return jsonify({'error': 'Name and param_type are required'}), 400
+        
+        # 插入新参数
+        cursor.execute('''
+            INSERT INTO interface_params (name, param_type, required, description, example, interface_id)
+            VALUES (?, ?, ?, ?, ?, ?)
+        ''', (name, param_type, 1 if required else 0, description, example, interface_id))
+        
+        conn.commit()
+        
+        # 返回新创建的参数
+        new_field_id = cursor.lastrowid
+        cursor.execute('SELECT * FROM interface_params WHERE id = ?', (new_field_id,))
+        new_field = cursor.fetchone()
+        
+        result = {
+            'id': new_field[0],
+            'name': new_field[1],
+            'param_type': new_field[2],
+            'required': bool(new_field[3]),
+            'description': new_field[4],
+            'example': new_field[5],
+            'interface_id': new_field[6]
+        }
+        
+        return jsonify(result), 201
+    except Exception as e:
+        logger.error(f"创建请求参数失败: {e}")
+        conn.rollback()
+        return jsonify({'error': str(e)}), 500
+    finally:
+        conn.close()
+
+# API路由：更新请求参数
+@app.route('/interfaces/<int:interface_id>/params/<int:param_id>', methods=['PUT'])
+def update_param_field(interface_id, param_id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({'error': 'No data provided'}), 400
+        
+        # 检查参数是否存在且属于指定接口
+        cursor.execute('SELECT * FROM interface_params WHERE id = ? AND interface_id = ?', (param_id, interface_id))
+        if not cursor.fetchone():
+            return jsonify({'error': 'Param field not found'}), 404
+        
+        # 构建更新语句
+        update_fields = []
+        update_values = []
+        
+        if 'name' in data:
+            update_fields.append('name = ?')
+            update_values.append(data['name'])
+        if 'param_type' in data:
+            update_fields.append('param_type = ?')
+            update_values.append(data['param_type'])
+        if 'required' in data:
+            update_fields.append('required = ?')
+            update_values.append(1 if data['required'] else 0)
+        if 'description' in data:
+            update_fields.append('description = ?')
+            update_values.append(data['description'])
+        if 'example' in data:
+            update_fields.append('example = ?')
+            update_values.append(data['example'])
+        
+        if not update_fields:
+            return jsonify({'error': 'No fields to update'}), 400
+        
+        # 执行更新
+        update_values.append(param_id)
+        update_values.append(interface_id)
+        
+        cursor.execute(f'''
+            UPDATE interface_params
+            SET {', '.join(update_fields)}
+            WHERE id = ? AND interface_id = ?
+        ''', update_values)
+        
+        conn.commit()
+        
+        # 返回更新后的参数
+        cursor.execute('SELECT * FROM interface_params WHERE id = ?', (param_id,))
+        updated_field = cursor.fetchone()
+        
+        result = {
+            'id': updated_field[0],
+            'name': updated_field[1],
+            'param_type': updated_field[2],
+            'required': bool(updated_field[3]),
+            'description': updated_field[4],
+            'example': updated_field[5],
+            'interface_id': updated_field[6]
+        }
+        
+        return jsonify(result)
+    except Exception as e:
+        logger.error(f"更新请求参数失败: {e}")
+        conn.rollback()
+        return jsonify({'error': str(e)}), 500
+    finally:
+        conn.close()
+
+# API路由：删除请求参数
+@app.route('/interfaces/<int:interface_id>/params/<int:param_id>', methods=['DELETE'])
+def delete_param_field(interface_id, param_id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    try:
+        # 检查参数是否存在且属于指定接口
+        cursor.execute('SELECT * FROM interface_params WHERE id = ? AND interface_id = ?', (param_id, interface_id))
+        if not cursor.fetchone():
+            return jsonify({'error': 'Param field not found'}), 404
+        
+        # 执行删除
+        cursor.execute('DELETE FROM interface_params WHERE id = ? AND interface_id = ?', (param_id, interface_id))
+        conn.commit()
+        
+        return jsonify({'message': 'Param field deleted successfully'})
+    except Exception as e:
+        logger.error(f"删除请求参数失败: {e}")
+        conn.rollback()
+        return jsonify({'error': str(e)}), 500
+    finally:
+        conn.close()
+
 # API路由：获取接口响应字段
 @app.route('/interfaces/<int:interface_id>/responses', methods=['GET'])
 def get_interface_responses(interface_id):
@@ -880,6 +1028,148 @@ def get_interface_responses(interface_id):
         ]
     
     return jsonify(result)
+
+# API路由：创建响应字段
+@app.route('/interfaces/<int:interface_id>/responses', methods=['POST'])
+def create_response_field(interface_id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({'error': 'No data provided'}), 400
+        
+        name = data.get('name')
+        response_type = data.get('response_type')
+        description = data.get('description', '')
+        example = data.get('example', '')
+        
+        if not name or not response_type:
+            return jsonify({'error': 'Name and response_type are required'}), 400
+        
+        # 插入新字段
+        cursor.execute('''
+            INSERT INTO interface_responses (name, response_type, description, example, interface_id)
+            VALUES (?, ?, ?, ?, ?)
+        ''', (name, response_type, description, example, interface_id))
+        
+        conn.commit()
+        
+        # 返回新创建的字段
+        new_field_id = cursor.lastrowid
+        cursor.execute('SELECT * FROM interface_responses WHERE id = ?', (new_field_id,))
+        new_field = cursor.fetchone()
+        
+        result = {
+            'id': new_field[0],
+            'name': new_field[1],
+            'response_type': new_field[2],
+            'description': new_field[3],
+            'example': new_field[4],
+            'interface_id': new_field[5]
+        }
+        
+        return jsonify(result), 201
+    except Exception as e:
+        logger.error(f"创建响应字段失败: {e}")
+        conn.rollback()
+        return jsonify({'error': str(e)}), 500
+    finally:
+        conn.close()
+
+# API路由：更新响应字段
+@app.route('/interfaces/<int:interface_id>/responses/<int:response_id>', methods=['PUT'])
+def update_response_field(interface_id, response_id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({'error': 'No data provided'}), 400
+        
+        # 检查字段是否存在且属于指定接口
+        cursor.execute('SELECT * FROM interface_responses WHERE id = ? AND interface_id = ?', (response_id, interface_id))
+        if not cursor.fetchone():
+            return jsonify({'error': 'Response field not found'}), 404
+        
+        # 构建更新语句
+        update_fields = []
+        update_values = []
+        
+        if 'name' in data:
+            update_fields.append('name = ?')
+            update_values.append(data['name'])
+        if 'response_type' in data:
+            update_fields.append('response_type = ?')
+            update_values.append(data['response_type'])
+        if 'description' in data:
+            update_fields.append('description = ?')
+            update_values.append(data['description'])
+        if 'example' in data:
+            update_fields.append('example = ?')
+            update_values.append(data['example'])
+        
+        if not update_fields:
+            return jsonify({'error': 'No fields to update'}), 400
+        
+        # 执行更新
+        update_values.append(response_id)
+        update_values.append(interface_id)
+        
+        cursor.execute(f'''
+            UPDATE interface_responses
+            SET {', '.join(update_fields)}
+            WHERE id = ? AND interface_id = ?
+        ''', update_values)
+        
+        conn.commit()
+        
+        # 返回更新后的字段
+        cursor.execute('SELECT * FROM interface_responses WHERE id = ?', (response_id,))
+        updated_field = cursor.fetchone()
+        
+        result = {
+            'id': updated_field[0],
+            'name': updated_field[1],
+            'response_type': updated_field[2],
+            'description': updated_field[3],
+            'example': updated_field[4],
+            'interface_id': updated_field[5]
+        }
+        
+        return jsonify(result)
+    except Exception as e:
+        logger.error(f"更新响应字段失败: {e}")
+        conn.rollback()
+        return jsonify({'error': str(e)}), 500
+    finally:
+        conn.close()
+
+# API路由：删除响应字段
+@app.route('/interfaces/<int:interface_id>/responses/<int:response_id>', methods=['DELETE'])
+def delete_response_field(interface_id, response_id):
+    conn = sqlite3.connect(DATABASE)
+    cursor = conn.cursor()
+    
+    try:
+        # 检查字段是否存在且属于指定接口
+        cursor.execute('SELECT * FROM interface_responses WHERE id = ? AND interface_id = ?', (response_id, interface_id))
+        if not cursor.fetchone():
+            return jsonify({'error': 'Response field not found'}), 404
+        
+        # 执行删除
+        cursor.execute('DELETE FROM interface_responses WHERE id = ? AND interface_id = ?', (response_id, interface_id))
+        conn.commit()
+        
+        return jsonify({'message': 'Response field deleted successfully'})
+    except Exception as e:
+        logger.error(f"删除响应字段失败: {e}")
+        conn.rollback()
+        return jsonify({'error': str(e)}), 500
+    finally:
+        conn.close()
 
 # API路由：获取Mock配置
 @app.route('/interfaces/<int:interface_id>/mock-config', methods=['GET'])
@@ -1446,6 +1736,9 @@ def handle_dynamic_request(path):
                         # 更新类型和描述
                         if field_type and i == len(parts) - 1:
                             current[part]['type'] = field_type
+                            # 确保object类型字段被正确处理
+                            if field_type in ['object', 'java.lang.Object']:
+                                current[part]['type'] = 'object'
                         if field_desc and i == len(parts) - 1:
                             current[part]['desc'] = field_desc
                         
@@ -1524,15 +1817,18 @@ def handle_dynamic_request(path):
                         result.append(generate_mock_value(node['type']))
                 return result
             else:
-                if node['children']:
-                    # 生成对象，即使字段类型定义为string
-                    result = {}
-                    for child_name, child_node in node['children'].items():
-                        result[child_name] = generate_mock_from_tree(child_node, mock_count, child_name)
-                    return result
-                else:
-                    # 生成简单值
-                    return generate_mock_value(node['type'])
+                    if node['children']:
+                        # 生成对象，即使字段类型定义为string
+                        result = {}
+                        for child_name, child_node in node['children'].items():
+                            result[child_name] = generate_mock_from_tree(child_node, mock_count, child_name)
+                        return result
+                    else:
+                        # 如果字段类型为object，生成空对象
+                        if node['type'] in ['object', 'java.lang.Object']:
+                            return {}
+                        # 否则生成简单值
+                        return generate_mock_value(node['type'])
         
         # 生成Mock数据
         if response_fields:
@@ -1607,12 +1903,23 @@ def handle_dynamic_request(path):
             headers_json = json.dumps(dict(request.headers), ensure_ascii=False)
             response_body = json.dumps(standardized_data, ensure_ascii=False)
             response_status = 200
+            execution_time = 0.0  # 添加执行时间默认值
             
             # 插入日志记录
             cursor.execute('''
-                INSERT INTO request_logs (interface_id, method, path, params, headers, response_status, response_body, request_time)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-            ''', (interface[0], method, full_path, params_json, headers_json, response_status, response_body, request_time))
+                INSERT INTO request_logs (interface_id, method, path, params, headers, response_status, response_body, execution_time, request_time)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (interface[0], method, full_path, params_json, headers_json, response_status, response_body, execution_time, request_time))
+            
+            # 只保留最新的200条日志记录
+            cursor.execute('''
+                DELETE FROM request_logs
+                WHERE id NOT IN (
+                    SELECT id FROM request_logs
+                    ORDER BY request_time DESC
+                    LIMIT 200
+                )
+            ''')
             
             conn.commit()
             conn.close()

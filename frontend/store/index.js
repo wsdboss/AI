@@ -116,10 +116,38 @@ export default new Vuex.Store({
     },
     
     // 加载请求日志
-    async loadRequestLogs({ commit }, interfaceId = null) {
+    async loadRequestLogs({ commit }, payload) {
       try {
+        // 处理payload参数
+        let interfaceId = null
+        let limit = 10
+        
+        if (typeof payload === 'object' && payload !== null) {
+          interfaceId = payload.interfaceId
+          limit = payload.limit || 10
+        } else {
+          interfaceId = payload
+        }
+        
         // 调用后端API获取请求日志
-        const url = interfaceId ? `/logs?interface_id=${interfaceId}` : '/logs'
+        let url = '/logs'
+        const params = {}
+        
+        if (interfaceId) {
+          params.interface_id = interfaceId
+        }
+        
+        params.limit = limit
+        
+        // 构建查询字符串
+        const queryString = Object.keys(params)
+          .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+          .join('&')
+        
+        if (queryString) {
+          url += `?${queryString}`
+        }
+        
         const response = await this._vm.$axios.get(url)
         commit('SET_REQUEST_LOGS', response.data)
       } catch (error) {

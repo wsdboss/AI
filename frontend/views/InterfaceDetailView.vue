@@ -47,32 +47,149 @@
         <!-- 请求参数 -->
         <el-tab-pane label="请求参数" name="params">
           <div class="detail-section">
-            <el-table :data="interfaceParams" stripe style="width: 100%" v-if="interfaceParams.length > 0">
-              <el-table-column prop="name" label="参数名" width="150"></el-table-column>
-              <el-table-column prop="param_type" label="参数类型" width="150"></el-table-column>
-              <el-table-column prop="required" label="是否必填" width="100">
+            <div class="section-header" style="margin-bottom: 16px;">
+              <h4>请求参数列表</h4>
+            </div>
+            
+            <el-table :data="interfaceParams" stripe style="width: 100%" v-if="interfaceParams.length > 0" @cell-dblclick="handleCellDblClick">
+              <el-table-column prop="name" label="参数名" width="150">
                 <template slot-scope="scope">
-                  <el-tag type="success" v-if="scope.row.required">必填</el-tag>
-                  <el-tag type="info" v-else>可选</el-tag>
+                  <span v-if="!scope.row.editing">{{ scope.row.name }}</span>
+                  <el-input v-else v-model="scope.row.name" size="small" style="width: 120px;"></el-input>
                 </template>
               </el-table-column>
-              <el-table-column prop="description" label="描述"></el-table-column>
-              <el-table-column prop="example" label="示例值"></el-table-column>
+              <el-table-column prop="param_type" label="参数类型" width="150">
+                <template slot-scope="scope">
+                  <span v-if="!scope.row.editing">{{ scope.row.param_type }}</span>
+                  <el-select v-else v-model="scope.row.param_type" size="small" style="width: 120px;">
+                    <el-option label="string" value="string"></el-option>
+                    <el-option label="int" value="int"></el-option>
+                    <el-option label="boolean" value="boolean"></el-option>
+                    <el-option label="double" value="double"></el-option>
+                  </el-select>
+                </template>
+              </el-table-column>
+              <el-table-column prop="required" label="是否必填" width="100">
+                <template slot-scope="scope">
+                  <span v-if="!scope.row.editing">
+                    <el-tag type="success" v-if="scope.row.required">必填</el-tag>
+                    <el-tag type="info" v-else>可选</el-tag>
+                  </span>
+                  <el-switch v-else v-model="scope.row.required" size="small"></el-switch>
+                </template>
+              </el-table-column>
+              <el-table-column prop="description" label="描述">
+                <template slot-scope="scope">
+                  <span v-if="!scope.row.editing">{{ scope.row.description || '' }}</span>
+                  <el-input v-else v-model="scope.row.description" size="small" type="textarea"></el-input>
+                </template>
+              </el-table-column>
+              <el-table-column prop="example" label="示例值">
+                <template slot-scope="scope">
+                  <span v-if="!scope.row.editing">{{ scope.row.example || '' }}</span>
+                  <el-input v-else v-model="scope.row.example" size="small"></el-input>
+                </template>
+              </el-table-column>
+              <el-table-column label="操作" width="250" fixed="right">
+                <template slot-scope="scope">
+                  <template v-if="!scope.row.editing">
+                    <el-button type="primary" size="small" @click="handleEditParamField(scope.row)" style="margin-right: 10px;">
+                      <i class="el-icon-edit"></i> 编辑
+                    </el-button>
+                    <el-button type="success" size="small" @click="handleAddParamField(scope.$index)" style="margin-right: 10px;">
+                      <i class="el-icon-plus"></i> 新增
+                    </el-button>
+                    <el-button type="danger" size="small" @click="handleDeleteParamField(scope.row.id)">
+                      <i class="el-icon-delete"></i> 删除
+                    </el-button>
+                  </template>
+                  <template v-else>
+                    <el-button type="success" size="small" @click="handleSaveParamField(scope.row)" style="margin-right: 10px;">
+                      <i class="el-icon-check"></i> 保存
+                    </el-button>
+                    <el-button type="warning" size="small" @click="handleCancelEditParam(scope.row)">
+                      <i class="el-icon-close"></i> 取消
+                    </el-button>
+                  </template>
+                </template>
+              </el-table-column>
             </el-table>
-            <el-empty description="暂无请求参数" v-else></el-empty>
+            <el-empty description="暂无请求参数" v-else>
+              <el-button type="primary" @click="handleAddParamField()">
+                <i class="el-icon-plus"></i> 添加参数
+              </el-button>
+            </el-empty>
           </div>
         </el-tab-pane>
         
         <!-- 响应参数 -->
         <el-tab-pane label="响应参数" name="responses">
           <div class="detail-section">
-            <el-table :data="interfaceResponses" stripe style="width: 100%" v-if="interfaceResponses.length > 0">
-              <el-table-column prop="name" label="字段名" width="150"></el-table-column>
-              <el-table-column prop="response_type" label="字段类型" width="150"></el-table-column>
-              <el-table-column prop="description" label="描述"></el-table-column>
-              <el-table-column prop="example" label="示例值"></el-table-column>
+            <div class="section-header" style="margin-bottom: 16px;">
+              <h4>响应参数列表</h4>
+            </div>
+            
+            <el-table :data="interfaceResponses" stripe style="width: 100%" v-if="interfaceResponses.length > 0" @cell-dblclick="handleCellDblClick">
+              <el-table-column prop="name" label="字段名" width="150">
+                <template slot-scope="scope">
+                  <span v-if="!scope.row.editing">{{ scope.row.name }}</span>
+                  <el-input v-else v-model="scope.row.name" size="small" style="width: 120px;"></el-input>
+                </template>
+              </el-table-column>
+              <el-table-column prop="response_type" label="字段类型" width="150">
+                <template slot-scope="scope">
+                  <span v-if="!scope.row.editing">{{ scope.row.response_type }}</span>
+                  <el-select v-else v-model="scope.row.response_type" size="small" style="width: 120px;">
+                    <el-option label="string" value="string"></el-option>
+                    <el-option label="int" value="int"></el-option>
+                    <el-option label="boolean" value="boolean"></el-option>
+                    <el-option label="double" value="double"></el-option>
+                    <el-option label="object" value="object"></el-option>
+                    <el-option label="array" value="array"></el-option>
+                  </el-select>
+                </template>
+              </el-table-column>
+              <el-table-column prop="description" label="描述">
+                <template slot-scope="scope">
+                  <span v-if="!scope.row.editing">{{ scope.row.description || '' }}</span>
+                  <el-input v-else v-model="scope.row.description" size="small" type="textarea"></el-input>
+                </template>
+              </el-table-column>
+              <el-table-column prop="example" label="示例值">
+                <template slot-scope="scope">
+                  <span v-if="!scope.row.editing">{{ scope.row.example || '' }}</span>
+                  <el-input v-else v-model="scope.row.example" size="small"></el-input>
+                </template>
+              </el-table-column>
+              <el-table-column label="操作" width="250" fixed="right">
+                <template slot-scope="scope">
+                  <template v-if="!scope.row.editing">
+                    <el-button type="primary" size="small" @click="handleEditField(scope.row)" style="margin-right: 10px;">
+                      <i class="el-icon-edit"></i> 编辑
+                    </el-button>
+                    <el-button type="success" size="small" @click="handleAddField(scope.$index)" style="margin-right: 10px;">
+                      <i class="el-icon-plus"></i> 新增
+                    </el-button>
+                    <el-button type="danger" size="small" @click="handleDeleteField(scope.row.id)">
+                      <i class="el-icon-delete"></i> 删除
+                    </el-button>
+                  </template>
+                  <template v-else>
+                    <el-button type="success" size="small" @click="handleSaveField(scope.row)" style="margin-right: 10px;">
+                      <i class="el-icon-check"></i> 保存
+                    </el-button>
+                    <el-button type="warning" size="small" @click="handleCancelEdit(scope.row)">
+                      <i class="el-icon-close"></i> 取消
+                    </el-button>
+                  </template>
+                </template>
+              </el-table-column>
             </el-table>
-            <el-empty description="暂无响应参数" v-else></el-empty>
+            <el-empty description="暂无响应参数" v-else>
+              <el-button type="primary" @click="handleAddField()">
+                <i class="el-icon-plus"></i> 添加字段
+              </el-button>
+            </el-empty>
             
             <!-- Mock配置 -->
             <el-divider>Mock配置</el-divider>
@@ -90,7 +207,18 @@
         <!-- 请求日志 -->
         <el-tab-pane label="请求日志" name="logs">
           <div class="detail-section">
-            <h4>请求日志记录</h4>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <h4>请求日志记录</h4>
+              <div style="display: flex; align-items: center;">
+                <span style="margin-right: 10px;">展示条数：</span>
+                <el-select v-model="logLimit" size="small" @change="handleLogLimitChange">
+                  <el-option label="10条" value="10"></el-option>
+                  <el-option label="100条" value="100"></el-option>
+                  <el-option label="500条" value="500"></el-option>
+                  <el-option label="1000条" value="1000"></el-option>
+                </el-select>
+              </div>
+            </div>
             <el-divider></el-divider>
             <div class="log-list" v-if="requestLogs.length > 0">
               <div 
@@ -190,6 +318,73 @@
       </el-tabs>
     </div>
   </div>
+  
+  <!-- 添加/编辑响应字段对话框 -->
+  <el-dialog
+    :title="dialogTitle"
+    :visible.sync="dialogVisible"
+    width="500px"
+  >
+    <el-form :model="fieldForm" label-width="100px">
+      <el-form-item label="字段名" required>
+        <el-input v-model="fieldForm.name" placeholder="请输入字段名"></el-input>
+      </el-form-item>
+      <el-form-item label="字段类型" required>
+        <el-select v-model="fieldForm.response_type" placeholder="请选择字段类型">
+          <el-option label="string" value="string"></el-option>
+          <el-option label="int" value="int"></el-option>
+          <el-option label="boolean" value="boolean"></el-option>
+          <el-option label="double" value="double"></el-option>
+          <el-option label="object" value="object"></el-option>
+          <el-option label="array" value="array"></el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="描述">
+        <el-input type="textarea" v-model="fieldForm.description" placeholder="请输入描述"></el-input>
+      </el-form-item>
+      <el-form-item label="示例值">
+        <el-input v-model="fieldForm.example" placeholder="请输入示例值"></el-input>
+      </el-form-item>
+    </el-form>
+    <span slot="footer" class="dialog-footer">
+      <el-button @click="dialogVisible = false">取消</el-button>
+      <el-button type="primary" @click="saveField" :loading="savingField">保存</el-button>
+    </span>
+  </el-dialog>
+  
+  <!-- 添加/编辑请求参数对话框 -->
+  <el-dialog
+    :title="paramDialogTitle"
+    :visible.sync="paramDialogVisible"
+    width="500px"
+  >
+    <el-form :model="paramForm" label-width="100px">
+      <el-form-item label="参数名" required>
+        <el-input v-model="paramForm.name" placeholder="请输入参数名"></el-input>
+      </el-form-item>
+      <el-form-item label="参数类型" required>
+        <el-select v-model="paramForm.param_type" placeholder="请选择参数类型">
+          <el-option label="string" value="string"></el-option>
+          <el-option label="int" value="int"></el-option>
+          <el-option label="boolean" value="boolean"></el-option>
+          <el-option label="double" value="double"></el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item label="是否必填">
+        <el-switch v-model="paramForm.required"></el-switch>
+      </el-form-item>
+      <el-form-item label="描述">
+        <el-input type="textarea" v-model="paramForm.description" placeholder="请输入描述"></el-input>
+      </el-form-item>
+      <el-form-item label="示例值">
+        <el-input v-model="paramForm.example" placeholder="请输入示例值"></el-input>
+      </el-form-item>
+    </el-form>
+    <span slot="footer" class="dialog-footer">
+      <el-button @click="paramDialogVisible = false">取消</el-button>
+      <el-button type="primary" @click="saveParamField" :loading="savingParamField">保存</el-button>
+    </span>
+  </el-dialog>
 </template>
 
 <script>
@@ -214,12 +409,37 @@ export default {
       isBrowserSupported: true,
       interfaceMethod: 'GET',
       savingMethod: false,
-      requestLogs: [],
+      // 响应字段编辑相关
+      dialogVisible: false,
+      dialogTitle: '添加响应字段',
+      fieldForm: {
+        id: 0,
+        name: '',
+        response_type: 'string',
+        description: '',
+        example: ''
+      },
+      savingField: false,
+      
+      // 请求参数编辑相关
+      paramDialogVisible: false,
+      paramDialogTitle: '添加请求参数',
+      paramForm: {
+        id: 0,
+        name: '',
+        param_type: 'string',
+        required: true,
+        description: '',
+        example: ''
+      },
+      savingParamField: false,
 
       requestForm: {
         params: '{}',
         mock_count: 10
-      }
+      },
+      // 请求日志相关
+      logLimit: '10'
     }
   },
   created() {
@@ -231,7 +451,10 @@ export default {
         if (newInterface) {
           this.loadInterfaceDetail(newInterface.id)
           // 加载请求日志
-          this.$store.dispatch('loadRequestLogs', newInterface.id)
+          this.$store.dispatch('loadRequestLogs', {
+            interfaceId: newInterface.id,
+            limit: this.logLimit
+          })
         }
       },
       { deep: true }
@@ -260,6 +483,45 @@ export default {
         }
       },
       deep: true
+    },
+    // 当请求参数变化时，更新HTTP请求发送表单中的请求参数
+    interfaceParams: {
+      handler(newParams) {
+        if (newParams && newParams.length > 0) {
+          const defaultParams = {}
+          newParams.forEach(param => {
+            // 根据参数类型设置默认值
+            let defaultValue = ''
+            switch (param.param_type) {
+              case 'int':
+              case 'long':
+                defaultValue = 0
+                break
+              case 'boolean':
+                defaultValue = false
+                break
+              case 'double':
+              case 'float':
+                defaultValue = 0.0
+                break
+              case 'object':
+                defaultValue = {}
+                break
+              case 'array':
+                defaultValue = []
+                break
+              default:
+                defaultValue = ''
+            }
+            defaultParams[param.name] = defaultValue
+          })
+          this.requestForm.params = JSON.stringify(defaultParams, null, 2)
+        } else {
+          // 如果没有请求参数，设置为空对象
+          this.requestForm.params = '{}'
+        }
+      },
+      deep: true
     }
   },
   
@@ -282,11 +544,54 @@ export default {
         // 移除/api前缀，因为axios.defaults.baseURL已经配置了/api
         // 加载接口参数
         const paramsResponse = await this.$axios.get(`/interfaces/${interfaceId}/params`)
-        this.interfaceParams = paramsResponse.data
+        // 为每个参数添加editing属性，确保响应式
+        this.interfaceParams = paramsResponse.data.map(param => ({
+          ...param,
+          editing: false
+        }))
+        
+        // 自动填充请求参数到HTTP请求发送表单
+        if (this.interfaceParams.length > 0) {
+          const defaultParams = {}
+          this.interfaceParams.forEach(param => {
+            // 根据参数类型设置默认值
+            let defaultValue = ''
+            switch (param.param_type) {
+              case 'int':
+              case 'long':
+                defaultValue = 0
+                break
+              case 'boolean':
+                defaultValue = false
+                break
+              case 'double':
+              case 'float':
+                defaultValue = 0.0
+                break
+              case 'object':
+                defaultValue = {}
+                break
+              case 'array':
+                defaultValue = []
+                break
+              default:
+                defaultValue = ''
+            }
+            defaultParams[param.name] = defaultValue
+          })
+          this.requestForm.params = JSON.stringify(defaultParams, null, 2)
+        } else {
+          // 如果没有请求参数，设置为空对象
+          this.requestForm.params = '{}'
+        }
         
         // 加载接口响应字段
         const responsesResponse = await this.$axios.get(`/interfaces/${interfaceId}/responses`)
-        this.interfaceResponses = responsesResponse.data
+        // 为每个字段添加editing属性，确保响应式
+        this.interfaceResponses = responsesResponse.data.map(field => ({
+          ...field,
+          editing: false
+        }))
         
         // 加载Mock配置，确保和后端数据库同步
         const mockResponse = await this.$axios.get(`/interfaces/${interfaceId}/mock-config`)
@@ -478,6 +783,331 @@ export default {
         this.interfaceMethod = this.currentInterface.method
       } finally {
         this.savingMethod = false
+      }
+    },
+    
+    // 处理添加字段
+    handleAddField(index) {
+      console.log('点击了添加字段按钮，在索引', index, '下方添加')
+      if (!this.currentInterface) {
+        this.$message.error('请先选择一个接口')
+        return
+      }
+      
+      // 创建新字段对象
+      const newField = {
+        id: 0,
+        name: 'new_field',
+        response_type: 'string',
+        description: '',
+        example: '',
+        interface_id: this.currentInterface.id,
+        editing: true // 直接进入编辑状态
+      }
+      
+      // 在指定索引下方添加新行
+      if (typeof index === 'number') {
+        this.interfaceResponses.splice(index + 1, 0, newField)
+      } else {
+        // 如果没有指定索引，添加到末尾
+        this.interfaceResponses.push(newField)
+      }
+      console.log('添加了新字段并进入编辑状态', newField)
+    },
+    
+    // 处理编辑字段
+    handleEditField(row) {
+      console.log('点击了编辑字段按钮', row)
+      if (!row) {
+        console.error('编辑字段时row为null')
+        this.$message.error('编辑失败：数据无效')
+        return
+      }
+      // 设置编辑状态
+      row.editing = true
+      console.log('设置字段为编辑状态', row)
+    },
+    
+    // 保存字段
+    async saveField() {
+      if (!this.currentInterface) {
+        this.$message.error('请先选择一个接口')
+        return
+      }
+      
+      if (!this.fieldForm.name || !this.fieldForm.response_type) {
+        this.$message.error('字段名和字段类型不能为空')
+        return
+      }
+      
+      try {
+        this.savingField = true
+        
+        if (this.fieldForm.id === 0) {
+          // 添加新字段
+          const response = await this.$axios.post(`/interfaces/${this.currentInterface.id}/responses`, this.fieldForm)
+          this.interfaceResponses.push(response.data)
+          this.$message.success('字段添加成功')
+        } else {
+          // 更新字段
+          const response = await this.$axios.put(`/interfaces/${this.currentInterface.id}/responses/${this.fieldForm.id}`, this.fieldForm)
+          const index = this.interfaceResponses.findIndex(item => item.id === this.fieldForm.id)
+          if (index !== -1) {
+            this.interfaceResponses[index] = response.data
+          }
+          this.$message.success('字段更新成功')
+        }
+        
+        this.dialogVisible = false
+      } catch (error) {
+        console.error('保存字段失败:', error)
+        this.$message.error('保存字段失败，请重试')
+      } finally {
+        this.savingField = false
+      }
+    },
+    
+    // 保存字段编辑
+    async handleSaveField(row) {
+      console.log('保存字段编辑', row)
+      if (!this.currentInterface) {
+        this.$message.error('请先选择一个接口')
+        return
+      }
+      
+      if (!row.name || !row.response_type) {
+        this.$message.error('字段名和字段类型不能为空')
+        return
+      }
+      
+      try {
+        let response
+        if (row.id === 0) {
+          // 调用后端API创建新字段
+          response = await this.$axios.post(`/interfaces/${this.currentInterface.id}/responses`, row)
+          // 更新本地数据，替换临时字段
+          const index = this.interfaceResponses.findIndex(item => item.id === row.id)
+          if (index !== -1) {
+            this.interfaceResponses[index] = response.data
+          }
+          this.$message.success('字段添加成功')
+        } else {
+          // 调用后端API更新字段
+          response = await this.$axios.put(`/interfaces/${this.currentInterface.id}/responses/${row.id}`, row)
+          // 更新本地数据
+          const index = this.interfaceResponses.findIndex(item => item.id === row.id)
+          if (index !== -1) {
+            this.interfaceResponses[index] = response.data
+          }
+          this.$message.success('字段更新成功')
+        }
+        // 取消编辑状态
+        row.editing = false
+      } catch (error) {
+        console.error('保存字段失败:', error)
+        this.$message.error('保存字段失败，请重试')
+      }
+    },
+    
+    // 取消字段编辑
+    handleCancelEdit(row) {
+      console.log('取消字段编辑', row)
+      // 取消编辑状态
+      row.editing = false
+      // 重新加载数据，恢复原始值
+      if (this.currentInterface) {
+        this.loadInterfaceDetail(this.currentInterface.id)
+      }
+    },
+    
+    // 处理删除字段
+    async handleDeleteField(fieldId) {
+      if (!this.currentInterface) {
+        this.$message.error('请先选择一个接口')
+        return
+      }
+      
+      try {
+        await this.$axios.delete(`/interfaces/${this.currentInterface.id}/responses/${fieldId}`)
+        this.interfaceResponses = this.interfaceResponses.filter(item => item.id !== fieldId)
+        this.$message.success('字段删除成功')
+      } catch (error) {
+        console.error('删除字段失败:', error)
+        this.$message.error('删除字段失败，请重试')
+      }
+    },
+    
+    // 处理添加请求参数
+    handleAddParamField(index) {
+      console.log('点击了添加请求参数按钮，在索引', index, '下方添加')
+      if (!this.currentInterface) {
+        this.$message.error('请先选择一个接口')
+        return
+      }
+      
+      // 创建新参数对象
+      const newParam = {
+        id: 0,
+        name: 'new_param',
+        param_type: 'string',
+        required: true,
+        description: '',
+        example: '',
+        interface_id: this.currentInterface.id,
+        editing: true // 直接进入编辑状态
+      }
+      
+      // 在指定索引下方添加新行
+      if (typeof index === 'number') {
+        this.interfaceParams.splice(index + 1, 0, newParam)
+      } else {
+        // 如果没有指定索引，添加到末尾
+        this.interfaceParams.push(newParam)
+      }
+      console.log('添加了新请求参数并进入编辑状态', newParam)
+    },
+    
+    // 处理编辑请求参数
+    handleEditParamField(row) {
+      console.log('点击了编辑请求参数按钮', row)
+      if (!row) {
+        console.error('编辑请求参数时row为null')
+        this.$message.error('编辑失败：数据无效')
+        return
+      }
+      // 设置编辑状态
+      row.editing = true
+      console.log('设置请求参数为编辑状态', row)
+    },
+    
+    // 保存请求参数
+    async saveParamField() {
+      if (!this.currentInterface) {
+        this.$message.error('请先选择一个接口')
+        return
+      }
+      
+      if (!this.paramForm.name || !this.paramForm.param_type) {
+        this.$message.error('参数名和参数类型不能为空')
+        return
+      }
+      
+      try {
+        this.savingParamField = true
+        
+        if (this.paramForm.id === 0) {
+          // 添加新参数
+          const response = await this.$axios.post(`/interfaces/${this.currentInterface.id}/params`, this.paramForm)
+          this.interfaceParams.push(response.data)
+          this.$message.success('参数添加成功')
+        } else {
+          // 更新参数
+          const response = await this.$axios.put(`/interfaces/${this.currentInterface.id}/params/${this.paramForm.id}`, this.paramForm)
+          const index = this.interfaceParams.findIndex(item => item.id === this.paramForm.id)
+          if (index !== -1) {
+            this.interfaceParams[index] = response.data
+          }
+          this.$message.success('参数更新成功')
+        }
+        
+        this.paramDialogVisible = false
+      } catch (error) {
+        console.error('保存参数失败:', error)
+        this.$message.error('保存参数失败，请重试')
+      } finally {
+        this.savingParamField = false
+      }
+    },
+    
+    // 保存请求参数编辑
+    async handleSaveParamField(row) {
+      console.log('保存请求参数编辑', row)
+      if (!this.currentInterface) {
+        this.$message.error('请先选择一个接口')
+        return
+      }
+      
+      if (!row.name || !row.param_type) {
+        this.$message.error('参数名和参数类型不能为空')
+        return
+      }
+      
+      try {
+        let response
+        if (row.id === 0) {
+          // 调用后端API创建新参数
+          response = await this.$axios.post(`/interfaces/${this.currentInterface.id}/params`, row)
+          // 更新本地数据，替换临时参数
+          const index = this.interfaceParams.findIndex(item => item.id === row.id)
+          if (index !== -1) {
+            this.interfaceParams[index] = response.data
+          }
+          this.$message.success('参数添加成功')
+        } else {
+          // 调用后端API更新参数
+          response = await this.$axios.put(`/interfaces/${this.currentInterface.id}/params/${row.id}`, row)
+          // 更新本地数据
+          const index = this.interfaceParams.findIndex(item => item.id === row.id)
+          if (index !== -1) {
+            this.interfaceParams[index] = response.data
+          }
+          this.$message.success('参数更新成功')
+        }
+        // 取消编辑状态
+        row.editing = false
+      } catch (error) {
+        console.error('保存参数失败:', error)
+        this.$message.error('保存参数失败，请重试')
+      }
+    },
+    
+    // 取消请求参数编辑
+    handleCancelEditParam(row) {
+      console.log('取消请求参数编辑', row)
+      // 取消编辑状态
+      row.editing = false
+      // 重新加载数据，恢复原始值
+      if (this.currentInterface) {
+        this.loadInterfaceDetail(this.currentInterface.id)
+      }
+    },
+    
+    // 处理删除请求参数
+    async handleDeleteParamField(paramId) {
+      if (!this.currentInterface) {
+        this.$message.error('请先选择一个接口')
+        return
+      }
+      
+      try {
+        await this.$axios.delete(`/interfaces/${this.currentInterface.id}/params/${paramId}`)
+        this.interfaceParams = this.interfaceParams.filter(item => item.id !== paramId)
+        this.$message.success('参数删除成功')
+      } catch (error) {
+        console.error('删除参数失败:', error)
+        this.$message.error('删除参数失败，请重试')
+      }
+    },
+    
+    // 处理表格单元格双击事件
+    handleCellDblClick(row, column, cell, event) {
+      console.log('双击了表格单元格', row, column)
+      if (!row) {
+        console.error('双击时row为null')
+        return
+      }
+      // 设置编辑状态
+      row.editing = true
+      console.log('设置行为编辑状态', row)
+    },
+    
+    // 处理日志展示条数变更
+    handleLogLimitChange() {
+      if (this.currentInterface) {
+        this.$store.dispatch('loadRequestLogs', {
+          interfaceId: this.currentInterface.id,
+          limit: this.logLimit
+        })
       }
     }
   }
