@@ -2542,3 +2542,13 @@
 2026-02-06 14:54:36,998 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:36] "GET /interfaces/1/responses HTTP/1.1" 200 -
 2026-02-06 14:54:37,025 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:37] "GET /interfaces/1/mock-config HTTP/1.1" 200 -
 2026-02-06 14:54:44,084 - werkzeug - INFO - _internal.py:97 - 127.0.0.1 - - [06/Feb/2026 14:54:44] "POST /dynamic/prodPosition/query HTTP/1.1" 200 -
+2026-02-12 17:24:58,843 - __main__ - INFO - simple_app.py:280 - 日志系统初始化完成
+2026-02-12 17:24:58,850 - __main__ - INFO - simple_app.py:356 - 使用前端资源目录: C:\Users\ZHAOZH~1\AppData\Local\Temp\_MEI112762\frontend
+2026-02-12 17:24:58,851 - __main__ - INFO - simple_app.py:357 - 前端目录是否存在: True
+2026-02-12 17:24:58,851 - __main__ - INFO - simple_app.py:358 - index.html是否存在: True
+2026-02-12 17:24:58,851 - __main__ - INFO - simple_app.py:485 - 初始化数据库...
+2026-02-12 17:24:58,861 - __main__ - INFO - simple_app.py:488 - 数据库初始化成功
+2026-02-12 17:24:58,891 - werkzeug - INFO - _internal.py:97 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8008
+2026-02-12 17:24:58,891 - werkzeug - INFO - _internal.py:97 - [33mPress CTRL+C to quit[0m
+2026-02-12 17:25:04,091 - __main__ - INFO - simple_app.py:2002 - 已自动打开浏览器，访问地址: http://127.0.0.1:8008
